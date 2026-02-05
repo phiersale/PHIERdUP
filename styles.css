@@ -106,6 +106,19 @@ h1 {
     user-select: none;
 }
 
+/* === NAV SPACING FIX === */
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px; /* controls spacing between buttons */
+}
+
+.nav-item {
+    margin: 4px; /* small outer margin to prevent crowding */
+}
+
+
 .nav-item:hover {
     background: linear-gradient(135deg, rgba(76, 175, 80, 0.4), rgba(129, 199, 132, 0.4));
     box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
