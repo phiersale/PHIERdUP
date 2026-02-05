@@ -246,3 +246,15 @@ nav ul li a {
 nav ul li a:hover {
   background: #e0e0e0;
 }
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+
+.nav-item {
+    display: inline-block;
+    margin: 4px;
+}
