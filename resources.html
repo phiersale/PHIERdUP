@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>Resources — PHIERdUP</title>
+
+    <!-- External CSS + JS -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <!-- Page‑specific CTA text -->
+    <script>
+        window.headerCTA = {
+            title: "Here Are the Receipts.",
+            subtitle: "White papers, state guides, implementation plans — everything is documented.",
+            action: "Explore the evidence."
+        };
+    </script>
+</head>
+
+<body>
+
+<!-- ORIENTATION PANEL -->
+<div class="orientation-panel">
+    <strong>You are at the frontline of a citizen movement.</strong>
+    <span>
+        This site explains <em>why leverage exists</em>, <em>how the math works</em>,
+        and <em>what participation looks like</em>. No persuasion. No simplification.
+    </span>
+</div>
+
+<!-- HEADER -->
+<header>
+    <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="logo">
+
+    <!-- Movement Identity -->
+    <div style="background: rgba(76, 175, 80, 0.08); border: 2px solid rgba(76, 175, 80, 0.3); border-radius: 10px; padding: 20px; margin: 20px auto 25px auto; max-width: 500px;">
+        <p style="font-size: 0.9em; color: #81c784; margin: 0 0 8px 0; text-align: center; font-style: italic;">
+            A 5D Cooperative Movement
+        </p>
+        <p style="font-size: 1.5em; color: #4caf50; margin: 0 0 5px 0; font-weight: bold; text-shadow: 0 0 20px rgba(76, 175, 80, 0.3); text-align: center;">
+            MABAH Movement
+        </p>
+        <p style="font-size: 1.05em; color: #c8e6c9; margin: 0; text-align: center; font-weight: 600;">
+            Making America Better And Healthier
+        </p>
+    </div>
+
+    <!-- Crisis Box (auto‑updated) -->
+    <div id="headerCrisisBox" style="position: relative; background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(66, 133, 244, 0.15)); border: 2px solid rgba(76, 175, 80, 0.4); padding: 25px 30px; border-radius: 12px; max-width: 600px; margin: 30px auto;">
+        <button onclick="document.getElementById('headerCrisisBox').style.display='none';"
+            style="position: absolute; top: 10px; right: 10px; background: rgba(76, 175, 80, 0.2); border: 1px solid #4caf50; color: #4caf50; font-size: 1.2em; font-weight: bold; cursor: pointer; padding: 2px 8px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 4px; transition: all 0.3s; line-height: 1;">
+            ×
+        </button>
+
+        <p id="header-cta-title" style="font-size: 1.1em; color: white; margin: 0 0 15px 0; font-weight: bold; padding-right: 30px;"></p>
+        <p id="header-cta-subtitle" style="font-size: 0.95em; color: #81c784; margin: 0 0 15px 0; font-weight: bold;"></p>
+        <p id="header-cta-action" style="font-size: 1.1em; color: #4caf50; margin: 0 0 25px 0; font-weight: bold;"></p>
+
+        <a href="https://c.org/q9vrMCQZsY" target="_blank"
+            style="background: linear-gradient(135deg, #4caf50, #2e7d32); color: white; padding: 14px 32px; font-size: 1.1em; font-weight: bold; border: 2px solid #4caf50; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.3s;">
+            🔥 Join PHIERS Now
+        </a>
+    </div>
+</header>
+
+<!-- NAVIGATION (with Resources cluster added) -->
+<nav class="nav-menu" style="position: sticky; top: 0; z-index: 5000; background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(22, 33, 62, 0.95)); backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
+
+    <!-- Start Here -->
+    <div style="flex: 1; min-width: 200px; border-right: 1px solid rgba(76, 175, 80, 0.2); padding: 10px 15px;">
+        <div style="color: #4caf50; font-size: 0.75em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; text-align: center;">Start Here</div>
+        <a class="nav-item" href="index.html">🏠 Home</a>
+        <a class="nav-item" href="quickstart.html">🚀 Quick Start</a>
+    </div>
+
+    <!-- Understand -->
+    <div style="flex: 1; min-width: 250px; border-right: 1px solid rgba(76, 175, 80, 0.2); padding: 10px 15px;">
+        <div style="color: #4caf50; font-size: 0.75em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; text-align: center;">Understand</div>
+        <a class="nav-item" href="crisis.html">🚨 The Crisis</a>
+        <a class="nav-item" href="how-it-works.html">⚙️ How It Works</a>
+        <a class="nav-item" href="5d.html">🧩 5D Solutions</a>
+        <a class="nav-item" href="leverage.html">⚡ The Leverage</a>
+    </div>
+
+    <!-- Resources -->
+    <div style="flex: 1; min-width: 200px; border-right: 1px solid rgba(76, 175, 80, 0.2); padding: 10px 15px;">
+        <div style="color: #4caf50; font-size: 0.75em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; text-align: center;">Resources</div>
+        <a class="nav-item active" href="resources.html">📚 Guides & White Papers</a>
+    </div>
+
+    <!-- Take Action -->
+    <div style="flex: 1; min-width: 200px; padding: 10px 15px;">
+        <div style="color: #4caf50; font-size: 0.75em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; text-align: center;">Take Action</div>
+        <a class="nav-item" href="action.html">✏️ Petition</a>
+        <a class="nav-item" href="faq.html">❓ FAQ</a>
+    </div>
+
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+    <section class="content-block">
+        <div class="section-marker">Resources</div>
+
+        <h2>📚 Resources & Implementation</h2>
+
+        <p style="color: #81c784; font-size: 1.05em; font-weight: bold; margin: 0 0 30px 0; line-height: 1.6; text-align: center; font-style: italic;">
+            White papers, state guides, implementation plans, and the full PHIERS architecture.
+        </p>
+
+        <!-- STATE GUIDES -->
+
+        <h3>📊 State-Level Implementation Guides</h3>
+
+        <div class="highlight-box">
+            <div class="highlight-title">🌴 California PHIERS Initiative</div>
+            <div class="highlight-content">
+                <p>$110+ billion in annual savings. Bicoastal leadership with Maryland.</p>
+                <a href="https://docs.google.com/document/d/17abpDTOkbqLjE4BYVye33K7degdkurJBd8Wy--U37jo/edit?usp=sharing" target="_blank" class="btn btn-primary" style="margin-top: 15px;">📖 Read White Paper</a>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <div class="highlight-title">🏛️ Maryland PHIERS Initiative — Van Hollen's Vision</div>
+            <div class="highlight-content">
+                <p><strong>Congressman Chris Van Hollen got the ball rolling.</strong> $17+ billion in annual savings.</p>
+                <a href="https://docs.google.com/document/d/1IQdyc4g-PAO50pb_MZOdaTrmsIp7XbxIZjQN_-xHShY/edit?usp=sharing" target="_blank" class="btn btn-primary" style="margin-top: 15px;">📖 Read White Paper</a>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <div class="highlight-title">🗽 NYC PHIERS Initiative</div>
+            <div class="highlight-content">
+                <p>$55+ billion in annual savings. Urban proof-of-concept that scales nationally.</p>
+                <a href="https://docs.google.com/document/d/1yMl0kHRmxSCCGdmR8NweSJ6oJS3KPYIjqogmQ4PbSk8/edit?usp=sharing" target="_blank" class="btn btn-primary" style="margin-top: 15px;">📖 Read White Paper</a>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <div class="highlight-title">🇺🇸 National PHIERS Initiative</div>
+            <div class="highlight-content">
+                <p>$2.73 trillion in annual savings. Complete national framework and Fight Club strategy.</p>
+                <a href="https://docs.google.com/document/d/1LBnU4KCgnWEuc7fLYU9nYAAtlpZ6wYSm880INmey4NI/edit?usp=sharing" target="_blank" class="btn btn-primary" style="margin-top: 15px;">📖 Read White Paper</a>
+            </div>
+        </div>
+
+        <!-- JOIN THE MOVEMENT -->
+
+        <h3 style="margin-top: 40px;">🎯 Join the Movement</h3>
+
+        <div class="button-group">
+            <a href="https://c.org/q9vrMCQZsY" target="_blank" class="btn btn-primary">✏️ Sign Petition</a>
+            <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank" class="btn btn-primary">📋 Fill Survey</a>
+            <a href="https://discord.gg/narhDKJY" target="_blank" class="btn btn-secondary">💬 Discord</a>
+            <a href="Donate.html" target="_blank" class="btn btn-secondary">💰 Donate</a>
+        </div>
+
+        <div class="join-us-cta">
+            <h3>💪 Final Message</h3>
+            <p><strong>Congress Failed Dec 11. We're Taking Over Dec 31–Jan 30.</strong></p>
+            <p>22 million individuals will lose healthcare if Congress doesn't act.</p>
+            <p><strong>We have the solution. We have the leverage. We have the coalition.</strong></p>
+            <p style="margin-top: 20px; font-size: 1.1em; font-weight: bold;">Sign. Fill. Join. Donate. Share.</p>
+            <p style="margin-top: 20px; color: #a5d6a7;">This is about healthcare, jobs, economy, politics, and peace. All at once. All interconnected. All unstoppable.</p>
+        </div>
+
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer style="text-align: center; margin-top: 60px; padding: 40px 20px; border-top: 1px solid rgba(76, 175, 80, 0.2);">
+
+    <p style="color: #a5d6a7; font-size: 0.9em; margin: 0;">
+        Built by public health analysts, policy researchers, and community organizers
+    </p>
+
+    <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
+
+    <p style="margin-top: 10px;">
+        Will Price | Chief Solutions Architect |
+        <a href="mailto:[email protected]" style="color: #81c784; text-decoration: underline;">Email</a> |
+        <a href="tel:+19163068967" style="color: #81c784; text-decoration: underline;">916‑306‑8967</a>
+    </p>
+
+    <p style="margin-top: 20px;">
+        <a href="https://c.org/q9vrMCQZsY" target="_blank" style="color: #81c784; text-decoration: underline;">Sign Petition</a> |
+        <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank" style="color: #81c784; text-decoration: underline;">Fill Survey</a> |
+        <a href="Donate.html" target="_blank" style="color: #81c784; text-decoration: underline;">Fund the Cascade</a>
+    </p>
+
+    <p style="margin-top: 10px;">
+        <a href="about.html" style="color: #81c784; text-decoration: underline;">About Us</a> |
+        <a href="https://phiersale.github.io/Join_the_Team/" target="_blank" style="color: #81c784; text-decoration: underline;">Join Team</a> |
+        <a href="https://phiersale.github.io/MABAH-Movement/" target="_blank" style="color: #81c784; text-decoration: underline;">MABAH Movement</a>
+    </p>
+
+    <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(66, 133, 244, 0.1)); border: 2px solid #4caf50; padding: 25px; margin: 30px 0; border-radius: 10px; text-align: center;">
+        <p style="color: #4caf50; font-size: 1.3em; font-weight: bold; margin: 0; line-height: 1.6;">
+            This isn't a petition. It's a pressure engine.
+        </p>
+        <p style="color: #81c784; font-size: 1.1em; font-weight: bold; margin: 15px 0 0 0;">
+            Sign now — and flip the switch.
+        </p>
+    </div>
+
+    <p style="margin-top: 20px;">© PHIERS.org — People's Health Insurance Economic Recovery Solutions</p>
+
+    <p style="margin-top: 15px; font-size: 0.85em; color: #a5d6a7;">
+        Accessibility | Privacy Policy
+    </p>
+
+    <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(76, 175, 80, 0.2); color: #4caf50; font-size: 0.85em; text-align: center;">
+        <strong>Site Version:</strong> v8.4 (COMPLETE POLISH) | Updated: February 01, 2026 @ 11:45 AM PST
+    </p>
+
+</footer>
+
+</body>
+</html>
