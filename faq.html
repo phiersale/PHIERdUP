@@ -4,239 +4,332 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <title>FAQ — PHIERdUP</title>
+    <title>FAQ - PHIERS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
 
-    <!-- External CSS + JS -->
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+        .orientation-panel {
+            background: #0f172a;
+            color: #e5e7eb;
+            padding: 14px 18px;
+            border-bottom: 1px solid #1e293b;
+            font-size: 0.95rem;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        
+        .orientation-panel strong { color: #fff; }
+        .orientation-panel span { display: block; margin-top: 4px; color: #cbd5f5; }
 
-    <!-- Page‑specific CTA text -->
-    <script>
-        window.headerCTA = {
-            title: "If You're Skeptical, Good.",
-            subtitle: "This page is built for people who ask hard questions.",
-            action: "Here are the receipts."
-        };
-    </script>
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(15, 52, 96, 0.8), rgba(22, 33, 62, 0.8));
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(76, 175, 80, 0.3);
+        }
+        
+        .logo { height: 120px; width: auto; margin: 0 auto 20px auto; display: block; }
+
+        h1 {
+            color: #4caf50;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+        }
+
+        h2 { color: #4caf50; font-size: 1.6em; margin: 40px 0 20px 0; }
+        .subtitle { font-size: 1.1em; color: #81c784; margin-bottom: 15px; }
+        p { color: #c8e6c9; margin: 15px 0; line-height: 1.8; }
+
+        .faq-item {
+            background: rgba(76, 175, 80, 0.05);
+            border-left: 4px solid #4caf50;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .faq-question {
+            color: #4caf50;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .faq-answer {
+            color: #c8e6c9;
+            line-height: 1.8;
+        }
+
+        .faq-answer a {
+            color: #81c784;
+            text-decoration: underline;
+        }
+
+        .faq-answer a:hover {
+            color: #4caf50;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #4caf50, #2e7d32);
+            color: white;
+            padding: 14px 32px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #66bb6a, #388e3c);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1));
+            border: 2px solid #4caf50;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.2));
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 40px 0;
+            padding-top: 30px;
+            border-top: 2px solid rgba(76, 175, 80, 0.3);
+        }
+
+        .nav-buttons .btn { flex: 1; text-align: center; }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 2px solid rgba(76, 175, 80, 0.3);
+            color: #81c784;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        footer p { margin: 10px 0; }
+        footer a { color: #81c784; text-decoration: underline; }
+        footer a:hover { color: #4caf50; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.4em; }
+            .logo { height: 100px; }
+        }
+    </style>
 </head>
-
 <body>
-
-<!-- ORIENTATION PANEL -->
-<div class="orientation-panel">
-    <strong>You are at the frontline of a citizen movement.</strong>
-    <span>
-        This site explains <em>why leverage exists</em>, <em>how the math works</em>,
-        and <em>what participation looks like</em>. No persuasion. No simplification.
-    </span>
-</div>
-
-<!-- HEADER -->
-<header>
-    <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="logo">
-
-    <!-- Movement Identity -->
-    <div style="background: rgba(76, 175, 80, 0.08); border: 2px solid rgba(76, 175, 80, 0.3); border-radius: 10px; padding: 20px; margin: 20px auto 25px auto; max-width: 500px;">
-        <p style="font-size: 0.9em; color: #81c784; margin: 0 0 8px 0; text-align: center; font-style: italic;">
-            A 5D Cooperative Movement
-        </p>
-        <p style="font-size: 1.5em; color: #4caf50; margin: 0 0 5px 0; font-weight: bold; text-shadow: 0 0 20px rgba(76, 175, 80, 0.3); text-align: center;">
-            MABAH Movement
-        </p>
-        <p style="font-size: 1.05em; color: #c8e6c9; margin: 0; text-align: center; font-weight: 600;">
-            Making America Better And Healthier
-        </p>
+    <div class="orientation-panel">
+        <strong>FAQ: If you're skeptical, good. This section is for you.</strong>
+        <span>
+            Short answers with proof points. Every claim backed by data. No theory—just math.
+        </span>
     </div>
 
-    <!-- Crisis Box (auto‑updated) -->
-    <div id="headerCrisisBox" style="position: relative; background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(66, 133, 244, 0.15)); border: 2px solid rgba(76, 175, 80, 0.4); padding: 25px 30px; border-radius: 12px; max-width: 600px; margin: 30px auto;">
-        <button onclick="document.getElementById('headerCrisisBox').style.display='none';"
-            style="position: absolute; top: 10px; right: 10px; background: rgba(76, 175, 80, 0.2); border: 1px solid #4caf50; color: #4caf50; font-size: 1.2em; font-weight: bold; cursor: pointer; padding: 2px 8px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 4px; transition: all 0.3s; line-height: 1;">
-            ×
-        </button>
+    <div class="container">
+        <header>
+            <a href="index.html">
+                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Logo.png" 
+                     alt="PHIERS Logo" 
+                     class="logo">
+            </a>
+            <h1>❓ Frequently Asked Questions</h1>
+            <p class="subtitle">If you're skeptical, good. This section is for you.</p>
+        </header>
 
-        <p id="header-cta-title" style="font-size: 1.1em; color: white; margin: 0 0 15px 0; font-weight: bold; padding-right: 30px;"></p>
-        <p id="header-cta-subtitle" style="font-size: 0.95em; color: #81c784; margin: 0 0 15px 0; font-weight: bold;"></p>
-        <p id="header-cta-action" style="font-size: 1.1em; color: #4caf50; margin: 0 0 25px 0; font-weight: bold;"></p>
-
-        <a href="https://c.org/q9vrMCQZsY" target="_blank"
-            style="background: linear-gradient(135deg, #4caf50, #2e7d32); color: white; padding: 14px 32px; font-size: 1.1em; font-weight: bold; border: 2px solid #4caf50; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.3s;">
-            🔥 Join PHIERS Now
-        </a>
-    </div>
-</header>
-
-<!-- NAVIGATION (with Resources cluster added) -->
-<nav class="nav-menu" style="position: sticky; top: 0; z-index: 5000; background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(22, 33, 62, 0.95)); backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
-
-    <!-- Start Here -->
-    <div style="flex: 1; min-width: 200px; border-right: 1px solid rgba(76, 175, 80, 0.2); padding: 10px 15px;">
-        <div style="color: #4caf50; font-size: 0.75em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; text-align: center;">Start Here</div>
-        <a class="nav-item" href="index.html">🏠 Home</a>
-        <a class="nav-item" href="quickstart.html">🚀 Quick Start</a>
-    </div>
-
-    <!-- Understand -->
-    <div style="flex: 1; min-width: 250px; border-right: 1px solid rgba(76, 175, 80, 0.2); padding: 10px 15px;">
-        <div style="color: #4caf50; font-size: 0.75em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; text-align: center;">Understand</div>
-        <a class="nav-item" href="crisis.html">🚨 The Crisis</a>
-        <a class="nav-item" href="how-it-works.html">⚙️ How It Works</a>
-        <a class="nav-item" href="5d.html">🧩 5D Solutions</a>
-        <a class="nav-item" href="leverage.html">⚡ The Leverage</a>
-    </div>
-
-    <!-- Resources -->
-    <div style="flex: 1; min-width: 200px; border-right: 1px solid rgba(76, 175, 80, 0.2); padding: 10px 15px;">
-        <div style="color: #4caf50; font-size: 0.75em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; text-align: center;">Resources</div>
-        <a class="nav-item" href="resources.html">📚 Guides & White Papers</a>
-    </div>
-
-    <!-- Take Action -->
-    <div style="flex: 1; min-width: 200px; padding: 10px 15px;">
-        <div style="color: #4caf50; font-size: 0.75em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; text-align: center;">Take Action</div>
-        <a class="nav-item" href="action.html">✏️ Petition</a>
-        <a class="nav-item active" href="faq.html">❓ FAQ</a>
-    </div>
-
-</nav>
-
-<!-- MAIN CONTENT -->
-<main class="container">
-    <section class="content-block">
-        <div class="section-marker">FAQ</div>
-
-        <h2>❓ Frequently Asked Questions</h2>
-
-        <p style="color: #81c784; font-size: 1.05em; font-weight: bold; margin: 0 0 30px 0; line-height: 1.6; text-align: center; font-style: italic;">
-            If you're skeptical, good. This section is for you.
-        </p>
-
-        <!-- FAQ ITEMS (all preserved exactly) -->
-
-        <details>
-            <summary>How much does PHIERS healthcare cost?</summary>
-            <p><strong>$600/year</strong> for comprehensive telehealth access covering 80% of healthcare needs.</p>
-            <p><strong>Individual savings:</strong> $7,400–$23,400 annually</p>
-            <p><strong>Family savings:</strong> $18,000–$72,000+ annually</p>
-        </details>
-
-        <details>
-            <summary>Is this really proven to work?</summary>
-            <p><strong>Yes. Three independent validations:</strong></p>
-            <ul>
-                <li><strong><a href="https://costpluspills.com" target="_blank" style="color: #81c784; text-decoration: underline;">Mark Cuban's Cost Plus Drugs</a>:</strong> 7M customers, 80–90% savings, 200+ pharmacies operational</li>
-                <li><strong>ZORTT Elite Medical:</strong> Cooperative healthcare delivery model, operational 2+ years</li>
-                <li><strong><a href="https://www.ted.com/speakers/erica_chenoweth" target="_blank" style="color: #81c784; text-decoration: underline;">Erica Chenoweth (Harvard Kennedy School)</a>:</strong> 3.5% organized = guaranteed systemic change</li>
-            </ul>
-        </details>
-
-        <details>
-            <summary>What jobs get created?</summary>
-            <p><strong>Millions of AI-resistant, human-centered positions:</strong></p>
-            <ul>
-                <li>Case managers and health coordinators</li>
-                <li>Mental health counselors and therapists</li>
-                <li>Pharmacists and pharmacy technicians</li>
-                <li>Community health workers</li>
-                <li>Child and adult care workers</li>
-                <li>Skilled trades workers</li>
-                <li>Training coordinators and organizers</li>
-            </ul>
-            <p><strong>Why AI-resistant?</strong> These require human judgment, empathy, and relationship-building.</p>
-        </details>
-
-        <details>
-            <summary>How much money does PHIERS save?</summary>
-            <p><strong>$2.73 TRILLION annually in documented savings</strong></p>
-            <p>That's 136× more than Trump’s current healthcare plan.</p>
-            <p><strong>Breakdown:</strong> CMS $888B + ACA + Private insurance + Uninsured markets = $2.73T total</p>
-        </details>
-
-        <details>
-            <summary>Where does that money come from?</summary>
-            <p><strong>Replacing expensive systems with efficient ones:</strong></p>
-            <ul>
-                <li><strong>Traditional insurance:</strong> $8,500+/year per person</li>
-                <li><strong>PHIERS telehealth:</strong> $600/year per person</li>
-                <li><strong>Difference:</strong> $7,400+ per person × 120M+ switching = $888B+ freed annually</li>
-            </ul>
-            <p><strong>No tax increases. No new debt. Just better business models.</strong></p>
-        </details>
-
-        <details>
-            <summary>What does "3.5%" mean? Why is it so powerful?</summary>
-            <p><strong>Harvard research by Erica Chenoweth:</strong> Studied 323 political campaigns from 1900–2006.</p>
-            <p><strong>Finding:</strong> NO campaign where 3.5% of the population participated in sustained, organized action ever failed.</p>
-            <ul>
-                <li>3.5% of US population = 11.6M Americans</li>
-                <li>PHIERS target = 100M+ (9× the threshold)</li>
-                <li>Implication: Mathematically unstoppable</li>
-            </ul>
-        </details>
-
-        <details>
-            <summary>Can I get PHIERS healthcare now?</summary>
-            <p>Mark Cuban's Cost Plus is operational NOW with 80–90% prescription savings. PHIERS telehealth framework is ready for Congressional approval.</p>
-            <div style="background: #c8e6c9; border-left: 4px solid #16a34a; padding: 15px; margin: 15px 0; border-radius: 5px; color: #000;">
-                <strong>🚨 CRITICAL — Coverage for EVERYONE happens IMMEDIATELY:</strong><br><br>
-                Once Congress authorizes CMS to cover telehealth at $600/year, implementation can begin immediately. Scaling to 100M+ Americans within 6 months is mathematically certain.
+        <section>
+            <div class="faq-item">
+                <div class="faq-question">How much does PHIERS healthcare cost?</div>
+                <div class="faq-answer">
+                    <p><strong style="color: white;">$600/year</strong> for comprehensive telehealth access covering 80% of healthcare needs.</p>
+                    <p style="margin-top: 10px;"><strong style="color: #4caf50;">Individual savings:</strong> $7,400-$23,400 annually compared to traditional insurance</p>
+                    <p><strong style="color: #4caf50;">Family savings:</strong> $18,000-$72,000+ annually</p>
+                    <p style="margin-top: 15px;"><a href="how-it-works.html">→ See how it works</a></p>
+                </div>
             </div>
-        </details>
 
-        <details>
-            <summary>Why hasn't Congress approved this already?</summary>
-            <p><strong>Because pharmaceutical lobbies profit from the current system:</strong></p>
-            <ul>
-                <li>Pharma profits: $1.2T+ annually</li>
-                <li>Insurance profits: $800B+ annually</li>
-                <li>These industries lobby Congress to prevent change</li>
-                <li>PHIERS eliminates their extraction model</li>
-            </ul>
-            <p><strong>Congress chooses donors over constituents — until constituent pressure makes serving donors expensive.</strong></p>
-        </details>
+            <div class="faq-item">
+                <div class="faq-question">Is this really proven to work?</div>
+                <div class="faq-answer">
+                    <p><strong style="color: white;">Yes. Three independent validations:</strong></p>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li style="margin: 8px 0;"><strong>Mark Cuban's Cost Plus Drugs:</strong> 7M customers, 80-90% savings, 200+ pharmacies operational</li>
+                        <li style="margin: 8px 0;"><strong>ZORTT Elite Medical:</strong> Cooperative healthcare delivery model, operational 2+ years</li>
+                        <li style="margin: 8px 0;"><strong>Erica Chenoweth (Harvard Kennedy School):</strong> 3.5% organized = guaranteed systemic change</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><a href="leverage.html">→ See the proof</a></p>
+                </div>
+            </div>
 
-        <details>
-            <summary>What about SNAP & Medicaid work requirements?</summary>
-            <p>Work requirements are coming. People who can't meet them risk losing coverage.</p>
-            <p><strong>PHIERS transforms this crisis into an opportunity.</strong></p>
-            <p>We’re creating millions of AI-resistant jobs RIGHT NOW. Training is immediate. Participation builds the movement that solves healthcare, jobs, economy, and peace simultaneously.</p>
-            <p><strong>Need work for SNAP/Medicaid? We have it. Need training? Immediate. Need to be part of something that works? This is it.</strong></p>
-        </details>
+            <div class="faq-item">
+                <div class="faq-question">What jobs get created?</div>
+                <div class="faq-answer">
+                    <p><strong style="color: white;">Millions of AI-resistant, human-centered positions:</strong></p>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li style="margin: 8px 0;">Case managers and health coordinators</li>
+                        <li style="margin: 8px 0;">Mental health counselors and therapists</li>
+                        <li style="margin: 8px 0;">Pharmacists and pharmacy technicians</li>
+                        <li style="margin: 8px 0;">Community health workers</li>
+                        <li style="margin: 8px 0;">Child and adult care workers</li>
+                        <li style="margin: 8px 0;">Skilled trades workers: repair, maintenance, construction</li>
+                        <li style="margin: 8px 0;">Training coordinators and community organizers</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">Why AI-resistant?</strong> These require human judgment, empathy, and relationship-building that AI cannot replicate.</p>
+                    <p style="margin-top: 10px;"><a href="solutions.html">→ See 5D Solutions</a></p>
+                </div>
+            </div>
 
-        <div class="button-group" style="margin-top: 40px;">
-            <a href="action.html" class="btn btn-primary">✏️ Take Action</a>
-            <a href="resources.html" class="btn btn-secondary">📚 View Resources</a>
+            <div class="faq-item">
+                <div class="faq-question">How much money does PHIERS save?</div>
+                <div class="faq-answer">
+                    <p><strong style="color: white;">$2.73 TRILLION annually in documented savings</strong></p>
+                    <p style="margin-top: 10px;">That's 136x more than Trump's current healthcare plan.</p>
+                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">Breakdown:</strong> CMS $888B + ACA + Private insurance + Uninsured markets = $2.73T total</p>
+                    <p style="margin-top: 10px;"><a href="how-it-works.html">→ See the math breakdown</a></p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Where does that money come from?</div>
+                <div class="faq-answer">
+                    <p><strong style="color: white;">Replacing expensive systems with efficient ones:</strong></p>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li style="margin: 8px 0;"><strong>Traditional insurance:</strong> $8,500+/year per person (includes corporate profits + overhead)</li>
+                        <li style="margin: 8px 0;"><strong>PHIERS telehealth:</strong> $600/year per person (direct service, minimal overhead)</li>
+                        <li style="margin: 8px 0;"><strong>Difference:</strong> $7,400+ per person × 120M+ switching = $888B+ freed annually</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">No tax increases. No new debt. Just better business models.</strong></p>
+                    <p style="margin-top: 10px;"><a href="simple-math.html">→ See the cascade math</a></p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What does "3.5%" mean? Why is it so powerful?</div>
+                <div class="faq-answer">
+                    <p><strong style="color: white;">Harvard research by Erica Chenoweth:</strong> Studied 323 political campaigns from 1900-2006.</p>
+                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">Finding:</strong> NO campaign where 3.5% of the population participated in sustained, organized action ever failed.</p>
+                    <p style="margin-top: 15px;"><strong>The math:</strong></p>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li style="margin: 8px 0;">3.5% of US population = 11.6M Americans</li>
+                        <li style="margin: 8px 0;">We're targeting 100M+ = 9x the threshold</li>
+                        <li style="margin: 8px 0;">Implication: Mathematically unstoppable</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">Translation:</strong> Systemic change isn't just possible—it's guaranteed once we reach and sustain 3.5% organized participation.</p>
+                    <p style="margin-top: 10px;"><a href="leverage.html">→ See the leverage</a></p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I get PHIERS healthcare now?</div>
+                <div class="faq-answer">
+                    <p>Mark Cuban's Cost Plus is operational NOW with 80-90% prescription savings. PHIERS telehealth framework is ready for Congressional approval.</p>
+                    <p style="margin-top: 15px;"><strong style="color: #ff9800;">🚨 CRITICAL - Coverage for EVERYONE happens IMMEDIATELY:</strong></p>
+                    <p style="margin-top: 10px;">Once Congress authorizes CMS to cover telehealth at $600/year, implementation can begin immediately. Scale to 100M+ Americans within 6 months is mathematically certain.</p>
+                    <p style="margin-top: 15px;"><a href="action.html">→ Sign the petition to force Congressional action</a></p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why hasn't Congress approved this already?</div>
+                <div class="faq-answer">
+                    <p><strong style="color: white;">Because pharmaceutical lobbies profit from the current system:</strong></p>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li style="margin: 8px 0;">Pharmaceutical industry profits: $1.2+ trillion annually</li>
+                        <li style="margin: 8px 0;">Insurance company profits: $800B+ annually</li>
+                        <li style="margin: 8px 0;">These industries lobby Congress to prevent change</li>
+                        <li style="margin: 8px 0;">PHIERS eliminates their profit extraction model</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">Congress chooses donors over constituents—until constituent pressure makes serving donors expensive.</strong></p>
+                    <p style="margin-top: 10px;"><a href="leverage.html">→ See how we force them</a></p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What about SNAP & Medicaid work requirements?</div>
+                <div class="faq-answer">
+                    <p>Work requirements are coming. Congress is pushing SNAP and Medicaid work requirements—people who can't meet them risk losing coverage. That creates hardship.</p>
+                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">But PHIERS transforms this crisis into an OPPORTUNITY.</strong></p>
+                    <p style="margin-top: 10px;">We're creating millions of AI-resistant jobs RIGHT NOW. We're providing immediate training on how to be involved in building the community-enabled solution. You're not just getting a job—you're becoming part of the movement that solves healthcare, jobs, economy, and peace simultaneously.</p>
+                    <p style="margin-top: 15px;"><strong style="color: white;">Need work for SNAP/Medicaid? We have it. Need training? Immediate. Need to be part of something that actually works? This is it.</strong></p>
+                    <p style="margin-top: 10px;"><a href="solutions.html">→ See all 5 dimensions</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section style="text-align: center; margin: 50px 0;">
+            <h2>Still Have Questions?</h2>
+            <p style="font-size: 1.1em; margin: 20px 0;">
+                Join Discord or email us directly. We answer every question.
+            </p>
+            
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
+                <a href="https://discord.gg/narhDKJY" target="_blank" class="btn">💬 Join Discord</a>
+                <a href="mailto:info@phiers.org" class="btn btn-secondary">📧 Email Us</a>
+                <a href="action.html" class="btn btn-secondary">✏️ Sign Petition</a>
+            </div>
+        </section>
+
+        <div class="nav-buttons">
+            <a href="action.html" class="btn btn-secondary">← Back: Take Action</a>
+            <a href="resources.html" class="btn btn-secondary">Next: Resources →</a>
         </div>
 
-    </section>
-</main>
-
-<!-- FOOTER -->
-<footer style="text-align: center; margin-top: 60px; padding: 40px 20px; border-top: 1px solid rgba(76, 175, 80, 0.2);">
-
-    <p style="color: #a5d6a7; font-size: 0.9em; margin: 0;">
-        Built by public health analysts, policy researchers, and community organizers
-    </p>
-
-    <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
-
-    <p style="margin-top: 10px;">
-        Will Price | Chief Solutions Architect |
-        <a href="mailto:[email protected]" style="color: #81c784; text-decoration: underline;">Email</a> |
-        <a href="tel:+19163068967" style="color: #81c784; text-decoration: underline;">916‑306‑8967</a>
-    </p>
-
-    <p style="margin-top: 20px;">
-        <a href="https://c.org/q9vrMCQZsY" target="_blank" style="color: #81c784; text-decoration: underline;">Sign Petition</a> |
-        <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank" style="color: #81c784; text-decoration: underline;">Fill Survey</a> |
-        <a href="Donate.html" target="_blank" style="color: #81c784; text-decoration: underline;">Fund the Cascade</a>
-    </p>
-
-    <p style="margin-top: 10px;">
-        <a href="about.html" style="color: #81c784; text-decoration: underline;">About Us</a> |
-        <a href="https://phiersale.github.io/Join_the_Team/" target="_blank" style="color: #81c784; text-decoration: underline;">Join Team</a> |
-        <a href="https://phiersale.github.io/MABAH-Movement/" target="_blank" style="color: #81c784; text-decoration: underline;">MABAH Movement</a>
-    </p>
-
-    <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(66, 133, 244, 0.1)); border: 2px solid #4caf50; padding: 25px; margin: 30px 0; border-radius: 10px; text-align: center;">
-        <p style="color: #4caf50; font
+        <footer>
+            <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
+            <p>Will Price | Chief Solutions Architect</p>
+            <p>Phone: 916-306-8967 | Email: info@phiers.org</p>
+            
+            <p style="margin-top: 20px;">
+                <a href="https://c.org/q9vrMCQZsY" target="_blank">Sign Petition</a> | 
+                <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank">Fill Survey</a> | 
+                <a href="Donate.html">Fund the Cascade</a> | 
+                <a href="https://discord.gg/narhDKJY" target="_blank">Join Discord</a>
+            </p>
+            
+            <p style="margin-top: 15px;">
+                <a href="about.html">About Us</a> | 
+                <a href="index.html">Home</a>
+            </p>
+            
+            <p style="margin-top: 20px;">
+                © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+            </p>
+            <p style="font-size: 0.85em; color: #a5d6a7;">
+                Accessibility | Privacy Policy
+            </p>
+            <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(76, 175, 80, 0.2); color: #4caf50; font-size: 0.85em;">
+                <strong>File:</strong> faq.html v1.0 | <strong>Created:</strong> 2026-02-05 @ 1:20 PM PST | <strong>Source:</strong> phiers.org "FAQ" section
+            </p>
+            <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
+                If you see an error in the math or policy, tell us — we'll fix it.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
