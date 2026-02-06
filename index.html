@@ -412,13 +412,11 @@
             background: rgba(0, 0, 0, 0.85);
             z-index: 9999;
             overflow-y: auto;
-            padding: 20px;
+            padding: 20px 10px;
         }
 
         .modal-overlay.show {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
         }
 
         .modal-content {
@@ -427,6 +425,7 @@
             border-radius: 12px;
             max-width: 700px;
             width: 100%;
+            margin: 20px auto;
             padding: 40px 30px;
             position: relative;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
@@ -607,6 +606,42 @@
                 min-width: 100%;
             }
         }
+
+        /* CLOSEABLE TIMESTAMP */
+        .closeable-timestamp {
+            position: relative;
+            display: inline-block;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            padding: 8px 40px 8px 15px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        .closeable-timestamp .close-x {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .closeable-timestamp .close-x:hover {
+            background: rgba(239, 68, 68, 0.2);
+            transform: translateY(-50%) rotate(90deg);
+        }
     </style>
 </head>
 <body>
@@ -622,6 +657,13 @@
             <h2 class="modal-title">Congress Refuses to Do Their Jobs.</h2>
             <h3 class="modal-subtitle">We're Forcing Them — Or Replacing Them.</h3>
             <p class="modal-tagline">This isn't a protest. It's a cooperative intelligence project.</p>
+            
+            <!-- POWER CONCEDES NOTHING IMAGE -->
+            <div style="text-align: center; margin: 25px 0;">
+                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/LEVERAGE_Pwr_of_the_People.png" 
+                     alt="Power Concedes Nothing Without a Demand That Has Teeth"
+                     style="max-width: 80%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
+            </div>
             
             <div class="modal-video">
                 <iframe width="560" height="315" 
@@ -698,7 +740,10 @@
                  alt="PHIERS Logo" 
                  class="logo">
             
-            <p style="font-size: 0.85em; color: #81c784; margin-bottom: 25px;">Last Updated: February 6, 2026</p>
+            <div class="closeable-timestamp" id="timestampNotice">
+                <span style="font-size: 0.85em; color: #81c784;">Last Updated: February 6, 2026</span>
+                <button class="close-x" id="closeTimestamp" aria-label="Close timestamp">&times;</button>
+            </div>
             
             <h1 class="hero-title">MABAH Movement</h1>
             <p class="hero-subtitle">Making America Better And Healthier</p>
@@ -915,6 +960,25 @@
                 closeWelcomeModal();
             }
         });
+
+        // Closeable Timestamp
+        const timestampNotice = document.getElementById('timestampNotice');
+        const closeTimestampBtn = document.getElementById('closeTimestamp');
+        
+        if (closeTimestampBtn && timestampNotice) {
+            if (sessionStorage.getItem('timestampDismissed')) {
+                timestampNotice.style.display = 'none';
+            }
+            
+            closeTimestampBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                timestampNotice.style.animation = 'fadeOut 0.3s ease-out';
+                setTimeout(() => {
+                    timestampNotice.style.display = 'none';
+                    sessionStorage.setItem('timestampDismissed', 'true');
+                }, 300);
+            });
+        }
     </script>
 
     <script src="phiers-enhancements.js"></script>
