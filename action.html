@@ -158,14 +158,57 @@
             .logo { height: 100px; }
             .graphic-container img { max-width: 80%; }
         }
+    
+        .orientation-panel {
+            position: relative;
+        }
+        
+        .orientation-panel-content {
+            position: relative;
+            padding-right: 40px;
+        }
+        
+        .orientation-panel .close-btn {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .orientation-panel .close-btn:hover {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+            transform: translateY(-50%) rotate(90deg);
+        }
+        
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
     </style>
 </head>
 <body>
     <div class="orientation-panel">
-        <strong>Take Action: This is how you participate. Four actions. Exponential impact.</strong>
+        <div class="orientation-panel-content">
+            <button class="close-btn" id="closeOrientationPanel" aria-label="Close">&times;</button>
+            <strong>Take Action: This is how you participate. Four actions. Exponential impact.</strong>
         <span>
             Sign. Share. Fund. Join. Every action multiplies the movement. Every signature activates the cascade.
         </span>
+        </div>
     </div>
 
     <div class="container">
@@ -198,7 +241,7 @@
             
             <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚖️ Why Change Required</a>
             
-            <a href="solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 What We Demand</a>
+            <a href="5D_Solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 What We Demand</a>
             
             <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">✏️ Petition</a>
             
@@ -313,44 +356,40 @@
         </section>
 
         <div class="nav-buttons">
-            <a href="solutions.html" class="btn btn-secondary">← Back: 5D Solutions</a>
+            <a href="5D_Solutions.html" class="btn btn-secondary">← Back: 5D Solutions</a>
             <a href="faq.html" class="btn btn-secondary">Next: FAQ →</a>
+            <!-- HOME BUTTON -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="index.html" style="background: linear-gradient(135deg, #4caf50, #45a049); color: white; padding: 12px 30px; font-size: 1em; font-weight: bold; text-decoration: none; border-radius: 8px; display: inline-block;">← Back to Start Here</a>
         </div>
-
-        <footer>
-            <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
-            <p>Will Price | Chief Solutions Architect</p>
-            <p>Phone: 916-306-8967 | Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d0b9beb6bf90a0b8b9b5a2a3febfa2b7">info@phiers.org</a></p>
-            
-            <p style="margin-top: 20px;">
-                <a href="https://c.org/q9vrMCQZsY" target="_blank">Sign Petition</a> | 
-                <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank">Fill Survey</a> | 
-                <a href="Donate.html">Fund the Cascade</a> | 
-                <a href="https://discord.gg/narhDKJY" target="_blank">XXX_REMOVED_XXX
-            </p>
-            
-            <p style="margin-top: 15px;">
-                <a href="about.html">About Us</a> | 
-                <a href="index.html">Home</a> | 
-                <a href="faq.html">FAQ</a>
-            </p>
-            
-            <p style="margin-top: 20px;">
-                © PHIERS.org — People's Health Insurance Economic Recovery Solutions
-            </p>
-            <p style="font-size: 0.85em; color: #a5d6a7;">
-                Accessibility | Privacy Policy
-            </p>
-            <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(76, 175, 80, 0.2); color: #4caf50; font-size: 0.85em;">
-                <strong>File:</strong> action.html v1.0 | <strong>Created:</strong> 2026-02-05 @ 1:15 PM PST | <strong>Source:</strong> phiers.org "Take Action" section
-            </p>
-            <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
-                If you see an error in the math or policy, tell us — we'll                If you see an error in the math or policy, tell us — we'll fix it.
-            </p>
-        </footer>
     </div>
 
-    <!-- PHIERS Universal Enhancements Script -->
-    <script src="phiers-enhancements.js"></script>
-</body>
-</html>
+        <footer>
+        <h3>PHIERS Movement</h3>
+        <p style="color: #c8e6c9; margin-bottom: 30px;">Building a healthier, more stable, more democratic America.</p>
+        
+        <div style="margin: 30px 0;">
+            <p style="color: #4caf50; font-weight: bold; margin-bottom: 15px;">Navigation</p>
+            <a href="index.html">Start Here</a> | 
+            <a href="crisis.html">What's Broken</a> | 
+            <a href="why-change-required.html">Why Change Required</a> | 
+            <a href="5D_Solutions.html">5D Solutions</a> | 
+            <a href="5D_Solutions.html#what-we-demand">What We Demand</a> | 
+            <a href="action.html">Petition</a> | 
+            <a href="simple-math.html">Receipts</a> | 
+            <a href="faq.html">FAQ</a>
+        </div>
+        
+        <div style="margin: 30px 0;">
+            <p style="color: #4caf50; font-weight: bold; margin-bottom: 15px;">Organization</p>
+            <a href="about.html">About</a> | 
+            <a href="mailto:info@phiers.org">Contact</a> | 
+            <a href="#">Privacy</a> | 
+            <a href="#">Accessibility</a>
+        </div>
+        
+        <p style="margin-top: 30px; color: #81c784;">
+            © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+        </p>
+    </footer>
+  

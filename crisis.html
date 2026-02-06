@@ -288,15 +288,58 @@
             .logo { height: 100px; }
             .cascade-comparison { grid-template-columns: 1fr; }
         }
+    
+        .orientation-panel {
+            position: relative;
+        }
+        
+        .orientation-panel-content {
+            position: relative;
+            padding-right: 40px;
+        }
+        
+        .orientation-panel .close-btn {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .orientation-panel .close-btn:hover {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+            transform: translateY(-50%) rotate(90deg);
+        }
+        
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
     </style>
 </head>
 <body>
     <div class="orientation-panel">
-        <strong>The Crisis: You're not crazy. This is a preventable disaster with a mechanical fix.</strong>
+        <div class="orientation-panel-content">
+            <button class="close-btn" id="closeOrientationPanel" aria-label="Close">&times;</button>
+            <strong>The Crisis: You're not crazy. This is a preventable disaster with a mechanical fix.</strong>
         <span>
             22 million lost coverage Dec 31. Congress rejected both healthcare plans. 
             But we have the solution — if enough people demand it.
         </span>
+        </div>
     </div>
 
     <div class="container">
@@ -599,7 +642,7 @@
         </div>
     </div>
 
-    <footer>
+        <footer>
         <h3>PHIERS Movement</h3>
         <p style="color: #c8e6c9; margin-bottom: 30px;">Building a healthier, more stable, more democratic America.</p>
         
@@ -609,6 +652,7 @@
             <a href="crisis.html">What's Broken</a> | 
             <a href="why-change-required.html">Why Change Required</a> | 
             <a href="5D_Solutions.html">5D Solutions</a> | 
+            <a href="5D_Solutions.html#what-we-demand">What We Demand</a> | 
             <a href="action.html">Petition</a> | 
             <a href="simple-math.html">Receipts</a> | 
             <a href="faq.html">FAQ</a>
@@ -626,6 +670,4 @@
             © PHIERS.org — People's Health Insurance Economic Recovery Solutions
         </p>
     </footer>
-    </div>
-
-    <!-- PHIERS Universal En
+  
