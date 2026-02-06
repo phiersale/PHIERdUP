@@ -1,49 +1,29 @@
 <!DOCTYPE html>
-<!-- 
-═══════════════════════════════════════════════════════════════
-PHIERS A+++ TRANSFORMATION
-Version: 2.0 (A+++ Structure)
-Created: February 6, 2026 @ 9:00 AM PST
-Session: A+++ 7-Step Movement Path Implementation
-Changes: Complete site restructure, 7-step nav, 9 new subpages, 
-         simplified Start Here, added Why Change Required, 
-         transformed What We Demand with 5 demand cards
-Status: READY FOR DEPLOYMENT
-═══════════════════════════════════════════════════════════════
--->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark light">
-    <title>FAQ - PHIERS</title>
+    <title>FAQ - PHIERS Movement</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             color: #e0e0e0;
-            line-height: 1.6;
+            line-height: 1.8;
             min-height: 100vh;
         }
 
-        .orientation-panel {
-            background: #0f172a;
-            color: #e5e7eb;
-            padding: 14px 18px;
-            border-bottom: 1px solid #1e293b;
-            font-size: 0.95rem;
-            position: sticky;
-            top: 0;
-            z-index: 999;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        
-        .orientation-panel strong { color: #fff; }
-        .orientation-panel span { display: block; margin-top: 4px; color: #cbd5f5; }
-
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
         
         header {
             text-align: center;
@@ -54,122 +34,133 @@ Status: READY FOR DEPLOYMENT
             border: 2px solid rgba(76, 175, 80, 0.3);
         }
         
-        .logo { height: 120px; width: auto; margin: 0 auto 20px auto; display: block; }
+        .logo {
+            height: 150px;
+            width: auto;
+            margin: 20px auto;
+            display: block;
+        }
 
         h1 {
             color: #4caf50;
             font-size: 2.2em;
-            margin-bottom: 15px;
+            margin: 20px 0;
             text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
         }
 
-        h2 { color: #4caf50; font-size: 1.6em; margin: 40px 0 20px 0; }
-        .subtitle { font-size: 1.1em; color: #81c784; margin-bottom: 15px; }
-        p { color: #c8e6c9; margin: 15px 0; line-height: 1.8; }
+        h2 {
+            color: #4caf50;
+            font-size: 1.5em;
+            margin: 35px 0 15px 0;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #c8e6c9;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #c8e6c9;
+            font-size: 1.05em;
+        }
+
+        section {
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #4caf50;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
 
         .faq-item {
-            background: rgba(76, 175, 80, 0.05);
-            border-left: 4px solid #4caf50;
+            background: rgba(76, 175, 80, 0.1);
+            border: 2px solid rgba(76, 175, 80, 0.3);
             padding: 25px;
-            margin: 20px 0;
+            margin: 25px 0;
             border-radius: 8px;
-        }
-
-        .faq-question {
-            color: #4caf50;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .faq-answer {
-            color: #c8e6c9;
-            line-height: 1.8;
-        }
-
-        .faq-answer a {
-            color: #81c784;
-            text-decoration: underline;
-        }
-
-        .faq-answer a:hover {
-            color: #4caf50;
         }
 
         .btn {
-            background: linear-gradient(135deg, #4caf50, #2e7d32);
+            background: linear-gradient(135deg, #2196f3, #1976d2);
             color: white;
-            padding: 14px 32px;
+            padding: 16px 40px;
             font-size: 1.1em;
             font-weight: bold;
-            border: 2px solid #4caf50;
-            border-radius: 8px;
-            cursor: pointer;
             text-decoration: none;
+            border-radius: 8px;
             display: inline-block;
+            margin: 20px 10px;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
         }
 
         .btn:hover {
-            background: linear-gradient(135deg, #66bb6a, #388e3c);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.6);
         }
 
-        .btn-secondary {
-            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1));
-            border: 2px solid #4caf50;
+        .home-btn {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            color: white;
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 30px auto;
+            text-align: center;
         }
-
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.2));
-        }
-
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            margin: 40px 0;
-            padding-top: 30px;
-            border-top: 2px solid rgba(76, 175, 80, 0.3);
-        }
-
-        .nav-buttons .btn { flex: 1; text-align: center; }
 
         footer {
-            text-align: center;
-            padding: 30px 20px;
+            background: rgba(15, 23, 42, 0.9);
+            padding: 40px 20px;
+            margin-top: 60px;
             border-top: 2px solid rgba(76, 175, 80, 0.3);
-            color: #81c784;
-            margin-top: 40px;
-            font-size: 0.9em;
+            text-align: center;
         }
 
-        footer p { margin: 10px 0; }
-        footer a { color: #81c784; text-decoration: underline; }
-        footer a:hover { color: #4caf50; }
+        footer h3 {
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: #81c784;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #4caf50;
+        }
+
+        ul {
+            margin: 20px 0 20px 40px;
+            color: #c8e6c9;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        strong {
+            color: white;
+        }
 
         @media (max-width: 768px) {
             h1 { font-size: 1.8em; }
-            h2 { font-size: 1.4em; }
+            h2 { font-size: 1.3em; }
             .logo { height: 100px; }
         }
     </style>
 </head>
 <body>
-    <!-- VERSION BADGE (visible on page) -->
-    <div style="position: fixed; top: 10px; right: 10px; background: rgba(76, 175, 80, 0.9); color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85em; font-weight: bold; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-family: monospace;">
-        v2.0 | Feb 6, 2026
-    </div>
-
-    <div class="orientation-panel">
-        <strong>FAQ: If you're skeptical, good. This section is for you.</strong>
-        <span>
-            Short answers with proof points. Every claim backed by data. No theory—just math.
-        </span>
-    </div>
-
     <div class="container">
         <header>
             <a href="index.html">
@@ -177,11 +168,11 @@ Status: READY FOR DEPLOYMENT
                      alt="PHIERS Logo" 
                      class="logo">
             </a>
-            <h1>❓ Frequently Asked Questions</h1>
-            <p class="subtitle">If you're skeptical, good. This section is for you.</p>
+            <h1>FAQ</h1>
+            <p class="subtitle">Honest answers. Clear explanations. No political jargon.</p>
         </header>
 
-<!-- NAVIGATION BUTTONS (Under Hero) -->
+        <!-- NAVIGATION -->
         <nav style="
             background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
             border: 2px solid rgba(76, 175, 80, 0.3);
@@ -200,171 +191,163 @@ Status: READY FOR DEPLOYMENT
             
             <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚖️ Why Change Required</a>
             
-            <a href="solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 What We Demand</a>
+            <a href="5D_Solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 5D Solutions</a>
             
             <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">✏️ Petition</a>
             
             <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📊 Receipts</a>
             
-            <a href="faq.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">❓ FAQ</a>
+            <a href="faq.html" style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(129, 199, 132, 0.3)); color: #4caf50; padding: 10px 20px; border: 2px solid #4caf50; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em;">❓ FAQ</a>
         </nav>
 
-
         <section>
-            <div class="faq-item">
-                <div class="faq-question">How much does PHIERS healthcare cost?</div>
-                <div class="faq-answer">
-                    <p><strong style="color: white;">$600/year</strong> for comprehensive telehealth access covering 80% of healthcare needs.</p>
-                    <p style="margin-top: 10px;"><strong style="color: #4caf50;">Individual savings:</strong> $7,400-$23,400 annually compared to traditional insurance</p>
-                    <p><strong style="color: #4caf50;">Family savings:</strong> $18,000-$72,000+ annually</p>
-                    <p style="margin-top: 15px;"><a href="how-it-works.html">→ See how it works</a></p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Is this really proven to work?</div>
-                <div class="faq-answer">
-                    <p><strong style="color: white;">Yes. Three independent validations:</strong></p>
-                    <ul style="padding-left: 20px; margin-top: 10px;">
-                        <li style="margin: 8px 0;"><strong>Mark Cuban's Cost Plus Drugs:</strong> 7M customers, 80-90% savings, 200+ pharmacies operational</li>
-                        <li style="margin: 8px 0;"><strong>ZORTT Elite Medical:</strong> Cooperative healthcare delivery model, operational 2+ years</li>
-                        <li style="margin: 8px 0;"><strong>Erica Chenoweth (Harvard Kennedy School):</strong> 3.5% organized = guaranteed systemic change</li>
-                    </ul>
-                    <p style="margin-top: 15px;"><a href="leverage.html">→ See the proof</a></p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What jobs get created?</div>
-                <div class="faq-answer">
-                    <p><strong style="color: white;">Millions of AI-resistant, human-centered positions:</strong></p>
-                    <ul style="padding-left: 20px; margin-top: 10px;">
-                        <li style="margin: 8px 0;">Case managers and health coordinators</li>
-                        <li style="margin: 8px 0;">Mental health counselors and therapists</li>
-                        <li style="margin: 8px 0;">Pharmacists and pharmacy technicians</li>
-                        <li style="margin: 8px 0;">Community health workers</li>
-                        <li style="margin: 8px 0;">Child and adult care workers</li>
-                        <li style="margin: 8px 0;">Skilled trades workers: repair, maintenance, construction</li>
-                        <li style="margin: 8px 0;">Training coordinators and community organizers</li>
-                    </ul>
-                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">Why AI-resistant?</strong> These require human judgment, empathy, and relationship-building that AI cannot replicate.</p>
-                    <p style="margin-top: 10px;"><a href="solutions.html">→ See 5D Solutions</a></p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How much money does PHIERS save?</div>
-                <div class="faq-answer">
-                    <p><strong style="color: white;">$2.73 TRILLION annually in documented savings</strong></p>
-                    <p style="margin-top: 10px;">That's 136x more than Trump's current healthcare plan.</p>
-                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">Breakdown:</strong> CMS $888B + ACA + Private insurance + Uninsured markets = $2.73T total</p>
-                    <p style="margin-top: 10px;"><a href="how-it-works.html">→ See the math breakdown</a></p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Where does that money come from?</div>
-                <div class="faq-answer">
-                    <p><strong style="color: white;">Replacing expensive systems with efficient ones:</strong></p>
-                    <ul style="padding-left: 20px; margin-top: 10px;">
-                        <li style="margin: 8px 0;"><strong>Traditional insurance:</strong> $8,500+/year per person (includes corporate profits + overhead)</li>
-                        <li style="margin: 8px 0;"><strong>PHIERS telehealth:</strong> $600/year per person (direct service, minimal overhead)</li>
-                        <li style="margin: 8px 0;"><strong>Difference:</strong> $7,400+ per person × 120M+ switching = $888B+ freed annually</li>
-                    </ul>
-                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">No tax increases. No new debt. Just better business models.</strong></p>
-                    <p style="margin-top: 10px;"><a href="simple-math.html">→ See the cascade math</a></p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What does "3.5%" mean? Why is it so powerful?</div>
-                <div class="faq-answer">
-                    <p><strong style="color: white;">Harvard research by Erica Chenoweth:</strong> Studied 323 political campaigns from 1900-2006.</p>
-                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">Finding:</strong> NO campaign where 3.5% of the population participated in sustained, organized action ever failed.</p>
-                    <p style="margin-top: 15px;"><strong>The math:</strong></p>
-                    <ul style="padding-left: 20px; margin-top: 10px;">
-                        <li style="margin: 8px 0;">3.5% of US population = 11.6M Americans</li>
-                        <li style="margin: 8px 0;">We're targeting 100M+ = 9x the threshold</li>
-                        <li style="margin: 8px 0;">Implication: Mathematically unstoppable</li>
-                    </ul>
-                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">Translation:</strong> Systemic change isn't just possible—it's guaranteed once we reach and sustain 3.5% organized participation.</p>
-                    <p style="margin-top: 10px;"><a href="leverage.html">→ See the leverage</a></p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Can I get PHIERS healthcare now?</div>
-                <div class="faq-answer">
-                    <p>Mark Cuban's Cost Plus is operational NOW with 80-90% prescription savings. PHIERS telehealth framework is ready for Congressional approval.</p>
-                    <p style="margin-top: 15px;"><strong style="color: #ff9800;">🚨 CRITICAL - Coverage for EVERYONE happens IMMEDIATELY:</strong></p>
-                    <p style="margin-top: 10px;">Once Congress authorizes CMS to cover telehealth at $600/year, implementation can begin immediately. Scale to 100M+ Americans within 6 months is mathematically certain.</p>
-                    <p style="margin-top: 15px;"><a href="action.html">→ Sign the petition to force Congressional action</a></p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Why hasn't Congress approved this already?</div>
-                <div class="faq-answer">
-                    <p><strong style="color: white;">Because pharmaceutical lobbies profit from the current system:</strong></p>
-                    <ul style="padding-left: 20px; margin-top: 10px;">
-                        <li style="margin: 8px 0;">Pharmaceutical industry profits: $1.2+ trillion annually</li>
-                        <li style="margin: 8px 0;">Insurance company profits: $800B+ annually</li>
-                        <li style="margin: 8px 0;">These industries lobby Congress to prevent change</li>
-                        <li style="margin: 8px 0;">PHIERS eliminates their profit extraction model</li>
-                    </ul>
-                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">Congress chooses donors over constituents—until constituent pressure makes serving donors expensive.</strong></p>
-                    <p style="margin-top: 10px;"><a href="leverage.html">→ See how we force them</a></p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What about SNAP & Medicaid work requirements?</div>
-                <div class="faq-answer">
-                    <p>Work requirements are coming. Congress is pushing SNAP and Medicaid work requirements—people who can't meet them risk losing coverage. That creates hardship.</p>
-                    <p style="margin-top: 15px;"><strong style="color: #4caf50;">But PHIERS transforms this crisis into an OPPORTUNITY.</strong></p>
-                    <p style="margin-top: 10px;">We're creating millions of AI-resistant jobs RIGHT NOW. We're providing immediate training on how to be involved in building the community-enabled solution. You're not just getting a job—you're becoming part of the movement that solves healthcare, jobs, economy, and peace simultaneously.</p>
-                    <p style="margin-top: 15px;"><strong style="color: white;">Need work for SNAP/Medicaid? We have it. Need training? Immediate. Need to be part of something that actually works? This is it.</strong></p>
-                    <p style="margin-top: 10px;"><a href="solutions.html">→ See all 5 dimensions</a></p>
-                </div>
-            </div>
+            <p style="font-size: 1.1em; color: white;">People deserve straight answers — not spin, not talking points, not bureaucratic fog. This movement is built on clarity, transparency, and math, so here are the answers to the most common questions we hear.</p>
         </section>
 
-        <section style="text-align: center; margin: 50px 0;">
-            <h2>Still Have Questions?</h2>
-            <p style="font-size: 1.1em; margin: 20px 0;">
-                Join Discord or email us directly. We answer every question.
-            </p>
-            
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
-                <a href="https://discord.gg/narhDKJY" target="_blank" class="btn">💬 Join Discord</a>
-                <a href="/cdn-cgi/l/email-protection#d8b1b6beb798a8b0b1bdaaabf6b7aabf" class="btn btn-secondary">📧 Email Us</a>
-                <a href="action.html" class="btn btn-secondary">✏️ Sign Petition</a>
-            </div>
-        </section>
-
-        <div class="nav-buttons">
-            <a href="action.html" class="btn btn-secondary">← Back: Take Action</a>
-            <a href="resources.html" class="btn btn-secondary">Next: Resources →</a>
+        <div class="faq-item">
+            <h2>1. Is this realistic?</h2>
+            <p><strong>Yes — because it's based on math, not hope.</strong></p>
+            <ul>
+                <li>Telehealth is already cheaper and faster.</li>
+                <li>Universal healthcare already saves $2.73T.</li>
+                <li>UBI is funded by redirecting waste, not raising taxes.</li>
+                <li>Job creation is a function of stability.</li>
+                <li>Democracy is protected by economic security.</li>
+            </ul>
+            <p style="color: #4caf50; font-weight: bold; margin-top: 15px;">This isn't a wishlist. It's a systems upgrade.</p>
         </div>
 
-        <footer>
-            <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 15px;">
-                PHIERS Movement | Make America Better And Healthier (MABAH)
-            </p>
-            
-            <p style="margin: 15px 0;">
-                <strong>Contact:</strong> Will Price | <a href="/cdn-cgi/l/email-protection#462f28202906362e2f23343568293421"><span class="__cf_email__" data-cfemail="c2abaca4ad82b2aaaba7b0b1ecadb0a5">[email&#160;protected]</span></a> | 916-306-8967
-            </p>
-            
-            <p style="margin: 20px 0;">
-                <a href="action.html" style="color: #4caf50; font-weight: bold; font-size: 1.05em;">✏️ Sign the Petition</a>
-            </p>
-            
-            <p style="margin-top: 20px;">
-                © PHIERS.org — People's Health Insurance Economic Recovery Solutions
-            </p>
-            <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
-                If you see an error in the math or policy, tell us — we'll fix it.
-            </p>
-        </footer>
-  
+        <div class="faq-item">
+            <h2>2. Why telehealth first?</h2>
+            <p><strong>Because it's the first domino.</strong></p>
+            <p>Telehealth is: 10x cheaper, instantly scalable, already working, already nationwide, and already saving lives.</p>
+            <p style="color: #4caf50; font-weight: bold; margin-top: 15px;">Once telehealth is authorized, the entire 5D cascade becomes possible.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>3. Why 3.5%?</h2>
+            <p>Harvard research shows that when 3.5% of a population organizes, systemic change becomes: guaranteed, peaceful, non‑negotiable, and inevitable.</p>
+            <p style="margin-top: 15px;"><strong>For the U.S., that's 11.6 million people.</strong></p>
+            <p style="color: #4caf50; font-weight: bold; margin-top: 15px;">That's why the petition matters.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>4. Why not wait for Congress to act on its own?</h2>
+            <p><strong>Because they won't.</strong></p>
+            <p>Congress has the authority, the money, the infrastructure, and the power — but not the incentive.</p>
+            <p style="color: #4caf50; font-weight: bold; margin-top: 15px;">3.5% gives them the incentive.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>5. Is this partisan?</h2>
+            <p><strong>No.</strong></p>
+            <p>Healthcare, stability, jobs, and democracy are not partisan issues. They're human issues.</p>
+            <p style="margin-top: 15px;">This movement includes: conservatives, liberals, independents, libertarians, apolitical Americans, and people who've never voted.</p>
+            <p style="color: #4caf50; font-weight: bold; margin-top: 15px;">The only requirement is wanting a country that works.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>6. Is this socialism?</h2>
+            <p><strong>No.</strong></p>
+            <p>This is: market‑efficient, cost‑reducing, waste‑eliminating, innovation‑friendly, and freedom‑expanding.</p>
+            <p style="margin-top: 15px;">We're not nationalizing anything. We're redirecting waste and unlocking efficiency.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>7. How does this get funded?</h2>
+            <p><strong>Through the $2.73 trillion we're already wasting.</strong></p>
+            <p>We're not asking for new taxes, new agencies, or new bureaucracy.</p>
+            <p style="margin-top: 15px;">We're asking Congress to stop burning money and redirect it into: universal healthcare, UBI, job creation, and democratic stability.</p>
+            <p style="color: #4caf50; font-weight: bold; margin-top: 15px;">This is minimum wasted motion.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>8. How does this create jobs?</h2>
+            <p><strong>Stability creates capacity. Capacity creates opportunity.</strong></p>
+            <p>When people have healthcare, income stability, and breathing room, they can: retrain, relocate, start businesses, fill essential roles, and build new industries.</p>
+            <p style="color: #4caf50; font-weight: bold; margin-top: 15px;">This is how we create millions of AI‑resistant jobs.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>9. How does this protect democracy?</h2>
+            <p>Authoritarianism thrives in chaos, fear, scarcity, and instability.</p>
+            <p style="margin-top: 15px;">It collapses when people are healthy, housed, fed, stable, and secure.</p>
+            <p style="color: #4caf50; font-weight: bold; margin-top: 15px;">Economic stability is political stability.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>10. What happens after I sign?</h2>
+            <p><strong>Three things:</strong></p>
+            <ol style="margin-left: 40px;">
+                <li>Your signature counts toward the 3.5% threshold.</li>
+                <li>Your district receives targeted pressure.</li>
+                <li>Congress loses the ability to ignore the people.</li>
+            </ol>
+            <p style="color: #4caf50; font-weight: bold; margin-top: 15px;">This is how peaceful change happens.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>11. What if Congress still refuses?</h2>
+            <p><strong>Then we replace them — peacefully, legally, and at scale.</strong></p>
+            <p>This movement is built for: primaries, general elections, district‑level mobilization, and accountability.</p>
+            <p style="margin-top: 15px;">No violence. No chaos. Just organized civic power.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>12. Why now?</h2>
+            <p><strong>Because:</strong></p>
+            <ul>
+                <li>The crisis is unfolding now</li>
+                <li>The system is failing now</li>
+                <li>Families are suffering now</li>
+                <li>Jobs are disappearing now</li>
+                <li>Authoritarian risk is rising now</li>
+            </ul>
+            <p style="margin-top: 20px;"><strong>And because the math finally works.</strong></p>
+            <p style="color: #4caf50; font-weight: bold; margin-top: 15px;">This is the first time in decades that a peaceful, scalable, intelligent solution has been possible.</p>
+        </div>
+
+        <section style="text-align: center; background: linear-gradient(135deg, rgba(33, 150, 243, 0.2), rgba(25, 118, 210, 0.2)); border-left: 5px solid #2196f3;">
+            <h2 style="color: #2196f3;">Next Step → Sign the Petition</h2>
+            <p style="font-size: 1.1em; margin: 20px 0;">You've seen the answers. You've seen the math. You've seen the mechanism.</p>
+            <p style="margin-bottom: 30px;">Now help ignite the cascade.</p>
+            <a href="action.html" class="btn">✏️ Sign the Petition → Force Telehealth Authorization → Trigger the 5D Blueprint</a>
+        </section>
+
+        <!-- HOME BUTTON -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="index.html" class="home-btn">← Back to Start Here</a>
+        </div>
+    </div>
+
+    <footer>
+        <h3>PHIERS Movement</h3>
+        <p style="color: #c8e6c9; margin-bottom: 30px;">Building a healthier, more stable, more democratic America.</p>
+        
+        <div style="margin: 30px 0;">
+            <p style="color: #4caf50; font-weight: bold; margin-bottom: 15px;">Navigation</p>
+            <a href="index.html">Start Here</a> | 
+            <a href="crisis.html">What's Broken</a> | 
+            <a href="why-change-required.html">Why Change Required</a> | 
+            <a href="5D_Solutions.html">5D Solutions</a> | 
+            <a href="action.html">Petition</a> | 
+            <a href="simple-math.html">Receipts</a> | 
+            <a href="faq.html">FAQ</a>
+        </div>
+        
+        <div style="margin: 30px 0;">
+            <p style="color: #4caf50; font-weight: bold; margin-bottom: 15px;">Organization</p>
+            <a href="about.html">About</a> | 
+            <a href="mailto:info@phiers.org">Contact</a> | 
+            <a href="#">Privacy</a> | 
+            <a href="#">Accessibility</a>
+        </div>
+        
+        <p style="margin-top: 30px; color: #81c784;">
+            © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+        </p>
+    </footer>
+
+    <script src="phiers-enhancements.js"></script>
+</body>
+</html>
