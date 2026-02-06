@@ -223,6 +223,12 @@ document.addEventListener('DOMContentLoaded', function() {
             Congress Refuses to Do Their Jobs.<br>We're Forcing Them — Or Replacing Them.
         </h2>
         
+        <div style="text-align: center; margin: 25px 0;">
+            <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Power_Concedes_Nothing_TEETH.png" 
+                 alt="Power Concedes Nothing Without A Demand That Has TEETH - We Are The TEETH" 
+                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);">
+        </div>
+        
         <p style="color: #c8e6c9; font-size: 1.05em; line-height: 1.7; margin: 20px 0; text-align: center;">
             This isn't a protest. It's a cooperative intelligence project.
         </p>
