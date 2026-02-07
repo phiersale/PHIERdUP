@@ -2,14 +2,18 @@
 <!--
 =============================================================================
 FILE: index.html
-VERSION: v1.2.1
-LAST UPDATED: 2026-02-07 04:25 UTC
+VERSION: v1.2.3
+LAST UPDATED: 2026-02-07 04:45 UTC
 UPDATED BY: Claude Session 2026-02-07
-CHANGES: Added version control, fixed modal scrollability, Power image updated
+CHANGES: Fixed modal to show on EVERY page load/refresh (removed sessionStorage 
+         persistence so modal appears each visit, not just first time)
 =============================================================================
 Previous Versions:
 - v1.0.0 | 2026-02-06 08:00 UTC | Initial creation from baseline
 - v1.1.0 | 2026-02-07 03:47 UTC | Phase 1 updates (modal, dates, images)
+- v1.2.1 | 2026-02-07 04:25 UTC | Added version control, fixed modal scrollability
+- v1.2.2 | 2026-02-07 04:35 UTC | Fixed Power image filename to match upload
+- v1.2.3 | 2026-02-07 04:45 UTC | Modal now shows every visit (removed persistence)
 =============================================================================
 -->
 
@@ -674,7 +678,7 @@ Previous Versions:
             
             <!-- POWER CONCEDES NOTHING IMAGE -->
             <div style="text-align: center; margin: 25px 0;">
-                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Power_Concedes_Nothing_without_TEETH.png" 
+                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Power_Concedes_Nothing_TEETH.png" 
                      alt="Power Concedes Nothing Without a Demand That Has Teeth - We Are The TEETH"
                      style="max-width: 85%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
             </div>
@@ -813,7 +817,7 @@ Previous Versions:
 
         <!-- POWER CONCEDES NOTHING - TEETH -->
         <section style="background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9)); border-left: 5px solid #4caf50; padding: 40px; margin-bottom: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); text-align: center;">
-            <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Power_Concedes_Nothing_without_TEETH.png" 
+            <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Power_Concedes_Nothing_TEETH.png" 
                  alt="Power Concedes Nothing Without A Demand That Has Teeth - We Are The TEETH"
                  style="max-width: 50%; height: auto; margin: 0 auto 20px; display: block; border-radius: 8px; box-shadow: 0 0 20px rgba(76, 175, 80, 0.3); cursor: pointer;"
                  onclick="this.style.maxWidth = this.style.maxWidth === '50%' ? '100%' : '50%';">
@@ -862,20 +866,17 @@ Previous Versions:
 
     <!-- MODAL CONTROL SCRIPT -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Welcome Modal
+        // Welcome Modal - SHOWS ON EVERY PAGE LOAD
         const welcomeModal = document.getElementById('welcomeModal');
         const closeModalBtn = document.getElementById('closeModal');
         const quickStartBtn = document.getElementById('quickStartBtn');
         
-        // Show modal on first visit only
-        if (!sessionStorage.getItem('welcomeModalSeen')) {
-            welcomeModal.classList.add('show');
-        }
+        // Show modal on EVERY page load (removed sessionStorage check)
+        welcomeModal.classList.add('show');
         
-        // Close modal function
+        // Close modal function (doesn't save to sessionStorage - modal returns on refresh)
         function closeWelcomeModal() {
             welcomeModal.classList.remove('show');
-            sessionStorage.setItem('welcomeModalSeen', 'true');
         }
         
         // Close button
