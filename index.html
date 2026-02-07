@@ -2,336 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>PHIERS — A Movement to Fix Healthcare Now</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>PHIERS — A Movement to Force Healthcare Reform</title>
-
-  <meta name="description"
-    content="PHIERS is a people-powered movement forcing healthcare reform. Only 3.5% participation is needed to compel Congress. Sign the petition." />
+  <meta name="description" content="PHIERS is a people-powered movement to force immediate healthcare reform using existing law. This is not a petition. It is pressure." />
 
   <style>
-    :root {
-      --bg: #0b0b0e;
-      --panel: #14141a;
-      --text: #f5f5f7;
-      --muted: #b4b4c2;
-      --accent: #7df9ff;
-      --cta: #ff4d4d;
-    }
-
-    * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: #0b0b0f;
+      color: #f5f5f7;
       line-height: 1.6;
     }
-
-    a { color: var(--accent); text-decoration: none; }
-
-    section {
-      padding: 4rem 1.5rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h1, h2, h3 {
-      line-height: 1.25;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem 1.5rem;
-    }
-
-    .logo {
-      max-width: 180px;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-title {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      margin-bottom: 1rem;
-    }
-
-    .hero-subtitle {
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-
-    .cta-primary {
-      background: var(--cta);
-      color: white;
-      padding: 1rem 2.2rem;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: 600;
+    a { color: #6ddcff; text-decoration: none; }
+    header, section, footer { padding: 4rem 1.5rem; max-width: 900px; margin: auto; }
+    h1, h2, h3 { line-height: 1.2; }
+    .hero h1 { font-size: 2.5rem; }
+    .cta {
       display: inline-block;
-      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      background: #6ddcff;
+      color: #000;
+      font-weight: 700;
+      border-radius: 6px;
     }
-
-    .hero-note {
-      font-size: 0.9rem;
-      color: var(--muted);
+    .math {
+      background: #12121a;
+      border-left: 4px solid #6ddcff;
+      padding: 1.5rem;
+      margin: 2rem 0;
     }
-
-    /* MINI NAV */
-    .hero-nav {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-      font-size: 0.9rem;
-      opacity: 0.85;
-    }
-
-    /* WHY NOW */
-    #why-now {
-      background: linear-gradient(180deg, transparent, var(--panel));
-      text-align: center;
-    }
-
-    /* 3.5 RULE */
-    .stat-block {
-      margin: 2rem auto;
-      background: var(--panel);
-      padding: 2rem;
-      border-radius: 12px;
-      text-align: center;
-      max-width: 400px;
-    }
-
-    .stat-number {
-      font-size: 3rem;
-      font-weight: bold;
-      color: var(--accent);
-    }
-
-    /* ROADMAP */
-    #roadmap img {
-      width: 100%;
-      max-width: 800px;
-      display: block;
-      margin: 2rem auto;
-      cursor: pointer;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
-    }
-
-    /* HOW IT WORKS */
-    ol {
-      max-width: 700px;
-      margin: auto;
-    }
-
-    ol li {
-      margin-bottom: 1rem;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #050507;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    footer nav a {
-      margin: 0 0.5rem;
-    }
-
-    /* MODAL */
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.8);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
-
-    .modal.show {
-      display: flex;
-    }
-
-    .modal-content {
-      background: var(--panel);
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 420px;
-      text-align: center;
-    }
-
-    .close-btn {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      opacity: 0.7;
-      cursor: pointer;
-    }
+    .divider { border-top: 1px solid #222; margin: 3rem 0; }
+    footer { font-size: 0.9rem; color: #aaa; }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="logo" />
+<header class="hero">
+  <h1>Healthcare is collapsing.<br>We can fix it — now.</h1>
+  <p>
+    PHIERS is a coordinated public movement to force immediate healthcare reform
+    using existing law. No new taxes. No years of debate. No waiting.
+  </p>
+  <a class="cta" href="#petition">Sign the Petition</a>
+</header>
 
-    <h1 class="hero-title">Healthcare Is Broken.<br>Congress Won’t Fix It.</h1>
+<section>
+  <h2>This is not a normal petition.</h2>
+  <p>
+    This is a pressure engine. When enough people organize at the district level,
+    Congress is forced into a binary choice: act, or be replaced.
+  </p>
 
-    <p class="hero-subtitle">
-      PHIERS is a people-powered movement forcing real healthcare reform —
-      lower costs, universal access, and economic stability —
-      without raising taxes or adding debt.
-    </p>
-
-    <a href="#petition" class="cta-primary">✏️ Sign the Petition</a>
-
-    <p class="hero-note">
-      Only 3.5% participation (≈11.6M people) is required to force change.
-    </p>
-
-    <nav class="hero-nav">
-      <a href="#how-it-works">How It Works</a>
-      <a href="#3point5-rule">Why 3.5%</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-  </header>
-
-  <!-- WHY NOW -->
-  <section id="why-now">
-    <p>
-      Millions lost coverage overnight when subsidies expired.
-      We aren’t patching a broken system — we’re replacing it.
-    </p>
-    <p>
-      Telehealth at ~$600/year outperforms $10,000 insurance failures.
-      The math already works.
-    </p>
-    <a href="#petition">✏️ Sign Now</a>
-  </section>
-
-  <!-- 3.5 RULE -->
-  <section id="3point5-rule">
-    <h2>Why 3.5% Guarantees Change</h2>
-    <p>
-      Harvard research shows that when just 3.5% of a population
-      organizes around a clear demand, systemic change becomes unavoidable.
-    </p>
-
-    <div class="stat-block">
-      <div class="stat-number">3.5%</div>
-      <div>Critical Mass for Change</div>
-    </div>
-
-    <p>
-      That’s 11.6 million Americans — distributed district by district —
-      enough to force Congress to choose action or replacement.
-    </p>
-  </section>
-
-  <!-- ROADMAP -->
-  <section id="roadmap">
-    <h2>The 90-Day Cascade</h2>
-    <p>
-      From petition to universal coverage — this is the mechanical sequence
-      that converts signatures into unavoidable pressure.
-    </p>
-
-    <img src="PHIERS_SequenceRoadmap_v1.png"
-         alt="PHIERS Cascade Roadmap"
-         onclick="toggleSize(this)" />
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section id="how-it-works">
-    <h2>What Happens When You Sign</h2>
-
-    <ol>
-      <li><strong>District aggregation</strong> — signatures form voting blocs.</li>
-      <li><strong>Coordinated pressure</strong> — town halls, primaries, visibility.</li>
-      <li><strong>Binary choice</strong> — pass PHIERS or face organized voters.</li>
-      <li><strong>Rapid rollout</strong> — nationwide coverage within months.</li>
-    </ol>
-
-    <a href="#petition" class="cta-primary">I’m In — Sign the Petition</a>
-  </section>
-
-  <!-- PETITION -->
-  <section id="petition">
-    <h2>Sign the Petition</h2>
-    <p>
-      Your signature is leverage. Your participation is power.
-    </p>
-
-    <!-- Replace with actual embed -->
-    <p><em>[ Petition embed goes here ]</em></p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>PHIERS is a citizen-driven movement for healthcare justice.</p>
-    <nav>
-      <a href="#petition">Sign</a> |
-      <a href="#faq">FAQ</a> |
-      <a href="#how-it-works">How It Works</a>
-    </nav>
-    <p>© PHIERS</p>
-  </footer>
-
-  <!-- MODAL -->
-  <div class="modal" id="welcomeModal">
-    <div class="modal-content">
-      <h3>This Is How Change Starts</h3>
-      <p>
-        No donations. No politicians. Just enough people acting together.
-      </p>
-      <a href="#petition" class="cta-primary">Sign the Petition</a>
-      <div class="close-btn" onclick="closeModal()">Maybe later</div>
-    </div>
+  <div class="math">
+    <strong>The math is simple:</strong><br>
+    Telehealth + existing ACA authority ≈ $600/person/year<br>
+    That covers ~80% of Americans immediately.
   </div>
 
-  <script>
-    function toggleSize(img) {
-      img.style.transform =
-        img.style.transform === "scale(1.15)" ? "scale(1)" : "scale(1.15)";
-    }
+  <p>
+    This does not eliminate private insurance.
+    It does not require new taxes.
+    It does not require new legislation.
+  </p>
+</section>
 
-    const modal = document.getElementById("welcomeModal");
-    let modalShown = false;
+<section>
+  <h2>Why this works</h2>
+  <ul>
+    <li>Movements succeed with ~3.5% active participation</li>
+    <li>Healthcare is already funded — just misallocated</li>
+    <li>District-level pressure beats national outrage</li>
+    <li>Politicians respond to replacement threats</li>
+  </ul>
+  <p>
+    We are organizing the minimum force required to win.
+  </p>
+</section>
 
-    function closeModal() {
-      modal.classList.remove("show");
-    }
+<section id="petition">
+  <h2>What signing actually does</h2>
+  <p>
+    Your signature is a coordination signal.
+    It helps us trigger district-level escalation and media pressure.
+  </p>
 
-    function maybeShowModal() {
-      if (modalShown) return;
-      modalShown = true;
-      modal.classList.add("show");
-    }
+  <!-- Replace with your actual petition embed -->
+  <p>
+    <strong>[ Petition embed goes here ]</strong>
+  </p>
+</section>
 
-    setTimeout(maybeShowModal, 8000);
+<section>
+  <h2>Want proof?</h2>
+  <p>
+    Read the full explanation, legal grounding, and escalation plan.
+  </p>
+  <a class="cta" href="how-it-works.html">How This Works</a>
+</section>
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY / document.body.scrollHeight > 0.3) {
-        maybeShowModal();
-      }
-    });
-  </script>
+<footer>
+  <p>
+    PHIERS is a public-interest movement. Not a company. Not a product.
+  </p>
+</footer>
 
 </body>
 </html>
