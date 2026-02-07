@@ -1,4 +1,31 @@
 <!DOCTYPE html>
+<!--
+=============================================================================
+FILE: leverage.html
+VERSION: v1.0.2
+LAST UPDATED: 2026-02-07 04:25 UTC
+UPDATED BY: Claude Session 2026-02-07
+CHANGES: Added version control, updated date references, images sized
+=============================================================================
+Previous Versions:
+- v1.0.0 | 2026-02-06 08:00 UTC | Initial creation from baseline
+- v1.1.0 | 2026-02-07 03:47 UTC | Phase 1 updates (modal, dates, images)
+=============================================================================
+-->
+
+<!-- 
+═══════════════════════════════════════════════════════════════
+PHIERS A+++ TRANSFORMATION
+Version: 2.0 (A+++ Structure)
+Created: February 6, 2026 @ 9:00 AM PST
+Session: A+++ 7-Step Movement Path Implementation
+Changes: Complete site restructure, 7-step nav, 9 new subpages, 
+         simplified Start Here, added Why Change Required, 
+         transformed What We Demand with 5 demand cards
+Status: READY FOR DEPLOYMENT
+═══════════════════════════════════════════════════════════════
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -236,15 +263,63 @@
             .binary-choice { grid-template-columns: 1fr; }
             .graphic-container img { max-width: 80%; }
         }
+    
+        .orientation-panel {
+            position: relative;
+        }
+        
+        .orientation-panel-content {
+            position: relative;
+            padding-right: 40px;
+        }
+        
+        .orientation-panel .close-btn {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .orientation-panel .close-btn:hover {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+            transform: translateY(-50%) rotate(90deg);
+        }
+        
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
     </style>
 </head>
 <body>
+    <!-- VERSION BADGE (visible on page) -->
+    <div style="position: fixed; top: 10px; right: 10px; background: rgba(76, 175, 80, 0.9); color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85em; font-weight: bold; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-family: monospace;">
+        v2.0 | Feb 6, 2026
+    </div>
+
     <div class="orientation-panel">
-        <strong>The Leverage: A small group can force national change if the math is undeniable.</strong>
+        <div class="orientation-panel-content">
+            <button class="close-btn" id="closeOrientationPanel" aria-label="Close">&times;</button>
+            <strong>The Leverage: A small group can force national change if the math is undeniable.</strong>
         <span>
             Town hall pressure. Primary challenges. Media amplification. Mathematical superiority. 
             Congress faces a binary choice.
         </span>
+        </div>
     </div>
 
     <div class="container">
@@ -258,7 +333,7 @@
             <p class="subtitle">A small group can force national change if the math is undeniable.</p>
         </header>
 
-        <!-- NAVIGATION BUTTONS (Under Hero) -->
+<!-- NAVIGATION BUTTONS (Under Hero) -->
         <nav style="
             background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
             border: 2px solid rgba(76, 175, 80, 0.3);
@@ -271,27 +346,17 @@
             justify-content: center;
             align-items: center;
         ">
-            <a href="index.html" style="background: linear-gradient(135deg, #4caf50, #45a049); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(76, 175, 80, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(76, 175, 80, 0.3)'">🏠 Home</a>
+            <a href="index.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🏠 Start Here</a>
             
-            <a href="quickstart.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🚀 Quick Start</a>
+            <a href="crisis.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🚨 What's Broken</a>
             
-            <a href="crisis.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🚨 Crisis</a>
+            <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚖️ Why Change Required</a>
             
-            <a href="how-it-works.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚙️ How It Works</a>
+            <a href="5D_Solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 What We Demand</a>
             
-            <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📊 Simple Math</a>
+            <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">✏️ Petition</a>
             
-            <a href="leverage.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚡ Leverage</a>
-            
-            <a href="buying-power.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">💪 Buying Power</a>
-            
-            <a href="solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🎯 Solutions</a>
-            
-            <a href="unions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">💪 Unions</a>
-            
-            <a href="media.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📚 Media</a>
-            
-            <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">✏️ Take Action</a>
+            <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📊 Receipts</a>
             
             <a href="faq.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">❓ FAQ</a>
         </nav>
@@ -309,7 +374,7 @@
 
         <section>
             <div class="graphic-container">
-                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/LEVERAGE_Pwr_of_the_People.png" 
+                <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/LEVERAGE_Pwr_of_the_People.png" 
                      alt="Power of the People - Congressional Leverage"
                      onclick="window.open(this.src, '_blank')">
                 <p class="graphic-caption">Click to enlarge • Power of the People: 100M+ Constituents vs Corporate Average = 230:1 Advantage</p>
@@ -377,7 +442,7 @@
                 <div class="choice-card choice-a">
                     <h3>✅ OPTION A: LEAD THIS</h3>
                     <p style="color: #c8e6c9; margin-top: 15px;">
-                        Say YES to telehealth in ACA by Jan 30.
+                        Say YES to telehealth in ACA by Late January.
                     </p>
                     <p style="color: #c8e6c9; margin-top: 10px;">
                         Become heroes.
@@ -419,7 +484,7 @@
             <h2>📊 The 3.5% Threshold</h2>
             
             <div class="graphic-container">
-                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Guaranteed_Change__THUMBNAILjpg.jpg" 
+                <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Guaranteed_Change__THUMBNAILjpg.jpg" 
                      alt="Guaranteed Change - 3.5% = 11.6M Signatures"
                      onclick="window.open(this.src, '_blank')">
                 <p class="graphic-caption">Click to enlarge • 3.5% = 11.6M signatures = Guaranteed systemic change (Harvard research)</p>
@@ -451,7 +516,7 @@
             <h2>🎯 Vote Like Your Life Depends On It</h2>
             
             <div class="graphic-container">
-                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/vote_lke_your_life_depends_on_it.jpg" 
+                <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/vote_lke_your_life_depends_on_it.jpg" 
                      alt="Vote Like Your Life Depends On It"
                      onclick="window.open(this.src, '_blank')">
                 <p class="graphic-caption">Click to enlarge • Because It Does – This Is About Healthcare, Jobs, and Survival</p>
@@ -474,42 +539,27 @@
         <div class="nav-buttons">
             <a href="how-it-works.html" class="btn btn-secondary">← Back: How It Works</a>
             <a href="buying-power.html" class="btn btn-secondary">Next: Buying Power →</a>
+            <!-- HOME BUTTON -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="index.html" style="background: linear-gradient(135deg, #4caf50, #45a049); color: white; padding: 12px 30px; font-size: 1em; font-weight: bold; text-decoration: none; border-radius: 8px; display: inline-block;">← Back to Start Here</a>
         </div>
+    </div>
 
-        <footer>
-            <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
-            <p>Will Price | Chief Solutions Architect</p>
-            <p>Phone: 916-306-8967 | Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87eee9e1e8c7f7efeee2f5f4a9e8f5e0">[email&#160;protected]</a></p>
-            
-            <p style="margin-top: 20px;">
-                <a href="https://c.org/q9vrMCQZsY" target="_blank">Sign Petition</a> | 
-                <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank">Fill Survey</a> | 
-                <a href="Donate.html">Fund the Cascade</a> | 
-                <a href="https://discord.gg/narhDKJY" target="_blank">Join Discord</a>
+    <footer>
+            <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 15px;">
+                PHIERS Movement | Make America Better And Healthier (MABAH)
             </p>
             
-            <p style="margin-top: 15px;">
-                <a href="about.html">About Us</a> | 
-                <a href="index.html">Home</a> | 
-                <a href="faq.html">FAQ</a>
+            <p style="margin: 15px 0;">
+                <strong>Contact:</strong> Will Price | <a href="/cdn-cgi/l/email-protection#3e575058517e4e56575b4c4d10514c59"><span class="__cf_email__" data-cfemail="2f464149406f5f47464a5d5c01405d48"><span class="__cf_email__" data-cfemail="046d6a626b44746c6d6176772a6b7663">[email&#160;protected]</span></span></a> | 916-306-8967
+            </p>
+            
+            <p style="margin: 20px 0;">
+                <a href="action.html" style="color: #4caf50; font-weight: bold; font-size: 1.05em;">✏️ Sign the Petition</a>
             </p>
             
             <p style="margin-top: 20px;">
                 © PHIERS.org — People's Health Insurance Economic Recovery Solutions
             </p>
-            <p style="font-size: 0.85em; color: #a5d6a7;">
-                Accessibility | Privacy Policy
-            </p>
-            <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(76, 175, 80, 0.2); color: #4caf50; font-size: 0.85em;">
-                <strong>File:</strong> leverage.html v1.0 | <strong>Created:</strong> 2026-02-05 @ 1:05 PM PST | <strong>Source:</strong> phiers.org "Congressional Leverage" section
-            </p>
             <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
-                If you see an error in the math or policy, tell us — we'll                If you see an error in the math or policy, tell us — we'll fix it.
-            </p>
-        </footer>
-    </div>
-
-    <!-- PHIERS Universal Enhancements Script -->
-    <script src="phiers-enhancements.js"></script>
-</body>
-</html>
+                If you see an err
