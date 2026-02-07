@@ -263,13 +263,13 @@ Previous Versions:
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.85);
-            z-index: 9999;
+            z-index: 99999 !important;
             overflow-y: auto;
             padding: 20px 10px;
         }
 
         .modal-overlay.show {
-            display: block;
+            display: block !important;
         }
 
         .modal-content {
@@ -743,14 +743,16 @@ Previous Versions:
     </footer>
 
     <!-- MODAL CONTROL SCRIPT -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Welcome Modal - SHOWS ON EVERY PAGE LOAD
         const welcomeModal = document.getElementById('welcomeModal');
         const closeModalBtn = document.getElementById('closeModal');
         const quickStartBtn = document.getElementById('quickStartBtn');
         
-        // Show modal on EVERY page load
-        welcomeModal.classList.add('show');
+        // Show modal immediately on page load
+        if (welcomeModal) {
+            welcomeModal.classList.add('show');
+        }
         
         // Close modal function
         function closeWelcomeModal() {
@@ -758,25 +760,31 @@ Previous Versions:
         }
         
         // Close button
-        closeModalBtn.addEventListener('click', closeWelcomeModal);
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeWelcomeModal);
+        }
         
         // Quick start button closes modal and scrolls to content
-        quickStartBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            closeWelcomeModal();
-            document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
-        });
+        if (quickStartBtn) {
+            quickStartBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeWelcomeModal();
+                document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
         
         // Close on background click
-        welcomeModal.addEventListener('click', function(e) {
-            if (e.target === welcomeModal) {
-                closeWelcomeModal();
-            }
-        });
+        if (welcomeModal) {
+            welcomeModal.addEventListener('click', function(e) {
+                if (e.target === welcomeModal) {
+                    closeWelcomeModal();
+                }
+            });
+        }
         
         // Close on Escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && welcomeModal.classList.contains('show')) {
+            if (e.key === 'Escape' && welcomeModal && welcomeModal.classList.contains('show')) {
                 closeWelcomeModal();
             }
         });
@@ -794,5 +802,13 @@ Previous Versions:
                 e.preventDefault();
                 timestampNotice.style.animation = 'fadeOut 0.3s ease-out';
                 setTimeout(() => {
+                    timestampNotice.style.display = 'none';
+                    sessionStorage.setItem('timestampDismissed', 'true');
+                }, 300);
+            });
+        }
+    </script>
+</body>
+</html>      setTimeout(() => {
                     timestampNotice.style.display = 'none';
          
