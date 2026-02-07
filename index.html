@@ -18,56 +18,60 @@
             font-size: 15px;
         }
 
-/* --- MODAL LAYOUT FIXES (DROP-IN REPLACEMENT) --- */
-
-.modal-content {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-    /* Centered, properly scaled video */
-    .modal-video {
-        width: 100%;
-        margin: 0 auto 24px auto;
-        display: flex;
-        justify-content: center;
+/* --- A+++ MODAL UPGRADE (FULL DROP-IN REPLACEMENT) --- */
+/* Modal container */
+    .modal-content {
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 24px;
+        text-align: center;
     }
     
+    /* PHIERS logo — stronger presence */
+    .modal-logo {
+        display: block;
+        height: 120px;        /* upgraded from 85px */
+        margin: 0 auto 28px;  /* more breathing room */
+        opacity: 0.98;
+    }
+    
+    /* Video wrapper */
+    .modal-video {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+    
+    /* Video itself — visually matched to TEETH */
     .modal-video iframe {
-        width: 90%;
-        max-width: 580px;
+        width: 90%;           /* slightly smaller than full width */
+        max-width: 580px;     /* visually matches TEETH banner */
         aspect-ratio: 16 / 9;
-        border-radius: 8px;
+        border-radius: 10px;
         display: block;
         margin: 0 auto;
+        box-shadow: 0 0 18px rgba(0,0,0,0.35);
     }
-
     
     /* Buffer line between video and TEETH */
     .modal-buffer-line {
         width: 100%;
         height: 2px;
         background: #000;
-        margin: 20px 0;
+        margin: 26px 0;       /* tuned spacing */
     }
     
-    /* TEETH image scaled to full modal width */
+    /* TEETH banner — full modal width */
     .modal-teeth img {
         width: 100%;
+        max-width: 650px;
         height: auto;
-        border-radius: 8px;
+        border-radius: 10px;
         display: block;
         margin: 0 auto;
+        box-shadow: 0 0 22px rgba(76, 175, 80, 0.35);
     }
-    
-    /* PHIERS logo above modal */
-         .modal-logo {
-            display: block;
-            height: 115px;   /* increased from 85px */
-            margin: 0 auto 28px;
-            opacity: 0.98;
-        }
 
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
