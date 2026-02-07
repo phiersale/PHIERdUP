@@ -315,12 +315,20 @@
 <!-- MODAL -->
 <div class="modal-overlay" id="welcomeModal">
     <div class="modal-content">
+
+        <!-- PHIERS LOGO -->
+        <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Logo.png"
+             alt="PHIERS Logo"
+             class="modal-logo">
+
+        <!-- CLOSE BUTTON -->
         <button class="modal-close" id="closeModal">&times;</button>
 
+        <!-- TITLE + SUBTITLE -->
         <h2 class="modal-title">Start with the leverage, not the chaos.</h2>
         <p class="modal-subtitle">You’re stepping into a 90‑day sprint — not a news cycle.</p>
 
-        <!-- VIDEO FIRST -->
+        <!-- VIDEO -->
         <div class="modal-video">
             <iframe src="https://www.youtube.com/embed/2j-dF3hgdeE"
                     title="PHIERS - The Math Congress Doesn't Want You to See"
@@ -332,7 +340,7 @@
         <!-- BUFFER LINE -->
         <p class="modal-buffer">This is the math Congress doesn’t want you to see.</p>
 
-        <!-- TEETH SECOND -->
+        <!-- TEETH IMAGE -->
         <div class="modal-teeth">
             <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Power_Concedes_Nothing_TEETH.png"
                  alt="Power Concedes Nothing Without a Demand That Has Teeth">
@@ -345,8 +353,8 @@
         </p>
 
         <p class="modal-text">
-            This site is your map: what’s broken, why Congress won’t fix it on their own, and how
-            <strong>3.5% of us</strong> can force action.
+            This site is your map: what’s broken, why Congress won’t fix it on their own,
+            and how <strong>3.5% of us</strong> can force action.
         </p>
 
         <!-- BUTTONS -->
@@ -355,7 +363,9 @@
             <a href="crisis.html" class="modal-btn-secondary">Show me what's broken →</a>
         </div>
 
+        <!-- FOOTER -->
         <p class="modal-footer">You can always return here from the footer navigation.</p>
+
     </div>
 </div>
 
@@ -512,6 +522,71 @@
             }, 300);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const welcomeModal = document.getElementById('welcomeModal');
+        const closeModal = document.getElementById('closeModal');
+        const quickStartBtn = document.getElementById('quickStartBtn');
+
+    function openWelcomeModal() {
+        welcomeModal.classList.add('show');
+    }
+
+    function closeWelcomeModal() {
+        welcomeModal.classList.remove('show');
+    }
+
+    // Open modal on first visit per session
+    if (!sessionStorage.getItem('modalShown')) {
+        openWelcomeModal();
+        sessionStorage.setItem('modalShown', 'true');
+    }
+
+    // Close button
+    closeModal.addEventListener('click', closeWelcomeModal);
+
+    // Close when clicking outside modal
+    welcomeModal.addEventListener('click', function (e) {
+        if (e.target === welcomeModal) {
+            closeWelcomeModal();
+        }
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && welcomeModal.classList.contains('show')) {
+            closeWelcomeModal();
+        }
+    });
+
+    // TEETH image expand/collapse
+    const teethImage = document.getElementById('teethImage');
+    if (teethImage) {
+        teethImage.addEventListener('click', () => {
+            teethImage.classList.toggle('expanded');
+        });
+    }
+
+    // Closeable Timestamp
+    const timestampNotice = document.getElementById('timestampNotice');
+    const closeTimestampBtn = document.getElementById('closeTimestamp');
+
+    if (closeTimestampBtn && timestampNotice) {
+        if (sessionStorage.getItem('timestampDismissed')) {
+            timestampNotice.style.display = 'none';
+        }
+
+        closeTimestampBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            timestampNotice.style.animation = 'fadeOut 0.3s ease-out';
+            setTimeout(() => {
+                timestampNotice.style.display = 'none';
+                sessionStorage.setItem('timestampDismissed', 'true');
+            }, 300);
+        });
+    }
+});
 </script>
+
 </body>
 </html>
