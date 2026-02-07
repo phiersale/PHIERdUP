@@ -6,11 +6,7 @@
     <meta name="color-scheme" content="dark light">
     <title>PHIERS - Make America Better and Healthier</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,11 +17,7 @@
             font-size: 15px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
         header {
             text-align: center;
@@ -37,12 +29,7 @@
             position: relative;
         }
 
-        .logo {
-            height: 150px;
-            width: auto;
-            margin: 20px auto;
-            display: block;
-        }
+        .logo { height: 150px; margin: 20px auto; display: block; }
 
         .hero-title {
             font-family: 'Bahnschrift', 'Segoe UI Semibold', 'Arial Black', sans-serif;
@@ -50,37 +37,22 @@
             font-weight: 700;
             color: #4caf50;
             letter-spacing: 2px;
-            line-height: 1.1;
-            margin: 32px 0 16px;
             text-shadow: 0 0 40px rgba(76, 175, 80, 0.5);
+            margin: 32px 0 16px;
         }
 
         .hero-subtitle {
-            font-family: 'Bahnschrift', 'Segoe UI Semibold', sans-serif;
             font-size: 1.6em;
             font-weight: 500;
             color: #c8e6c9;
             letter-spacing: 1px;
-            margin: 8px 0 0;
         }
 
-        h1 {
-            color: #4caf50;
-            font-size: 2em;
-            margin: 20px 0 10px;
-            text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
-        }
-
-        h2 {
-            color: #4caf50;
-            font-size: 1.6em;
-            margin: 48px 0 20px;
-            line-height: 1.3;
-        }
-
-        p {
-            font-size: 0.95em;
-            line-height: 1.7;
+        .hero-divider {
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(76, 175, 80, 0.3), transparent);
+            margin: 48px auto;
         }
 
         .hero-intro {
@@ -104,22 +76,25 @@
             max-width: 650px;
         }
 
-        .section-divider,
-        .hero-divider {
-            width: 80%;
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(76, 175, 80, 0.3), transparent);
-            margin: 48px auto;
-        }
-
-        section {
+        .teeth-section {
             background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
-            padding: 50px;
-            margin-bottom: 64px;
-            border-radius: 8px;
             border-left: 5px solid #4caf50;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
+
+        .teeth-image {
+            max-width: 50%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+            cursor: pointer;
+            transition: max-width 0.3s ease;
+        }
+
+        .teeth-image.expanded { max-width: 100%; }
 
         .hero-box {
             background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(66, 133, 244, 0.15));
@@ -131,98 +106,27 @@
             text-align: center;
         }
 
-        .hero-box p {
-            color: #ffffff;
-            margin-bottom: 15px;
-        }
-
-        .hero-box .hero-proof {
-            font-size: 0.95em;
-            color: #c8e6c9;
-            margin-bottom: 20px;
-        }
-
-        .hero-box .hero-note {
-            font-size: 0.85em;
-            margin-top: 15px;
-            color: #a5d6a7;
-        }
-
         .btn {
             background: linear-gradient(135deg, #4caf50, #2e7d32);
             color: white;
             padding: 14px 32px;
             font-size: 1.1em;
             font-weight: bold;
-            border: 2px solid #4caf50;
             border-radius: 8px;
-            cursor: pointer;
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
         }
 
-        .btn:hover {
-            background: linear-gradient(135deg, #66bb6a, #388e3c);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-        }
+        .btn:hover { transform: translateY(-2px); }
 
         .btn-link {
             color: #4caf50;
-            font-size: 1.05em;
             font-weight: bold;
             text-decoration: underline;
         }
 
-        .btn-link:hover {
-            color: #81c784;
-        }
-
-        .teeth-section {
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
-            border-left: 5px solid #4caf50;
-            padding: 40px;
-            margin-bottom: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            text-align: center;
-        }
-
-        .teeth-image {
-            max-width: 50%;
-            height: auto;
-            margin: 0 auto 20px;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
-            cursor: pointer;
-            transition: max-width 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .teeth-image.expanded {
-            max-width: 100%;
-            box-shadow: 0 0 30px rgba(76, 175, 80, 0.6);
-        }
-
-        .video-section {
-            text-align: center;
-        }
-
-        .video-section h2 {
-            margin-bottom: 20px;
-        }
-
-        .video-section p {
-            color: #c8e6c9;
-            margin-bottom: 25px;
-        }
-
-        .video-wrapper {
-            text-align: center;
-            margin: 30px 0;
-        }
+        .video-section { text-align: center; }
 
         .video-wrapper iframe {
             max-width: 100%;
@@ -230,26 +134,12 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
-        .video-tagline {
-            text-align: center;
-            color: #81c784;
-            margin-top: 20px;
-            font-size: 0.95em;
-        }
-
         .next-step-section {
             background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(129, 199, 132, 0.15));
             border: 3px solid #4caf50;
             padding: 40px;
-            margin: 40px 0;
             border-radius: 8px;
             text-align: center;
-        }
-
-        .next-step-section p {
-            font-size: 1.05em;
-            color: #c8e6c9;
-            margin-bottom: 25px;
         }
 
         footer {
@@ -258,110 +148,29 @@
             border-top: 2px solid rgba(76, 175, 80, 0.3);
             color: #81c784;
             margin-top: 40px;
-            font-size: 0.9em;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        footer a {
-            color: #81c784;
-            text-decoration: underline;
-        }
-
-        footer a:hover {
-            color: #4caf50;
-        }
-
-        .footer-nav,
-        .footer-org {
-            margin: 30px 0;
-        }
-
-        .footer-heading {
-            color: #4caf50;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .closeable-timestamp {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(129, 199, 132, 0.6);
-            border-radius: 999px;
-            padding: 6px 12px 6px 14px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .closeable-timestamp span {
-            font-size: 0.8em;
-            color: #81c784;
-        }
-
-        .close-x {
-            background: transparent;
-            border: none;
-            color: #a5d6a7;
-            font-size: 1.1em;
-            cursor: pointer;
-            line-height: 1;
-        }
-
-        .close-x:hover {
-            color: #ffffff;
-        }
-
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
         }
 
         /* MODAL */
-
         .modal-overlay {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             background: rgba(0, 0, 0, 0.85);
             z-index: 9999;
             overflow-y: auto;
             padding: 20px 10px;
         }
 
-        .modal-overlay.show {
-            display: block;
-        }
+        .modal-overlay.show { display: block; }
 
         .modal-content {
             background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
             border: 3px solid #4caf50;
             border-radius: 12px;
-            max-width: 700px;
-            width: 100%;
-            margin: 20px auto;
+            max-width: 750px;
+            margin: 40px auto;
             padding: 40px 30px;
             position: relative;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-            animation: modalSlideIn 0.4s ease-out;
-        }
-
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .modal-close {
@@ -375,30 +184,55 @@
             height: 28px;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .modal-title {
             font-size: 1.6em;
             color: #4caf50;
             margin-bottom: 10px;
+            text-align: center;
         }
 
         .modal-subtitle {
             font-size: 1em;
             color: #a5d6a7;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .modal-video {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .modal-video iframe {
+            width: 70%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+
+        .modal-buffer {
+            text-align: center;
+            color: #81c784;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .modal-teeth {
+            text-align: center;
+            margin: 20px 0 32px;
+        }
+
+        .modal-teeth img {
+            max-width: 50%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
         }
 
         .modal-text {
             color: #c8e6c9;
-            font-size: 1em;
-            line-height: 1.6;
             margin: 15px 0;
+            text-align: center;
         }
 
         .modal-buttons {
@@ -406,51 +240,28 @@
             gap: 15px;
             margin-top: 30px;
             flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .modal-btn-primary,
+        .modal-btn-secondary {
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            min-width: 200px;
         }
 
         .modal-btn-primary {
-            flex: 1;
-            min-width: 200px;
             background: linear-gradient(135deg, #4caf50, #2e7d32);
             color: white;
-            padding: 16px 30px;
-            font-size: 1.1em;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            display: block;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
-        }
-
-        .modal-btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
         }
 
         .modal-btn-secondary {
-            flex: 1;
-            min-width: 140px;
             background: rgba(33, 150, 243, 0.2);
             color: #64b5f6;
-            padding: 14px 25px;
-            font-size: 1em;
-            font-weight: bold;
             border: 2px solid #2196f3;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            display: block;
-            transition: all 0.3s;
-        }
-
-        .modal-btn-secondary:hover {
-            background: rgba(33, 150, 243, 0.3);
-            transform: translateY(-2px);
         }
 
         .modal-footer {
@@ -460,221 +271,211 @@
             margin-top: 25px;
             font-style: italic;
         }
-
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.4em; letter-spacing: 1px; }
-            .hero-subtitle { font-size: 1.2em; }
-            h1 { font-size: 1.6em; }
-            h2 { font-size: 1.3em; }
-            .logo { height: 120px; }
-            .container { padding: 15px; }
-            header { padding: 40px 15px 50px; }
-            section { padding: 30px 20px; }
-            .hero-box { padding: 20px; }
-        }
-
-        @media (max-width: 480px) {
-            .hero-title { font-size: 1.9em; }
-            .hero-subtitle { font-size: 1em; }
-        }
     </style>
 </head>
+
 <body>
 
-    <!-- WELCOME MODAL -->
-    <div class="modal-overlay" id="welcomeModal" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
-        <div class="modal-content">
-            <button class="modal-close" id="closeModal" aria-label="Close welcome message">&times;</button>
-            <h2 class="modal-title" id="welcomeTitle">Start with the leverage, not the chaos.</h2>
-            <p class="modal-subtitle">You’re not just reading about a crisis — you’re stepping into a 90‑day sprint.</p>
+<!-- MODAL -->
+<div class="modal-overlay" id="welcomeModal">
+    <div class="modal-content">
+        <button class="modal-close" id="closeModal">&times;</button>
 
-            <p class="modal-text">
-                Congress let healthcare subsidies collapse. Millions are being priced out or pushed off coverage.  
-                PHIERS is the plan to fix it — not for one group, but for <strong>234 million Americans</strong>.
-            </p>
-            <p class="modal-text">
-                This site is your map: what’s broken, why Congress won’t fix it on their own, and how <strong>3.5% of us</strong> can force action.
-            </p>
+        <h2 class="modal-title">Start with the leverage, not the chaos.</h2>
+        <p class="modal-subtitle">You’re stepping into a 90‑day sprint — not a news cycle.</p>
 
-            <div class="modal-buttons">
-                <a href="#hero-petition" class="modal-btn-primary" id="quickStartBtn">
-                    Jump to the plan and petition →
-                </a>
-                <a href="crisis.html" class="modal-btn-secondary">
-                    First, show me what’s broken →
-                </a>
-            </div>
-
-            <p class="modal-footer">
-                You can always come back here from the navigation at the bottom of the page.
-            </p>
-        </div>
-    </div>
-
-    <div class="container">
-        <header>
-            <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Logo.png"
-                 alt="PHIERS Logo"
-                 class="logo">
-
-            <div class="closeable-timestamp" id="timestampNotice">
-                <span>Last Updated: February 6, 2026</span>
-                <button class="close-x" id="closeTimestamp" aria-label="Close timestamp">&times;</button>
-            </div>
-
-            <h1 class="hero-title">MABAH Movement</h1>
-            <p class="hero-subtitle">Making America Better And Healthier</p>
-
-            <div class="hero-divider"></div>
-
-            <p class="hero-intro">
-                When Congress failed to extend healthcare subsidies, 22 million Americans lost coverage. But we're not here to patch one crisis —
-                <strong>we're solving it for 234 million Americans</strong>: universal healthcare, UBI, millions of AI‑resistant jobs, and guardrails on executive power.
-            </p>
-
-            <section class="teeth-section" aria-label="Power concedes nothing without a demand that has teeth">
-                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Power_Concedes_Nothing_TEETH.png"
-                     alt="Power concedes nothing without a demand that has teeth. We are the TEETH."
-                     class="teeth-image"
-                     id="teethImage">
-            </section>
-
-            <p class="hero-sprint">
-                This is a 90‑day sprint to universal healthcare, UBI, millions of AI‑resistant jobs, and guardrails on executive power — ahead of the
-                <strong>No Kings Rally on March 28</strong>.
-            </p>
-
-            <p class="hero-leverage">
-                We bring leverage to the rally. The sooner people sign with us, the more leverage they have to bring about change.
-            </p>
-
-            <div class="hero-box" id="hero-petition">
-                <p><strong>We need 3.5% of Americans (11.6 million signatures) to force Congressional action.</strong></p>
-                <p class="hero-proof">Harvard research proves: 3.5% organized = guaranteed systemic change.</p>
-                <a href="action.html" class="btn">Sign the Petition Now</a>
-                <p class="hero-note">
-                    Takes 30 seconds • After you sign, we deliver district‑level pressure to Congress
-                </p>
-            </div>
-
-            <p style="text-align: center; margin-top: 30px;">
-                <a href="crisis.html" class="btn-link">Continue to What's Broken →</a>
-            </p>
-        </header>
-
-        <section class="video-section" aria-labelledby="why-movement-title">
-            <h2 id="why-movement-title">Why This Movement Exists (1:11)</h2>
-            <p>Watch how $600 telehealth replaces $10,000 insurance — and triggers universal coverage in months, not decades.</p>
-
-            <div class="video-wrapper">
-                <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/2j-dF3hgdeE"
-                        title="PHIERS - The Math Congress Doesn't Want You to See"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-            </div>
-
-            <p class="video-tagline">1 minute 11 seconds. This is why they're terrified.</p>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <section class="next-step-section">
-            <h2>Want to understand what's broken first?</h2>
-            <p>See the harm. Read the stories. Understand why Congress must act.</p>
-            <a href="crisis.html" class="btn">Continue to What's Broken →</a>
-        </section>
-    </div>
-
-    <footer>
-        <h3>PHIERS Movement</h3>
-        <p style="color: #c8e6c9; margin-bottom: 30px;">Building a healthier, more stable, more democratic America.</p>
-
-        <div class="footer-nav">
-            <p class="footer-heading">Navigation</p>
-            <a href="index.html">Start Here</a> |
-            <a href="crisis.html">What's Broken</a> |
-            <a href="why-change-required.html">Why Change Required</a> |
-            <a href="5D_Solutions.html">What Must Change</a> |
-            <a href="action.html">Petition</a> |
-            <a href="simple-math.html">Receipts</a> |
-            <a href="faq.html">FAQ</a>
+        <!-- VIDEO FIRST -->
+        <div class="modal-video">
+            <iframe src="https://www.youtube.com/embed/2j-dF3hgdeE"
+                    title="PHIERS - The Math Congress Doesn't Want You to See"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
         </div>
 
-        <div class="footer-org">
-            <p class="footer-heading">Organization</p>
-            <a href="about.html">About</a> |
-            <a href="/cdn-cgi/l/email-protection#543d3a323b14243c3d3126277a3b2633">Contact</a> |
-            <a href="#">Privacy</a> |
-            <a href="#">Accessibility</a>
+        <!-- BUFFER LINE -->
+        <p class="modal-buffer">This is the math Congress doesn’t want you to see.</p>
+
+        <!-- TEETH SECOND -->
+        <div class="modal-teeth">
+            <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Power_Concedes_Nothing_TEETH.png"
+                 alt="Power Concedes Nothing Without a Demand That Has Teeth">
         </div>
 
-        <p style="margin-top: 30px; color: #81c784;">
-            © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+        <!-- TEXT -->
+        <p class="modal-text">
+            Congress let healthcare subsidies collapse. Millions are being priced out or pushed off coverage.
+            PHIERS is the plan to fix it — not for one group, but for <strong>234 million Americans</strong>.
         </p>
-    </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script>
-        // Welcome Modal - shows on every page load
-        const welcomeModal = document.getElementById('welcomeModal');
-        const closeModalBtn = document.getElementById('closeModal');
-        const quickStartBtn = document.getElementById('quickStartBtn');
+        <p class="modal-text">
+            This site is your map: what’s broken, why Congress won’t fix it on their own, and how
+            <strong>3.5% of us</strong> can force action.
+        </p>
 
-        welcomeModal.classList.add('show');
+        <!-- BUTTONS -->
+        <div class="modal-buttons">
+            <a href="#hero-petition" class="modal-btn-primary" id="quickStartBtn">Jump to the plan →</a>
+            <a href="crisis.html" class="modal-btn-secondary">Show me what's broken →</a>
+        </div>
 
-        function closeWelcomeModal() {
-            welcomeModal.classList.remove('show');
-        }
+        <p class="modal-footer">You can always return here from the footer navigation.</p>
+    </div>
+</div>
 
-        closeModalBtn.addEventListener('click', closeWelcomeModal);
+<div class="container">
+    <header>
+        <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Logo.png"
+             alt="PHIERS Logo"
+             class="logo">
 
-        quickStartBtn.addEventListener('click', function (e) {
-            e.preventDefault();
+        <h1 class="hero-title">MABAH Movement</h1>
+        <p class="hero-subtitle">Making America Better And Healthier</p>
+
+        <div class="hero-divider"></div>
+
+        <p class="hero-intro">
+            When Congress failed to extend healthcare subsidies, 22 million Americans lost coverage.
+            But we're not here to patch one crisis —
+            <strong>we're solving it for 234 million Americans</strong>.
+        </p>
+
+        <section class="teeth-section">
+            <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Power_Concedes_Nothing_TEETH.png"
+                 alt="Power Concedes Nothing Without A Demand That Has Teeth"
+                 class="teeth-image"
+                 id="teethImage">
+        </section>
+
+        <p class="hero-sprint">
+            This is a 90‑day sprint to universal healthcare, UBI, millions of AI‑resistant jobs,
+            and guardrails on executive power — ahead of the <strong>No Kings Rally on March 28</strong>.
+        </p>
+
+        <p class="hero-leverage">
+            We bring leverage to the rally. The sooner people sign with us, the more leverage they have to bring about change.
+        </p>
+
+        <div class="hero-box" id="hero-petition">
+            <p><strong>We need 3.5% of Americans (11.6 million signatures) to force Congressional action.</strong></p>
+            <p style="color:#c8e6c9;">Harvard research proves: 3.5% organized = guaranteed systemic change.</p>
+            <a href="action.html" class="btn">Sign the Petition Now</a>
+            <p style="font-size:0.85em; color:#a5d6a7;">Takes 30 seconds • District‑level pressure delivered after signing</p>
+        </div>
+
+        <p style="text-align:center; margin-top:30px;">
+            <a href="crisis.html" class="btn-link">Continue to What's Broken →</a>
+        </p>
+    </header>
+
+    <section class="video-section">
+        <h2>Why This Movement Exists (1:11)</h2>
+        <p>Watch how $600 telehealth replaces $10,000 insurance — and triggers universal coverage in months.</p>
+
+        <div class="video-wrapper">
+            <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/2j-dF3hgdeE"
+                    title="PHIERS - The Math Congress Doesn't Want You to See"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+
+        <p style="color:#81c784;">1 minute 11 seconds. This is why they're terrified.</p>
+    </section>
+
+    <div class="hero-divider"></div>
+
+    <section class="next-step-section">
+        <h2>Want to understand what's broken first?</h2>
+        <p>See the harm. Read the stories. Understand why Congress must act.</p>
+        <a href="crisis.html" class="btn">Continue to What's Broken →</a>
+    </section>
+</div>
+
+<footer>
+    <h3>PHIERS Movement</h3>
+    <p style="color:#c8e6c9;">Building a healthier, more stable, more democratic America.</p>
+
+    <p style="color:#4caf50; font-weight:bold;">Navigation</p>
+    <a href="index.html">Start Here</a> |
+    <a href="crisis.html">What's Broken</a> |
+    <a href="why-change-required.html">Why Change Required</a> |
+    <a href="5D_Solutions.html">What Must Change</a> |
+    <a href="action.html">Petition</a> |
+    <a href="simple-math.html">Receipts</a> |
+    <a href="faq.html">FAQ</a>
+
+    <br><br>
+
+    <p style="color:#4caf50; font-weight:bold;">Organization</p>
+    <a href="about.html">About</a> |
+    <a href="/cdn-cgi/l/email-protection#">Contact</a> |
+    <a href="#">Privacy</a> |
+    <a href="#">Accessibility</a>
+
+    <p style="margin-top:30px; color:#81c784;">
+        © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+    </p>
+</footer>
+
+<script>
+    const welcomeModal = document.getElementById('welcomeModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const quickStartBtn = document.getElementById('quickStartBtn');
+
+    welcomeModal.classList.add('show');
+
+    function closeWelcomeModal() {
+        welcomeModal.classList.remove('show');
+    }
+
+    closeModalBtn.addEventListener('click', closeWelcomeModal);
+
+    quickStartBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        closeWelcomeModal();
+        document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    welcomeModal.addEventListener('click', function (e) {
+        if (e.target === welcomeModal) closeWelcomeModal();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape')
+
+                if (e.key === 'Escape' && welcomeModal.classList.contains('show')) {
             closeWelcomeModal();
-            document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
-        });
+        }
+    });
 
-        welcomeModal.addEventListener('click', function (e) {
-            if (e.target === welcomeModal) {
-                closeWelcomeModal();
-            }
+    // TEETH image expand/collapse
+    const teethImage = document.getElementById('teethImage');
+    if (teethImage) {
+        teethImage.addEventListener('click', () => {
+            teethImage.classList.toggle('expanded');
         });
+    }
 
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && welcomeModal.classList.contains('show')) {
-                closeWelcomeModal();
-            }
-        });
+    // Closeable Timestamp
+    const timestampNotice = document.getElementById('timestampNotice');
+    const closeTimestampBtn = document.getElementById('closeTimestamp');
 
-        // TEETH image expand/collapse
-        const teethImage = document.getElementById('teethImage');
-        if (teethImage) {
-            teethImage.addEventListener('click', () => {
-                teethImage.classList.toggle('expanded');
-            });
+    if (closeTimestampBtn && timestampNotice) {
+        if (sessionStorage.getItem('timestampDismissed')) {
+            timestampNotice.style.display = 'none';
         }
 
-        // Closeable Timestamp
-        const timestampNotice = document.getElementById('timestampNotice');
-        const closeTimestampBtn = document.getElementById('closeTimestamp');
-
-        if (closeTimestampBtn && timestampNotice) {
-            if (sessionStorage.getItem('timestampDismissed')) {
+        closeTimestampBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            timestampNotice.style.animation = 'fadeOut 0.3s ease-out';
+            setTimeout(() => {
                 timestampNotice.style.display = 'none';
-            }
-
-            closeTimestampBtn.addEventListener('click', function (e) {
-                e.preventDefault();
-                timestampNotice.style.animation = 'fadeOut 0.3s ease-out';
-                setTimeout(() => {
-                    timestampNotice.style.display = 'none';
-                    sessionStorage.setItem('timestampDismissed', 'true');
-                }, 300);
-            });
-        }
-    </script>
+                sessionStorage.setItem('timestampDismissed', 'true');
+            }, 300);
+        });
+    }
+</script>
 </body>
 </html>
-
