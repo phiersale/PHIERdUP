@@ -20,546 +20,547 @@ Version: 2.0 (A+++ Structure)
 Created: February 6, 2026 @ 9:00 AM PST
 Session: A+++ 7-Step Movement Path Implementation
 Changes: Complete site restructure, 7-step nav, 9 new subpages, 
-         simplified Start Here, added Why Change Required, 
-         transformed What We Demand with 5 demand cards
+ simplified Start Here, added Why Change Required, 
+ transformed What We Demand with 5 demand cards
 Status: READY FOR DEPLOYMENT
 ═══════════════════════════════════════════════════════════════
 -->
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark light">
-    <title>The Leverage - PHIERS</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #e0e0e0;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="color-scheme" content="dark light">
+ <title>The Leverage - PHIERS</title>
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ 
+ body {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+ color: #e0e0e0;
+ line-height: 1.6;
+ min-height: 100vh;
+ }
 
-        .orientation-panel {
-            background: #0f172a;
-            color: #e5e7eb;
-            padding: 14px 18px;
-            border-bottom: 1px solid #1e293b;
-            font-size: 0.95rem;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-        
-        .orientation-panel strong { color: #fff; }
-        .orientation-panel span { display: block; margin-top: 4px; color: #cbd5f5; }
+ .orientation-panel {
+ background: #0f172a;
+ color: #e5e7eb;
+ padding: 14px 18px;
+ border-bottom: 1px solid #1e293b;
+ font-size: 0.95rem;
+ position: sticky;
+ top: 0;
+ z-index: 999;
+ }
+ 
+ .orientation-panel strong { color: #fff; }
+ .orientation-panel span { display: block; margin-top: 4px; color: #cbd5f5; }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.8), rgba(22, 33, 62, 0.8));
-            border-radius: 10px;
-            margin-bottom: 30px;
-            border: 2px solid rgba(76, 175, 80, 0.3);
-        }
-        
-        .logo {
-            height: 120px;
-            width: auto;
-            margin: 0 auto 20px auto;
-            display: block;
-        }
+ .container {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 20px;
+ }
+ 
+ header {
+ text-align: center;
+ padding: 40px 20px;
+ background: linear-gradient(135deg, rgba(15, 52, 96, 0.8), rgba(22, 33, 62, 0.8));
+ border-radius: 10px;
+ margin-bottom: 30px;
+ border: 2px solid rgba(76, 175, 80, 0.3);
+ }
+ 
+ .logo {
+ height: 120px;
+ width: auto;
+ margin: 0 auto 20px auto;
+ display: block;
+ }
 
-        h1 {
-            color: #4caf50;
-            font-size: 2.2em;
-            margin-bottom: 15px;
-            text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
-        }
+ h1 {
+ color: #4caf50;
+ font-size: 2.2em;
+ margin-bottom: 15px;
+ text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+ }
 
-        h2 {
-            color: #4caf50;
-            font-size: 1.6em;
-            margin: 40px 0 20px 0;
-        }
+ h2 {
+ color: #4caf50;
+ font-size: 1.6em;
+ margin: 40px 0 20px 0;
+ }
 
-        h3 {
-            color: #81c784;
-            font-size: 1.3em;
-            margin: 25px 0 15px 0;
-        }
+ h3 {
+ color: #81c784;
+ font-size: 1.3em;
+ margin: 25px 0 15px 0;
+ }
 
-        .subtitle {
-            font-size: 1.1em;
-            color: #81c784;
-            margin-bottom: 15px;
-        }
+ .subtitle {
+ font-size: 1.1em;
+ color: #81c784;
+ margin-bottom: 15px;
+ }
 
-        p {
-            color: #c8e6c9;
-            margin: 15px 0;
-            line-height: 1.8;
-        }
+ p {
+ color: #c8e6c9;
+ margin: 15px 0;
+ line-height: 1.8;
+ }
 
-        .highlight-box {
-            background: rgba(76, 175, 80, 0.1);
-            border: 2px solid #4caf50;
-            padding: 25px;
-            margin: 25px 0;
-            border-radius: 8px;
-        }
+ .highlight-box {
+ background: rgba(76, 175, 80, 0.1);
+ border: 2px solid #4caf50;
+ padding: 25px;
+ margin: 25px 0;
+ border-radius: 8px;
+ }
 
-        .graphic-container {
-            text-align: center;
-            margin: 40px 0;
-        }
+ .graphic-container {
+ text-align: center;
+ margin: 40px 0;
+ }
 
-        .graphic-container img {
-            max-width: 50%;
-            height: auto;
-            border-radius: 8px;
-            border: 2px solid rgba(76, 175, 80, 0.3);
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
+ .graphic-container img {
+ max-width: 50%;
+ height: auto;
+ border-radius: 8px;
+ border: 2px solid rgba(76, 175, 80, 0.3);
+ cursor: pointer;
+ transition: transform 0.3s;
+ }
 
-        .graphic-container img:hover {
-            transform: scale(1.05);
-        }
+ .graphic-container img:hover {
+ transform: scale(1.05);
+ }
 
-        .graphic-caption {
-            color: #81c784;
-            font-size: 0.9em;
-            font-style: italic;
-            margin-top: 10px;
-        }
+ .graphic-caption {
+ color: #81c784;
+ font-size: 0.9em;
+ font-style: italic;
+ margin-top: 10px;
+ }
 
-        .leverage-card {
-            background: rgba(76, 175, 80, 0.1);
-            border-left: 5px solid #4caf50;
-            padding: 25px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
+ .leverage-card {
+ background: rgba(76, 175, 80, 0.1);
+ border-left: 5px solid #4caf50;
+ padding: 25px;
+ margin: 20px 0;
+ border-radius: 8px;
+ }
 
-        .leverage-card h3 {
-            color: #4caf50;
-            margin-top: 0;
-        }
+ .leverage-card h3 {
+ color: #4caf50;
+ margin-top: 0;
+ }
 
-        .binary-choice {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 30px 0;
-        }
+ .binary-choice {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 20px;
+ margin: 30px 0;
+ }
 
-        .choice-card {
-            padding: 25px;
-            border-radius: 8px;
-        }
+ .choice-card {
+ padding: 25px;
+ border-radius: 8px;
+ }
 
-        .choice-a {
-            background: rgba(76, 175, 80, 0.1);
-            border: 3px solid #4caf50;
-        }
+ .choice-a {
+ background: rgba(76, 175, 80, 0.1);
+ border: 3px solid #4caf50;
+ }
 
-        .choice-a h3 {
-            color: #4caf50;
-        }
+ .choice-a h3 {
+ color: #4caf50;
+ }
 
-        .choice-b {
-            background: rgba(244, 67, 54, 0.1);
-            border: 3px solid #f44336;
-        }
+ .choice-b {
+ background: rgba(244, 67, 54, 0.1);
+ border: 3px solid #f44336;
+ }
 
-        .choice-b h3 {
-            color: #ef5350;
-        }
+ .choice-b h3 {
+ color: #ef5350;
+ }
 
-        .btn {
-            background: linear-gradient(135deg, #4caf50, #2e7d32);
-            color: white;
-            padding: 14px 32px;
-            font-size: 1.1em;
-            font-weight: bold;
-            border: 2px solid #4caf50;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-        }
+ .btn {
+ background: linear-gradient(135deg, #4caf50, #2e7d32);
+ color: white;
+ padding: 14px 32px;
+ font-size: 1.1em;
+ font-weight: bold;
+ border: 2px solid #4caf50;
+ border-radius: 8px;
+ cursor: pointer;
+ text-decoration: none;
+ display: inline-block;
+ transition: all 0.3s;
+ box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+ }
 
-        .btn:hover {
-            background: linear-gradient(135deg, #66bb6a, #388e3c);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-        }
+ .btn:hover {
+ background: linear-gradient(135deg, #66bb6a, #388e3c);
+ transform: translateY(-2px);
+ box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+ }
 
-        .btn-secondary {
-            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1));
-            border: 2px solid #4caf50;
-        }
+ .btn-secondary {
+ background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1));
+ border: 2px solid #4caf50;
+ }
 
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.2));
-        }
+ .btn-secondary:hover {
+ background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.2));
+ }
 
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            margin: 40px 0;
-            padding-top: 30px;
-            border-top: 2px solid rgba(76, 175, 80, 0.3);
-        }
+ .nav-buttons {
+ display: flex;
+ justify-content: space-between;
+ gap: 15px;
+ margin: 40px 0;
+ padding-top: 30px;
+ border-top: 2px solid rgba(76, 175, 80, 0.3);
+ }
 
-        .nav-buttons .btn {
-            flex: 1;
-            text-align: center;
-        }
+ .nav-buttons .btn {
+ flex: 1;
+ text-align: center;
+ }
 
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            border-top: 2px solid rgba(76, 175, 80, 0.3);
-            color: #81c784;
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
+ footer {
+ text-align: center;
+ padding: 30px 20px;
+ border-top: 2px solid rgba(76, 175, 80, 0.3);
+ color: #81c784;
+ margin-top: 40px;
+ font-size: 0.9em;
+ }
 
-        footer p {
-            margin: 10px 0;
-        }
+ footer p {
+ margin: 10px 0;
+ }
 
-        footer a {
-            color: #81c784;
-            text-decoration: underline;
-        }
+ footer a {
+ color: #81c784;
+ text-decoration: underline;
+ }
 
-        footer a:hover {
-            color: #4caf50;
-        }
+ footer a:hover {
+ color: #4caf50;
+ }
 
-        @media (max-width: 768px) {
-            h1 { font-size: 1.8em; }
-            h2 { font-size: 1.4em; }
-            .logo { height: 100px; }
-            .binary-choice { grid-template-columns: 1fr; }
-            .graphic-container img { max-width: 80%; }
-        }
-    
-        .orientation-panel {
-            position: relative;
-        }
-        
-        .orientation-panel-content {
-            position: relative;
-            padding-right: 40px;
-        }
-        
-        .orientation-panel .close-btn {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            background: rgba(239, 68, 68, 0.1);
-            border: 2px solid rgba(239, 68, 68, 0.3);
-            color: #ef4444;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-        
-        .orientation-panel .close-btn:hover {
-            background: rgba(239, 68, 68, 0.2);
-            border-color: #ef4444;
-            transform: translateY(-50%) rotate(90deg);
-        }
-        
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
-    </style>
+ @media (max-width: 768px) {
+ h1 { font-size: 1.8em; }
+ h2 { font-size: 1.4em; }
+ .logo { height: 100px; }
+ .binary-choice { grid-template-columns: 1fr; }
+ .graphic-container img { max-width: 80%; }
+ }
+ 
+ .orientation-panel {
+ position: relative;
+ }
+ 
+ .orientation-panel-content {
+ position: relative;
+ padding-right: 40px;
+ }
+ 
+ .orientation-panel .close-btn {
+ position: absolute;
+ top: 50%;
+ right: 10px;
+ transform: translateY(-50%);
+ background: rgba(239, 68, 68, 0.1);
+ border: 2px solid rgba(239, 68, 68, 0.3);
+ color: #ef4444;
+ width: 28px;
+ height: 28px;
+ border-radius: 50%;
+ cursor: pointer;
+ font-size: 18px;
+ font-weight: bold;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: all 0.3s;
+ }
+ 
+ .orientation-panel .close-btn:hover {
+ background: rgba(239, 68, 68, 0.2);
+ border-color: #ef4444;
+ transform: translateY(-50%) rotate(90deg);
+ }
+ 
+ @keyframes fadeOut {
+ from { opacity: 1; }
+ to { opacity: 0; }
+ }
+ </style>
 </head>
 <body>
-    <!-- VERSION BADGE (visible on page) -->
-    <div style="position: fixed; top: 10px; right: 10px; background: rgba(76, 175, 80, 0.9); color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85em; font-weight: bold; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-family: monospace;">
-        v2.0 | Feb 6, 2026
-    </div>
+ <!-- VERSION BADGE (visible on page) -->
+ <div style="position: fixed; top: 10px; right: 10px; background: rgba(76, 175, 80, 0.9); color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85em; font-weight: bold; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-family: monospace;">
+ v2.0 | Feb 6, 2026
+ </div>
 
-    <div class="orientation-panel">
-        <div class="orientation-panel-content">
-            <button class="close-btn" id="closeOrientationPanel" aria-label="Close">&times;</button>
-            <strong>The Leverage: A small group can force national change if the math is undeniable.</strong>
-        <span>
-            Town hall pressure. Primary challenges. Media amplification. Mathematical superiority. 
-            Congress faces a binary choice.
-        </span>
-        </div>
-    </div>
+ <div class="orientation-panel">
+ <div class="orientation-panel-content">
+ <button class="close-btn" id="closeOrientationPanel" aria-label="Close">&times;</button>
+ <strong>The Leverage: A small group can force national change if the math is undeniable.</strong>
+ <span>
+ Town hall pressure. Primary challenges. Media amplification. Mathematical superiority. 
+ Congress faces a binary choice.
+ </span>
+ </div>
+ </div>
 
-    <div class="container">
-        <header>
-            <a href="index.html">
-                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Logo.png" 
-                     alt="PHIERS Logo" 
-                     class="logo">
-            </a>
-            <h1>⚡ Congressional Leverage: Binary Choice</h1>
-            <p class="subtitle">A small group can force national change if the math is undeniable.</p>
-        </header>
+ <div class="container">
+ <header>
+ <a href="index.html">
+ <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Logo.png" 
+ alt="PHIERS Logo" 
+ class="logo">
+ </a>
+ 
+            <h1 style="color: #4caf50; font-size: 2.5em; margin: 20px 0 10px 0; text-shadow: 0 0 20px rgba(76, 175, 80, 0.3); text-align: center;">The Leverage</h1>
+ <p class="subtitle">A small group can force national change if the math is undeniable.</p>
+ </header>
 
 <!-- NAVIGATION BUTTONS (Under Hero) -->
-        <nav style="
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
-            border: 2px solid rgba(76, 175, 80, 0.3);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 40px;
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        ">
-            <a href="index.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🏠 Start Here</a>
-            
-            <a href="crisis.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🚨 What's Broken</a>
-            
-            <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚖️ Why Change Required</a>
-            
-            <a href="5D_Solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 What We Demand</a>
-            
-            <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">✏️ Petition</a>
-            
-            <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📊 Receipts</a>
-            
-            <a href="faq.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">❓ FAQ</a>
-        </nav>
+ <nav style="
+ background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+ border: 2px solid rgba(76, 175, 80, 0.3);
+ border-radius: 8px;
+ padding: 20px;
+ margin-bottom: 40px;
+ display: flex;
+ gap: 12px;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ ">
+ <a href="index.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'"> Start Here</a>
+ 
+ <a href="crisis.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'"> What's Broken</a>
+ 
+ <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">️ Why Change Required</a>
+ 
+ <a href="5D_Solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'"> What We Demand</a>
+ 
+ <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">️ Petition</a>
+ 
+ <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'"> Receipts</a>
+ 
+ <a href="faq.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'"> FAQ</a>
+ </nav>
 
 
-        <!-- 4:44 POLITICAL LEVERAGE VIDEO -->
-        <section style="background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9)); border-left: 5px solid #ffeb3b; padding: 40px; margin-bottom: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);">
-            <h2 style="color: #ffeb3b; margin-bottom: 20px; text-align: center;">🎥 The Vision: What Happens After We Win (4:44)</h2>
-            <p style="text-align: center; color: #c8e6c9; margin-bottom: 25px;">See the complete transformation. Universal coverage + UBI + jobs guarantee + political power restored to the people.</p>
-            
-            <div style="text-align: center; margin: 30px 0;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/xy3F9ZWbgS8" title="The Vision - What Happens After We Win" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);"></iframe>
-            </div>
-        </section>
+ <!-- 4:44 POLITICAL LEVERAGE VIDEO -->
+ <section style="background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9)); border-left: 5px solid #ffeb3b; padding: 40px; margin-bottom: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);">
+ <h2 style="color: #ffeb3b; margin-bottom: 20px; text-align: center;"> The Vision: What Happens After We Win (4:44)</h2>
+ <p style="text-align: center; color: #c8e6c9; margin-bottom: 25px;">See the complete transformation. Universal coverage + UBI + jobs guarantee + political power restored to the people.</p>
+ 
+ <div style="text-align: center; margin: 30px 0;">
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/xy3F9ZWbgS8" title="The Vision - What Happens After We Win" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);"></iframe>
+ </div>
+ </section>
 
-        <section>
-            <div class="graphic-container">
-                <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/LEVERAGE_Pwr_of_the_People.png" 
-                     alt="Power of the People - Congressional Leverage"
-                     onclick="window.open(this.src, '_blank')">
-                <p class="graphic-caption">Click to enlarge • Power of the People: 100M+ Constituents vs Corporate Average = 230:1 Advantage</p>
-            </div>
-        </section>
+ <section>
+ <div class="graphic-container">
+ <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/LEVERAGE_Pwr_of_the_People.png" 
+ alt="Power of the People - Congressional Leverage"
+ onclick="window.open(this.src, '_blank')">
+ <p class="graphic-caption">Click to enlarge • Power of the People: 100M+ Constituents vs Corporate Average = 230:1 Advantage</p>
+ </div>
+ </section>
 
-        <section>
-            <h2>The Four Pressure Points</h2>
+ <section>
+ <h2>The Four Pressure Points</h2>
 
-            <div class="leverage-card">
-                <h3>1. Town Hall Pressure (Nader Rule)</h3>
-                <p>
-                    <strong style="color: white;">1,500 signatures = mandatory town hall.</strong> 
-                    We're targeting 10,000+ per district. Representatives forced to face constituents with 
-                    petition data + survey stories.
-                </p>
-                <p style="margin-top: 15px;">
-                    This isn't optional. The Nader Rule forces them to show up and answer for their decisions.
-                </p>
-            </div>
+ <div class="leverage-card">
+ <h3>1. Town Hall Pressure (Nader Rule)</h3>
+ <p>
+ <strong style="color: white;">1,500 signatures = mandatory town hall.</strong> 
+ We're targeting 10,000+ per district. Representatives forced to face constituents with 
+ petition data + survey stories.
+ </p>
+ <p style="margin-top: 15px;">
+ This isn't optional. The Nader Rule forces them to show up and answer for their decisions.
+ </p>
+ </div>
 
-            <div class="leverage-card">
-                <h3>2. Primary Challenge Threat (Jan 2026)</h3>
-                <p>
-                    <strong style="color: white;">Any representative refusing telehealth faces immediate primary challenge.</strong>
-                </p>
-                <p style="margin-top: 15px;">
-                    Healthcare IS the dominant issue (80% of voters). Refusing solution = automatic vulnerability.
-                </p>
-            </div>
+ <div class="leverage-card">
+ <h3>2. Primary Challenge Threat (Jan 2026)</h3>
+ <p>
+ <strong style="color: white;">Any representative refusing telehealth faces immediate primary challenge.</strong>
+ </p>
+ <p style="margin-top: 15px;">
+ Healthcare IS the dominant issue (80% of voters). Refusing solution = automatic vulnerability.
+ </p>
+ </div>
 
-            <div class="leverage-card">
-                <h3>3. Media Amplification (55M Readers)</h3>
-                <p>
-                    <strong style="color: white;">Pathos Communications + International Business Times</strong> - 
-                    Ready to publish PHIERS story.
-                </p>
-                <p style="margin-top: 15px;">
-                    <strong style="color: #4caf50;">Publication happens when fundraising goal is reached.</strong> 
-                    Your contribution directly funds the story that reaches 55M+ readers and changes the national conversation.
-                </p>
-                <p style="margin-top: 10px;">
-                    <a href="Donate.html" style="color: #4caf50; text-decoration: underline;">→ Fund the media campaign</a>
-                </p>
-            </div>
+ <div class="leverage-card">
+ <h3>3. Media Amplification (55M Readers)</h3>
+ <p>
+ <strong style="color: white;">Pathos Communications + International Business Times</strong> - 
+ Ready to publish PHIERS story.
+ </p>
+ <p style="margin-top: 15px;">
+ <strong style="color: #4caf50;">Publication happens when fundraising goal is reached.</strong> 
+ Your contribution directly funds the story that reaches 55M+ readers and changes the national conversation.
+ </p>
+ <p style="margin-top: 10px;">
+ <a href="Donate.html" style="color: #4caf50; text-decoration: underline;">→ Fund the media campaign</a>
+ </p>
+ </div>
 
-            <div class="leverage-card">
-                <h3>4. Mathematical Inevitability</h3>
-                <p>
-                    <strong style="color: white;">$1.95B per district constituent pressure vs. $8.5M corporate average.</strong>
-                </p>
-                <p style="margin-top: 15px; font-size: 1.2em; color: #4caf50; font-weight: bold;">
-                    230:1 advantage minimum.
-                </p>
-                <p style="margin-top: 10px;">
-                    Congress cannot ignore mathematical superiority.
-                </p>
-            </div>
-        </section>
+ <div class="leverage-card">
+ <h3>4. Mathematical Inevitability</h3>
+ <p>
+ <strong style="color: white;">$1.95B per district constituent pressure vs. $8.5M corporate average.</strong>
+ </p>
+ <p style="margin-top: 15px; font-size: 1.2em; color: #4caf50; font-weight: bold;">
+ 230:1 advantage minimum.
+ </p>
+ <p style="margin-top: 10px;">
+ Congress cannot ignore mathematical superiority.
+ </p>
+ </div>
+ </section>
 
-        <section>
-            <h2>🗳️ Congress's Binary Choice</h2>
-            
-            <div class="binary-choice">
-                <div class="choice-card choice-a">
-                    <h3>✅ OPTION A: LEAD THIS</h3>
-                    <p style="color: #c8e6c9; margin-top: 15px;">
-                        Say YES to telehealth in ACA by Late January.
-                    </p>
-                    <p style="color: #c8e6c9; margin-top: 10px;">
-                        Become heroes.
-                    </p>
-                    <p style="color: #c8e6c9; margin-top: 10px;">
-                        Save 22M people.
-                    </p>
-                    <p style="color: #c8e6c9; margin-top: 10px;">
-                        Trigger cascade.
-                    </p>
-                    <p style="color: white; font-weight: bold; margin-top: 15px; font-size: 1.1em;">
-                        Be remembered as problem-solvers.
-                    </p>
-                </div>
+ <section>
+ <h2>️ Congress's Binary Choice</h2>
+ 
+ <div class="binary-choice">
+ <div class="choice-card choice-a">
+ <h3> OPTION A: LEAD THIS</h3>
+ <p style="color: #c8e6c9; margin-top: 15px;">
+ Say YES to telehealth in ACA by Late January.
+ </p>
+ <p style="color: #c8e6c9; margin-top: 10px;">
+ Become heroes.
+ </p>
+ <p style="color: #c8e6c9; margin-top: 10px;">
+ Save 22M people.
+ </p>
+ <p style="color: #c8e6c9; margin-top: 10px;">
+ Trigger cascade.
+ </p>
+ <p style="color: white; font-weight: bold; margin-top: 15px; font-size: 1.1em;">
+ Be remembered as problem-solvers.
+ </p>
+ </div>
 
-                <div class="choice-card choice-b">
-                    <h3>❌ OPTION B: FACE REPLACEMENT</h3>
-                    <p style="color: #ffcdd2; margin-top: 15px;">
-                        Refuse.
-                    </p>
-                    <p style="color: #ffcdd2; margin-top: 10px;">
-                        Face 100M+ organized constituents demanding removal.
-                    </p>
-                    <p style="color: #ffcdd2; margin-top: 10px;">
-                        Lose primary elections Jan 2026.
-                    </p>
-                    <p style="color: white; font-weight: bold; margin-top: 15px; font-size: 1.1em;">
-                        Be remembered as obstacles.
-                    </p>
-                </div>
-            </div>
+ <div class="choice-card choice-b">
+ <h3> OPTION B: FACE REPLACEMENT</h3>
+ <p style="color: #ffcdd2; margin-top: 15px;">
+ Refuse.
+ </p>
+ <p style="color: #ffcdd2; margin-top: 10px;">
+ Face 100M+ organized constituents demanding removal.
+ </p>
+ <p style="color: #ffcdd2; margin-top: 10px;">
+ Lose primary elections Jan 2026.
+ </p>
+ <p style="color: white; font-weight: bold; margin-top: 15px; font-size: 1.1em;">
+ Be remembered as obstacles.
+ </p>
+ </div>
+ </div>
 
-            <p style="text-align: center; font-size: 1.2em; color: #4caf50; font-weight: bold; margin: 40px 0;">
-                Congress will choose A. The pressure is mathematical. The choice is binary.
-            </p>
-        </section>
+ <p style="text-align: center; font-size: 1.2em; color: #4caf50; font-weight: bold; margin: 40px 0;">
+ Congress will choose A. The pressure is mathematical. The choice is binary.
+ </p>
+ </section>
 
-        <section>
-            <h2>📊 The 3.5% Threshold</h2>
-            
-            <div class="graphic-container">
-                <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Guaranteed_Change__THUMBNAILjpg.jpg" 
-                     alt="Guaranteed Change - 3.5% = 11.6M Signatures"
-                     onclick="window.open(this.src, '_blank')">
-                <p class="graphic-caption">Click to enlarge • 3.5% = 11.6M signatures = Guaranteed systemic change (Harvard research)</p>
-            </div>
+ <section>
+ <h2> The 3.5% Threshold</h2>
+ 
+ <div class="graphic-container">
+ <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Guaranteed_Change__THUMBNAILjpg.jpg" 
+ alt="Guaranteed Change - 3.5% = 11.6M Signatures"
+ onclick="window.open(this.src, '_blank')">
+ <p class="graphic-caption">Click to enlarge • 3.5% = 11.6M signatures = Guaranteed systemic change (Harvard research)</p>
+ </div>
 
-            <div class="highlight-box">
-                <h3 style="color: #4caf50; margin-top: 0;">Harvard Research (Erica Chenoweth):</h3>
-                <p style="margin-top: 15px;">
-                    Studied 323 political campaigns from 1900-2006.
-                </p>
-                <p style="margin-top: 15px; font-size: 1.1em; color: white; font-weight: bold;">
-                    Finding: NO campaign where 3.5% of the population participated in sustained, organized action ever failed.
-                </p>
-                <p style="margin-top: 20px;">
-                    <strong style="color: #4caf50;">The math:</strong>
-                </p>
-                <ul style="padding-left: 20px; margin-top: 10px;">
-                    <li style="color: #c8e6c9; margin: 8px 0;">3.5% of US population = 11.6M Americans</li>
-                    <li style="color: #c8e6c9; margin: 8px 0;">We're targeting 100M+ = 9x the threshold</li>
-                    <li style="color: #c8e6c9; margin: 8px 0;">Implication: Mathematically unstoppable</li>
-                </ul>
-                <p style="margin-top: 20px; font-size: 1.1em; color: #4caf50; font-weight: bold;">
-                    Systemic change isn't just possible—it's guaranteed once we reach and sustain 3.5% organized participation.
-                </p>
-            </div>
-        </section>
+ <div class="highlight-box">
+ <h3 style="color: #4caf50; margin-top: 0;">Harvard Research (Erica Chenoweth):</h3>
+ <p style="margin-top: 15px;">
+ Studied 323 political campaigns from 1900-2006.
+ </p>
+ <p style="margin-top: 15px; font-size: 1.1em; color: white; font-weight: bold;">
+ Finding: NO campaign where 3.5% of the population participated in sustained, organized action ever failed.
+ </p>
+ <p style="margin-top: 20px;">
+ <strong style="color: #4caf50;">The math:</strong>
+ </p>
+ <ul style="padding-left: 20px; margin-top: 10px;">
+ <li style="color: #c8e6c9; margin: 8px 0;">3.5% of US population = 11.6M Americans</li>
+ <li style="color: #c8e6c9; margin: 8px 0;">We're targeting 100M+ = 9x the threshold</li>
+ <li style="color: #c8e6c9; margin: 8px 0;">Implication: Mathematically unstoppable</li>
+ </ul>
+ <p style="margin-top: 20px; font-size: 1.1em; color: #4caf50; font-weight: bold;">
+ Systemic change isn't just possible—it's guaranteed once we reach and sustain 3.5% organized participation.
+ </p>
+ </div>
+ </section>
 
-        <section>
-            <h2>🎯 Vote Like Your Life Depends On It</h2>
-            
-            <div class="graphic-container">
-                <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/vote_lke_your_life_depends_on_it.jpg" 
-                     alt="Vote Like Your Life Depends On It"
-                     onclick="window.open(this.src, '_blank')">
-                <p class="graphic-caption">Click to enlarge • Because It Does – This Is About Healthcare, Jobs, and Survival</p>
-            </div>
-        </section>
+ <section>
+ <h2> Vote Like Your Life Depends On It</h2>
+ 
+ <div class="graphic-container">
+ <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/vote_lke_your_life_depends_on_it.jpg" 
+ alt="Vote Like Your Life Depends On It"
+ onclick="window.open(this.src, '_blank')">
+ <p class="graphic-caption">Click to enlarge • Because It Does – This Is About Healthcare, Jobs, and Survival</p>
+ </div>
+ </section>
 
-        <section style="text-align: center; margin: 50px 0;">
-            <h2>Ready to Build the Pressure?</h2>
-            <p style="font-size: 1.1em; margin: 20px 0;">
-                Sign the petition. Build the leverage. Force Congress to choose.
-            </p>
-            
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
-                <a href="https://c.org/q9vrMCQZsY" target="_blank" class="btn">✏️ Sign Petition Now</a>
-                <a href="buying-power.html" class="btn btn-secondary">💪 See Buying Power →</a>
-                <a href="action.html" class="btn btn-secondary">📋 All Actions →</a>
-            </div>
-        </section>
+ <section style="text-align: center; margin: 50px 0;">
+ <h2>Ready to Build the Pressure?</h2>
+ <p style="font-size: 1.1em; margin: 20px 0;">
+ Sign the petition. Build the leverage. Force Congress to choose.
+ </p>
+ 
+ <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
+ <a href="https://c.org/q9vrMCQZsY" target="_blank" class="btn">️ Sign Petition Now</a>
+ <a href="buying-power.html" class="btn btn-secondary"> See Buying Power →</a>
+ <a href="action.html" class="btn btn-secondary"> All Actions →</a>
+ </div>
+ </section>
 
-        <div class="nav-buttons">
-            <a href="how-it-works.html" class="btn btn-secondary">← Back: How It Works</a>
-            <a href="buying-power.html" class="btn btn-secondary">Next: Buying Power →</a>
-            <!-- HOME BUTTON -->
-        <div style="text-align: center; margin: 40px 0;">
-            <a href="index.html" style="background: linear-gradient(135deg, #4caf50, #45a049); color: white; padding: 12px 30px; font-size: 1em; font-weight: bold; text-decoration: none; border-radius: 8px; display: inline-block;">← Back to Start Here</a>
-        </div>
-    </div>
+ <div class="nav-buttons">
+ <a href="how-it-works.html" class="btn btn-secondary">← Back: How It Works</a>
+ <a href="buying-power.html" class="btn btn-secondary">Next: Buying Power →</a>
+ <!-- HOME BUTTON -->
+ <div style="text-align: center; margin: 40px 0;">
+ <a href="index.html" style="background: linear-gradient(135deg, #4caf50, #45a049); color: white; padding: 12px 30px; font-size: 1em; font-weight: bold; text-decoration: none; border-radius: 8px; display: inline-block;">← Back to Start Here</a>
+ </div>
+ </div>
 
-    <footer>
-            <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 15px;">
-                PHIERS Movement | Make America Better And Healthier (MABAH)
-            </p>
-            
-            <p style="margin: 15px 0;">
-                <strong>Contact:</strong> Will Price | <a href="/cdn-cgi/l/email-protection#3e575058517e4e56575b4c4d10514c59"><span class="__cf_email__" data-cfemail="2f464149406f5f47464a5d5c01405d48"><span class="__cf_email__" data-cfemail="046d6a626b44746c6d6176772a6b7663">[email&#160;protected]</span></span></a> | 916-306-8967
-            </p>
-            
-            <p style="margin: 20px 0;">
-                <a href="action.html" style="color: #4caf50; font-weight: bold; font-size: 1.05em;">✏️ Sign the Petition</a>
-            </p>
-            
-            <p style="margin-top: 20px;">
-                © PHIERS.org — People's Health Insurance Economic Recovery Solutions
-            </p>
-            <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
-                If you see an err
+ <footer>
+ <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 15px;">
+ PHIERS Movement | Make America Better And Healthier (MABAH)
+ </p>
+ 
+ <p style="margin: 15px 0;">
+ <strong>Contact:</strong> Will Price | <a href="/cdn-cgi/l/email-protection#3e575058517e4e56575b4c4d10514c59"><span class="__cf_email__" data-cfemail="2f464149406f5f47464a5d5c01405d48"><span class="__cf_email__" data-cfemail="046d6a626b44746c6d6176772a6b7663">[email&#160;protected]</span></span></a> | 916-306-8967
+ </p>
+ 
+ <p style="margin: 20px 0;">
+ <a href="action.html" style="color: #4caf50; font-weight: bold; font-size: 1.05em;">️ Sign the Petition</a>
+ </p>
+ 
+ <p style="margin-top: 20px;">
+ © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+ </p>
+ <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
+ If you see an err
