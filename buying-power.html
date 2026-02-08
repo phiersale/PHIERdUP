@@ -1,31 +1,4 @@
 <!DOCTYPE html>
-<!--
-=============================================================================
-FILE: buying-power.html
-VERSION: v1.0.2
-LAST UPDATED: 2026-02-07 04:25 UTC
-UPDATED BY: Claude Session 2026-02-07
-CHANGES: Added version control, images sized to 50%
-=============================================================================
-Previous Versions:
-- v1.0.0 | 2026-02-06 08:00 UTC | Initial creation from baseline
-- v1.1.0 | 2026-02-07 03:47 UTC | Phase 1 updates (modal, dates, images)
-=============================================================================
--->
-
-<!-- 
-═══════════════════════════════════════════════════════════════
-PHIERS A+++ TRANSFORMATION
-Version: 2.0 (A+++ Structure)
-Created: February 6, 2026 @ 9:00 AM PST
-Session: A+++ 7-Step Movement Path Implementation
-Changes: Complete site restructure, 7-step nav, 9 new subpages, 
-         simplified Start Here, added Why Change Required, 
-         transformed What We Demand with 5 demand cards
-Status: READY FOR DEPLOYMENT
-═══════════════════════════════════════════════════════════════
--->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -232,63 +205,15 @@ Status: READY FOR DEPLOYMENT
             .logo { height: 100px; }
             .graphic-container img { max-width: 80%; }
         }
-    
-        .orientation-panel {
-            position: relative;
-        }
-        
-        .orientation-panel-content {
-            position: relative;
-            padding-right: 40px;
-        }
-        
-        .orientation-panel .close-btn {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            background: rgba(239, 68, 68, 0.1);
-            border: 2px solid rgba(239, 68, 68, 0.3);
-            color: #ef4444;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-        
-        .orientation-panel .close-btn:hover {
-            background: rgba(239, 68, 68, 0.2);
-            border-color: #ef4444;
-            transform: translateY(-50%) rotate(90deg);
-        }
-        
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
     </style>
 </head>
 <body>
-    <!-- VERSION BADGE (visible on page) -->
-    <div style="position: fixed; top: 10px; right: 10px; background: rgba(76, 175, 80, 0.9); color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85em; font-weight: bold; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-family: monospace;">
-        v2.0 | Feb 6, 2026
-    </div>
-
     <div class="orientation-panel">
-        <div class="orientation-panel-content">
-            <button class="close-btn" id="closeOrientationPanel" aria-label="Close">&times;</button>
-            <strong>Buying Power: We're turning wasted premiums into direct care and political leverage.</strong>
+        <strong>Buying Power: We're turning wasted premiums into direct care and political leverage.</strong>
         <span>
             100M+ organized = largest pharmaceutical buyer in the nation. 
             We undercut Big Pharma through pure market dominance.
         </span>
-        </div>
     </div>
 
     <div class="container">
@@ -298,38 +223,9 @@ Status: READY FOR DEPLOYMENT
                      alt="PHIERS Logo" 
                      class="logo">
             </a>
-            <h1>💪 Cooperative Purchasing Power: The Nuclear Option</h1>
+            <h1>Option</h1>
             <p class="subtitle">We're turning wasted premiums into direct care and political leverage.</p>
         </header>
-
-<!-- NAVIGATION BUTTONS (Under Hero) -->
-        <nav style="
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
-            border: 2px solid rgba(76, 175, 80, 0.3);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 40px;
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        ">
-            <a href="index.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🏠 Start Here</a>
-            
-            <a href="crisis.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🚨 What's Broken</a>
-            
-            <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚖️ Why Change Required</a>
-            
-            <a href="5D_Solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 What We Demand</a>
-            
-            <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">✏️ Petition</a>
-            
-            <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📊 Receipts</a>
-            
-            <a href="faq.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">❓ FAQ</a>
-        </nav>
-
 
         <section>
             <h2>What Most People Don't Understand</h2>
@@ -343,40 +239,40 @@ Status: READY FOR DEPLOYMENT
         </section>
 
         <section>
-            <h2>📊 The Market Reality</h2>
+            <h2>Reality</h2>
             
             <div class="graphic-container">
-                <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/90pct_of_US_Meds_are_Imports.png" 
+                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/90pct_of_US_Meds_are_Imports.png" 
                      alt="90% of US Medications are Imports"
                      onclick="window.open(this.src, '_blank')">
-                <p class="graphic-caption">Click to enlarge • US imports 90% of its medications - this gives us massive leverage</p>
+                <p class="graphic-caption">Click to enlarge â€¢ US imports 90% of its medications - this gives us massive leverage</p>
             </div>
 
             <div class="power-grid">
                 <div class="power-card">
-                    <h3>🌍 Import Reality</h3>
+                    <h3>Reality</h3>
                     <p>US imports 90% of its medications from global manufacturers</p>
                 </div>
                 
                 <div class="power-card">
-                    <h3>💪 Market Dominance</h3>
+                    <h3>Dominance</h3>
                     <p>100M+ cooperative members = LARGEST PHARMACEUTICAL BUYER IN THE NATION</p>
                 </div>
                 
                 <div class="power-card">
-                    <h3>💰 Cost Advantage</h3>
+                    <h3>Advantage</h3>
                     <p>Buying cooperatively (no markups, no middlemen) = UNDERCUTS ENTIRE US PHARMA MARKET</p>
                 </div>
                 
                 <div class="power-card">
-                    <h3>🎯 Result</h3>
+                    <h3>Result</h3>
                     <p>Drug costs 10x lower without any government negotiation</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>💊 We Already Know How to Cut Drug Costs 80-90%</h2>
+            <h2>80-90%</h2>
             
             <div class="highlight-box">
                 <h3 style="color: #4caf50; margin-top: 0;">Proof we can deliver:</h3>
@@ -401,13 +297,13 @@ Status: READY FOR DEPLOYMENT
         </section>
 
         <section>
-            <h2>🔬 Alternative Drug Development Models</h2>
+            <h2>Models</h2>
             
             <div class="graphic-container">
-                <img style="max-width: 50%; height: auto; cursor: pointer;" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Drug_DEV_Costs__UAEM.png" 
+                <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Drug_DEV_Costs__UAEM.png" 
                      alt="Drug Development Costs - Academic vs Big Pharma"
                      onclick="window.open(this.src, '_blank')">
-                <p class="graphic-caption">Click to enlarge • Alternative R&D Models Produce New Drugs at 1/24th the Cost of Big Pharma</p>
+                <p class="graphic-caption">Click to enlarge â€¢ Alternative R&D Models Produce New Drugs at 1/24th the Cost of Big Pharma</p>
             </div>
 
             <p style="text-align: center; font-size: 1.05em; margin: 30px 0;">
@@ -416,7 +312,7 @@ Status: READY FOR DEPLOYMENT
         </section>
 
         <section>
-            <h2>🚀 Why This Is Unstoppable</h2>
+            <h2>Why This Is Unstoppable</h2>
             
             <div class="highlight-box">
                 <p style="margin-bottom: 15px;">
@@ -435,7 +331,7 @@ Status: READY FOR DEPLOYMENT
         </section>
 
         <section>
-            <h2>⚡ This Is Why 100M+ Organized People Literally Cannot Be Stopped</h2>
+            <h2>Stopped</h2>
             
             <div class="highlight-box">
                 <p style="font-size: 1.1em; color: white; font-weight: bold; margin-bottom: 15px;">
@@ -450,7 +346,7 @@ Status: READY FOR DEPLOYMENT
                         (Chenoweth proven)
                     </li>
                     <li style="color: #c8e6c9; margin: 12px 0;">
-                        <strong style="color: white;">Structural power:</strong> Everyone benefits → 
+                        <strong style="color: white;">Structural power:</strong> Everyone benefits ’ 
                         impossible to divide us
                     </li>
                 </ul>
@@ -464,31 +360,42 @@ Status: READY FOR DEPLOYMENT
             </p>
             
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
-                <a href="https://c.org/q9vrMCQZsY" target="_blank" class="btn">✏️ Sign Petition Now</a>
-                <a href="5D_Solutions.html" class="btn btn-secondary">🧩 See 5D Solutions →</a>
+                <a href="https://c.org/q9vrMCQZsY" target="_blank" class="btn">Now</a>
+                <a href="solutions.html" class="btn btn-secondary">See 5D Solutions ’</a>
             </div>
         </section>
 
         <div class="nav-buttons">
-            <a href="leverage.html" class="btn btn-secondary">← Back: Leverage</a>
-            <a href="5D_Solutions.html" class="btn btn-secondary">Next: 5D Solutions →</a>
+            <a href="leverage.html" class="btn btn-secondary"> Back: Leverage</a>
+            <a href="solutions.html" class="btn btn-secondary">Next: 5D Solutions ’</a>
         </div>
 
         <footer>
-            <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 15px;">
-                PHIERS Movement | Make America Better And Healthier (MABAH)
+            <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
+            <p>Will Price | Chief Solutions Architect</p>
+            <p>Phone: 916-306-8967 | Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e38a8d858ca3938b8a869190cd8c9184">[email&#160;protected]</a></p>
+            
+            <p style="margin-top: 20px;">
+                <a href="https://c.org/q9vrMCQZsY" target="_blank">Sign Petition</a> | 
+                <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank">Fill Survey</a> | 
+                <a href="Donate.html">Fund the Cascade</a> | 
+                <a href="https://discord.gg/narhDKJY" target="_blank">Join Discord</a>
             </p>
             
-            <p style="margin: 15px 0;">
-                <strong>Contact:</strong> Will Price | <a href="/cdn-cgi/l/email-protection#167f78707956667e7f73646538796471"><span class="__cf_email__" data-cfemail="d6bfb8b0b996a6bebfb3a4a5f8b9a4b1"><span class="__cf_email__" data-cfemail="90f9fef6ffd0e0f8f9f5e2e3beffe2f7">[email&#160;protected]</span></span></a> | 916-306-8967
-            </p>
-            
-            <p style="margin: 20px 0;">
-                <a href="action.html" style="color: #4caf50; font-weight: bold; font-size: 1.05em;">✏️ Sign the Petition</a>
+            <p style="margin-top: 15px;">
+                <a href="about.html">About Us</a> | 
+                <a href="index.html">Home</a> | 
+                <a href="faq.html">FAQ</a>
             </p>
             
             <p style="margin-top: 20px;">
-                © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+                Â© PHIERS.org â€” People's Health Insurance Economic Recovery Solutions
+            </p>
+            <p style="font-size: 0.85em; color: #a5d6a7;">
+                Accessibility | Privacy Policy
+            </p>
+            <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(76, 175, 80, 0.2); color: #4caf50; font-size: 0.85em;">
+                <strong>File:</strong> buying-power.html v1.0 | <strong>Created:</strong> 2026-02-05 @ 1:10 PM PST | <strong>Source:</strong> phiers.org "Cooperative Purchasing Power" section
             </p>
             <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
-                If you see an err
+                If you see an error in the math or policy, tell us â€” we'll

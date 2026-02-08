@@ -1,31 +1,4 @@
 <!DOCTYPE html>
-<!--
-=============================================================================
-FILE: quickstart.html
-VERSION: v1.0.2
-LAST UPDATED: 2026-02-07 04:25 UTC
-UPDATED BY: Claude Session 2026-02-07
-CHANGES: Added version control, images sized to 50%
-=============================================================================
-Previous Versions:
-- v1.0.0 | 2026-02-06 08:00 UTC | Initial creation from baseline
-- v1.1.0 | 2026-02-07 03:47 UTC | Phase 1 updates (modal, dates, images)
-=============================================================================
--->
-
-<!-- 
-═══════════════════════════════════════════════════════════════
-PHIERS A+++ TRANSFORMATION
-Version: 2.0 (A+++ Structure)
-Created: February 6, 2026 @ 9:00 AM PST
-Session: A+++ 7-Step Movement Path Implementation
-Changes: Complete site restructure, 7-step nav, 9 new subpages, 
-         simplified Start Here, added Why Change Required, 
-         transformed What We Demand with 5 demand cards
-Status: READY FOR DEPLOYMENT
-═══════════════════════════════════════════════════════════════
--->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -343,62 +316,14 @@ Status: READY FOR DEPLOYMENT
             .logo { height: 100px; }
             .comparison-grid { grid-template-columns: 1fr; }
         }
-    
-        .orientation-panel {
-            position: relative;
-        }
-        
-        .orientation-panel-content {
-            position: relative;
-            padding-right: 40px;
-        }
-        
-        .orientation-panel .close-btn {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            background: rgba(239, 68, 68, 0.1);
-            border: 2px solid rgba(239, 68, 68, 0.3);
-            color: #ef4444;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-        
-        .orientation-panel .close-btn:hover {
-            background: rgba(239, 68, 68, 0.2);
-            border-color: #ef4444;
-            transform: translateY(-50%) rotate(90deg);
-        }
-        
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
     </style>
 </head>
 <body>
-    <!-- VERSION BADGE (visible on page) -->
-    <div style="position: fixed; top: 10px; right: 10px; background: rgba(76, 175, 80, 0.9); color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85em; font-weight: bold; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-family: monospace;">
-        v2.0 | Feb 6, 2026
-    </div>
-
     <div class="orientation-panel">
-        <div class="orientation-panel-content">
-            <button class="close-btn" id="closeOrientationPanel" aria-label="Close">&times;</button>
-            <strong>Quick Start: Everything you need to know in 5 minutes.</strong>
+        <strong>Quick Start: Everything you need to know in 5 minutes.</strong>
         <span>
             New here? This is the fastest way to understand PHIERS. Watch the video, see the math, take action.
         </span>
-        </div>
     </div>
 
     <div class="container">
@@ -408,44 +333,15 @@ Status: READY FOR DEPLOYMENT
                      alt="PHIERS Logo" 
                      class="logo">
             </a>
-            <h1>🚀 Quick Start: 30 Seconds to Understand</h1>
+            <h1>Quick Start: 30 Seconds to Understand</h1>
             <p class="subtitle">New here? This is everything you need to know in under a minute.</p>
             
-            <div class="time-badge">⏱️ 30 seconds to join. 50-days to win.</div>
+            <div class="time-badge">win.</div>
             
             <p style="color: white; font-size: 1.1em; margin-top: 20px;">
-                This isn't a protest — it's a cooperative intelligence project.
+                This isn't a protest â€” it's a cooperative intelligence project.
             </p>
         </header>
-
-<!-- NAVIGATION BUTTONS (Under Hero) -->
-        <nav style="
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
-            border: 2px solid rgba(76, 175, 80, 0.3);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 40px;
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        ">
-            <a href="index.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🏠 Start Here</a>
-            
-            <a href="crisis.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🚨 What's Broken</a>
-            
-            <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚖️ Why Change Required</a>
-            
-            <a href="5D_Solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 What We Demand</a>
-            
-            <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">✏️ Petition</a>
-            
-            <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📊 Receipts</a>
-            
-            <a href="faq.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">❓ FAQ</a>
-        </nav>
-
 
         <section>
             <h2>Step 1: Learn in 71 Seconds</h2>
@@ -455,7 +351,7 @@ Status: READY FOR DEPLOYMENT
                     Watch: The Math Congress Doesn't Want You To Understand (1:11)
                 </h3>
                 <a href="https://youtu.be/2j-dF3hgdeE" target="_blank" class="video-link">
-                    ▶️ Watch on YouTube (1:11)
+                    â–¶ï¸ Watch on YouTube (1:11)
                 </a>
                 <p style="color: #81c784; margin-top: 15px; font-size: 0.95em;">
                     Everything you need to know about how $600 telehealth unlocks 234 million covered
@@ -464,10 +360,10 @@ Status: READY FOR DEPLOYMENT
 
             <div class="graphic-container">
                 <a href="how-it-works.html">
-                    <img style="max-width: 50%; height: auto; cursor: pointer;" onclick="this.style.maxWidth = this.style.maxWidth === '50%' ? '100%' : '50%';" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/CORE_MATH_for_234M.png" 
+                    <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/CORE_MATH_for_234M.png" 
                          alt="THE CORE MATH - How $600 telehealth unlocks 234 million covered">
                 </a>
-                <p class="graphic-caption">The Complete Story in One Image — Click to expand</p>
+                <p class="graphic-caption">The Complete Story in One Image â€” Click to expand</p>
             </div>
         </section>
 
@@ -476,7 +372,7 @@ Status: READY FOR DEPLOYMENT
             
             <div class="comparison-grid">
                 <div class="comparison-card comparison-bad">
-                    <h3>❌ Status Quo Insurance ($10K)</h3>
+                    <h3>($10K)</h3>
                     <ul>
                         <li style="color: #ffcdd2;">Delays care (prior authorization)</li>
                         <li style="color: #ffcdd2;">Denies coverage (claim rejections)</li>
@@ -486,7 +382,7 @@ Status: READY FOR DEPLOYMENT
                 </div>
 
                 <div class="comparison-card comparison-good">
-                    <h3>✅ PHIERS Telehealth ($600)</h3>
+                    <h3>($600)</h3>
                     <ul>
                         <li style="color: #c8e6c9;">Instant access (no wait times)</li>
                         <li style="color: #c8e6c9;">Zero denials (direct care)</li>
@@ -502,7 +398,7 @@ Status: READY FOR DEPLOYMENT
                     Those 12 fund 148.
                 </p>
                 <p style="font-size: 1.2em; color: #4caf50; font-weight: bold;">
-                    Exponential. Unstoppable. Universal healthcare in 50-days to critical mass.
+                    Exponential. Unstoppable. Universal healthcare in 90 days to critical mass.
                 </p>
             </div>
         </section>
@@ -519,7 +415,7 @@ Status: READY FOR DEPLOYMENT
                         1,500 signatures per district = they must face you.
                     </p>
                     <div style="margin-top: 20px; margin-left: 45px;">
-                        <a href="https://c.org/q9vrMCQZsY" target="_blank" class="btn">✏️ Sign Now</a>
+                        <a href="https://c.org/q9vrMCQZsY" target="_blank" class="btn">Now</a>
                     </div>
                 </div>
 
@@ -536,7 +432,7 @@ Status: READY FOR DEPLOYMENT
                     <span class="step-number">3</span>
                     <h3>Watch It Spread (Exponential)</h3>
                     <p>
-                        1 person → 12 people → 148 people → millions. The cascade can't be stopped once it starts. 
+                        1 person ’ 12 people ’ 148 people ’ millions. The cascade can't be stopped once it starts. 
                         That's the power of mechanical leverage.
                     </p>
                 </div>
@@ -548,24 +444,24 @@ Status: READY FOR DEPLOYMENT
             
             <div class="graphic-container">
                 <a href="simple-math.html">
-                    <img style="max-width: 50%; height: auto; cursor: pointer;" onclick="this.style.maxWidth = this.style.maxWidth === '50%' ? '100%' : '50%';" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Cascade_Leverage_Visual_v1.png" 
+                    <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Cascade_Leverage_Visual_v1.png" 
                          alt="PHIERS Cascade Leverage Visual">
                 </a>
-                <p class="graphic-caption">This is how the system works when we connect the pieces — Click for full breakdown</p>
+                <p class="graphic-caption">This is how the system works when we connect the pieces â€” Click for full breakdown</p>
             </div>
 
             <div class="graphic-container">
                 <a href="simple-math.html">
-                    <img style="max-width: 50%; height: auto; cursor: pointer;" onclick="this.style.maxWidth = this.style.maxWidth === '50%' ? '100%' : '50%';" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/SIMPLE_MATH_Pyramid_Universal_Coverage.png" 
+                    <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/SIMPLE_MATH_Pyramid_Universal_Coverage.png" 
                          alt="Universal Coverage Pyramid">
                 </a>
                 <p class="graphic-caption">
-                    Medicaid → Medicare → ACA → 234M Americans Covered — Click to see the progression
+                    Medicaid ’ Medicare ’ ACA ’ 234M Americans Covered â€” Click to see the progression
                 </p>
             </div>
 
             <p style="text-align: center; font-size: 1.05em; margin: 30px 0;">
-                These programs already exist — and <strong style="color: white;">when we connect them</strong>, 
+                These programs already exist â€” and <strong style="color: white;">when we connect them</strong>, 
                 they cover everyone.
             </p>
         </section>
@@ -577,32 +473,43 @@ Status: READY FOR DEPLOYMENT
             </p>
             
             <div class="button-group">
-                <a href="5D_Solutions.html" class="btn">🧩 See 5D Solutions</a>
-                <a href="how-it-works.html" class="btn btn-secondary">⚙️ How It Works</a>
-                <a href="crisis.html" class="btn btn-secondary">🚨 The Crisis</a>
+                <a href="solutions.html" class="btn">See 5D Solutions</a>
+                <a href="how-it-works.html" class="btn btn-secondary"> How It Works</a>
+                <a href="crisis.html" class="btn btn-secondary">The Crisis</a>
             </div>
         </section>
 
         <div class="nav-buttons">
-            <a href="index.html" class="btn btn-secondary">← Back: Home</a>
-            <a href="crisis.html" class="btn btn-secondary">Next: The Crisis →</a>
+            <a href="index.html" class="btn btn-secondary"> Back: Home</a>
+            <a href="crisis.html" class="btn btn-secondary">Next: The Crisis ’</a>
         </div>
 
         <footer>
-            <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 15px;">
-                PHIERS Movement | Make America Better And Healthier (MABAH)
+            <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
+            <p>Will Price | Chief Solutions Architect</p>
+            <p>Phone: 916-306-8967 | Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="650c0b030a25150d0c0017164b0a1702">[email&#160;protected]</a></p>
+            
+            <p style="margin-top: 20px;">
+                <a href="https://c.org/q9vrMCQZsY" target="_blank">Sign Petition</a> | 
+                <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank">Fill Survey</a> | 
+                <a href="Donate.html">Fund the Cascade</a> | 
+                <a href="https://discord.gg/narhDKJY" target="_blank">Join Discord</a>
             </p>
             
-            <p style="margin: 15px 0;">
-                <strong>Contact:</strong> Will Price | <a href="/cdn-cgi/l/email-protection#137a7d757c53637b7a7661603d7c6174"><span class="__cf_email__" data-cfemail="472e29212807372f2e22353469283520"><span class="__cf_email__" data-cfemail="7b12151d143b0b13121e09085514091c">[email&#160;protected]</span></span></a> | 916-306-8967
-            </p>
-            
-            <p style="margin: 20px 0;">
-                <a href="action.html" style="color: #4caf50; font-weight: bold; font-size: 1.05em;">✏️ Sign the Petition</a>
+            <p style="margin-top: 15px;">
+                <a href="about.html">About Us</a> | 
+                <a href="index.html">Home</a> | 
+                <a href="faq.html">FAQ</a>
             </p>
             
             <p style="margin-top: 20px;">
-                © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+                Â© PHIERS.org â€” People's Health Insurance Economic Recovery Solutions
+            </p>
+            <p style="font-size: 0.85em; color: #a5d6a7;">
+                Accessibility | Privacy Policy
+            </p>
+            <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(76, 175, 80, 0.2); color: #4caf50; font-size: 0.85em;">
+                <strong>File:</strong> quickstart.html v1.0 | <strong>Created:</strong> 2026-02-05 @ 12:40 PM PST | <strong>Source:</strong> phiers.org "Quick Start" section
             </p>
             <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
-                If you see an err
+                If you see an error in the math or policy, tell us â€” we'll

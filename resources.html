@@ -1,31 +1,4 @@
 <!DOCTYPE html>
-<!--
-=============================================================================
-FILE: resources.html
-VERSION: v1.0.1
-LAST UPDATED: 2026-02-07 04:25 UTC
-UPDATED BY: Claude Session 2026-02-07
-CHANGES: Added version control
-=============================================================================
-Previous Versions:
-- v1.0.0 | 2026-02-06 08:00 UTC | Initial creation from baseline
-- v1.1.0 | 2026-02-07 03:47 UTC | Phase 1 updates (modal, dates, images)
-=============================================================================
--->
-
-<!-- 
-═══════════════════════════════════════════════════════════════
-PHIERS A+++ TRANSFORMATION
-Version: 2.0 (A+++ Structure)
-Created: February 6, 2026 @ 9:00 AM PST
-Session: A+++ 7-Step Movement Path Implementation
-Changes: Complete site restructure, 7-step nav, 9 new subpages, 
-         simplified Start Here, added Why Change Required, 
-         transformed What We Demand with 5 demand cards
-Status: READY FOR DEPLOYMENT
-═══════════════════════════════════════════════════════════════
--->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -127,62 +100,14 @@ Status: READY FOR DEPLOYMENT
         footer p { margin: 10px 0; }
         footer a { color: #81c784; text-decoration: underline; }
         footer a:hover { color: #4caf50; }
-    
-        .orientation-panel {
-            position: relative;
-        }
-        
-        .orientation-panel-content {
-            position: relative;
-            padding-right: 40px;
-        }
-        
-        .orientation-panel .close-btn {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            background: rgba(239, 68, 68, 0.1);
-            border: 2px solid rgba(239, 68, 68, 0.3);
-            color: #ef4444;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-        
-        .orientation-panel .close-btn:hover {
-            background: rgba(239, 68, 68, 0.2);
-            border-color: #ef4444;
-            transform: translateY(-50%) rotate(90deg);
-        }
-        
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
     </style>
 </head>
 <body>
-    <!-- VERSION BADGE (visible on page) -->
-    <div style="position: fixed; top: 10px; right: 10px; background: rgba(76, 175, 80, 0.9); color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85em; font-weight: bold; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-family: monospace;">
-        v2.0 | Feb 6, 2026
-    </div>
-
     <div class="orientation-panel">
-        <div class="orientation-panel-content">
-            <button class="close-btn" id="closeOrientationPanel" aria-label="Close">&times;</button>
-            <strong>Resources: State by State. District by District.</strong>
+        <strong>Resources: State by State. District by District.</strong>
         <span>
-            Here's how we implement universal healthcare in 8–13 months.
+            Here's how we implement universal healthcare in 8â€“13 months.
         </span>
-        </div>
     </div>
 
     <div class="container">
@@ -192,105 +117,79 @@ Status: READY FOR DEPLOYMENT
                      alt="PHIERS Logo" 
                      class="logo">
             </a>
-            <h1>📚 Resources & Implementation</h1>
+            <h1>Implementation</h1>
             <p class="subtitle">State-level guides, research, and implementation frameworks</p>
         </header>
 
-<!-- NAVIGATION BUTTONS (Under Hero) -->
-        <nav style="
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
-            border: 2px solid rgba(76, 175, 80, 0.3);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 40px;
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        ">
-            <a href="index.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🏠 Start Here</a>
-            
-            <a href="crisis.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🚨 What's Broken</a>
-            
-            <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚖️ Why Change Required</a>
-            
-            <a href="5D_Solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 What We Demand</a>
-            
-            <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">✏️ Petition</a>
-            
-            <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📊 Receipts</a>
-            
-            <a href="faq.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">❓ FAQ</a>
-        </nav>
-
-
         <section>
-            <h2>📊 State-Level Implementation Guides</h2>
+            <h2>Guides</h2>
 
             <div class="resource-card">
-                <h3>🌴 California PHIERS Initiative</h3>
+                <h3>Initiative</h3>
                 <p>$110+ billion in annual savings. Bicoastal leadership with Maryland.</p>
                 <p style="margin-top: 15px;">
-                    <a href="https://docs.google.com/document/d/17abpDTOkbqLjE4BYVye33K7degdkurJBd8Wy--U37jo/edit?usp=sharing" target="_blank">📖 Read White Paper →</a>
+                    <a href="https://docs.google.com/document/d/17abpDTOkbqLjE4BYVye33K7degdkurJBd8Wy--U37jo/edit?usp=sharing" target="_blank">’</a>
                 </p>
             </div>
 
             <div class="resource-card">
-                <h3>🏛️ Maryland PHIERS Initiative - Van Hollen's Vision</h3>
+                <h3>Vision</h3>
                 <p><strong>Congressman Chris Van Hollen got the ball rolling.</strong> $17+ billion in annual savings. His "Fight Club" vision of fighting corporate extraction now operational.</p>
                 <p style="margin-top: 15px;">
-                    <a href="https://docs.google.com/document/d/1IQdyc4g-PAO50pb_MZOdaTrmsIp7XbxIZjQN_-xHShY/edit?usp=sharing" target="_blank">📖 Read White Paper →</a>
+                    <a href="https://docs.google.com/document/d/1IQdyc4g-PAO50pb_MZOdaTrmsIp7XbxIZjQN_-xHShY/edit?usp=sharing" target="_blank">’</a>
                 </p>
             </div>
 
             <div class="resource-card">
-                <h3>🗽 NYC PHIERS Initiative</h3>
+                <h3>Initiative</h3>
                 <p>$55+ billion in annual savings. Urban proof-of-concept that scales nationally.</p>
                 <p style="margin-top: 15px;">
-                    <a href="https://docs.google.com/document/d/1yMl0kHRmxSCCGdmR8NweSJ6oJS3KPYIjqogmQ4PbSk8/edit?usp=sharing" target="_blank">📖 Read White Paper →</a>
+                    <a href="https://docs.google.com/document/d/1yMl0kHRmxSCCGdmR8NweSJ6oJS3KPYIjqogmQ4PbSk8/edit?usp=sharing" target="_blank">’</a>
                 </p>
             </div>
 
             <div class="resource-card">
-                <h3>🇺🇸 National PHIERS Initiative</h3>
+                <h3>Initiative</h3>
                 <p>$2.73 trillion in annual savings. Complete national framework and Fight Club strategy.</p>
                 <p style="margin-top: 15px;">
-                    <a href="https://docs.google.com/document/d/1LBnU4KCgnWEuc7fLYU9nYAAtlpZ6wYSm880INmey4NI/edit?usp=sharing" target="_blank">📖 Read White Paper →</a>
+                    <a href="https://docs.google.com/document/d/1LBnU4KCgnWEuc7fLYU9nYAAtlpZ6wYSm880INmey4NI/edit?usp=sharing" target="_blank">’</a>
                 </p>
             </div>
         </section>
 
         <section>
-            <h2>🎯 Join the Movement</h2>
+            <h2>Movement</h2>
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
-                <a href="https://c.org/q9vrMCQZsY" target="_blank" class="btn">✏️ Sign Petition</a>
-                <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank" class="btn btn-secondary">📋 Fill Survey</a>
-                
-                <a href="Donate.html" class="btn btn-secondary">💰 Donate</a>
+                <a href="https://c.org/q9vrMCQZsY" target="_blank" class="btn">Petition</a>
+                <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank" class="btn btn-secondary">Survey</a>
+                <a href="https://discord.gg/narhDKJY" target="_blank" class="btn btn-secondary">Discord</a>
+                <a href="Donate.html" class="btn btn-secondary">Donate</a>
             </div>
         </section>
 
         <div class="nav-buttons">
-            <a href="faq.html" class="btn btn-secondary">← Back: FAQ</a>
-            <a href="about.html" class="btn btn-secondary">Next: About PHIERS →</a>
+            <a href="faq.html" class="btn btn-secondary"> Back: FAQ</a>
+            <a href="about.html" class="btn btn-secondary">Next: About PHIERS ’</a>
         </div>
 
         <footer>
-            <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 15px;">
-                PHIERS Movement | Make America Better And Healthier (MABAH)
-            </p>
-            
-            <p style="margin: 15px 0;">
-                <strong>Contact:</strong> Will Price | <a href="/cdn-cgi/l/email-protection#c1a8afa7ae81b1a9a8a4b3b2efaeb3a6"><span class="__cf_email__" data-cfemail="6801060e07281800010d1a1b46071a0f"><span class="__cf_email__" data-cfemail="7c15121a133c0c1415190e0f52130e1b">[email&#160;protected]</span></span></a> | 916-306-8967
-            </p>
-            
-            <p style="margin: 20px 0;">
-                <a href="action.html" style="color: #4caf50; font-weight: bold; font-size: 1.05em;">✏️ Sign the Petition</a>
-            </p>
-            
+            <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
+            <p>Will Price | Chief Solutions Architect | 916-306-8967 | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e68f888089a6968e8f839495c8899481">[email&#160;protected]</a></p>
             <p style="margin-top: 20px;">
-                © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+                <a href="https://c.org/q9vrMCQZsY" target="_blank">Sign Petition</a> | 
+                <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank">Fill Survey</a> | 
+                <a href="Donate.html">Fund the Cascade</a> | 
+                <a href="https://discord.gg/narhDKJY" target="_blank">Join Discord</a>
+            </p>
+            <p style="margin-top: 15px;">
+                <a href="about.html">About Us</a> | 
+                <a href="index.html">Home</a> | 
+                <a href="faq.html">FAQ</a>
+            </p>
+            <p style="margin-top: 20px;">Â© PHIERS.org â€” People's Health Insurance Economic Recovery Solutions</p>
+            <p style="font-size: 0.85em; color: #a5d6a7;">Accessibility | Privacy Policy</p>
+            <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(76, 175, 80, 0.2); color: #4caf50; font-size: 0.85em;">
+                <strong>File:</strong> resources.html v1.0 | <strong>Created:</strong> 2026-02-05 @ 1:22 PM PST | <strong>Source:</strong> phiers.org "Resources" section
             </p>
             <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
-                If you see an err
+                If you see an error in the math or policy, tell us â€” we'll

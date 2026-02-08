@@ -1,31 +1,4 @@
 <!DOCTYPE html>
-<!--
-=============================================================================
-FILE: media.html
-VERSION: v1.0.1
-LAST UPDATED: 2026-02-07 04:25 UTC
-UPDATED BY: Claude Session 2026-02-07
-CHANGES: Added version control
-=============================================================================
-Previous Versions:
-- v1.0.0 | 2026-02-06 08:00 UTC | Initial creation from baseline
-- v1.1.0 | 2026-02-07 03:47 UTC | Phase 1 updates (modal, dates, images)
-=============================================================================
--->
-
-<!-- 
-═══════════════════════════════════════════════════════════════
-PHIERS A+++ TRANSFORMATION
-Version: 2.0 (A+++ Structure)
-Created: February 6, 2026 @ 9:00 AM PST
-Session: A+++ 7-Step Movement Path Implementation
-Changes: Complete site restructure, 7-step nav, 9 new subpages, 
-         simplified Start Here, added Why Change Required, 
-         transformed What We Demand with 5 demand cards
-Status: READY FOR DEPLOYMENT
-═══════════════════════════════════════════════════════════════
--->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -136,62 +109,14 @@ Status: READY FOR DEPLOYMENT
         footer p { margin: 10px 0; }
         footer a { color: #81c784; text-decoration: underline; }
         footer a:hover { color: #4caf50; }
-    
-        .orientation-panel {
-            position: relative;
-        }
-        
-        .orientation-panel-content {
-            position: relative;
-            padding-right: 40px;
-        }
-        
-        .orientation-panel .close-btn {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            background: rgba(239, 68, 68, 0.1);
-            border: 2px solid rgba(239, 68, 68, 0.3);
-            color: #ef4444;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-        
-        .orientation-panel .close-btn:hover {
-            background: rgba(239, 68, 68, 0.2);
-            border-color: #ef4444;
-            transform: translateY(-50%) rotate(90deg);
-        }
-        
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
     </style>
 </head>
 <body>
-    <!-- VERSION BADGE (visible on page) -->
-    <div style="position: fixed; top: 10px; right: 10px; background: rgba(76, 175, 80, 0.9); color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85em; font-weight: bold; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-family: monospace;">
-        v2.0 | Feb 6, 2026
-    </div>
-
     <div class="orientation-panel">
-        <div class="orientation-panel-content">
-            <button class="close-btn" id="closeOrientationPanel" aria-label="Close">&times;</button>
-            <strong>Media Library: All Resources in One Place</strong>
+        <strong>Media Library: All Resources in One Place</strong>
         <span>
             Videos, infographics, state guides, and validation documents. Everything you need to understand and share PHIERS.
         </span>
-        </div>
     </div>
 
     <div class="container">
@@ -201,98 +126,72 @@ Status: READY FOR DEPLOYMENT
                      alt="PHIERS Logo" 
                      class="logo">
             </a>
-            <h1>📚 Media Library: All Resources in One Place</h1>
+            <h1>Place</h1>
             <p class="subtitle">Videos, infographics, state guides, and validation documents</p>
         </header>
 
-<!-- NAVIGATION BUTTONS (Under Hero) -->
-        <nav style="
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
-            border: 2px solid rgba(76, 175, 80, 0.3);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 40px;
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        ">
-            <a href="index.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🏠 Start Here</a>
-            
-            <a href="crisis.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🚨 What's Broken</a>
-            
-            <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚖️ Why Change Required</a>
-            
-            <a href="5D_Solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 What We Demand</a>
-            
-            <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">✏️ Petition</a>
-            
-            <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📊 Receipts</a>
-            
-            <a href="faq.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">❓ FAQ</a>
-        </nav>
-
-
         <section>
             <div class="media-section">
-                <h3>📹 Core Videos</h3>
+                <h3>Videos</h3>
                 <ul>
-                    <li><strong><a href="https://youtu.be/bEUyDVAYwpk" target="_blank">The Bipartisan Solution (11:11)</a></strong> – Complete framework</li>
-                    <li><strong><a href="https://youtu.be/2j-dF3hgdeE" target="_blank">The Math Congress Doesn't Want You to See (1:11)</a></strong> – Core concept explained</li>
-                    <li><strong><a href="https://youtu.be/jMU6LKEBzbs" target="_blank">The Mechanism (3:33)</a></strong> – How $2.73T savings work</li>
-                    <li><strong><a href="https://youtu.be/eE-TxvI0d4Q" target="_blank">The Moment (2:22)</a></strong> – Why Congress created this crisis</li>
-                    <li><strong><a href="https://youtu.be/xy3F9ZWbgS8" target="_blank">The Vision (4:44)</a></strong> – What happens after we win</li>
+                    <li><strong><a href="https://youtu.be/bEUyDVAYwpk" target="_blank">The Bipartisan Solution (11:11)</a></strong> â€“ Complete framework</li>
+                    <li><strong><a href="https://youtu.be/2j-dF3hgdeE" target="_blank">The Math Congress Doesn't Want You to See (1:11)</a></strong> â€“ Core concept explained</li>
+                    <li><strong><a href="https://youtu.be/jMU6LKEBzbs" target="_blank">The Mechanism (3:33)</a></strong> â€“ How $2.73T savings work</li>
+                    <li><strong><a href="https://youtu.be/eE-TxvI0d4Q" target="_blank">The Moment (2:22)</a></strong> â€“ Why Congress created this crisis</li>
+                    <li><strong><a href="https://youtu.be/xy3F9ZWbgS8" target="_blank">The Vision (4:44)</a></strong> â€“ What happens after we win</li>
                 </ul>
             </div>
 
             <div class="media-section">
-                <h3>📊 Key Infographics</h3>
+                <h3>Infographics</h3>
                 <p style="color: #c8e6c9;">All graphics available in project repository. Links to full collection:</p>
                 <ul>
-                    <li>$2.73T Savings Infographic – All dimensions connected</li>
-                    <li>PHIERS Rubik's Cube (Symbols) – 5D interconnection visual</li>
-                    <li>PHIERS Operating System (Firewall) – Protection against extraction</li>
-                    <li>80/20 Healthcare Model – Telehealth vs Insurance costs</li>
-                    <li>Drug Development Costs (Academic vs Big Pharma) – Why alternatives work</li>
-                    <li>Power of the People (Leverage) – Congressional pressure math</li>
-                    <li>Guaranteed Change (Map) – 3.5% = 11.6M signatures</li>
-                    <li>Healthcare Crisis – 22M losing coverage</li>
+                    <li>$2.73T Savings Infographic â€“ All dimensions connected</li>
+                    <li>PHIERS Rubik's Cube (Symbols) â€“ 5D interconnection visual</li>
+                    <li>PHIERS Operating System (Firewall) â€“ Protection against extraction</li>
+                    <li>80/20 Healthcare Model â€“ Telehealth vs Insurance costs</li>
+                    <li>Drug Development Costs (Academic vs Big Pharma) â€“ Why alternatives work</li>
+                    <li>Power of the People (Leverage) â€“ Congressional pressure math</li>
+                    <li>Guaranteed Change (Map) â€“ 3.5% = 11.6M signatures</li>
+                    <li>Healthcare Crisis â€“ 22M losing coverage</li>
                 </ul>
             </div>
 
             <div class="media-section">
-                <h3>📄 State Implementation Guides</h3>
+                <h3>Guides</h3>
                 <ul>
-                    <li><strong>National PHIERS Initiative</strong> – $2.73T savings</li>
-                    <li><strong>California PHIERS Initiative</strong> – $110B+ annual savings</li>
-                    <li><strong>Maryland PHIERS Initiative</strong> – $17B+ annual savings</li>
-                    <li><strong>NYC PHIERS Initiative</strong> – $55B+ annual savings</li>
+                    <li><strong>National PHIERS Initiative</strong> â€“ $2.73T savings</li>
+                    <li><strong>California PHIERS Initiative</strong> â€“ $110B+ annual savings</li>
+                    <li><strong>Maryland PHIERS Initiative</strong> â€“ $17B+ annual savings</li>
+                    <li><strong>NYC PHIERS Initiative</strong> â€“ $55B+ annual savings</li>
                 </ul>
-                <p style="margin-top: 15px;"><a href="resources.html">→ Access all white papers</a></p>
+                <p style="margin-top: 15px;"><a href="resources.html">’ Access all white papers</a></p>
             </div>
         </section>
 
         <div class="nav-buttons">
-            <a href="5D_Solutions.html" class="btn btn-secondary">← Back: 5D Solutions</a>
-            <a href="action.html" class="btn btn-secondary">Next: Take Action →</a>
+            <a href="solutions.html" class="btn btn-secondary"> Back: 5D Solutions</a>
+            <a href="action.html" class="btn btn-secondary">Next: Take Action ’</a>
         </div>
 
         <footer>
-            <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 15px;">
-                PHIERS Movement | Make America Better And Healthier (MABAH)
-            </p>
-            
-            <p style="margin: 15px 0;">
-                <strong>Contact:</strong> Will Price | <a href="/cdn-cgi/l/email-protection#c5acaba3aa85b5adaca0b7b6ebaab7a2"><span class="__cf_email__" data-cfemail="20494e464f605048494552530e4f5247"><span class="__cf_email__" data-cfemail="84edeae2ebc4f4ecede1f6f7aaebf6e3">[email&#160;protected]</span></span></a> | 916-306-8967
-            </p>
-            
-            <p style="margin: 20px 0;">
-                <a href="action.html" style="color: #4caf50; font-weight: bold; font-size: 1.05em;">✏️ Sign the Petition</a>
-            </p>
-            
+            <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
+            <p>Will Price | Chief Solutions Architect | 916-306-8967 | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3950575f56794951505c4b4a17564b5e">[email&#160;protected]</a></p>
             <p style="margin-top: 20px;">
-                © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+                <a href="https://c.org/q9vrMCQZsY" target="_blank">Sign Petition</a> | 
+                <a href="https://forms.gle/GekCB2xwHfFb4WLF6" target="_blank">Fill Survey</a> | 
+                <a href="Donate.html">Fund the Cascade</a> | 
+                <a href="https://discord.gg/narhDKJY" target="_blank">Join Discord</a>
+            </p>
+            <p style="margin-top: 15px;">
+                <a href="about.html">About Us</a> | 
+                <a href="index.html">Home</a> | 
+                <a href="faq.html">FAQ</a>
+            </p>
+            <p style="margin-top: 20px;">Â© PHIERS.org â€” People's Health Insurance Economic Recovery Solutions</p>
+            <p style="font-size: 0.85em; color: #a5d6a7;">Accessibility | Privacy Policy</p>
+            <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(76, 175, 80, 0.2); color: #4caf50; font-size: 0.85em;">
+                <strong>File:</strong> media.html v1.0 | <strong>Created:</strong> 2026-02-05 @ 1:23 PM PST | <strong>Source:</strong> phiers.org "Media Library" section
             </p>
             <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
-                If you see an err
+                If you see an error in the math or policy, tell us â€” we'll
