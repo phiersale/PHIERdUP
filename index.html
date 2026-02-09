@@ -15,9 +15,9 @@
       line-height: 1.6;
     }
     a { color: #6ddcff; text-decoration: none; }
-    header, section, footer { padding: 4rem 1.5rem; max-width: 900px; margin: auto; }
+    header, section, footer { padding: 4rem 1.5rem; max-width: 900px; margin: auto; text-align: center; }
     h1, h2, h3 { line-height: 1.2; }
-    .hero h1 { font-size: 2.5rem; margin-top: 1rem; }
+    .hero h1 { font-size: 2.5rem; margin-top: 1.5rem; }
     .cta {
       display: inline-block;
       margin-top: 1.5rem;
@@ -32,17 +32,26 @@
       border-left: 4px solid #6ddcff;
       padding: 1.5rem;
       margin: 2rem 0;
+      text-align: left;
     }
-    .tagline {
-      font-size: 1.1rem;
-      color: #ccc;
-      margin-top: 0.5rem;
-      letter-spacing: 0.5px;
+    .brand-block {
+      margin-bottom: 1.5rem;
     }
-    .logo {
-      width: 160px;
+    .brand-logo {
+      width: 240px;
       display: block;
-      margin-bottom: 1rem;
+      margin: 0 auto 1rem auto;
+    }
+    .brand-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.3rem;
+    }
+    .brand-tagline {
+      font-size: 1.05rem;
+      color: #ccc;
+      letter-spacing: 0.4px;
     }
     footer { font-size: 0.9rem; color: #aaa; padding-bottom: 4rem; }
   </style>
@@ -51,8 +60,12 @@
 <body>
 
 <header class="hero">
-  <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="logo">
-  <div class="tagline">Making America Better And Healthier</div>
+
+  <div class="brand-block">
+    <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="brand-logo">
+    <div class="brand-title">MABAH Movement</div>
+    <div class="brand-tagline">Making America Better And Healthier</div>
+  </div>
 
   <h1>Healthcare is collapsing.<br>We can fix it — now.</h1>
   <p>
@@ -87,7 +100,7 @@
 
 <section>
   <h2>Why this works</h2>
-  <ul>
+  <ul style="text-align:left; display:inline-block;">
     <li>Movements succeed with ~3.5% active participation</li>
     <li>Healthcare is already funded — just misallocated</li>
     <li>District-level pressure beats national outrage</li>
