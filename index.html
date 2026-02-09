@@ -17,7 +17,7 @@
     a { color: #6ddcff; text-decoration: none; }
     header, section, footer { padding: 4rem 1.5rem; max-width: 900px; margin: auto; }
     h1, h2, h3 { line-height: 1.2; }
-    .hero h1 { font-size: 2.5rem; }
+    .hero h1 { font-size: 2.5rem; margin-top: 1rem; }
     .cta {
       display: inline-block;
       margin-top: 1.5rem;
@@ -33,7 +33,17 @@
       padding: 1.5rem;
       margin: 2rem 0;
     }
-    .divider { border-top: 1px solid #222; margin: 3rem 0; }
+    .tagline {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+    .logo {
+      width: 160px;
+      display: block;
+      margin-bottom: 1rem;
+    }
     footer { font-size: 0.9rem; color: #aaa; padding-bottom: 4rem; }
   </style>
 </head>
@@ -41,12 +51,18 @@
 <body>
 
 <header class="hero">
+  <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="logo">
+  <div class="tagline">Making America Better And Healthier</div>
+
   <h1>Healthcare is collapsing.<br>We can fix it — now.</h1>
   <p>
     PHIERS is a coordinated public movement to force immediate healthcare reform
     using existing law. No new taxes. No years of debate. No waiting.
   </p>
-  <a class="cta" href="#petition">Sign the Petition</a>
+
+  <a class="cta" href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now">
+    Sign the Petition
+  </a>
 </header>
 
 <section>
@@ -89,7 +105,9 @@
     It helps us trigger district-level escalation and media pressure.
   </p>
 
-  <p><strong>[ Petition embed goes here ]</strong></p>
+  <a class="cta" href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now">
+    Sign the Petition
+  </a>
 </section>
 
 <section>
@@ -98,7 +116,6 @@
     Read the full explanation, legal grounding, and escalation plan.
   </p>
 
-  <!-- Link to your old homepage -->
   <a class="cta" href="orig_phierdup_homie.html">See the Full Plan</a>
 </section>
 
