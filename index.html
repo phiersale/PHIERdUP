@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>PHIERdUP — Pre‑Launch Movement Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PHIERS is a people-powered movement preparing coordinated action ahead of the March 28th No Kings Rally." />
 
   <style>
     body {
@@ -14,38 +15,30 @@
       line-height: 1.6;
     }
 
-    header, section {
+    a { color: #6ddcff; text-decoration: none; }
+
+    header, section, footer {
+      padding: 4rem 1.5rem;
       max-width: 900px;
       margin: auto;
-      padding: 3rem 1.5rem;
       text-align: center;
     }
 
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 1rem;
-      line-height: 1.2;
+    h1, h2, h3 { line-height: 1.2; }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-top: 1.5rem;
     }
 
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-
-    p {
-      font-size: 1.15rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .cta-primary {
+    .cta {
       display: inline-block;
+      margin-top: 1.5rem;
       padding: 1rem 2rem;
       background: #6ddcff;
       color: #000;
       font-weight: 700;
       border-radius: 6px;
-      margin-top: 1.5rem;
     }
 
     .cta-secondary {
@@ -53,6 +46,29 @@
       margin-top: 1rem;
       color: #6ddcff;
       font-size: 1rem;
+    }
+
+    .brand-block {
+      margin-bottom: 1.5rem;
+    }
+
+    .brand-logo {
+      width: 240px;
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
+
+    .brand-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.3rem;
+    }
+
+    .brand-tagline {
+      font-size: 1.05rem;
+      color: #ccc;
+      letter-spacing: 0.4px;
     }
 
     .why-section {
@@ -71,13 +87,28 @@
       color: #bbb;
       margin-top: 0.5rem;
     }
+
+    footer {
+      font-size: 0.9rem;
+      color: #aaa;
+      padding-bottom: 4rem;
+    }
   </style>
 </head>
 
 <body>
 
 <!-- HERO SECTION -->
-<header>
+<header class="hero">
+
+  <!-- BRANDING BLOCK (DO NOT REMOVE) -->
+  <div class="brand-block">
+    <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="brand-logo">
+    <div class="brand-title">MABAH Movement</div>
+    <div class="brand-tagline">Making America Better And Healthier</div>
+  </div>
+
+  <!-- UPDATED PRE-LAUNCH HERO TEXT -->
   <h1>Healthcare is collapsing — it’s time for citizens to act.</h1>
 
   <p>
@@ -86,14 +117,19 @@
     <strong>March 28th No Kings Rally</strong>.
   </p>
 
-  <a class="cta-primary" href="#">Join the Early Movement</a>
+  <a class="cta" href="#">
+    Join the Early Movement
+  </a>
 
   <br>
 
-  <a class="cta-secondary" href="https://phiers.org">Learn More → PHIERS.org</a>
+  <a class="cta-secondary" href="https://phiers.org">
+    Learn More → PHIERS.org
+  </a>
+
 </header>
 
-<!-- WHY THIS MATTERS -->
+<!-- WHY WE'RE ACTING NOW -->
 <section class="why-section">
   <h2>Why We’re Acting Now</h2>
 
@@ -110,10 +146,20 @@
   </p>
 
   <div class="cta-block">
-    <a class="cta-primary" href="#">Join the Early Movement</a>
-    <div class="microcopy">It’s free and takes less than a minute — your early support matters.</div>
+    <a class="cta" href="#">
+      Join the Early Movement
+    </a>
+    <div class="microcopy">
+      It’s free and takes less than a minute — your early support matters.
+    </div>
   </div>
 </section>
+
+<footer>
+  <p>
+    PHIERS is a public-interest movement. Not a company. Not a product.
+  </p>
+</footer>
 
 </body>
 </html>
