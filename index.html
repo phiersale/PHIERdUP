@@ -1,63 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>PHIERdUP — Pre‑Launch Movement Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PHIERS is a people-powered movement preparing coordinated action ahead of the March 28th No Kings Rally." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHIERdUP — Join the Early Movement</title>
 
   <style>
-    body {
+    body, html {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
       background: #0b0b0f;
       color: #f5f5f7;
-      line-height: 1.6;
     }
 
-    a { color: #6ddcff; text-decoration: none; }
-
-    header {
+    /* HERO (CENTERED) */
+    header.hero {
+      text-align: center;
       padding: 4rem 1.5rem;
       max-width: 900px;
       margin: auto;
-      text-align: center; /* HERO CENTERED */
-    }
-
-    section {
-      padding: 4rem 1.5rem;
-      max-width: 900px;
-      margin: auto;
-      text-align: left; /* BODY LEFT-JUSTIFIED */
-    }
-
-    h1, h2, h3 { line-height: 1.2; }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 1rem 2rem;
-      background: #6ddcff;
-      color: #000;
-      font-weight: 700;
-      border-radius: 6px;
-    }
-
-    .cta-secondary {
-      display: inline-block;
-      margin-top: 1rem;
-      color: #6ddcff;
-      font-size: 1rem;
     }
 
     .brand-block {
       margin-bottom: 1.5rem;
-      text-align: center;
     }
 
     .brand-logo {
@@ -79,6 +46,42 @@
       letter-spacing: 0.4px;
     }
 
+    header.hero h1 {
+      font-size: 2.5rem;
+      margin-top: 1.5rem;
+    }
+
+    header.hero p {
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin: 1rem auto 1.5rem auto;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #6ddcff;
+      color: #000;
+      font-weight: 700;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+
+    .cta-secondary {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #6ddcff;
+      font-size: 1rem;
+    }
+
+    /* BODY (LEFT-ALIGNED) */
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+
     .why-section {
       max-width: 700px;
       margin: auto;
@@ -95,6 +98,7 @@
       margin-top: 0.5rem;
     }
 
+    /* TEETH BANNER */
     .teeth-banner {
       text-align: center;
       padding: 4rem 1.5rem;
@@ -112,87 +116,114 @@
       margin: 0.5rem 0 0;
     }
 
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 6px;
+      text-align: left;
+      color: #222;
+    }
+
+    .close {
+      float: right;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     footer {
-      font-size: 0.9rem;
-      color: #aaa;
-      padding-bottom: 4rem;
       text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      color: #aaa;
     }
   </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION (CENTERED) -->
-<header class="hero">
+  <!-- HERO (CENTERED) -->
+  <header class="hero">
 
-  <!-- BRANDING BLOCK -->
-  <div class="brand-block">
-    <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="brand-logo">
-    <div class="brand-title">MABAH Movement</div>
-    <div class="brand-tagline">Making America Better And Healthier</div>
-  </div>
+    <div class="brand-block">
+      <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="brand-logo">
+      <div class="brand-title">MABAH Movement</div>
+      <div class="brand-tagline">Making America Better And Healthier</div>
+    </div>
 
-  <h1>Healthcare is collapsing — it’s time for citizens to act.</h1>
-
-  <p>
-    We’re organizing a people-powered movement to hold Congress accountable.
-    Join the early wave preparing for coordinated action ahead of the
-    <strong>March 28th No Kings Rally</strong>.
-  </p>
-
-  <a class="cta" href="#">
-    Join the Early Movement
-  </a>
-
-  <br>
-
-  <a class="cta-secondary" href="https://phiers.org">
-    Learn More → PHIERS.org
-  </a>
-
-</header>
-
-<!-- WHY WE'RE ACTING NOW (LEFT-JUSTIFIED BODY TEXT) -->
-<section>
-  <div class="why-section">
-    <h2>Why We’re Acting Now</h2>
+    <h1>Healthcare is collapsing — it’s time for citizens to act.</h1>
 
     <p>
-      Healthcare continues to fail millions of Americans. Politicians have ignored
-      the crisis for too long — and the only force that has ever moved Congress is
-      organized public pressure.
+      We’re organizing a people-powered movement to hold Congress accountable.
+      Join the early wave preparing for coordinated action ahead of the
+      <strong>March 28th No Kings Rally</strong>.
     </p>
 
-    <p>
-      By joining early, you become part of the <strong>first wave</strong> preparing
-      to take action at the March 28th No Kings Rally. Your early support strengthens
-      the movement before it goes public.
-    </p>
+    <a class="cta" href="#">Join the Early Movement</a>
+    <br>
+    <a class="cta-secondary" id="modalOpen">Why this matters →</a>
 
-    <div class="cta-block">
-      <a class="cta" href="#">
-        Join the Early Movement
-      </a>
-      <div class="microcopy">
-        It’s free and takes less than a minute — your early support matters.
-      </div>
+  </header>
+
+  <!-- MODAL -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="modalClose">&times;</span>
+      <h2>Why We’re Acting Now</h2>
+      <p>Healthcare continues to fail millions of Americans. Politicians have ignored the crisis for too long — and the only force that has ever moved Congress is organized public pressure.</p>
+      <p>By joining early, you become part of the first wave preparing to take action at the March 28th No Kings Rally. Your early support strengthens the movement before it goes public.</p>
+      <p>Your voice is leverage. Each person who participates strengthens the movement.</p>
     </div>
   </div>
-</section>
 
-<!-- TEETH BANNER (CORRECT FILENAME) -->
-<section class="teeth-banner">
-  <img src="Power_Concedes_Nothing_TEETH.png" alt="Power concedes nothing without a demand that has teeth. We are the TEETH.">
-  <p><strong>Power concedes nothing without a demand that has TEETH.</strong></p>
-  <p>We Are The TEETH.</p>
-</section>
+  <!-- BODY (LEFT-ALIGNED) -->
+  <section>
+    <div class="why-section">
+      <h2>Stand With the Movement</h2>
+      <p>This pre-launch phase is critical. By adding your name now, you are part of a committed group ready to take action. Together, we can create the pressure that elected officials have so far ignored.</p>
 
-<footer>
-  <p>
+      <div class="cta-block">
+        <a class="cta" href="#">Join the Early Movement</a>
+        <div class="microcopy">It’s free and takes less than a minute — your early support matters.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEETH BANNER -->
+  <section class="teeth-banner">
+    <img src="Power_Concedes_Nothing_TEETH.png" alt="Power concedes nothing without a demand that has teeth. We are the TEETH.">
+    <p><strong>Power concedes nothing without a demand that has TEETH.</strong></p>
+    <p>We Are The TEETH.</p>
+  </section>
+
+  <footer>
     PHIERS is a public-interest movement. Not a company. Not a product.
-  </p>
-</footer>
+  </footer>
+
+  <script>
+    const modal = document.getElementById("myModal");
+    const openBtn = document.getElementById("modalOpen");
+    const closeBtn = document.getElementById("modalClose");
+
+    openBtn.onclick = () => modal.style.display = "block";
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+  </script>
 
 </body>
 </html>
