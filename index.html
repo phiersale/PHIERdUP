@@ -17,11 +17,18 @@
 
     a { color: #6ddcff; text-decoration: none; }
 
-    header, section, footer {
+    header {
       padding: 4rem 1.5rem;
       max-width: 900px;
       margin: auto;
-      text-align: center;
+      text-align: center; /* HERO CENTERED */
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+      text-align: left; /* BODY LEFT-JUSTIFIED */
     }
 
     h1, h2, h3 { line-height: 1.2; }
@@ -50,6 +57,7 @@
 
     .brand-block {
       margin-bottom: 1.5rem;
+      text-align: center;
     }
 
     .brand-logo {
@@ -72,7 +80,6 @@
     }
 
     .why-section {
-      text-align: left;
       max-width: 700px;
       margin: auto;
     }
@@ -88,27 +95,44 @@
       margin-top: 0.5rem;
     }
 
+    .teeth-banner {
+      text-align: center;
+      padding: 4rem 1.5rem;
+    }
+
+    .teeth-banner img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .teeth-banner p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0 0;
+    }
+
     footer {
       font-size: 0.9rem;
       color: #aaa;
       padding-bottom: 4rem;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO SECTION (CENTERED) -->
 <header class="hero">
 
-  <!-- BRANDING BLOCK (DO NOT REMOVE) -->
+  <!-- BRANDING BLOCK -->
   <div class="brand-block">
     <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="brand-logo">
     <div class="brand-title">MABAH Movement</div>
     <div class="brand-tagline">Making America Better And Healthier</div>
   </div>
 
-  <!-- UPDATED PRE-LAUNCH HERO TEXT -->
   <h1>Healthcare is collapsing — it’s time for citizens to act.</h1>
 
   <p>
@@ -129,30 +153,39 @@
 
 </header>
 
-<!-- WHY WE'RE ACTING NOW -->
-<section class="why-section">
-  <h2>Why We’re Acting Now</h2>
+<!-- WHY WE'RE ACTING NOW (LEFT-JUSTIFIED BODY TEXT) -->
+<section>
+  <div class="why-section">
+    <h2>Why We’re Acting Now</h2>
 
-  <p>
-    Healthcare continues to fail millions of Americans. Politicians have ignored
-    the crisis for too long — and the only force that has ever moved Congress is
-    organized public pressure.
-  </p>
+    <p>
+      Healthcare continues to fail millions of Americans. Politicians have ignored
+      the crisis for too long — and the only force that has ever moved Congress is
+      organized public pressure.
+    </p>
 
-  <p>
-    By joining early, you become part of the <strong>first wave</strong> preparing
-    to take action at the March 28th No Kings Rally. Your early support strengthens
-    the movement before it goes public.
-  </p>
+    <p>
+      By joining early, you become part of the <strong>first wave</strong> preparing
+      to take action at the March 28th No Kings Rally. Your early support strengthens
+      the movement before it goes public.
+    </p>
 
-  <div class="cta-block">
-    <a class="cta" href="#">
-      Join the Early Movement
-    </a>
-    <div class="microcopy">
-      It’s free and takes less than a minute — your early support matters.
+    <div class="cta-block">
+      <a class="cta" href="#">
+        Join the Early Movement
+      </a>
+      <div class="microcopy">
+        It’s free and takes less than a minute — your early support matters.
+      </div>
     </div>
   </div>
+</section>
+
+<!-- TEETH BANNER (CORRECT FILENAME) -->
+<section class="teeth-banner">
+  <img src="Power_Concedes_Nothing_TEETH.png" alt="Power concedes nothing without a demand that has teeth. We are the TEETH.">
+  <p><strong>Power concedes nothing without a demand that has TEETH.</strong></p>
+  <p>We Are The TEETH.</p>
 </section>
 
 <footer>
