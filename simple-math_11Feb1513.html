@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Math — The Cascade That Funds Itself</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #0a0a0a;
+            color: #e8e8e8;
+            line-height: 1.6;
+        }
+
+        a { color: #81c784; }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: #111;
+            border-bottom: 1px solid #222;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+            color: #81c784;
+        }
+
+        .hero-sub {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #a5d6a7;
+        }
+
+        .identity {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        /* NAV */
+        nav {
+            background: #0f0f0f;
+            border-bottom: 1px solid #222;
+            padding: 12px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            color: #e8e8e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: #81c784;
+            font-weight: 700;
+        }
+
+        /* CONTENT */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #81c784;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .anchor-img {
+            width: 50%;
+            max-width: 420px;
+            display: block;
+            margin: 30px auto;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .math-card {
+            background: #111;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #222;
+            margin-bottom: 20px;
+        }
+
+        .timeline-step {
+            background: #111;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #222;
+            margin-bottom: 20px;
+        }
+
+        .timeline-month {
+            font-weight: bold;
+            color: #81c784;
+            margin-bottom: 8px;
+        }
+
+        /* CTA */
+        .cta-button {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            color: white;
+            padding: 18px 36px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #a5d6a7;
+            border-top: 1px solid rgba(76, 175, 80, 0.3);
+            margin-top: 40px;
+        }
+
+        .timestamp {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const current = window.location.pathname.split("/").pop();
+            document.querySelectorAll("nav a").forEach(a => {
+                if (a.getAttribute("href") === current) {
+                    a.classList.add("active");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Simple Math</h1>
+    <div class="hero-sub">The Cascade That Funds Itself</div>
+    <div class="identity">PHIERS Movement • Make America Better And Healthier (MABAH)</div>
+</div>
+
+<!-- NAV -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="simple-math.html" class="active">Simple Math</a></li>
+        <li><a href="simple-math-fast-read.html">Fast Read</a></li>
+        <li><a href="5d-solutions.html">5D Solutions</a></li>
+        <li><a href="crisis-plan.html">Crisis Plan</a></li>
+        <li><a href="quick-start.html">Quick Start</a></li>
+        <li><a href="donate.html">Donate</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <!-- ANCHOR IMAGE -->
+    <img src="SIMPLE_MATH_Pyramid_Universal_Coverage.png"
+         alt="Telehealth Pyramid — Universal Coverage Cascade"
+         class="anchor-img"
+         onclick="this.style.width='90%';">
+
+    <p style="text-align:center; color:#a5d6a7; margin-top:10px;">
+        The telehealth model is the foundation — and the spark — of the entire cascade.
+    </p>
+
+    <!-- CORE SECTION -->
+    <h2>The Cascade Mathematics</h2>
+
+    <p>
+        The entire movement rests on one simple truth: <strong>the savings from each person switching to $600/year telehealth
+        can fund the next wave of conversions.</strong> This creates a self‑accelerating cascade:
+    </p>
+
+    <div class="math-card">
+        <strong>1 → 12 → 148 → 234,000,000</strong><br>
+        One conversion funds twelve. Twelve fund 148. The pattern repeats until every American is covered.
+    </div>
+
+    <!-- BREAKDOWN -->
+    <h2>How the Numbers Work</h2>
+
+    <div class="math-card">
+        <h3>Savings Per Person</h3>
+        <ul>
+            <li>Traditional insurance: $8,500+/year</li>
+            <li>PHIERS telehealth: $600/year</li>
+            <li>Individual savings: $7,900+/year</li>
+            <li>Family savings: $18,000–$72,000+/year</li>
+        </ul>
+    </div>
+
+    <div class="math-card">
+        <h3>Network Funding Model</h3>
+        <ul>
+            <li>Each conversion saves $7,900+</li>
+            <li>Savings fund the next 12 conversions</li>
+            <li>12 conversions create $94,800 in new savings</li>
+            <li>The pattern repeats exponentially</li>
+        </ul>
+    </div>
+
+    <div class="math-card">
+        <h3>Scale Mathematics</h3>
+        <ul>
+            <li>Phase 1: 1 person saves $7,900</li>
+            <li>Phase 2: 12 people save $94,800</li>
+            <li>Phase 3: 148 people save $1.17M</li>
+            <li>Phase 4: Network effects accelerate to universal coverage</li>
+        </ul>
+    </div>
+
+    <!-- WHY IT WORKS -->
+    <h2>Why This Model Is Unstoppable</h2>
+
+    <div class="math-card">
+        <h3>Network Effect Physics</h3>
+        <ul>
+            <li>Each conversion enables multiple new conversions</li>
+            <li>Savings from each wave fund the next wave</li>
+            <li>As the network grows, per‑person costs drop further</li>
+            <li>At critical mass, traditional insurance becomes economically obsolete</li>
+        </ul>
+    </div>
+
+    <div class="math-card">
+        <h3>Economic Inevitability</h3>
+        <p>
+            When people can get 80% of healthcare needs for $600 instead of $8,500, the choice becomes mathematically obvious.
+            The only question is timing — not outcome.
+        </p>
+    </div>
+
+    <div class="math-card">
+        <h3>Congressional Pressure</h3>
+        <p>
+            As millions convert, district‑level pressure becomes overwhelming. Representatives serve constituents or lose elections.
+        </p>
+    </div>
+
+    <!-- TIMELINE -->
+    <h2>8–13 Month Timeline to Universal Coverage</h2>
+
+    <div class="timeline-step">
+        <div class="timeline-month">Month 1–2</div>
+        Initial conversions. Savings fund the next wave.
+    </div>
+
+    <div class="timeline-step">
+        <div class="timeline-month">Month 3–4</div>
+        Network growth accelerates. Word spreads through savings testimonials.
+    </div>
+
+    <div class="timeline-step">
+        <div class="timeline-month">Month 5–6</div>
+        Congressional pressure intensifies as millions convert.
+    </div>
+
+    <div class="timeline-step">
+        <div class="timeline-month">Month 7–8</div>
+        Congress authorizes CMS to cover the $600 telehealth model.
+    </div>
+
+    <div class="timeline-step">
+        <div class="timeline-month">Month 9–13</div>
+        Universal coverage achieved through network effects.
+    </div>
+
+    <!-- GUARANTEE -->
+    <h2>Why Success Is Guaranteed</h2>
+
+    <div class="math-card">
+        <h3>Three Convergent Forces</h3>
+        <ul>
+            <li><strong>Economic:</strong> $7,900+ annual savings per person</li>
+            <li><strong>Network:</strong> Each conversion funds multiple new conversions</li>
+            <li><strong>Political:</strong> District‑level pressure forces congressional action</li>
+        </ul>
+    </div>
+
+    <!-- CTA -->
+    <h2 style="text-align:center;">Join the Cascade</h2>
+
+    <p style="text-align:center; font-size:1.1rem;">
+        Every signature accelerates the mathematical progression. Every conversion funds the next wave.
+    </p>
+
+    <div style="text-align:center;">
+        <a class="cta-button"
+           href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now">
+           Add Your Voice to the Cascade
+        </a>
+    </div>
+
+    <p style="text-align:center; color:#81c784;">
+        Universal healthcare in 8–13 months isn’t hope. It’s mathematics.
+    </p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
+    <p>Will Price | Chief Solutions Architect</p>
+    <p>Phone: (916) 306‑8967 | Email: info@phiers.org</p>
+</footer>
+
+<div class="timestamp">
+    Updated February 11, 2026 — Cascade mathematics active and accelerating
+</div>
+
+</body>
+</html>
+    
