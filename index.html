@@ -83,6 +83,35 @@
             margin-right: auto;
         }
 
+        /* VIDEO BLOCK */
+        .video-block {
+            margin: 40px auto;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .video-block h2 {
+            color: #4caf50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid rgba(76, 175, 80, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+
         .cta-primary {
             background: linear-gradient(135deg, #4caf50, #45a049);
             color: white;
@@ -323,8 +352,27 @@
                 Add Your Voice to the Movement Map
             </a>
 
-            <a href="#strategy" class="cta-secondary">See the Strategy ↓</a>
+            <a href="#video" class="cta-secondary">Watch the 111‑Second Video ↓</a>
         </header>
+
+        <!-- VIDEO BLOCK -->
+        <section id="video" class="video-block">
+            <h2>The MATH Congress Doesn’t Want You to See</h2>
+
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/2j-dF3hgdeE"
+                    title="The MATH Congress Doesn’t Want You to See"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <a href="OVERVIEW.html" class="cta-primary" style="margin-top: 25px;">
+                Start Here — The Overview
+            </a>
+        </section>
 
         <!-- PRESSURE SYSTEM -->
         <section class="pressure-system">
@@ -400,58 +448,4 @@
                         <li>A public-interest movement</li>
                         <li>Citizen-driven and non-corporate</li>
                         <li>Strategy-based, not vibes-based</li>
-                        <li>Built for accountability</li>
-                    </ul>
-                </div>
-
-                <div class="definition-column">
-                    <h4>PHIERS IS NOT</h4>
-                    <ul class="definition-list not-list">
-                        <li>A company</li>
-                        <li>An insurance product</li>
-                        <li>A political party</li>
-                        <li>A fundraising scheme</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- FINAL CTA -->
-        <section class="section" style="text-align: center;">
-            <h2>Add Your Voice. Strengthen the Signal.</h2>
-
-            <p style="margin: 20px 0; font-size: 1.1em;">
-                No spam. No selling. No gimmicks. Just organized citizens building real leverage.
-            </p>
-
-            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now"
-               class="cta-primary">
-               Add Your Name to the PHIERS Map
-            </a>
-
-            <div style="margin-top: 30px;">
-                <a href="solutions.html" style="color: #81c784; text-decoration: underline; margin: 0 15px;">See the Full Strategy</a>
-                <a href="faq.html" style="color: #81c784; text-decoration: underline; margin: 0 15px;">FAQ</a>
-                <a href="donate.html" style="color: #81c784; text-decoration: underline; margin: 0 15px;">Support the Movement</a>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-            <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
-            <p>Will Price | Chief Solutions Architect</p>
-            <p>Phone: (916) 306-8967 | Email: <a href="mailto:info@phiers.org" style="color: #81c784;">info@phiers.org</a></p>
-            <p style="margin-top: 15px;">
-                PHIERS is a public-interest movement — not a company, not a product.<br>
-                The only thing missing is you.
-            </p>
-        </footer>
-
-        <!-- TIMESTAMP -->
-        <div class="timestamp">
-            <p>Updated February 10, 2026 — Healthcare crisis window active</p>
-        </div>
-
-    </div>
-</body>
-</html>
+                        <
