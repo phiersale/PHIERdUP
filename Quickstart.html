@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>Quickstart - PHIERS Movement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* OPTIMIZED NAVIGATION */
+        .unified-nav {
+            background: rgba(26, 26, 46, 0.8);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .nav-link {
+            color: #81c784;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+
+        .nav-link.active {
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(26, 26, 46, 0.95);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 4px;
+            padding: 8px 0;
+            min-width: 180px;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu .nav-link {
+            display: block;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+        
+        /* CANONICAL HERO */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.3), rgba(25, 118, 210, 0.2));
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid #2196f3;
+        }
+        
+        .logo {
+            max-width: 120px;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+
+        h1 {
+            color: #2196f3;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 25px rgba(33, 150, 243, 0.5);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #bbdefb;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* QUICKSTART STEPS */
+        .quickstart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .step-card {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(25, 118, 210, 0.1));
+            border: 2px solid #2196f3;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+        }
+
+        .step-number {
+            background: #2196f3;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step-card h3 {
+            color: #2196f3;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .step-card p {
+            margin-bottom: 20px;
+            color: #c8e6c9;
+        }
+
+        .step-cta {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            color: white;
+            padding: 12px 24px;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .step-cta:hover {
+            background: linear-gradient(135deg, #45a049, #3d8b40);
+            transform: translateY(-2px);
+        }
+
+        .urgent-cta {
+            background: linear-gradient(135deg, #ff5722, #d84315);
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+            text-transform: uppercase;
+        }
+
+        .urgent-cta:hover {
+            background: linear-gradient(135deg, #d84315, #bf360c);
+            transform: translateY(-3px);
+        }
+
+        /* SECTIONS */
+        section {
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+            border-left: 4px solid #2196f3;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            color: #2196f3;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #c8e6c9;
+            margin: 15px 0;
+            font-size: 1.05em;
+        }
+
+        .highlight-box {
+            background: rgba(33, 150, 243, 0.1);
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 2px solid rgba(76, 175, 80, 0.3);
+            color: #81c784;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        footer h3 {
+            color: #4caf50;
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            color: #81c784;
+            text-decoration: underline;
+        }
+
+        .constitutional-statement {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .timestamp-badge {
+            background: rgba(33, 150, 243, 0.2);
+            color: #2196f3;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .unified-nav {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .quickstart-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- OPTIMIZED UNIFIED NAVIGATION -->
+        <nav class="unified-nav">
+            <a href="Quickstart.html" class="nav-link active">Quickstart</a>
+            <a href="OVERVIEW.html" class="nav-link">OVERVIEW</a>
+            <a href="Action.html" class="nav-link">Action</a>
+            <a href="Crisis.html" class="nav-link">Crisis</a>
+            <a href="5D_Solutions.html" class="nav-link">5D Solutions</a>
+            <a href="Simple-Math-Fast-Read.html" class="nav-link">Simple Math</a>
+            <a href="FAQ.html" class="nav-link">FAQ</a>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Resources ▼</a>
+                <div class="dropdown-menu">
+                    <a href="Media.html" class="nav-link">Media</a>
+                    <a href="About.html" class="nav-link">About</a>
+                    <a href="Why-Change-Required.html" class="nav-link">Why Change Required</a>
+                    <a href="Leverage.html" class="nav-link">Leverage</a>
+                    <a href="Unions-Strategy.html" class="nav-link">Unions Strategy</a>
+                </div>
+            </div>
+            <a href="Donate.html" class="nav-link">Donate</a>
+        </nav>
+
+        <!-- CANONICAL HERO -->
+        <header>
+            <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="logo">
+            <h1>Start Here</h1>
+            <p class="subtitle">New to PHIERS? Get up to speed in 3 minutes.</p>
+            <p style="font-size: 1.1em; margin-top: 20px;">
+                Healthcare is broken. Congress won't fix it. But organized citizens can — and here's exactly how.
+            </p>
+        </header>
+
+        <!-- 3-STEP QUICKSTART -->
+        <section>
+            <h2>Get Started in 3 Steps</h2>
+            
+            <div class="quickstart-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Understand the Crisis</h3>
+                    <p>22 million Americans just lost healthcare coverage. Premiums doubled. The system is failing in real time.</p>
+                    <a href="Crisis.html" class="step-cta">See What's Broken</a>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Learn the Solution</h3>
+                    <p>$600/year telehealth covers 80% of healthcare needs. The math works. The authority exists. Congress just needs pressure.</p>
+                    <a href="Simple-Math-Fast-Read.html" class="step-cta">See the Math</a>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Add Your Pressure</h3>
+                    <p>When 3.5% of Americans coordinate around a single demand, systems change. Your signature builds that pressure.</p>
+                    <a href="Action.html" class="step-cta">Sign Petition</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- URGENT ACTION -->
+        <section style="text-align: center; background: linear-gradient(135deg, rgba(255, 87, 34, 0.1), rgba(244, 67, 54, 0.1)); border-left: 4px solid #ff5722;">
+            <h2 style="color: #ff5722;">Why This Can't Wait</h2>
+            <p style="font-size: 1.2em; margin: 25px 0;">
+                Congress has until <strong>January 30th</strong> to prevent a government shutdown. The healthcare crisis is accelerating. 
+                Every day we wait, more families lose coverage.
+            </p>
+            
+            <div class="highlight-box" style="background: rgba(255, 87, 34, 0.1); border-color: #ff5722;">
+                <p><strong>The window for change is NOW:</strong></p>
+                <p>→ Crisis creates urgency</p>
+                <p>→ Congressional deadline forces action</p> 
+                <p>→ 3.5% organized pressure becomes unstoppable</p>
+            </div>
+            
+            <a href="Action.html" class="urgent-cta">Add Your Voice Now</a>
+        </section>
+
+        <!-- FOR DEEPER UNDERSTANDING -->
+        <section>
+            <h2>Want to Go Deeper?</h2>
+            <p>Ready for the complete strategic framework? Here's where to dive in:</p>
+            
+            <div class="quickstart-grid">
+                <div class="step-card">
+                    <h3>Complete Strategy</h3>
+                    <p>The full roadmap: how 1 person becomes 12, becomes 148, becomes 234 million with universal coverage.</p>
+                    <a href="OVERVIEW.html" class="step-cta">Read OVERVIEW</a>
+                </div>
+                
+                <div class="step-card">
+                    <h3>5D Framework</h3>
+                    <p>Healthcare, Jobs, Economy, Politics, Peace — fixing all five dimensions simultaneously.</p>
+                    <a href="5D_Solutions.html" class="step-cta">See 5D Solutions</a>
+                </div>
+                
+                <div class="step-card">
+                    <h3>Get Answers</h3>
+                    <p>Common questions about the movement, the math, and why this approach works.</p>
+                    <a href="FAQ.html" class="step-cta">Read FAQ</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTTOM CTA -->
+        <section style="text-align: center; background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(129, 199, 132, 0.2)); border-left: 4px solid #4caf50;">
+            <h2>Ready to Join the Movement?</h2>
+            <p style="font-size: 1.1em; margin: 25px 0;">
+                You understand the crisis. You've seen the solution. You know the math works.
+            </p>
+            <p style="margin-bottom: 30px;">
+                Now help build the pressure that forces Congress to act — or get replaced by people who will.
+            </p>
+            
+            <a href="Action.html" class="urgent-cta" style="background: linear-gradient(135deg, #4caf50, #45a049);">
+                Join the PHIERS Movement
+            </a>
+        </section>
+
+        <!-- CONSTITUTIONAL FOOTER -->
+        <footer>
+            <h3>PHIERS Movement | MABAH</h3>
+            <p>Will Price | Chief Solutions Architect</p>
+            <p>Phone: <a href="tel:+19163068967">(916) 306-8967</a> | Email: <a href="mailto:info@phiers.org">info@phiers.org</a></p>
+            
+            <div class="constitutional-statement">
+                <p>PHIERS is a public-interest movement — not a company, not a product. The only thing missing is you.</p>
+            </div>
+            
+            <div class="timestamp-badge">
+                Updated February 12, 2026 — Healthcare crisis window active
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
