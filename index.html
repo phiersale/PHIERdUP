@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <title>PHIERS - Congress Won't Fix Healthcare. Organized Citizens Will.</title>
+    <meta name="description" content="PHIERS — a public‑interest movement building coordinated citizen pressure to force real healthcare reform. Congress won’t fix healthcare. Organized citizens will.">
+    <title>PHIERS — Congress Won't Fix Healthcare. Organized Citizens Will.</title>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
@@ -20,13 +18,40 @@
             min-height: 100vh;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        /* NAVIGATION */
+        nav {
+            width: 100%;
+            background: rgba(15, 52, 96, 0.85);
+            border-bottom: 2px solid rgba(76, 175, 80, 0.3);
+            padding: 15px 0;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(6px);
         }
 
-        /* HERO SECTION */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #81c784;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover { color: #4caf50; }
+
+        /* HERO */
         .hero {
             text-align: center;
             padding: 60px 20px;
@@ -49,7 +74,7 @@
             text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
         }
 
-        .hero .subheadline {
+        .subheadline {
             font-size: 1.3em;
             color: #81c784;
             margin-bottom: 30px;
@@ -64,9 +89,7 @@
             padding: 18px 36px;
             font-size: 1.2em;
             font-weight: bold;
-            border: none;
             border-radius: 8px;
-            cursor: pointer;
             text-decoration: none;
             display: inline-block;
             margin: 10px;
@@ -88,7 +111,6 @@
             font-weight: bold;
             border: 2px solid #4caf50;
             border-radius: 8px;
-            cursor: pointer;
             text-decoration: none;
             display: inline-block;
             margin: 10px;
@@ -100,7 +122,7 @@
             transform: translateY(-2px);
         }
 
-        /* SECTION STYLING */
+        /* SECTION BASE */
         .section {
             background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
             border-left: 4px solid #4caf50;
@@ -117,13 +139,7 @@
             text-align: center;
         }
 
-        .section h3 {
-            font-size: 1.5em;
-            color: #81c784;
-            margin-bottom: 15px;
-        }
-
-        /* PRESSURE SYSTEM SECTION */
+        /* PRESSURE SYSTEM */
         .pressure-system {
             background: rgba(76, 175, 80, 0.1);
             border: 2px solid #4caf50;
@@ -138,17 +154,12 @@
             text-align: center;
         }
 
-        .pressure-bullets {
-            list-style: none;
-            padding: 0;
-        }
-
+        .pressure-bullets { list-style: none; }
         .pressure-bullets li {
             margin: 15px 0;
             padding-left: 25px;
             position: relative;
         }
-
         .pressure-bullets li:before {
             content: "→";
             color: #4caf50;
@@ -157,7 +168,7 @@
             left: 0;
         }
 
-        /* STRATEGY CARDS */
+        /* STRATEGY GRID */
         .strategy-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -179,13 +190,7 @@
             border-color: #4caf50;
         }
 
-        .strategy-card h4 {
-            color: #4caf50;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-
-        /* IDENTITY SECTION */
+        /* IDENTITY */
         .identity-section {
             text-align: center;
             background: rgba(76, 175, 80, 0.05);
@@ -202,7 +207,7 @@
             border-radius: 8px;
         }
 
-        /* WHAT WE ARE SECTION */
+        /* DEFINITIONS */
         .definition-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -210,17 +215,7 @@
             margin: 30px 0;
         }
 
-        .definition-column h4 {
-            color: #4caf50;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .definition-list {
-            list-style: none;
-            padding: 0;
-        }
-
+        .definition-list { list-style: none; }
         .definition-list li {
             margin: 10px 0;
             padding-left: 25px;
@@ -243,7 +238,7 @@
             left: 0;
         }
 
-        /* MARCH 28 URGENCY */
+        /* URGENCY */
         .urgency-box {
             background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(255, 193, 7, 0.1));
             border: 2px solid #ffa726;
@@ -258,6 +253,15 @@
             margin-bottom: 15px;
         }
 
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #a5d6a7;
+            border-top: 1px solid rgba(76, 175, 80, 0.3);
+            margin-top: 40px;
+        }
+
         /* TIMESTAMP */
         .timestamp {
             text-align: center;
@@ -269,44 +273,60 @@
             border-radius: 8px;
         }
 
-        /* MOBILE RESPONSIVENESS */
+        /* MOBILE */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-            
-            .hero .subheadline {
-                font-size: 1.1em;
-            }
-            
-            .definition-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 10px;
-            }
+            .hero h1 { font-size: 2em; }
+            .subheadline { font-size: 1.1em; }
+            .definition-grid { grid-template-columns: 1fr; }
+            .container { padding: 10px; }
         }
     </style>
 </head>
+
 <body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="why-change-required.html">Why Change Is Required</a></li>
+            <li><a href="Simple-Math-Fast-Read.html">Simple Math</a></li>
+            <li><a href="5D_Solutions.html">5D Solutions</a></li>
+            <li><a href="solutions.html">Full Strategy</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <!-- HERO SECTION -->
+
+        <!-- HERO -->
         <header class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="logo">
-            <div style="font-size: 1em; color: #81c784; margin-bottom: 10px;">MABAH Movement</div>
-            <div style="font-size: 0.9em; color: #a5d6a7; margin-bottom: 30px;">Making America Better And Healthier — our citizen-led mission to fix what Congress won't.</div>
-            
+
+            <div style="font-size: 1em; color: #81c784; margin-bottom: 10px;">
+                MABAH Movement
+            </div>
+
+            <div style="font-size: 0.9em; color: #a5d6a7; margin-bottom: 30px;">
+                Making America Better And Healthier — our citizen-led mission to fix what Congress won't.
+            </div>
+
             <h1>Congress won't fix healthcare. Organized citizens will.</h1>
+
             <div class="subheadline">
                 PHIERS is a public-interest movement building coordinated citizen pressure across every congressional district — with real leverage and a real plan.
             </div>
-            
-            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now" class="cta-primary">Add Your Voice to the Movement Map</a>
+
+            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now" class="cta-primary">
+                Add Your Voice to the Movement Map
+            </a>
+
             <a href="#strategy" class="cta-secondary">See the Strategy ↓</a>
         </header>
 
-        <!-- WHAT HAPPENS WHEN YOU ADD YOUR NAME -->
+        <!-- PRESSURE SYSTEM -->
         <section class="pressure-system">
             <h3>This isn't a petition. It's a pressure system.</h3>
             <ul class="pressure-bullets">
@@ -323,20 +343,24 @@
         <!-- STRATEGY SNAPSHOT -->
         <section class="section" id="strategy">
             <h2>The PHIERS Strategy — At a Glance</h2>
+
             <div class="strategy-grid">
                 <div class="strategy-card">
                     <h4>Critical Mass</h4>
                     <p>3.5% participation has repeatedly triggered systemic change.</p>
                 </div>
+
                 <div class="strategy-card">
                     <h4>District Leverage</h4>
                     <p>Pressure is applied locally, where representatives are most vulnerable.</p>
                 </div>
+
                 <div class="strategy-card">
                     <h4>Escalation Moments</h4>
                     <p>Public milestones force responses — or expose refusal.</p>
                 </div>
             </div>
+
             <div style="text-align: center; margin-top: 30px;">
                 <a href="solutions.html" class="cta-secondary">Read the Full Strategy</a>
             </div>
@@ -346,20 +370,29 @@
         <section class="urgency-box">
             <h3>Why March 28 Matters</h3>
             <p>The No Kings Rally is a national moment of visibility and accountability. PHIERS is building coordinated pressure toward this date to demonstrate organized citizen demand — not noise, not protest theater, but leverage.</p>
-            <p style="margin-top: 15px; font-weight: bold;">What happens before March 28 determines what power must respond to after.</p>
+            <p style="margin-top: 15px; font-weight: bold;">
+                What happens before March 28 determines what power must respond to after.
+            </p>
         </section>
 
-        <!-- WE ARE THE TEETH -->
+        <!-- TEETH -->
         <section class="identity-section">
             <h2>We Are the TEETH</h2>
             <p style="font-size: 1.2em; margin-bottom: 20px;">Power concedes nothing without a demand.</p>
-            <img src="Power_Concedes_Nothing_TEETH.png" alt="Power concedes nothing without a demand that has teeth. We are the TEETH." class="teeth-image">
-            <p style="margin-top: 20px; font-size: 1.1em;">PHIERS gives citizens the TEETH — organized, strategic, collective force — to make that demand unavoidable.</p>
+
+            <img src="Power_Concedes_Nothing_TEETH.png"
+                 alt="Power concedes nothing without a demand that has teeth. We are the TEETH."
+                 class="teeth-image">
+
+            <p style="margin-top: 20px; font-size: 1.1em;">
+                PHIERS gives citizens the TEETH — organized, strategic, collective force — to make that demand unavoidable.
+            </p>
         </section>
 
-        <!-- WHAT PHIERS IS AND IS NOT -->
+        <!-- WHAT PHIERS IS / IS NOT -->
         <section class="section">
             <h2>What PHIERS Is — And Is Not</h2>
+
             <div class="definition-grid">
                 <div class="definition-column">
                     <h4>PHIERS IS</h4>
@@ -370,6 +403,7 @@
                         <li>Built for accountability</li>
                     </ul>
                 </div>
+
                 <div class="definition-column">
                     <h4>PHIERS IS NOT</h4>
                     <ul class="definition-list not-list">
@@ -385,10 +419,16 @@
         <!-- FINAL CTA -->
         <section class="section" style="text-align: center;">
             <h2>Add Your Voice. Strengthen the Signal.</h2>
-            <p style="margin: 20px 0; font-size: 1.1em;">No spam. No selling. No gimmicks. Just organized citizens building real leverage.</p>
-            
-            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now" class="cta-primary">Add Your Name to the PHIERS Map</a>
-            
+
+            <p style="margin: 20px 0; font-size: 1.1em;">
+                No spam. No selling. No gimmicks. Just organized citizens building real leverage.
+            </p>
+
+            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now"
+               class="cta-primary">
+               Add Your Name to the PHIERS Map
+            </a>
+
             <div style="margin-top: 30px;">
                 <a href="solutions.html" style="color: #81c784; text-decoration: underline; margin: 0 15px;">See the Full Strategy</a>
                 <a href="faq.html" style="color: #81c784; text-decoration: underline; margin: 0 15px;">FAQ</a>
@@ -396,8 +436,8 @@
             </div>
         </section>
 
-        <!-- CONTACT INFO -->
-        <footer style="text-align: center; padding: 40px 20px; color: #a5d6a7; border-top: 1px solid rgba(76, 175, 80, 0.3); margin-top: 40px;">
+        <!-- FOOTER -->
+        <footer>
             <p><strong>PHIERS Movement | Make America Better And Healthier (MABAH)</strong></p>
             <p>Will Price | Chief Solutions Architect</p>
             <p>Phone: (916) 306-8967 | Email: <a href="mailto:info@phiers.org" style="color: #81c784;">info@phiers.org</a></p>
@@ -411,6 +451,7 @@
         <div class="timestamp">
             <p>Updated February 10, 2026 — Healthcare crisis window active</p>
         </div>
+
     </div>
 </body>
 </html>
