@@ -191,6 +191,73 @@
             background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.2));
         }
 
+
+        /* Resources Dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: transparent;
+            color: #81c784;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .dropbtn:hover {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: rgba(26, 26, 46, 0.98);
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+            z-index: 1000;
+            border-radius: 8px;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            margin-top: 5px;
+        }
+
+        .dropdown-content a {
+            color: #81c784;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 0;
+        }
+
+        .dropdown-content a:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .dropdown-content a:last-child {
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+
         /* FOOTER - Section 7 Constitutional Compliance */
         footer {
             text-align: center;
@@ -248,16 +315,26 @@
 <body>
     <div class="container">
         <!-- NAVIGATION - Section 5 Constitutional Order -->
-        <nav>
-            <a href="Quickstart.html">Quickstart</a>
+                <nav>
+            <a href="Quickstart.html">START HERE</a>
             <a href="OVERVIEW.html">OVERVIEW</a>
             <a href="Crisis.html">Crisis</a>
             <a href="Simple-Math-Fast-Read.html">Simple Math</a>
             <a href="5D_Solutions.html">5D Solutions</a>
-            <a href="action.html">Action</a>
-            <a href="FAQ.html">FAQ</a>
-            <a href="Resources.html">Resources ▼</a>
+            <a href="action.html">TAKE ACTION</a>
             <a href="Donate.html">Donate</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Resources ▼</button>
+                <div class="dropdown-content">
+                    <a href="FAQ.html">FAQ</a>
+                    <a href="About.html">About PHIERS</a>
+                    <a href="Leverage.html">Leverage</a>
+                    <a href="Media.html">Media Library</a>
+                    <a href="Unions-Strategy.html">Unions Strategy</a>
+                    <a href="Why-Change-Required.html">Why Change Required</a>
+                </div>
+            </div>
         </nav>
 
         <header>
@@ -299,7 +376,7 @@
                         opportunity everyone else missed—and built the blueprint to execute it.
                     </p>
                     <p style="margin-top: 15px;">
-                        <strong style="color: white;">Contact:</strong> 916-306-8967 | info@phiers.org
+                        <strong style="color: white;">Contact:</strong> 916-306-8967 | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1a73747c755a6a72737f68693475687d">[email&#160;protected]</a>
                     </p>
                 </div>
             </section>
@@ -459,7 +536,7 @@
             <p style="margin: 15px 0;">
                 Will Price | Chief Solutions Architect<br>
                 Phone: <a href="tel:+19163068967">(916) 306-8967</a> | 
-                Email: <a href="mailto:info@phiers.org">info@phiers.org</a>
+                Email: <a href="/cdn-cgi/l/email-protection#70191e161f300018191502035e1f0217"><span class="__cf_email__" data-cfemail="b2dbdcd4ddf2c2dadbd7c0c19cddc0d5">[email&#160;protected]</span></a>
             </p>
             
             <div class="footer-nav">
@@ -481,14 +558,4 @@
             <div class="constitutional-disclaimer">
                 <p>
                     PHIERS is a public-interest movement — not a company, not a product.<br>
-                    The only thing missing is you.
-                </p>
-            </div>
-            
-            <p style="margin-top: 20px; font-size: 0.85rem; color: #9ca3af;">
-                Last updated: February 13, 2026
-            </p>
-        </footer>
-    </div>
-</body>
-</html>
+                    The only thing missing is y
