@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <title>Quick Start - PHIERS</title>
+    <title>The Leverage - PHIERS</title>
     <style>
         * {
             margin: 0;
@@ -79,7 +79,7 @@
 
         h1 {
             color: #4caf50;
-            font-size: 2em;
+            font-size: 2.2em;
             margin-bottom: 15px;
             text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
         }
@@ -143,70 +143,17 @@
             height: 100%;
         }
 
-        .time-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #4caf50, #2e7d32);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9em;
-            margin: 10px 0;
-        }
-
         .highlight-box {
             background: rgba(76, 175, 80, 0.1);
             border: 2px solid #4caf50;
             padding: 25px;
             margin: 25px 0;
             border-radius: 8px;
-            box-shadow: 0 0 20px rgba(76, 175, 80, 0.15);
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .comparison-card {
-            padding: 25px;
-            border-radius: 8px;
-        }
-
-        .comparison-bad {
-            background: rgba(244, 67, 54, 0.1);
-            border: 2px solid #f44336;
-        }
-
-        .comparison-bad h3 {
-            color: #ef5350;
-            margin-bottom: 15px;
-        }
-
-        .comparison-good {
-            background: rgba(76, 175, 80, 0.1);
-            border: 2px solid #4caf50;
-        }
-
-        .comparison-good h3 {
-            color: #4caf50;
-            margin-bottom: 15px;
-        }
-
-        .comparison-card ul {
-            margin: 15px 0 0 20px;
-        }
-
-        .comparison-card li {
-            margin: 10px 0;
-            line-height: 1.6;
         }
 
         .graphic-container {
             text-align: center;
-            margin: 30px 0;
+            margin: 40px 0;
         }
 
         .graphic-container img {
@@ -219,7 +166,7 @@
         }
 
         .graphic-container img:hover {
-            transform: scale(1.02);
+            transform: scale(1.05);
         }
 
         .graphic-caption {
@@ -229,40 +176,47 @@
             margin-top: 10px;
         }
 
-        .steps-container {
-            margin: 40px 0;
-        }
-
-        .step-card {
+        .leverage-card {
             background: rgba(76, 175, 80, 0.1);
-            border: 2px solid #4caf50;
             border-left: 5px solid #4caf50;
             padding: 25px;
             margin: 20px 0;
             border-radius: 8px;
         }
 
-        .step-number {
-            display: inline-block;
-            background: #4caf50;
-            color: white;
-            width: 35px;
-            height: 35px;
-            line-height: 35px;
-            border-radius: 50%;
-            text-align: center;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .step-card h3 {
-            display: inline;
+        .leverage-card h3 {
             color: #4caf50;
-            margin: 0;
+            margin-top: 0;
         }
 
-        .step-card p {
-            margin: 15px 0 0 45px;
+        .binary-choice {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .choice-card {
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .choice-a {
+            background: rgba(76, 175, 80, 0.1);
+            border: 3px solid #4caf50;
+        }
+
+        .choice-a h3 {
+            color: #4caf50;
+        }
+
+        .choice-b {
+            background: rgba(244, 67, 54, 0.1);
+            border: 3px solid #f44336;
+        }
+
+        .choice-b h3 {
+            color: #ef5350;
         }
 
         .btn {
@@ -293,14 +247,6 @@
 
         .btn-secondary:hover {
             background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.2));
-        }
-
-        .button-group {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 25px 0;
         }
 
         section {
@@ -357,10 +303,10 @@
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 1.6em; }
+            h1 { font-size: 1.8em; }
             h2 { font-size: 1.4em; }
             .logo { height: 100px; }
-            .comparison-grid { grid-template-columns: 1fr; }
+            .binary-choice { grid-template-columns: 1fr; }
             .graphic-container img { max-width: 100%; }
             nav { flex-direction: column; }
             nav a { text-align: center; }
@@ -371,7 +317,7 @@
     <div class="container">
         <!-- NAVIGATION - Section 5 Constitutional Order -->
         <nav>
-            <a href="Quickstart.html" class="active">Quickstart</a>
+            <a href="Quickstart.html">Quickstart</a>
             <a href="OVERVIEW.html">OVERVIEW</a>
             <a href="Crisis.html">Crisis</a>
             <a href="Simple-Math-Fast-Read.html">Simple Math</a>
@@ -388,153 +334,185 @@
                      alt="PHIERS Logo" 
                      class="logo">
             </a>
-            <h1>Quick Start: 30 Seconds to Understand</h1>
-            <p class="subtitle">New here? This is everything you need to know in under a minute.</p>
-            
-            <div class="time-badge">30 seconds to join. 90 days to win.</div>
-            
-            <p style="color: white; font-size: 1.1em; margin-top: 20px;">
-                This isn't a protest — it's a cooperative intelligence project.
-            </p>
+            <h1>Congressional Leverage: Binary Choice</h1>
+            <p class="subtitle">A small group can force national change if the math is undeniable.</p>
         </header>
 
         <!-- CONSTITUTIONAL VIDEO BLOCK - Section 4 Mandatory -->
         <div class="video-section">
-            <h2>Learn in 71 Seconds</h2>
+            <h2>Congress: Get Out of the Way, Or Step Aside (4:44)</h2>
             
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/2j-dF3hgdeE" 
-                        title="The Math Congress Fears — PHIERS Explainer"
+                <iframe src="https://www.youtube.com/embed/xy3F9ZWbgS8" 
+                        title="Congress: Get Out of the Way, Or Step Aside"
                         frameborder="0" 
                         allowfullscreen></iframe>
             </div>
             
-            <p style="text-align: center; color: #64b5f6; font-weight: bold; margin-top: 15px;">1 minute 11 seconds. This is why they're terrified.</p>
+            <p style="text-align: center; color: #64b5f6; font-weight: bold; margin-top: 15px;">The ultimatum. Lead this or face replacement.</p>
         </div>
 
         <main>
             <section>
                 <div class="graphic-container">
-                    <a href="OVERVIEW.html#how-it-works">
-                        <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/CORE_MATH_for_234M.png" 
-                             alt="THE CORE MATH - How $600 telehealth unlocks 234 million covered"
-                             onclick="window.open(this.src, '_blank')">
-                    </a>
-                    <p class="graphic-caption">The Complete Story in One Image — Click to expand</p>
+                    <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/LEVERAGE_Pwr_of_the_People.png" 
+                         alt="Power of the People - Congressional Leverage"
+                         onclick="window.open(this.src, '_blank')">
+                    <p class="graphic-caption">Click to enlarge • Power of the People: 100M+ Constituents vs Corporate Average = 230:1 Advantage</p>
                 </div>
             </section>
 
             <section>
-                <h2>Why $600 Telehealth Beats $10K Insurance</h2>
+                <h2>The Four Pressure Points</h2>
+
+                <div class="leverage-card">
+                    <h3>1. Town Hall Pressure (Nader Rule)</h3>
+                    <p>
+                        <strong style="color: white;">1,500 signatures = mandatory town hall.</strong> 
+                        We're targeting 10,000+ per district. Representatives forced to face constituents with 
+                        petition data + survey stories.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        This isn't optional. The Nader Rule forces them to show up and answer for their decisions.
+                    </p>
+                </div>
+
+                <div class="leverage-card">
+                    <h3>2. Primary Challenge Threat (Jan 2026)</h3>
+                    <p>
+                        <strong style="color: white;">Any representative refusing telehealth faces immediate primary challenge.</strong>
+                    </p>
+                    <p style="margin-top: 15px;">
+                        Healthcare IS the dominant issue (80% of voters). Refusing solution = automatic vulnerability.
+                    </p>
+                </div>
+
+                <div class="leverage-card">
+                    <h3>3. Media Amplification (55M Readers)</h3>
+                    <p>
+                        <strong style="color: white;">Pathos Communications + International Business Times</strong> - 
+                        Ready to publish PHIERS story.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        <strong style="color: #4caf50;">Publication happens when fundraising goal is reached.</strong> 
+                        Your contribution directly funds the story that reaches 55M+ readers and changes the national conversation.
+                    </p>
+                    <p style="margin-top: 10px;">
+                        <a href="Donate.html" style="color: #4caf50; text-decoration: underline;">→ Fund the media campaign</a>
+                    </p>
+                </div>
+
+                <div class="leverage-card">
+                    <h3>4. Mathematical Inevitability</h3>
+                    <p>
+                        <strong style="color: white;">$1.95B per district constituent pressure vs. $8.5M corporate average.</strong>
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.2em; color: #4caf50; font-weight: bold;">
+                        230:1 advantage minimum.
+                    </p>
+                    <p style="margin-top: 10px;">
+                        Congress cannot ignore mathematical superiority.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Congress's Binary Choice</h2>
                 
-                <div class="comparison-grid">
-                    <div class="comparison-card comparison-bad">
-                        <h3>Status Quo Insurance ($10K)</h3>
-                        <ul>
-                            <li style="color: #ffcdd2;">Delays care (prior authorization)</li>
-                            <li style="color: #ffcdd2;">Denies coverage (claim rejections)</li>
-                            <li style="color: #ffcdd2;">Limited network access</li>
-                            <li style="color: #ffcdd2;">High out-of-pocket costs</li>
-                        </ul>
+                <div class="binary-choice">
+                    <div class="choice-card choice-a">
+                        <h3>OPTION A: LEAD THIS</h3>
+                        <p style="color: #c8e6c9; margin-top: 15px;">
+                            Say YES to telehealth in ACA by Jan 30.
+                        </p>
+                        <p style="color: #c8e6c9; margin-top: 10px;">
+                            Become heroes.
+                        </p>
+                        <p style="color: #c8e6c9; margin-top: 10px;">
+                            Save 22M people.
+                        </p>
+                        <p style="color: #c8e6c9; margin-top: 10px;">
+                            Trigger cascade.
+                        </p>
+                        <p style="color: white; font-weight: bold; margin-top: 15px; font-size: 1.1em;">
+                            Be remembered as problem-solvers.
+                        </p>
                     </div>
 
-                    <div class="comparison-card comparison-good">
-                        <h3>PHIERS Telehealth ($600)</h3>
-                        <ul>
-                            <li style="color: #c8e6c9;">Instant access (no wait times)</li>
-                            <li style="color: #c8e6c9;">Zero denials (direct care)</li>
-                            <li style="color: #c8e6c9;">Anywhere, anytime coverage</li>
-                            <li style="color: #c8e6c9;">Minimal out-of-pocket costs</li>
-                        </ul>
+                    <div class="choice-card choice-b">
+                        <h3>OPTION B: FACE REPLACEMENT</h3>
+                        <p style="color: #ffcdd2; margin-top: 15px;">
+                            Refuse.
+                        </p>
+                        <p style="color: #ffcdd2; margin-top: 10px;">
+                            Face 100M+ organized constituents demanding removal.
+                        </p>
+                        <p style="color: #ffcdd2; margin-top: 10px;">
+                            Lose primary elections Jan 2026.
+                        </p>
+                        <p style="color: white; font-weight: bold; margin-top: 15px; font-size: 1.1em;">
+                            Be remembered as obstacles.
+                        </p>
                     </div>
+                </div>
+
+                <p style="text-align: center; font-size: 1.2em; color: #4caf50; font-weight: bold; margin: 40px 0;">
+                    Congress will choose A. The pressure is mathematical. The choice is binary.
+                </p>
+            </section>
+
+            <section>
+                <h2>The 3.5% Threshold</h2>
+                
+                <div class="graphic-container">
+                    <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/Guaranteed_Change__THUMBNAILjpg.jpg" 
+                         alt="Guaranteed Change - 3.5% = 11.6M Signatures"
+                         onclick="window.open(this.src, '_blank')">
+                    <p class="graphic-caption">Click to enlarge • 3.5% = 11.6M signatures = Guaranteed systemic change (Harvard research)</p>
                 </div>
 
                 <div class="highlight-box">
-                    <p style="font-size: 1.1em; color: white; font-weight: bold; margin-bottom: 15px;">
-                        If Congress authorizes telehealth through the ACA, one conversion funds 12 more. 
-                        Those 12 fund 148.
+                    <h3 style="color: #4caf50; margin-top: 0;">Harvard Research (Erica Chenoweth):</h3>
+                    <p style="margin-top: 15px;">
+                        Studied 323 political campaigns from 1900-2006.
                     </p>
-                    <p style="font-size: 1.2em; color: #4caf50; font-weight: bold;">
-                        Exponential. Unstoppable. Universal healthcare in 90 days to critical mass.
+                    <p style="margin-top: 15px; font-size: 1.1em; color: white; font-weight: bold;">
+                        Finding: NO campaign where 3.5% of the population participated in sustained, organized action ever failed.
+                    </p>
+                    <p style="margin-top: 20px;">
+                        <strong style="color: #4caf50;">The math:</strong>
+                    </p>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li style="color: #c8e6c9; margin: 8px 0;">3.5% of US population = 11.6M Americans</li>
+                        <li style="color: #c8e6c9; margin: 8px 0;">We're targeting 100M+ = 9x the threshold</li>
+                        <li style="color: #c8e6c9; margin: 8px 0;">Implication: Mathematically unstoppable</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 1.1em; color: #4caf50; font-weight: bold;">
+                        Systemic change isn't just possible—it's guaranteed once we reach and sustain 3.5% organized participation.
                     </p>
                 </div>
             </section>
 
             <section>
-                <h2>Get Started in 3 Steps</h2>
-                
-                <div class="steps-container">
-                    <div class="step-card">
-                        <span class="step-number">1</span>
-                        <h3>Sign the Petition (30 seconds)</h3>
-                        <p>
-                            Add your name to force Congress to hold mandatory town halls. 
-                            1,500 signatures per district = they must face you.
-                        </p>
-                        <div style="margin-top: 20px; margin-left: 45px;">
-                            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now" target="_blank" class="btn">Sign Now</a>
-                        </div>
-                    </div>
-
-                    <div class="step-card">
-                        <span class="step-number">2</span>
-                        <h3>Share the Cascade (2 minutes)</h3>
-                        <p>
-                            Every share reaches 10-100 more people. Each person who signs multiplies the pressure. 
-                            This is exponential leverage.
-                        </p>
-                    </div>
-
-                    <div class="step-card">
-                        <span class="step-number">3</span>
-                        <h3>Watch It Spread (Exponential)</h3>
-                        <p>
-                            1 person → 12 people → 148 people → millions. The cascade can't be stopped once it starts. 
-                            That's the power of mechanical leverage.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2>The Math That Makes It Work</h2>
+                <h2>Vote Like Your Life Depends On It</h2>
                 
                 <div class="graphic-container">
-                    <a href="Simple-Math-Fast-Read.html">
-                        <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Cascade_Leverage_Visual_v1.png" 
-                             alt="PHIERS Cascade Leverage Visual"
-                             onclick="window.open(this.src, '_blank')">
-                    </a>
-                    <p class="graphic-caption">This is how the system works when we connect the pieces — Click for full breakdown</p>
+                    <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/vote_lke_your_life_depends_on_it.jpg" 
+                         alt="Vote Like Your Life Depends On It"
+                         onclick="window.open(this.src, '_blank')">
+                    <p class="graphic-caption">Click to enlarge • Because It Does — This Is About Healthcare, Jobs, and Survival</p>
                 </div>
-
-                <div class="graphic-container">
-                    <a href="Simple-Math-Fast-Read.html">
-                        <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/SIMPLE_MATH_Pyramid_Universal_Coverage.png" 
-                             alt="Universal Coverage Pyramid"
-                             onclick="window.open(this.src, '_blank')">
-                    </a>
-                    <p class="graphic-caption">
-                        Medicaid → Medicare → ACA → 234M Americans Covered — Click to see the progression
-                    </p>
-                </div>
-
-                <p style="text-align: center; font-size: 1.05em; margin: 30px 0;">
-                    These programs already exist — and <strong style="color: white;">when we connect them</strong>, 
-                    they cover everyone.
-                </p>
             </section>
 
-            <section>
-                <h2>Want to understand the full 5D leverage mechanism?</h2>
-                <p style="text-align: center; font-size: 1.05em; margin: 20px 0;">
-                    Ready to see how healthcare unlocks jobs, economy, politics, and peace?
+            <section style="text-align: center; margin: 50px 0;">
+                <h2>Ready to Build the Pressure?</h2>
+                <p style="font-size: 1.1em; margin: 20px 0;">
+                    Sign the petition. Build the leverage. Force Congress to choose.
                 </p>
                 
-                <div class="button-group">
-                    <a href="5D_Solutions.html" class="btn">See 5D Solutions</a>
-                    <a href="OVERVIEW.html#how-it-works" class="btn btn-secondary">How It Works</a>
-                    <a href="Crisis.html" class="btn btn-secondary">The Crisis</a>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
+                    <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now" target="_blank" class="btn">Sign Petition Now</a>
+                    <a href="action.html" class="btn btn-secondary">All Actions →</a>
                 </div>
             </section>
         </main>
