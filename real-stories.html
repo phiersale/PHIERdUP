@@ -1,18 +1,4 @@
 <!DOCTYPE html>
-<!--
-=============================================================================
-FILE: real-stories.html
-VERSION: v1.0.1
-LAST UPDATED: 2026-02-07 04:25 UTC
-UPDATED BY: Claude Session 2026-02-07
-CHANGES: Added version control
-=============================================================================
-Previous Versions:
-- v1.0.0 | 2026-02-06 08:00 UTC | Initial creation from baseline
-- v1.1.0 | 2026-02-07 03:47 UTC | Phase 1 updates (modal, dates, images)
-=============================================================================
--->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -120,12 +106,64 @@ Previous Versions:
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>💔 Real Stories</h1>
-            <p style="color: #c8e6c9; font-size: 1.1em; margin-top: 15px;">
+        <!-- HERO BLOCK - REAL STORIES - MOVEMENT GRADE -->
+        <header style="text-align: center; padding: 80px 20px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.9), rgba(22, 33, 62, 0.9)); border-radius: 12px; margin-bottom: 80px; border: 2px solid rgba(244, 67, 54, 0.3);">
+            
+            <!-- Headline -->
+            <h1 style="font-size: 2.6em; line-height: 1.2; margin-bottom: 1.5rem; color: #f44336; font-weight: 700; text-shadow: 0 0 30px rgba(244, 67, 54, 0.4);">
+                Real Stories From Real People
+            </h1>
+
+            <!-- Subheadline -->
+            <p style="font-size: 1.3em; line-height: 1.6; max-width: 750px; margin: 0 auto 3.5rem auto; color: #e0e0e0; font-weight: 400;">
                 These are the voices Congress ignores. These are the people we're fighting for.
             </p>
+
+            <!-- CTA Button -->
+            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now" 
+               style="display: inline-block; background: white; color: #2e7d32; font-size: 1.6em; font-weight: 700; padding: 1.5rem 3.5rem; border-radius: 8px; text-decoration: none; box-shadow: 0 12px 40px rgba(255, 255, 255, 0.25); transition: all 0.3s ease; border: none; margin: 1rem 0 2rem 0;"
+               onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 16px 50px rgba(255, 255, 255, 0.35)';"
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 40px rgba(255, 255, 255, 0.25)';">
+                Add Your Voice
+            </a>
+
+            <!-- Supporting Context -->
+            <p style="margin-top: 2.5rem; font-size: 0.95em; color: #81c784; font-style: italic;">
+                You are not alone. We are organizing.
+            </p>
+
         </header>
+
+        <!-- VISUAL SEPARATOR -->
+        <div style="height: 2px; background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.3), transparent); margin: 60px 0;"></div>
+        <!-- NAVIGATION BUTTONS (Under Hero) -->
+        <nav style="
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+            border: 2px solid rgba(76, 175, 80, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        ">
+            <a href="index.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🏠 Start Here</a>
+            
+            <a href="crisis.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">🚨 What's Broken</a>
+            
+            <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">⚖️ Why Change Required</a>
+            
+            <a href="solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📋 What We Demand</a>
+            
+            <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">✏️ Petition</a>
+            
+            <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">📊 Receipts</a>
+            
+            <a href="faq.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">❓ FAQ</a>
+        </nav>
+
 
         <div class="story-card">
             <h3>"I had insurance. I still couldn't afford care."</h3>
@@ -188,11 +226,16 @@ Previous Versions:
             </p>
             
             <p style="margin: 15px 0;">
-                <strong>Contact:</strong> Will Price | <a href="/cdn-cgi/l/email-protection#fb92959d94bb8b93929e8988d594899c"><span class="__cf_email__" data-cfemail="f0999e969fb0809899958283de9f8297">[email&#160;protected]</span></a> | 916-306-8967
+                <strong>Contact:</strong> Will Price | <a href="mailto:info@phiers.org">info@phiers.org</a> | 916-306-8967
             </p>
             
             <p style="margin-top: 20px;">
                 © PHIERS.org — People's Health Insurance Economic Recovery Solutions
+            </p>
+            
+            <!-- VERSION STAMP -->
+            <p style="margin-top: 1.5rem; text-align: center; font-size: 0.75rem; color: #666;">
+                PHIERS Movement | Version: 2026-02-15-PHASE4 | Last Updated: Feb 15, 2026 10:45pm PST
             </p>
             <p style="margin-top: 15px; font-size: 0.9em; font-weight: bold;">
                 If you see an error in the math or policy, tell us — we'l
