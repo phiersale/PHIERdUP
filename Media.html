@@ -511,22 +511,12 @@ img {
     </style>
 
     <style>
-    /* ── MOBILE NAV FIX ── */
+        /* ── NAV STYLES ── */
     .mobile-menu-toggle {
       display: none;
-      background: rgba(76, 175, 80, 0.3);
-      border: 2px solid #4caf50;
-      color: #4caf50;
-      font-size: 1.8em;
-      font-weight: bold;
-      padding: 10px 18px;
-      border-radius: 6px;
-      cursor: pointer;
-      position: fixed;
-      right: 20px;
-      top: 20px;
-      z-index: 10000;
-      line-height: 1;
+    }
+    .mobile-close-btn {
+      display: none;
     }
     .nav-links {
       display: flex;
@@ -536,59 +526,100 @@ img {
       width: 100%;
     }
     @media (max-width: 768px) {
-      nav { position: relative; padding: 10px; min-height: 50px; }
-      .mobile-menu-toggle { display: block; }
+      .mobile-menu-toggle {
+        display: block;
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        z-index: 10001;
+        background: rgba(76, 175, 80, 0.9);
+        border: 2px solid #4caf50;
+        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        line-height: 1;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .mobile-menu-toggle.hidden {
+        display: none !important;
+      }
       .nav-links {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        background: rgba(10, 14, 26, 0.98);
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
-        padding: 80px 20px 40px 20px;
-        border-radius: 0; border: none; box-shadow: none;
-        z-index: 9999; overflow-y: auto;
+        z-index: 10000;
+        background: rgba(10, 14, 26, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        overflow-y: auto;
       }
-      .nav-links.active { display: flex; }
+      .nav-links.open {
+        display: flex;
+      }
+      .mobile-close-btn {
+        display: block;
+        background: none;
+        border: 2px solid rgba(76, 175, 80, 0.5);
+        color: #4caf50;
+        font-size: 1.1em;
+        font-weight: bold;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 6px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+        -webkit-tap-highlight-color: transparent;
+      }
       .nav-links a {
         width: 100%;
         text-align: center !important;
-        padding: 15px !important;
-        font-size: 1.2em !important;
+        padding: 14px !important;
+        font-size: 1.15em !important;
         border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+        display: block;
       }
-      .dropdown { width: 100% !important; text-align: center !important; }
+      .dropdown { width: 100%; }
       .dropbtn {
         width: 100% !important;
         text-align: center !important;
-        padding: 15px !important;
-        font-size: 1.2em !important;
+        padding: 14px !important;
+        font-size: 1.15em !important;
         font-weight: bold !important;
         color: #4caf50 !important;
-        border-bottom: 1px solid rgba(76, 175, 80, 0.2) !important;
         background: transparent !important;
+        border: none !important;
+        border-bottom: 1px solid rgba(76, 175, 80, 0.2) !important;
         display: block !important;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
       }
       .dropdown-content {
+        display: none;
         position: static !important;
+        background: rgba(76, 175, 80, 0.08) !important;
         box-shadow: none !important;
         border: none !important;
-        margin-top: 0 !important;
-        background: rgba(76, 175, 80, 0.1) !important;
         width: 100% !important;
-        display: none;
       }
-      .dropdown-content.show { display: block !important; }
-      .dropdown-content a {
-        width: 100% !important;
-        text-align: center !important;
+      .dropdown-content.open {
         display: block !important;
+      }
+      .dropdown-content a {
+        text-align: center !important;
         padding: 12px 15px !important;
-        font-size: 1.1em !important;
+        font-size: 1.05em !important;
         color: #81c784 !important;
+        display: block !important;
+        width: 100% !important;
+        border-bottom: 1px solid rgba(76, 175, 80, 0.1) !important;
       }
     }
-    /* ── END MOBILE NAV FIX ── */
+    /* ── END NAV STYLES ── */
     </style>
 
 </head>
@@ -601,20 +632,14 @@ img {
 <!-- ============================================== -->
     <div class="container">
         <!-- NAVIGATION - Section 5 Constitutional Order -->
-  <nav>
-    <!-- Mobile Menu Toggle -->
-    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-      <span class="menu-icon">&#9776;</span>
-      <span class="close-icon" style="display: none;">&#x2715;</span>
-    </button>
-    
-    <!-- Navigation Links -->
-    <div class="nav-links">
+    <nav>
+    <button class="mobile-menu-toggle" id="hamburger-btn" aria-label="Open menu">&#9776; Menu</button>
+    <div class="nav-links" id="nav-links">
+      <button class="mobile-close-btn" id="close-btn" aria-label="Close menu">&#x2715; Close</button>
       <a href="index.html">Home</a>
-      
       <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown(event)">Strategy &#9660;</button>
-        <div class="dropdown-content">
+        <button class="dropbtn" id="strategy-btn">Strategy &#9660;</button>
+        <div class="dropdown-content" id="strategy-drop">
           <a href="OVERVIEW.html">Overview</a>
           <a href="Crisis.html">Crisis</a>
           <a href="SimpleMath.html">Simple Math</a>
@@ -624,14 +649,12 @@ img {
           <a href="Unions-Strategy.html">Union Strategy</a>
         </div>
       </div>
-      
       <a href="Quickstart.html">Quick Start</a>
       <a href="action.html">Take Action</a>
       <a href="Donate.html">Donate</a>
-      
       <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown(event)">Resources &#9660;</button>
-        <div class="dropdown-content">
+        <button class="dropbtn" id="resources-btn">Resources &#9660;</button>
+        <div class="dropdown-content" id="resources-drop">
           <a href="Media.html">Media</a>
           <a href="real-stories.html">Real Stories</a>
           <a href="FAQ.html">FAQ</a>
@@ -816,45 +839,70 @@ function initImageModal() {
 
 </body>
 
-<!-- Mobile Menu JavaScript -->
+<!-- Nav JavaScript -->
 <script>
-function toggleMobileMenu() {
-  const navLinks = document.querySelector('.nav-links');
-  const menuIcon = document.querySelector('.menu-icon');
-  const closeIcon = document.querySelector('.close-icon');
-  document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('show'));
-  navLinks.classList.toggle('active');
-  if (navLinks.classList.contains('active')) {
-    menuIcon.style.display = 'none';
-    closeIcon.style.display = 'inline';
+(function() {
+  var hamburger, navLinks, closeBtn, strategyBtn, strategyDrop, resourcesBtn, resourcesDrop;
+
+  function init() {
+    hamburger    = document.getElementById('hamburger-btn');
+    navLinks     = document.getElementById('nav-links');
+    closeBtn     = document.getElementById('close-btn');
+    strategyBtn  = document.getElementById('strategy-btn');
+    strategyDrop = document.getElementById('strategy-drop');
+    resourcesBtn = document.getElementById('resources-btn');
+    resourcesDrop= document.getElementById('resources-drop');
+
+    if (!hamburger || !navLinks) return;
+
+    hamburger.addEventListener('click', openMenu);
+    if (closeBtn)     closeBtn.addEventListener('click', closeMenu);
+    if (strategyBtn)  strategyBtn.addEventListener('click', function(e) { e.stopPropagation(); toggleDrop(strategyDrop); });
+    if (resourcesBtn) resourcesBtn.addEventListener('click', function(e) { e.stopPropagation(); toggleDrop(resourcesDrop); });
+
+    // Close menu when a regular nav link is tapped
+    navLinks.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() { closeMenu(); });
+    });
+
+    // Close when tapping outside
+    document.addEventListener('click', function(e) {
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && e.target !== hamburger) {
+        closeMenu();
+      }
+    });
+  }
+
+  function openMenu() {
+    navLinks.classList.add('open');
+    hamburger.classList.add('hidden');
+  }
+
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('hidden');
+    if (strategyDrop)  strategyDrop.classList.remove('open');
+    if (resourcesDrop) resourcesDrop.classList.remove('open');
+  }
+
+  function toggleDrop(drop) {
+    if (!drop) return;
+    var isOpen = drop.classList.contains('open');
+    if (strategyDrop)  strategyDrop.classList.remove('open');
+    if (resourcesDrop) resourcesDrop.classList.remove('open');
+    if (!isOpen) drop.classList.add('open');
+  }
+
+  // Keep onclick attrs working as fallback
+  window.toggleMobileMenu = function() { navLinks.classList.contains('open') ? closeMenu() : openMenu(); };
+  window.toggleDropdown = function(e) { e.preventDefault(); e.stopPropagation(); };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    menuIcon.style.display = 'inline';
-    closeIcon.style.display = 'none';
+    init();
   }
-}
-function toggleDropdown(event) {
-  event.stopPropagation();
-  const dropdown = event.target.nextElementSibling;
-  const isOpen = dropdown.classList.contains('show');
-  document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('show'));
-  if (!isOpen) { dropdown.classList.add('show'); }
-}
-document.addEventListener('click', function(event) {
-  const nav = document.querySelector('nav');
-  const navLinks = document.querySelector('.nav-links');
-  const menuIcon = document.querySelector('.menu-icon');
-  const closeIcon = document.querySelector('.close-icon');
-  if (nav && !nav.contains(event.target) && navLinks && navLinks.classList.contains('active')) {
-    navLinks.classList.remove('active');
-    if (menuIcon) menuIcon.style.display = 'inline';
-    if (closeIcon) closeIcon.style.display = 'none';
-  }
-});
-document.addEventListener('click', function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('show'));
-  }
-});
+})();
 </script>
 
 </html>
