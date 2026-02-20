@@ -648,16 +648,48 @@
   }
 }
 
-/* Responsive Images */
-img {
-  max-width: 100%;
-  height: auto;
-  cursor: pointer;
-}
 
 @media (max-width: 768px) {
   img {
     max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* MOBILE IMAGE SIZE FIX - Images load smaller, click to enlarge */
+@media (max-width: 768px) {
+  /* Make ALL images load smaller on mobile by default */
+  img:not(.mobile-menu-toggle *) {
+    max-width: 85% !important;
+    width: 85% !important;
+    height: auto !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Logo in hero can stay larger */
+  header img[alt*="PHIERS Logo"],
+  header img[src*="Logo"] {
+    max-width: 300px !important;
+    width: auto !important;
+  }
+  
+  /* Ensure modal images are full-size */
+  .modal-content {
+    max-width: 95% !important;
+    width: auto !important;
+  }
+}
+
+/* Desktop - keep images reasonable */
+@media (min-width: 769px) {
+  img:not(.mobile-menu-toggle *) {
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin-left: auto;
     margin-right: auto;
   }
