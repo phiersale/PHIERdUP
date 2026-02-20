@@ -58,21 +58,27 @@
     /* Mobile Menu Toggle Button */
     .mobile-menu-toggle {
       display: none;
-      background: transparent;
+      background: rgba(76, 175, 80, 0.3);
       border: 2px solid #4caf50;
       color: #4caf50;
-      font-size: 1.5em;
-      padding: 8px 15px;
+      font-size: 1.8em;
+      font-weight: bold;
+      padding: 10px 18px;
       border-radius: 6px;
       cursor: pointer;
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      z-index: 1001;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      z-index: 10000;
+      line-height: 1;
     }
 
     .mobile-menu-toggle:hover {
-      background: rgba(76, 175, 80, 0.2);
+      background: rgba(76, 175, 80, 0.4);
+    }
+
+    .mobile-menu-toggle:active {
+      background: rgba(76, 175, 80, 0.5);
     }
 
     /* Mobile Navigation Container */
@@ -89,6 +95,7 @@
       nav {
         position: relative;
         padding: 10px;
+        min-height: 50px;
       }
 
       .mobile-menu-toggle {
@@ -99,15 +106,18 @@
         display: none;
         flex-direction: column;
         width: 100%;
-        background: rgba(26, 26, 46, 0.98);
-        position: absolute;
+        background: rgba(10, 14, 26, 0.98);
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        padding: 60px 20px 20px 20px;
-        border-radius: 8px;
-        border: 1px solid rgba(76, 175, 80, 0.3);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+        bottom: 0;
+        padding: 80px 20px 40px 20px;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        z-index: 9999;
+        overflow-y: auto;
       }
 
       .nav-links.active {
@@ -117,8 +127,9 @@
       .nav-links a {
         width: 100%;
         text-align: center;
-        padding: 12px;
-        font-size: 1.1em;
+        padding: 15px;
+        font-size: 1.2em;
+        border-bottom: 1px solid rgba(76, 175, 80, 0.2);
       }
 
       .dropdown {
