@@ -313,31 +313,134 @@ footer a {
             }
         }
 </style>
+
+    /* Mobile Menu Toggle Button */
+    .mobile-menu-toggle {
+      display: none;
+      background: rgba(76, 175, 80, 0.3);
+      border: 2px solid #4caf50;
+      color: #4caf50;
+      font-size: 1.8em;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      z-index: 10000;
+      line-height: 1;
+    }
+
+    .mobile-menu-toggle:hover {
+      background: rgba(76, 175, 80, 0.4);
+    }
+
+    .mobile-menu-toggle:active {
+      background: rgba(76, 175, 80, 0.5);
+    }
+
+    /* Mobile Navigation Container */
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    /* Mobile Menu Styles */
+    @media (max-width: 768px) {
+      nav {
+        position: relative;
+        padding: 10px;
+        min-height: 50px;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(10, 14, 26, 0.98);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 80px 20px 40px 20px;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        z-index: 9999;
+        overflow-y: auto;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        font-size: 1.2em;
+        border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+      }
+
+      .dropdown {
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: none;
+        margin-top: 0;
+        background: rgba(76, 175, 80, 0.1);
+      }
+
+      .dropdown-content.show {
+        display: block;
+      }
+    }
 </head>
 <body>
 <div class="container">
 
 <!-- NAVIGATION -->
 <nav>
-  <a href="Quickstart.html">START HERE</a>
-  <a href="OVERVIEW.html">OVERVIEW</a>
-  <a href="Crisis.html">Crisis</a>
-  <a href="SimpleMath.html" class="active">Simple Math</a>
-  <a href="5D_Solutions.html">5D Solutions</a>
-  <a href="action.html">TAKE ACTION</a>
-  <a href="Donate.html">Donate</a>
+  <!-- Mobile Menu Toggle -->
+  <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+    <span class="menu-icon">☰</span>
+    <span class="close-icon" style="display: none;">✕</span>
+  </button>
   
-  <div class="dropdown">
-    <button class="dropbtn">Resources ▼</button>
-    <div class="dropdown-content">
-      <a href="FAQ.html">FAQ</a>
-      <a href="real-stories.html">Real Stories</a>
-      <a href="About.html">About PHIERS</a>
-      <a href="Our-Origins.html">Our Origins</a>
-      <a href="Leverage.html">Leverage</a>
-      <a href="Media.html">Media Library</a>
-      <a href="Unions-Strategy.html">Unions Strategy</a>
-      <a href="Why-Change-Required.html">Why Change Required</a>
+  <!-- Navigation Links -->
+  <div class="nav-links">
+    <a href="Quickstart.html">START HERE</a>
+    <a href="OVERVIEW.html">OVERVIEW</a>
+    <a href="Crisis.html">Crisis</a>
+    <a href="SimpleMath.html" class="active">Simple Math</a>
+    <a href="5D_Solutions.html">5D Solutions</a>
+    <a href="action.html">TAKE ACTION</a>
+    <a href="Donate.html">Donate</a>
+    
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown(event)">Resources ▼</button>
+      <div class="dropdown-content">
+        <a href="FAQ.html">FAQ</a>
+        <a href="real-stories.html">Real Stories</a>
+        <a href="About.html">About PHIERS</a>
+        <a href="Our-Origins.html">Our Origins</a>
+        <a href="Leverage.html">Leverage</a>
+        <a href="Media.html">Media Library</a>
+        <a href="Unions-Strategy.html">Unions Strategy</a>
+        <a href="Why-Change-Required.html">Why Change Required</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -356,8 +459,13 @@ footer a {
     </h1>
 
     <!-- Subheadline -->
-    <p style="font-size: 1.3em; line-height: 1.6; max-width: 750px; margin: 0 auto 3.5rem auto; color: #e0e0e0; font-weight: 400;">
+    <p style="font-size: 1.3em; line-height: 1.6; max-width: 750px; margin: 0 auto 1.5rem auto; color: #e0e0e0; font-weight: 400;">
         3.5% = Guaranteed Change. The math proves it. One person switching funds 15+ more. That's why they're terrified.
+    </p>
+
+    <!-- ONE-SENTENCE IDENTITY -->
+    <p style="font-size: 1.15em; line-height: 1.6; max-width: 800px; margin: 0 auto 3rem auto; color: #c8e6c9; font-weight: 500; padding: 1.5rem; background: rgba(76, 175, 80, 0.1); border-radius: 8px; border-left: 4px solid #4caf50;">
+        PHIERS is a citizen coalition using collective leverage to force Congress to fix healthcare — or replace them.
     </p>
 
     <!-- CTA Button -->
@@ -532,6 +640,9 @@ footer a {
 <footer>
   <h3>PHIERS Movement | MABAH</h3>
   <p><strong>Make America Better And Healthier</strong></p>
+  <p style="font-size: 1.05em; color: #c8e6c9; font-weight: 500; margin: 1rem 0;">
+    PHIERS is a citizen coalition using collective leverage to force Congress to fix healthcare — or replace them.
+  </p>
   
   <p style="margin: 15px 0;">
     Will Price | Chief Solutions Architect<br>
@@ -570,3 +681,52 @@ footer a {
   
   <p style="margin-top: 20px; font-size: 0.85rem; color: #666;">
  
+<!-- Mobile Menu JavaScript -->
+<script>
+function toggleMobileMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeIcon = document.querySelector('.close-icon');
+  
+  navLinks.classList.toggle('active');
+  
+  if (navLinks.classList.contains('active')) {
+    menuIcon.style.display = 'none';
+    closeIcon.style.display = 'inline';
+  } else {
+    menuIcon.style.display = 'inline';
+    closeIcon.style.display = 'none';
+  }
+}
+
+function toggleDropdown(event) {
+  event.stopPropagation();
+  const dropdown = event.target.nextElementSibling;
+  dropdown.classList.toggle('show');
+}
+
+document.addEventListener('click', function(event) {
+  const nav = document.querySelector('nav');
+  const navLinks = document.querySelector('.nav-links');
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeIcon = document.querySelector('.close-icon');
+  
+  if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+    navLinks.classList.remove('active');
+    menuIcon.style.display = 'inline';
+    closeIcon.style.display = 'none';
+  }
+});
+
+document.addEventListener('click', function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName('dropdown-content');
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].classList.remove('show');
+    }
+  }
+});
+</script>
+-e 
+</body>
+</html>
