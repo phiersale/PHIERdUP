@@ -47,12 +47,95 @@
       padding: 15px;
       margin-bottom: 30px;
       position: sticky;
-            top: 0;
-            z-index: 999;
-            display: flex;
+      top: 0;
+      z-index: 999;
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
+    }
+
+    /* Mobile Menu Toggle Button */
+    .mobile-menu-toggle {
+      display: none;
+      background: transparent;
+      border: 2px solid #4caf50;
+      color: #4caf50;
+      font-size: 1.5em;
+      padding: 8px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      z-index: 1001;
+    }
+
+    .mobile-menu-toggle:hover {
+      background: rgba(76, 175, 80, 0.2);
+    }
+
+    /* Mobile Navigation Container */
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    /* Mobile Menu Styles */
+    @media (max-width: 768px) {
+      nav {
+        position: relative;
+        padding: 10px;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(26, 26, 46, 0.98);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 60px 20px 20px 20px;
+        border-radius: 8px;
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 1.1em;
+      }
+
+      .dropdown {
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: none;
+        margin-top: 0;
+        background: rgba(76, 175, 80, 0.1);
+      }
+
+      .dropdown-content.show {
+        display: block;
+      }
     }
 
     nav a {
@@ -522,26 +605,34 @@
 <div class="container">
   <!-- NAVIGATION - Section 5 Constitutional Order -->
   <nav>
-    <a href="Quickstart.html">START HERE</a>
-    <a href="OVERVIEW.html">OVERVIEW</a>
-    <a href="Crisis.html">Crisis</a>
-    <a href="SimpleMath.html">Simple Math</a>
-    <a href="5D_Solutions.html">5D Solutions</a>
-    <a href="action.html">TAKE ACTION</a>
-    <a href="Donate.html">Donate</a>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <span class="menu-icon">☰</span>
+      <span class="close-icon" style="display: none;">✕</span>
+    </button>
     
-    <div class="dropdown">
-      <button class="dropbtn">Resources ▼</button>
-      <div class="dropdown-content">
-        <a href="FAQ.html">FAQ</a>
-        <a href="real-stories.html">Real Stories</a>
-        <a href="About.html">About PHIERS</a>
-                    <a href="Our-Origins.html">Our Origins</a>
-
-        <a href="Leverage.html">Leverage</a>
-        <a href="Media.html">Media Library</a>
-        <a href="Unions-Strategy.html">Unions Strategy</a>
-        <a href="Why-Change-Required.html">Why Change Required</a>
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="Quickstart.html">START HERE</a>
+      <a href="OVERVIEW.html">OVERVIEW</a>
+      <a href="Crisis.html">Crisis</a>
+      <a href="SimpleMath.html">Simple Math</a>
+      <a href="5D_Solutions.html">5D Solutions</a>
+      <a href="action.html">TAKE ACTION</a>
+      <a href="Donate.html">Donate</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(event)">Resources ▼</button>
+        <div class="dropdown-content">
+          <a href="FAQ.html">FAQ</a>
+          <a href="real-stories.html">Real Stories</a>
+          <a href="About.html">About PHIERS</a>
+          <a href="Our-Origins.html">Our Origins</a>
+          <a href="Leverage.html">Leverage</a>
+          <a href="Media.html">Media Library</a>
+          <a href="Unions-Strategy.html">Unions Strategy</a>
+          <a href="Why-Change-Required.html">Why Change Required</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -1611,4 +1702,61 @@
     </div>
     
     <!-- VERSION STAMP -->
-    <p style="margin-top: 2rem; text-align: center;
+    <p style="margin-top: 2rem; text-align: center;; font-size: 0.85em; color: #666;">
+      Version: 2026-02-19
+    </p>
+  </footer>
+
+</div>
+
+<!-- Mobile Menu JavaScript -->
+<script>
+function toggleMobileMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeIcon = document.querySelector('.close-icon');
+  
+  navLinks.classList.toggle('active');
+  
+  if (navLinks.classList.contains('active')) {
+    menuIcon.style.display = 'none';
+    closeIcon.style.display = 'inline';
+  } else {
+    menuIcon.style.display = 'inline';
+    closeIcon.style.display = 'none';
+  }
+}
+
+function toggleDropdown(event) {
+  event.stopPropagation();
+  const dropdown = event.target.nextElementSibling;
+  dropdown.classList.toggle('show');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+  const nav = document.querySelector('nav');
+  const navLinks = document.querySelector('.nav-links');
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeIcon = document.querySelector('.close-icon');
+  
+  if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+    navLinks.classList.remove('active');
+    menuIcon.style.display = 'inline';
+    closeIcon.style.display = 'none';
+  }
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName('dropdown-content');
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].classList.remove('show');
+    }
+  }
+});
+</script>
+
+</body>
+</html>
