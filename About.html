@@ -15,7 +15,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-person: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             color: #e0e0e0;
             line-height: 1.6;
@@ -221,7 +221,7 @@
             cursor: pointer;
             border-radius: 4px;
             transition: all 0.3s ease;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-person: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .dropbtn:hover {
@@ -559,7 +559,7 @@ img {
             <a href="index.html">
                 <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Logo.png" 
                      alt="PHIERS Logo" 
-                     class="logo">
+                     class="logo" loading="lazy">
             </a>
             <h1>About PHIERS: The Origin Story</h1>
             <p class="subtitle">This wasn't designed in a boardroom. It was built from lived experience.</p>
@@ -748,7 +748,7 @@ img {
                 <div class="graphic-container">
                     <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_SequenceRoadmap_v1.png" 
                          alt="PHIERS Implementation Timeline"
-                         onclick="window.open(this.src, '_blank')">
+                         onclick="window.open(this.src, '_blank')" loading="lazy">
                     <p class="graphic-caption">Click to enlarge • From Petition to Universal Coverage: The 90-Day Sprint</p>
                 </div>
 
@@ -813,7 +813,7 @@ img {
 <!-- Image Modal -->
 <div id="imageModal" class="image-modal">
   <span class="close-modal" onclick="closeImageModal()">&times;</span>
-  <img class="modal-content" id="modalImage" alt="">
+  <img class="modal-content" id="modalImage" alt="" loading="lazy">
 </div>
 
 <script>
