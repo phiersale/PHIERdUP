@@ -525,6 +525,88 @@ img {
   }
 }
     </style>
+
+    <style>
+    /* ── MOBILE NAV FIX ── */
+    .mobile-menu-toggle {
+      display: none;
+      background: rgba(76, 175, 80, 0.3);
+      border: 2px solid #4caf50;
+      color: #4caf50;
+      font-size: 1.8em;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      z-index: 10000;
+      line-height: 1;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      nav { position: relative; padding: 10px; min-height: 50px; }
+      .mobile-menu-toggle { display: block; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(10, 14, 26, 0.98);
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        padding: 80px 20px 40px 20px;
+        border-radius: 0; border: none; box-shadow: none;
+        z-index: 9999; overflow-y: auto;
+      }
+      .nav-links.active { display: flex; }
+      .nav-links a {
+        width: 100%;
+        text-align: center !important;
+        padding: 15px !important;
+        font-size: 1.2em !important;
+        border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+      }
+      .dropdown { width: 100% !important; text-align: center !important; }
+      .dropbtn {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 15px !important;
+        font-size: 1.2em !important;
+        font-weight: bold !important;
+        color: #4caf50 !important;
+        border-bottom: 1px solid rgba(76, 175, 80, 0.2) !important;
+        background: transparent !important;
+        display: block !important;
+      }
+      .dropdown-content {
+        position: static !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin-top: 0 !important;
+        background: rgba(76, 175, 80, 0.1) !important;
+        width: 100% !important;
+        display: none;
+      }
+      .dropdown-content.show { display: block !important; }
+      .dropdown-content a {
+        width: 100% !important;
+        text-align: center !important;
+        display: block !important;
+        padding: 12px 15px !important;
+        font-size: 1.1em !important;
+        color: #81c784 !important;
+      }
+    }
+    /* ── END MOBILE NAV FIX ── */
+    </style>
+
 </head>
 <body>
 

@@ -535,6 +535,88 @@ img {
   }
 }
     </style>
+
+    <style>
+    /* ── MOBILE NAV FIX ── */
+    .mobile-menu-toggle {
+      display: none;
+      background: rgba(76, 175, 80, 0.3);
+      border: 2px solid #4caf50;
+      color: #4caf50;
+      font-size: 1.8em;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      z-index: 10000;
+      line-height: 1;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      nav { position: relative; padding: 10px; min-height: 50px; }
+      .mobile-menu-toggle { display: block; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(10, 14, 26, 0.98);
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        padding: 80px 20px 40px 20px;
+        border-radius: 0; border: none; box-shadow: none;
+        z-index: 9999; overflow-y: auto;
+      }
+      .nav-links.active { display: flex; }
+      .nav-links a {
+        width: 100%;
+        text-align: center !important;
+        padding: 15px !important;
+        font-size: 1.2em !important;
+        border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+      }
+      .dropdown { width: 100% !important; text-align: center !important; }
+      .dropbtn {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 15px !important;
+        font-size: 1.2em !important;
+        font-weight: bold !important;
+        color: #4caf50 !important;
+        border-bottom: 1px solid rgba(76, 175, 80, 0.2) !important;
+        background: transparent !important;
+        display: block !important;
+      }
+      .dropdown-content {
+        position: static !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin-top: 0 !important;
+        background: rgba(76, 175, 80, 0.1) !important;
+        width: 100% !important;
+        display: none;
+      }
+      .dropdown-content.show { display: block !important; }
+      .dropdown-content a {
+        width: 100% !important;
+        text-align: center !important;
+        display: block !important;
+        padding: 12px 15px !important;
+        font-size: 1.1em !important;
+        color: #81c784 !important;
+      }
+    }
+    /* ── END MOBILE NAV FIX ── */
+    </style>
+
 </head>
 <body>
 
@@ -596,6 +678,21 @@ img {
             <p class="subtitle">This wasn't designed in a boardroom. It was built from lived experience.</p>
         </header>
 
+        <section style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(66, 133, 244, 0.08)); border-left: 5px solid #4caf50; padding: 35px 40px; margin-bottom: 40px; border-radius: 8px;">
+            <p style="font-size: 1.15em; line-height: 1.8; color: #e0e0e0; margin-bottom: 20px;">
+                <strong style="color: #4caf50;">PHIERS is a people‑powered movement</strong> to fix healthcare and rebuild America's foundation — by organizing communities, unlocking collective buying power, creating jobs, and strengthening the safety net through collaboration and teamwork. We believe Americans can solve problems faster, cheaper, and more fairly when we work together instead of being divided, isolated, or forced to navigate broken systems alone.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.8; color: #c8e6c9; margin-bottom: 20px;">
+                PHIERS began as a healthcare project — but it quickly became clear that healthcare was only the first domino. The same forces that make healthcare unaffordable also weaken wages, shrink opportunity, undermine trust, and erode the safety net. Fixing one requires fixing the others. So PHIERS evolved into a broader movement: a practical, cooperative strategy to help Americans regain power in every part of life.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.8; color: #c8e6c9; margin-bottom: 20px;">
+                On <strong style="color: white;">December 11</strong>, everything changed. That's when we discovered the 3.5% rule, the collective buying math, and the district‑level leverage that make PHIERS possible. It's also when PATHOS — a respected, independent research group — validated our model and confirmed that our approach is mathematically sound, historically grounded, and strategically achievable.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.8; color: #c8e6c9; margin: 0;">
+                Today, PHIERS is a national movement built on teamwork, shared purpose, and the belief that Americans deserve systems that work <em>for</em> us — not against us. We're organizing, educating, and building the tools people need to take back control of healthcare, jobs, costs, and community power.
+            </p>
+        </section>
+
         <!-- CONSTITUTIONAL VIDEO BLOCK - Section 4 Mandatory -->
         <div class="video-section">
             <h2>PHIERStorm: The Movement to Fix Healthcare</h2>
@@ -631,7 +728,7 @@ img {
                         validation of 15+ years of work.
                     </p>
                     <p style="margin-top: 15px;">
-                        <strong style="color: white;">Contact:</strong> (916) 306-8967 | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c6afa8a0a986b6aeafa3b4b5e8a9b4a1">[email&#160;protected]</a>
+                        <strong style="color: white;">Contact:</strong> (916) 306-8967 | <a href="mailto:info@phiers.org" style="color: #4caf50;">info@phiers.org</a>
                     </p>
                 </div>
             </section>
@@ -818,7 +915,7 @@ img {
             <p style="margin: 15px 0;">
                 Will Price | Chief Solutions Architect<br>
                 Phone: <a href="tel:+19163068967">(916) 306-8967</a> | 
-                Email: <a href="/cdn-cgi/l/email-protection#70191e161f300018191502035e1f0217"><span class="__cf_email__" data-cfemail="b2dbdcd4ddf2c2dadbd7c0c19cddc0d5">[email&#160;protected]</span></a>
+                Email: <a href="mailto:info@phiers.org" style="color: #4caf50;">info@phiers.org</a>
             </p>
             
             <div class="footer-nav">
