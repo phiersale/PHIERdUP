@@ -535,127 +535,6 @@ img {
   }
 }
     </style>
-
-    <style>
-            /* ── NAV STYLES ── */
-    .mobile-menu-toggle { display: none; }
-    .mobile-close-btn   { display: none; }
-    .nav-section-label  { display: none; }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-    }
-    /* Desktop dropdowns still work via hover */
-    .dropdown { position: relative; display: inline-block; }
-    .dropbtn {
-      background: transparent;
-      color: #81c784;
-      padding: 8px 12px;
-      font-size: 0.9em;
-      font-weight: 500;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-      font-family: inherit;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background: rgba(26,26,46,0.98);
-      min-width: 200px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-      z-index: 1000;
-      border-radius: 8px;
-      border: 1px solid rgba(76,175,80,0.3);
-      margin-top: 5px;
-    }
-    .dropdown:hover .dropdown-content { display: block; }
-    .dropdown-content a {
-      color: #81c784;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    .dropdown-content a:hover { background: rgba(76,175,80,0.2); color: #4caf50; }
-    @media (max-width: 768px) {
-      .mobile-menu-toggle {
-        display: block;
-        position: fixed;
-        top: 12px; right: 12px;
-        z-index: 10001;
-        background: rgba(76,175,80,0.9);
-        border: 2px solid #4caf50;
-        color: white;
-        font-size: 1.4em;
-        font-weight: bold;
-        padding: 8px 16px;
-        border-radius: 6px;
-        cursor: pointer;
-        line-height: 1;
-      }
-      .mobile-menu-toggle.hidden { display: none !important; }
-      .nav-links {
-        display: none;
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        z-index: 10000;
-        background: rgba(10,14,26,0.98);
-        flex-direction: column;
-        align-items: stretch;
-        padding: 20px;
-        overflow-y: auto;
-      }
-      .nav-links.open { display: flex; }
-      .mobile-close-btn {
-        display: block;
-        background: none;
-        border: 2px solid rgba(76,175,80,0.5);
-        color: #4caf50;
-        font-size: 1.1em;
-        font-weight: bold;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 6px;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-      }
-      .nav-links a {
-        width: 100%;
-        text-align: center !important;
-        padding: 13px 10px !important;
-        font-size: 1.1em !important;
-        border-bottom: 1px solid rgba(76,175,80,0.15);
-        display: block;
-        color: #81c784;
-        text-decoration: none;
-      }
-      .nav-links a:active { background: rgba(76,175,80,0.2); }
-      .nav-section-label {
-        display: block;
-        text-align: center;
-        color: #4caf50;
-        font-weight: bold;
-        font-size: 0.85em;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        padding: 12px 10px 4px 10px;
-        border-bottom: 1px solid rgba(76,175,80,0.3);
-        margin-top: 6px;
-      }
-      .nav-links a.nav-sub {
-        font-size: 1em !important;
-        padding: 11px 10px !important;
-        color: #a5d6a7;
-        padding-left: 20px !important;
-      }
-    }
-    /* ── END NAV STYLES ── */
-    </style>
-
 </head>
 <body>
 
@@ -666,30 +545,7 @@ img {
 <!-- ============================================== -->
     <div class="container">
         <!-- NAVIGATION - Section 5 Constitutional Order -->
-      <nav>
-    <button class="mobile-menu-toggle" id="hamburger-btn" aria-label="Open menu">&#9776; Menu</button>
-    <div class="nav-links" id="nav-links">
-      <button class="mobile-close-btn" id="close-btn" aria-label="Close menu">&#x2715; Close</button>
-      <a href="index.html">Home</a>
-      <span class="nav-section-label">Strategy</span>
-      <a href="OVERVIEW.html" class="nav-sub">Overview</a>
-      <a href="Crisis.html" class="nav-sub">Crisis</a>
-      <a href="SimpleMath.html" class="nav-sub">Simple Math</a>
-      <a href="5D_Solutions.html" class="nav-sub">5D Solutions</a>
-      <a href="Leverage.html" class="nav-sub">Leverage</a>
-      <a href="Why-Change-Required.html" class="nav-sub">Why Change Required</a>
-      <a href="Unions-Strategy.html" class="nav-sub">Union Strategy</a>
-      <a href="Quickstart.html">Quick Start</a>
-      <a href="action.html">Take Action</a>
-      <a href="Donate.html">Donate</a>
-      <span class="nav-section-label">Resources</span>
-      <a href="Media.html" class="nav-sub">Media</a>
-      <a href="real-stories.html" class="nav-sub">Real Stories</a>
-      <a href="FAQ.html" class="nav-sub">FAQ</a>
-      <a href="About.html" class="nav-sub">About</a>
-      <a href="Our-Origins.html" class="nav-sub">Origins</a>
-    </div>
-  </nav>
+  {% include nav.html %}
 
         <header>
             <a href="index.html">
@@ -700,21 +556,6 @@ img {
             <h1>About PHIERS: The Origin Story</h1>
             <p class="subtitle">This wasn't designed in a boardroom. It was built from lived experience.</p>
         </header>
-
-        <section style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(66, 133, 244, 0.08)); border-left: 5px solid #4caf50; padding: 35px 40px; margin-bottom: 40px; border-radius: 8px;">
-            <p style="font-size: 1.15em; line-height: 1.8; color: #e0e0e0; margin-bottom: 20px;">
-                <strong style="color: #4caf50;">PHIERS is a people‑powered movement</strong> to fix healthcare and rebuild America's foundation — by organizing communities, unlocking collective buying power, creating jobs, and strengthening the safety net through collaboration and teamwork. We believe Americans can solve problems faster, cheaper, and more fairly when we work together instead of being divided, isolated, or forced to navigate broken systems alone.
-            </p>
-            <p style="font-size: 1.1em; line-height: 1.8; color: #c8e6c9; margin-bottom: 20px;">
-                PHIERS began as a healthcare project — but it quickly became clear that healthcare was only the first domino. The same forces that make healthcare unaffordable also weaken wages, shrink opportunity, undermine trust, and erode the safety net. Fixing one requires fixing the others. So PHIERS evolved into a broader movement: a practical, cooperative strategy to help Americans regain power in every part of life.
-            </p>
-            <p style="font-size: 1.1em; line-height: 1.8; color: #c8e6c9; margin-bottom: 20px;">
-                On <strong style="color: white;">December 11</strong>, everything changed. That's when we discovered the 3.5% rule, the collective buying math, and the district‑level leverage that make PHIERS possible. It's also when PATHOS — a respected, independent research group — validated our model and confirmed that our approach is mathematically sound, historically grounded, and strategically achievable.
-            </p>
-            <p style="font-size: 1.1em; line-height: 1.8; color: #c8e6c9; margin: 0;">
-                Today, PHIERS is a national movement built on teamwork, shared purpose, and the belief that Americans deserve systems that work <em>for</em> us — not against us. We're organizing, educating, and building the tools people need to take back control of healthcare, jobs, costs, and community power.
-            </p>
-        </section>
 
         <!-- CONSTITUTIONAL VIDEO BLOCK - Section 4 Mandatory -->
         <div class="video-section">
@@ -751,7 +592,7 @@ img {
                         validation of 15+ years of work.
                     </p>
                     <p style="margin-top: 15px;">
-                        <strong style="color: white;">Contact:</strong> (916) 306-8967 | <a href="mailto:info@phiers.org" style="color: #4caf50;">info@phiers.org</a>
+                        <strong style="color: white;">Contact:</strong> (916) 306-8967 | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c6afa8a0a986b6aeafa3b4b5e8a9b4a1">[email&#160;protected]</a>
                     </p>
                 </div>
             </section>
@@ -938,7 +779,7 @@ img {
             <p style="margin: 15px 0;">
                 Will Price | Chief Solutions Architect<br>
                 Phone: <a href="tel:+19163068967">(916) 306-8967</a> | 
-                Email: <a href="mailto:info@phiers.org" style="color: #4caf50;">info@phiers.org</a>
+                Email: <a href="/cdn-cgi/l/email-protection#70191e161f300018191502035e1f0217"><span class="__cf_email__" data-cfemail="b2dbdcd4ddf2c2dadbd7c0c19cddc0d5">[email&#160;protected]</span></a>
             </p>
             
             <div class="footer-nav">
@@ -959,16 +800,7 @@ img {
             
             <div class="constitutional-disclaimer">
                 <p>
-                    PHIERS is a public-interest movement — not a company, not a product.<br>
-                    The only thing missing is you.
-                </p>
-            </div>
-
-            <!-- VERSION STAMP -->
-            <p style="margin-top: 2rem; text-align: center; font-size: 0.75rem; color: #666;">
-                PHIERS Movement | Version: 2026-02-20 22:43:50
-            </p>
-        </footer>
+                    PHIE
 
 <!-- Image Modal -->
 <div id="imageModal" class="image-modal">
@@ -1040,40 +872,4 @@ function initImageModal() {
 </div>
 
 </body>
-
-<!-- Nav JavaScript -->
-<script>
-(function() {
-  function init() {
-    var hamburger = document.getElementById('hamburger-btn');
-    var navLinks  = document.getElementById('nav-links');
-    var closeBtn  = document.getElementById('close-btn');
-    if (!hamburger || !navLinks) return;
-
-    function openMenu() {
-      navLinks.classList.add('open');
-      hamburger.classList.add('hidden');
-    }
-    function closeMenu() {
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('hidden');
-    }
-
-    hamburger.addEventListener('click', openMenu);
-    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-
-    // Close when tapping a real nav link (not a section header)
-    navLinks.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', closeMenu);
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
-</script>
-
 </html>
