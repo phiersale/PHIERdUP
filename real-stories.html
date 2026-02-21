@@ -320,8 +320,8 @@ html {
       <a href="index.html">Home</a>
       
       <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown(event)">Strategy ▼</button>
-        <div class="dropdown-content">
+        <button class="dropbtn strategy-dropbtn" onclick="toggleDropdown(event)">⚡ Strategy ▼</button>
+        <div class="dropdown-content strategy-dropdown-content">
           <a href="OVERVIEW.html">Overview</a>
           <a href="Crisis.html">Crisis</a>
           <a href="SimpleMath.html">Simple Math</a>
@@ -334,6 +334,7 @@ html {
       
       <a href="Quickstart.html">Quick Start</a>
       <a href="action.html">Take Action</a>
+      <a href="SOTU-Pre-Sponse.html" style="color:#f5c842; font-weight:700;">SOTU Response 📺</a>
       <a href="Donate.html">Donate</a>
       
       <div class="dropdown">
@@ -344,6 +345,7 @@ html {
           <a href="FAQ.html">FAQ</a>
           <a href="About.html">About</a>
           <a href="Our-Origins.html">Origins</a>
+          <a href="Veterans.html" style="color:#ef5350; font-weight:700;">Veterans 🎖</a>
         </div>
       </div>
     </div>
@@ -451,7 +453,7 @@ html {
             </p>
             
             <p style="margin: 15px 0;">
-                <strong>Contact:</strong> Will Price | <a href="mailto:info@phiers.org">info@phiers.org</a> | 916-306-8967
+                <strong>Contact:</strong> Will Price | <a href="/cdn-cgi/l/email-protection#afc6c1c9c0efdfc7c6cadddc81c0ddc8"><span class="__cf_email__" data-cfemail="6e070008012e1e06070b1c1d40011c09">[email&#160;protected]</span></a> | 916-306-8967
             </p>
             
             <p style="margin-top: 20px;">
@@ -466,7 +468,7 @@ html {
     <img loading="lazy" class="modal-content" id="modalImage" alt="" loading="lazy">
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function closeImageModal() {
   const modal = document.getElementById('imageModal');
   if (modal) modal.classList.remove('active');
@@ -588,12 +590,4 @@ document.addEventListener('click', function(event) {
   if (!event.target.matches('.dropbtn')) {
     const dropdowns = document.getElementsByClassName('dropdown-content');
     for (let i = 0; i < dropdowns.length; i++) {
-      dropdowns[i].classList.remove('show');
-    }
-  }
-});
-</script>
-    <!-- VERSION STAMP -->
-    <p style="text-align:center; font-size:0.75em; color:#555; margin-top:1.5rem;">Last updated: 2026-02-21 at 2:40 AM PT</p>
-</body>
-</html>
+   
