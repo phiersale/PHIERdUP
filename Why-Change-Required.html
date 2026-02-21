@@ -531,13 +531,10 @@ img {
     </style>
 
     <style>
-        /* ── NAV STYLES ── */
-    .mobile-menu-toggle {
-      display: none;
-    }
-    .mobile-close-btn {
-      display: none;
-    }
+            /* ── NAV STYLES ── */
+    .mobile-menu-toggle { display: none; }
+    .mobile-close-btn   { display: none; }
+    .nav-section-label  { display: none; }
     .nav-links {
       display: flex;
       flex-wrap: wrap;
@@ -545,14 +542,45 @@ img {
       gap: 10px;
       width: 100%;
     }
+    /* Desktop dropdowns still work via hover */
+    .dropdown { position: relative; display: inline-block; }
+    .dropbtn {
+      background: transparent;
+      color: #81c784;
+      padding: 8px 12px;
+      font-size: 0.9em;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: rgba(26,26,46,0.98);
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      z-index: 1000;
+      border-radius: 8px;
+      border: 1px solid rgba(76,175,80,0.3);
+      margin-top: 5px;
+    }
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropdown-content a {
+      color: #81c784;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover { background: rgba(76,175,80,0.2); color: #4caf50; }
     @media (max-width: 768px) {
       .mobile-menu-toggle {
         display: block;
         position: fixed;
-        top: 12px;
-        right: 12px;
+        top: 12px; right: 12px;
         z-index: 10001;
-        background: rgba(76, 175, 80, 0.9);
+        background: rgba(76,175,80,0.9);
         border: 2px solid #4caf50;
         color: white;
         font-size: 1.4em;
@@ -561,29 +589,24 @@ img {
         border-radius: 6px;
         cursor: pointer;
         line-height: 1;
-        -webkit-tap-highlight-color: transparent;
       }
-      .mobile-menu-toggle.hidden {
-        display: none !important;
-      }
+      .mobile-menu-toggle.hidden { display: none !important; }
       .nav-links {
         display: none;
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
         z-index: 10000;
-        background: rgba(10, 14, 26, 0.98);
+        background: rgba(10,14,26,0.98);
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         padding: 20px;
         overflow-y: auto;
       }
-      .nav-links.open {
-        display: flex;
-      }
+      .nav-links.open { display: flex; }
       .mobile-close-btn {
         display: block;
         background: none;
-        border: 2px solid rgba(76, 175, 80, 0.5);
+        border: 2px solid rgba(76,175,80,0.5);
         color: #4caf50;
         font-size: 1.1em;
         font-weight: bold;
@@ -592,51 +615,36 @@ img {
         border-radius: 6px;
         width: 100%;
         text-align: center;
-        margin-bottom: 15px;
-        -webkit-tap-highlight-color: transparent;
+        margin-bottom: 10px;
       }
       .nav-links a {
         width: 100%;
         text-align: center !important;
-        padding: 14px !important;
-        font-size: 1.15em !important;
-        border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+        padding: 13px 10px !important;
+        font-size: 1.1em !important;
+        border-bottom: 1px solid rgba(76,175,80,0.15);
         display: block;
+        color: #81c784;
+        text-decoration: none;
       }
-      .dropdown { width: 100%; }
-      .dropbtn {
-        width: 100% !important;
-        text-align: center !important;
-        padding: 14px !important;
-        font-size: 1.15em !important;
-        font-weight: bold !important;
-        color: #4caf50 !important;
-        background: transparent !important;
-        border: none !important;
-        border-bottom: 1px solid rgba(76, 175, 80, 0.2) !important;
-        display: block !important;
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
+      .nav-links a:active { background: rgba(76,175,80,0.2); }
+      .nav-section-label {
+        display: block;
+        text-align: center;
+        color: #4caf50;
+        font-weight: bold;
+        font-size: 0.85em;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 12px 10px 4px 10px;
+        border-bottom: 1px solid rgba(76,175,80,0.3);
+        margin-top: 6px;
       }
-      .dropdown-content {
-        display: none;
-        position: static !important;
-        background: rgba(76, 175, 80, 0.08) !important;
-        box-shadow: none !important;
-        border: none !important;
-        width: 100% !important;
-      }
-      .dropdown-content.open {
-        display: block !important;
-      }
-      .dropdown-content a {
-        text-align: center !important;
-        padding: 12px 15px !important;
-        font-size: 1.05em !important;
-        color: #81c784 !important;
-        display: block !important;
-        width: 100% !important;
-        border-bottom: 1px solid rgba(76, 175, 80, 0.1) !important;
+      .nav-links a.nav-sub {
+        font-size: 1em !important;
+        padding: 11px 10px !important;
+        color: #a5d6a7;
+        padding-left: 20px !important;
       }
     }
     /* ── END NAV STYLES ── */
@@ -652,36 +660,28 @@ img {
 <!-- ============================================== -->
     <div class="container">
         <!-- NAVIGATION - Section 5 Constitutional Order -->
-    <nav>
+      <nav>
     <button class="mobile-menu-toggle" id="hamburger-btn" aria-label="Open menu">&#9776; Menu</button>
     <div class="nav-links" id="nav-links">
       <button class="mobile-close-btn" id="close-btn" aria-label="Close menu">&#x2715; Close</button>
       <a href="index.html">Home</a>
-      <div class="dropdown">
-        <button class="dropbtn" id="strategy-btn">Strategy &#9660;</button>
-        <div class="dropdown-content" id="strategy-drop">
-          <a href="OVERVIEW.html">Overview</a>
-          <a href="Crisis.html">Crisis</a>
-          <a href="SimpleMath.html">Simple Math</a>
-          <a href="5D_Solutions.html">5D Solutions</a>
-          <a href="Leverage.html">Leverage</a>
-          <a href="Why-Change-Required.html">Why Change Required</a>
-          <a href="Unions-Strategy.html">Union Strategy</a>
-        </div>
-      </div>
+      <span class="nav-section-label">Strategy</span>
+      <a href="OVERVIEW.html" class="nav-sub">Overview</a>
+      <a href="Crisis.html" class="nav-sub">Crisis</a>
+      <a href="SimpleMath.html" class="nav-sub">Simple Math</a>
+      <a href="5D_Solutions.html" class="nav-sub">5D Solutions</a>
+      <a href="Leverage.html" class="nav-sub">Leverage</a>
+      <a href="Why-Change-Required.html" class="nav-sub">Why Change Required</a>
+      <a href="Unions-Strategy.html" class="nav-sub">Union Strategy</a>
       <a href="Quickstart.html">Quick Start</a>
       <a href="action.html">Take Action</a>
       <a href="Donate.html">Donate</a>
-      <div class="dropdown">
-        <button class="dropbtn" id="resources-btn">Resources &#9660;</button>
-        <div class="dropdown-content" id="resources-drop">
-          <a href="Media.html">Media</a>
-          <a href="real-stories.html">Real Stories</a>
-          <a href="FAQ.html">FAQ</a>
-          <a href="About.html">About</a>
-          <a href="Our-Origins.html">Origins</a>
-        </div>
-      </div>
+      <span class="nav-section-label">Resources</span>
+      <a href="Media.html" class="nav-sub">Media</a>
+      <a href="real-stories.html" class="nav-sub">Real Stories</a>
+      <a href="FAQ.html" class="nav-sub">FAQ</a>
+      <a href="About.html" class="nav-sub">About</a>
+      <a href="Our-Origins.html" class="nav-sub">Origins</a>
     </div>
   </nav>
 
@@ -1019,60 +1019,29 @@ function initImageModal() {
 <!-- Nav JavaScript -->
 <script>
 (function() {
-  var hamburger, navLinks, closeBtn, strategyBtn, strategyDrop, resourcesBtn, resourcesDrop;
-
   function init() {
-    hamburger    = document.getElementById('hamburger-btn');
-    navLinks     = document.getElementById('nav-links');
-    closeBtn     = document.getElementById('close-btn');
-    strategyBtn  = document.getElementById('strategy-btn');
-    strategyDrop = document.getElementById('strategy-drop');
-    resourcesBtn = document.getElementById('resources-btn');
-    resourcesDrop= document.getElementById('resources-drop');
-
+    var hamburger = document.getElementById('hamburger-btn');
+    var navLinks  = document.getElementById('nav-links');
+    var closeBtn  = document.getElementById('close-btn');
     if (!hamburger || !navLinks) return;
 
+    function openMenu() {
+      navLinks.classList.add('open');
+      hamburger.classList.add('hidden');
+    }
+    function closeMenu() {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('hidden');
+    }
+
     hamburger.addEventListener('click', openMenu);
-    if (closeBtn)     closeBtn.addEventListener('click', closeMenu);
-    if (strategyBtn)  strategyBtn.addEventListener('click', function(e) { e.stopPropagation(); toggleDrop(strategyDrop); });
-    if (resourcesBtn) resourcesBtn.addEventListener('click', function(e) { e.stopPropagation(); toggleDrop(resourcesDrop); });
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
 
-    // Close menu when a regular nav link is tapped
+    // Close when tapping a real nav link (not a section header)
     navLinks.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() { closeMenu(); });
-    });
-
-    // Close when tapping outside
-    document.addEventListener('click', function(e) {
-      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && e.target !== hamburger) {
-        closeMenu();
-      }
+      a.addEventListener('click', closeMenu);
     });
   }
-
-  function openMenu() {
-    navLinks.classList.add('open');
-    hamburger.classList.add('hidden');
-  }
-
-  function closeMenu() {
-    navLinks.classList.remove('open');
-    hamburger.classList.remove('hidden');
-    if (strategyDrop)  strategyDrop.classList.remove('open');
-    if (resourcesDrop) resourcesDrop.classList.remove('open');
-  }
-
-  function toggleDrop(drop) {
-    if (!drop) return;
-    var isOpen = drop.classList.contains('open');
-    if (strategyDrop)  strategyDrop.classList.remove('open');
-    if (resourcesDrop) resourcesDrop.classList.remove('open');
-    if (!isOpen) drop.classList.add('open');
-  }
-
-  // Keep onclick attrs working as fallback
-  window.toggleMobileMenu = function() { navLinks.classList.contains('open') ? closeMenu() : openMenu(); };
-  window.toggleDropdown = function(e) { e.preventDefault(); e.stopPropagation(); };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
