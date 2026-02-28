@@ -1,18 +1,4 @@
 <!DOCTYPE html>
-<!--
-=============================================================================
-FILE: demand-jobs.html
-VERSION: v1.0.1
-LAST UPDATED: 2026-02-07 04:25 UTC
-UPDATED BY: Claude Session 2026-02-07
-CHANGES: Added version control
-=============================================================================
-Previous Versions:
-- v1.0.0 | 2026-02-06 08:00 UTC | Initial creation from baseline
-- v1.1.0 | 2026-02-07 03:47 UTC | Phase 1 updates (modal, dates, images)
-=============================================================================
--->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,13 +15,119 @@ Previous Versions:
         ul { margin-left: 25px; color: #c8e6c9; }
         ul li { margin: 15px 0; }
     </style>
+
+    /* === NAV STYLES === */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #1a1a2e;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #4caf50;
+    }
+    .nav-links { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+    .nav-links a { color: #e0e0e0; text-decoration: none; padding: 0.4rem 0.7rem; border-radius: 4px; font-size: 0.9rem; }
+    .nav-links a:hover { background: #4caf50; color: #fff; }
+    .mobile-menu-toggle { display: none; background: none; border: none; color: #e0e0e0; font-size: 1.5rem; cursor: pointer; }
+    .dropdown { position: relative; }
+    .dropbtn { background: none; border: none; color: #e0e0e0; cursor: pointer; padding: 0.4rem 0.7rem; font-size: 0.9rem; border-radius: 4px; }
+    .dropbtn:hover { background: #4caf50; color: #fff; }
+    .dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: #1a1a2e; border: 1px solid #4caf50; border-radius: 4px; min-width: 200px; z-index: 1001; }
+    .dropdown-content a { display: block; padding: 0.5rem 1rem; }
+    .dropdown-content.show { display: block; }
+    .close-icon { display: none; }
+    @media (max-width: 768px) {
+      .mobile-menu-toggle { display: block; }
+      .nav-links { display: none; flex-direction: column; width: 100%; }
+      .nav-links.active { display: flex; }
+      .dropdown-content { position: static; }
+    }
+    /* === END NAV STYLES === */
+
 </head>
 <body>
+<nav>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <span class="menu-icon">☰</span>
+      <span class="close-icon" style="display: none;">✕</span>
+    </button>
+    
+    <!-- Navigation Links -->
+        <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="UNSTOPPABLE.html" style="color:#f5c842; font-weight:700;">UNSTOPPABLE ⚡</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn strategy-dropbtn" onclick="toggleDropdown(event)">⚡ Strategy ▼</button>
+        <div class="dropdown-content">
+          <a href="Telehealth-Insurance.html" style="color:#f5c842;">Telehealth vs Insurance ⚡</a>
+          <a href="OVERVIEW.html">Overview</a>
+          <a href="Crisis.html">Crisis</a>
+          <a href="SimpleMath.html">Simple Math</a>
+          <a href="5D_Solutions.html">5D Solutions</a>
+          <a href="Leverage.html">Leverage</a>
+          <a href="Why-Change-Required.html">Why Change Required</a>
+          <a href="Unions-Strategy.html">Union Strategy</a>
+        </div>
+      </div>
+      
+      <a href="Quickstart.html" title="Understand the movement in 60 seconds">How It Works</a>
+      <a href="action.html" title="Sign, organize, or join the pressure system">Take Action</a>
+      <a href="SOTU-Pre-Sponse.html" style="color:#f5c842; font-weight:700;">SOTU Response 📺</a>
+      <a href="Veterans.html" style="color:#ef5350; font-weight:700;">Veterans 🎖</a>
+      <a href="Donate.html">Donate</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(event)">Resources ▼</button>
+        <div class="dropdown-content">
+          <a href="Veterans.html" style="color:#ef5350; font-weight:700;">Veterans 🎖</a>
+          <a href="real-stories.html">Real Stories</a>
+          <a href="Media.html">Media</a>
+          <a href="FAQ.html">FAQ</a>
+          <a href="About.html">About</a>
+          <a href="Our-Origins.html">Origins</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
     <div class="container">
         <header>
-            <h1>💼 Demand #4: AI-Resistant Job Creation</h1>
+            <h1>ðŸ’¼ Demand #4: AI-Resistant Job Creation</h1>
             <p style="color: #c8e6c9; margin-top: 15px;">Create 8-14 million jobs that AI cannot replace</p>
         </header>
+        <!-- NAVIGATION BUTTONS (Under Hero) -->
+        <nav style="
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+            border: 2px solid rgba(76, 175, 80, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        ">
+            <a href="index.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">ðŸ  Start Here</a>
+            
+            <a href="crisis.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">ðŸš¨ What's Broken</a>
+            
+            <a href="why-change-required.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">âš–ï¸ Why Change Required</a>
+            
+            <a href="solutions.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">ðŸ“‹ What We Demand</a>
+            
+            <a href="action.html" style="background: linear-gradient(135deg, #2196f3, #1976d2); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(33, 150, 243, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(33, 150, 243, 0.3)'">âœï¸ Petition</a>
+            
+            <a href="simple-math.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">ðŸ“Š Receipts</a>
+            
+            <a href="faq.html" style="background: rgba(76, 175, 80, 0.2); color: #81c784; padding: 10px 20px; border: 2px solid rgba(76, 175, 80, 0.4); border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; transition: all 0.3s;" onmouseover="this.style.background='rgba(76, 175, 80, 0.3)'; this.style.color='#4caf50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.color='#81c784'">â“ FAQ</a>
+        </nav>
+
 
         <section>
             <h2 style="color: #4caf50; margin-bottom: 20px;">What We Demand</h2>
@@ -54,10 +146,10 @@ Previous Versions:
             <p>These jobs require human connection, physical presence, community knowledge, and trust relationships that AI cannot replicate.</p>
 
             <h2 style="color: #4caf50; margin: 40px 0 20px 0;">Pay Range</h2>
-            <p><strong style="color: white;">$15-20/hour starting wage</strong> — Funded by healthcare savings, not business profits</p>
+            <p><strong style="color: white;">$15-20/hour starting wage</strong> â€” Funded by healthcare savings, not business profits</p>
 
             <div style="text-align: center; margin: 40px 0;">
-                <a href="../solutions.html" style="color: #4caf50; font-size: 1.05em; font-weight: bold; text-decoration: underline;">← Back to All Demands</a>
+                <a href="../solutions.html" style="color: #4caf50; font-size: 1.05em; font-weight: bold; text-decoration: underline;">â† Back to All Demands</a>
             </div>
         </section>
     </div>
