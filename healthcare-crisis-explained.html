@@ -17,94 +17,82 @@
  ul { margin-left: 25px; color: #c8e6c9; }
  ul li { margin: 15px 0; }
  
- /* === NAV STYLES === */
- nav {
- position: sticky;
- top: 0;
- z-index: 1000;
- background: #1a1a2e;
- padding: 0.75rem 1.5rem;
- display: flex;
- align-items: center;
- justify-content: space-between;
- border-bottom: 2px solid #4caf50;
- }
- .nav-links { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
- .nav-links a { color: #e0e0e0; text-decoration: none; padding: 0.4rem 0.7rem; border-radius: 4px; font-size: 0.9rem; }
- .nav-links a:hover { background: #4caf50; color: #fff; }
- .mobile-menu-toggle { display: none; background: none; border: none; color: #e0e0e0; font-size: 1.5rem; cursor: pointer; }
- .dropdown { position: relative; }
- .dropbtn { background: none; border: none; color: #e0e0e0; cursor: pointer; padding: 0.4rem 0.7rem; font-size: 0.9rem; border-radius: 4px; }
- .dropbtn:hover { background: #4caf50; color: #fff; }
- .dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: #1a1a2e; border: 1px solid #4caf50; border-radius: 4px; min-width: 200px; z-index: 1001; }
- .dropdown-content a { display: block; padding: 0.5rem 1rem; }
- .dropdown-content.show { display: block; }
- .close-icon { display: none; }
- @media (max-width: 768px) {
- .mobile-menu-toggle { display: block; }
- .nav-links { display: none; flex-direction: column; width: 100%; }
- .nav-links.active { display: flex; }
- .dropdown-content { position: static; }
- }
- /* === END NAV STYLES === */
- </style>
+    /* === NAV STYLES === */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #1a1a2e;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #4caf50;
+    }
+    .nav-links { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+    .nav-links a { color: #e0e0e0; text-decoration: none; padding: 0.4rem 0.7rem; border-radius: 4px; font-size: 0.9rem; }
+    .nav-links a:hover { background: #4caf50; color: #fff; }
+    .mobile-menu-toggle { display: none; background: none; border: none; color: #e0e0e0; font-size: 1.5rem; cursor: pointer; }
+    .dropdown { position: relative; }
+    .dropbtn { background: none; border: none; color: #e0e0e0; cursor: pointer; padding: 0.4rem 0.7rem; font-size: 0.9rem; border-radius: 4px; }
+    .dropbtn:hover { background: #4caf50; color: #fff; }
+    .dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: #1a1a2e; border: 1px solid #4caf50; border-radius: 4px; min-width: 200px; z-index: 1001; }
+    .dropdown-content a { display: block; padding: 0.5rem 1rem; color: #e0e0e0; text-decoration: none; }
+    .dropdown-content a:hover { background: #4caf50; color: #fff; }
+    .dropdown-content.show { display: block; }
+    .close-icon { display: none; }
+    @media (max-width: 768px) {
+      .mobile-menu-toggle { display: block; }
+      .nav-links { display: none; flex-direction: column; width: 100%; }
+      .nav-links.active { display: flex; }
+      .dropdown-content { position: static; border: none; }
+    }
+    /* === END NAV STYLES === */
+    </style>
 </head>
 <body>
 <nav>
- <!-- Mobile Menu Toggle -->
- <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
- <span class="menu-icon">&#9776;</span>
- <span class="close-icon" style="display: none;">&#x2715;</span>
- </button>
- 
- <!-- Navigation Links -->
- <div class="nav-links">
- <a href="index.html">Home</a>
- 
- <div class="dropdown">
- <button class="dropbtn" onclick="toggleDropdown(event)">The Problem &#x25BC;</button>
- <div class="dropdown-content">
- <a href="Crisis.html">The Crisis</a>
- <a href="Why-Change-Required.html">Why Change Is Required</a>
- <a href="Telehealth-Insurance.html">Telehealth vs Insurance</a>
- <a href="OVERVIEW.html">Full Overview</a>
- </div>
- </div>
- 
- <div class="dropdown">
- <button class="dropbtn" onclick="toggleDropdown(event)">The Math &#x25BC;</button>
- <div class="dropdown-content">
- <a href="SimpleMath.html">Simple Math</a>
- <a href="5D_Solutions.html">5D Solutions</a>
- <a href="Leverage.html">Leverage</a>
- <a href="Unions-Strategy.html">Union Strategy</a>
- </div>
- </div>
- 
- <a href="Quickstart.html">How It Works</a>
- <a href="action.html" style="color:#f5c842; font-weight:700;">Take Action</a>
- <a href="Donate.html">Donate</a>
- 
- <div class="dropdown">
- <button class="dropbtn" onclick="toggleDropdown(event)">More &#x25BC;</button>
- <div class="dropdown-content">
- <a href="UNSTOPPABLE.html" style="font-weight:700;">UNSTOPPABLE</a>
- <a href="real-stories.html">Real Stories</a>
- <a href="Veterans.html">Veterans</a>
- <a href="SOTU-Pre-Sponse.html">SOTU Response</a>
- <a href="FAQ.html">FAQ</a>
- <a href="Media.html">Media</a>
- <a href="About.html">About</a>
- <a href="Our-Origins.html">Origins</a>
- </div>
- </div>
- </div>
- </nav>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <span class="menu-icon">&#9776;</span>
+      <span class="close-icon" style="display: none;">&#x2715;</span>
+    </button>
+    
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="OVERVIEW.html">Why This Works</a>
+      <a href="SimpleMath.html">The Math</a>
+      <a href="Quickstart.html">How It Works</a>
+      <a href="action.html" style="color:#f5c842; font-weight:700;">Take Action</a>
+      <a href="Donate.html">Donate</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(event)">More &#x25BC;</button>
+        <div class="dropdown-content">
+          <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
+          <a href="real-stories.html">Real Stories</a>
+          <a href="Crisis.html">The Crisis</a>
+          <a href="5D_Solutions.html">5D Solutions</a>
+          <a href="Leverage.html">Leverage</a>
+          <a href="Why-Change-Required.html">Why Change Required</a>
+          <a href="Telehealth-Insurance.html">Telehealth vs Insurance</a>
+          <a href="Unions-Strategy.html">Union Strategy</a>
+          <a href="SOTU-Pre-Sponse.html">SOTU Response</a>
+          <a href="Veterans.html">Veterans</a>
+          <a href="FAQ.html">FAQ</a>
+          <a href="Media.html">Media</a>
+          <a href="About.html">About</a>
+          <a href="Our-Origins.html">Origins</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
  <div class="container">
  <header>
  <h1> The Healthcare Crisis Explained</h1>
- <p style="color: #c8e6c9; margin-top: 15px;">How we got here &#x2014; and why Congress refuses to fix it</p>
+ <p style="color: #c8e6c9; margin-top: 15px;">How we got here &#x2014;&#x20;and why Congress refuses to fix it</p>
  </header>
 
  <section>
@@ -144,10 +132,10 @@
  <p style="margin-bottom: 20px;">Every healthcare reform proposal in the past 50 years has kept insurance companies at the center.</p>
  <p style="margin-bottom: 20px;">That's the problem. Insurance profits require:</p>
  <ul>
- <li><strong style="color: white;">High premiums</strong> &#x2014; $8,000-$10,000 per person per year</li>
- <li><strong style="color: white;">Claim denials</strong> &#x2014; 20-30% of legitimate claims rejected</li>
- <li><strong style="color: white;">Administrative overhead</strong> &#x2014; 15-20% of every dollar goes to bureaucracy</li>
- <li><strong style="color: white;">Network restrictions</strong> &#x2014; Limited doctor access</li>
+ <li><strong style="color: white;">High premiums</strong> &#x2014;&#x20;$8,000-$10,000 per person per year</li>
+ <li><strong style="color: white;">Claim denials</strong> &#x2014;&#x20;20-30% of legitimate claims rejected</li>
+ <li><strong style="color: white;">Administrative overhead</strong> &#x2014;&#x20;15-20% of every dollar goes to bureaucracy</li>
+ <li><strong style="color: white;">Network restrictions</strong> &#x2014;&#x20;Limited doctor access</li>
  </ul>
 
  <p style="margin-top: 25px; font-size: 1.1em; color: #4caf50; font-weight: bold;">
@@ -176,13 +164,13 @@
  <h2 style="color: #4caf50; margin-bottom: 20px;">This Is Why We Fight</h2>
  <p style="color: #c8e6c9; font-size: 1.05em; margin-bottom: 25px;">
  Congress allowed 22M to lose coverage. They rejected both bills. They offer no alternative.<br>
- We're forcing them to authorize telehealth &#x2014; or replacing them.
+ We're forcing them to authorize telehealth &#x2014;&#x20;or replacing them.
  </p>
- <a href="../action.html" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, #4caf50, #45a049); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.15em; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);"> Sign the Petition Now</a>
+ <a href="../action.html" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, #4caf50, #45a049); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.15em; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);">&#x20;Sign the Petition Now</a>
  </div>
 
  <div style="text-align: center; margin: 40px 0;">
- <a href="../crisis.html" style="color: #4caf50; font-size: 1.05em; font-weight: bold; text-decoration: underline;">&#x2190; Back to What's Broken</a>
+ <a href="../crisis.html" style="color: #4caf50; font-size: 1.05em; font-weight: bold; text-decoration: underline;">&#x2190;&#x20;Back to What's Broken</a>
  </div>
  </section>
  </div>
