@@ -6,10 +6,10 @@
     <meta name="description" content="PHIERS Movement: 3.5% by March 28, 100M by July 4. Force Congress to authorize $600 telehealth. Universal coverage for 234M of the 99%.">
     <meta property="og:title" content="PHIERS - Make America Better And Healthier">
     <meta property="og:description" content="The math Congress fears: $600 telehealth covers 234M Americans. Sign the petition. March 28, 2026.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Logo.png">
+    <meta property="og:image" content="PHIERS_Logo.png">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-<title>The Simple Math - PHIERS</title>
+<title>The Math - PHIERS</title>
 <style>
 * {
   box-sizing: border-box;
@@ -204,7 +204,7 @@ a:hover {
   margin: 30px 0;
 }
 .graphic-container img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   border-radius: 8px;
   border: 2px solid rgba(76, 175, 80, 0.3);
@@ -400,6 +400,13 @@ footer a {
         border: none;
         margin-top: 0;
         background: rgba(76, 175, 80, 0.1);
+        width: 100%;
+      }
+      
+      .dropdown-content a {
+        width: 100%;
+        text-align: center;
+        display: block;
       }
 
       .dropdown-content.show {
@@ -555,10 +562,26 @@ footer a {
     height: auto !important;
   }
 }
-</style>
-        display: block;
-      }
-    }
+
+    /* === NAV STYLES === */
+    nav { position: sticky; top: 0; z-index: 1000; background: #1a1a2e; padding: 0.75rem 1.5rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #4caf50; }
+    .nav-links { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+    .nav-links a { color: #e0e0e0; text-decoration: none; padding: 0.4rem 0.7rem; border-radius: 4px; font-size: 0.9rem; }
+    .nav-links a:hover { background: #4caf50; color: #fff; }
+    .mobile-menu-toggle { display: none; background: none; border: none; color: #e0e0e0; font-size: 1.5rem; cursor: pointer; }
+    .dropdown { position: relative; }
+    .dropbtn { background: none; border: none; color: #e0e0e0; cursor: pointer; padding: 0.4rem 0.7rem; font-size: 0.9rem; border-radius: 4px; }
+    .dropbtn:hover { background: #4caf50; color: #fff; }
+    .dropdown-content { display: none; position: absolute; top: 100%; right: 0; background: #1a1a2e; border: 1px solid #4caf50; border-radius: 4px; min-width: 220px; z-index: 1001; }
+    .dropdown-content a { display: block; padding: 0.4rem 1rem; color: #e0e0e0; text-decoration: none; font-size: 0.88rem; }
+    .dropdown-content a:hover { background: #4caf50; color: #fff; }
+    .dropdown-group-label { padding: 0.5rem 1rem 0.2rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #81c784; border-top: 1px solid rgba(76,175,80,0.25); margin-top: 0.2rem; }
+    .dropdown-group-label:first-child { border-top: none; margin-top: 0; }
+    .dropdown-content.show { display: block; }
+    .close-icon { display: none; }
+    @media (max-width: 768px) { .mobile-menu-toggle { display: block; } .nav-links { display: none; flex-direction: column; width: 100%; } .nav-links.active { display: flex; } .dropdown-content { position: static; border: none; } }
+    /* === END NAV STYLES === */
+    </style>
 </head>
 <body>
 
@@ -570,41 +593,40 @@ footer a {
 <div class="container">
 
 <!-- NAVIGATION -->
-  <nav>
-    <!-- Mobile Menu Toggle -->
+    <nav>
     <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-      <span class="menu-icon">☰</span>
-      <span class="close-icon" style="display: none;">✕</span>
+      <span class="menu-icon">&#9776;</span>
+      <span class="close-icon" style="display: none;">&#x2715;</span>
     </button>
-    
-    <!-- Navigation Links -->
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="Quickstart.html">Quick Start</a>
-      <a href="action.html">Take Action</a>
+      <a href="OVERVIEW.html">Why This Works</a>
+      <a href="SimpleMath.html">The Math</a>
+      <a href="Quickstart.html">How It Works</a>
+      <a href="action.html" style="color:#f5c842; font-weight:700;">Take Action</a>
       <a href="Donate.html">Donate</a>
-      
       <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown(event)">Strategy ▼</button>
+        <button class="dropbtn" onclick="toggleDropdown(event)">More &#x25BC;</button>
         <div class="dropdown-content">
-          <a href="OVERVIEW.html">Overview</a>
-          <a href="Crisis.html">Crisis</a>
-          <a href="SimpleMath.html">Simple Math</a>
+          <div class="dropdown-group-label">Why It Matters</div>
+          <a href="Crisis.html">The Crisis</a>
+          <a href="Why-Change-Required.html">Why Change Required</a>
+          <a href="Telehealth-Insurance.html">Telehealth vs Insurance</a>
+          <div class="dropdown-group-label">Strategy &amp; Model</div>
           <a href="5D_Solutions.html">5D Solutions</a>
           <a href="Leverage.html">Leverage</a>
-          <a href="Why-Change-Required.html">Why Change Required</a>
           <a href="Unions-Strategy.html">Union Strategy</a>
-        </div>
-      </div>
-      
-      <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown(event)">Resources ▼</button>
-        <div class="dropdown-content">
-          <a href="Media.html">Media</a>
+          <div class="dropdown-group-label">Stories &amp; Proof</div>
           <a href="real-stories.html">Real Stories</a>
+          <a href="Veterans.html">Veterans</a>
+          <a href="SOTU-Pre-Sponse.html">SOTU Response</a>
+          <a href="Media.html">Media</a>
+          <div class="dropdown-group-label">Support &amp; Info</div>
           <a href="FAQ.html">FAQ</a>
           <a href="About.html">About</a>
           <a href="Our-Origins.html">Origins</a>
+          <div class="dropdown-group-label">Deep Movement</div>
+          <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
         </div>
       </div>
     </div>
@@ -667,7 +689,7 @@ footer a {
 
 <section class="section">
   <div class="graphic-container">
-    <img loading="lazy" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/SIMPLE_MATH_Pyramid_Universal_Coverage.png" 
+    <img loading="lazy" src="SIMPLE_MATH_Pyramid_Universal_Coverage.png" 
          alt="The Simple Math Pyramid - Building to Universal Coverage"
          onclick="window.open(this.src, '_blank')" loading="lazy">
     <p>The Weapon: One Person Switching Funds 12–19 More</p>
@@ -711,7 +733,7 @@ footer a {
   <h2>One Conversion Funds 12–19 More</h2>
   
   <div class="graphic-container">
-    <img loading="lazy" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/SIMPLE_MATH.png" 
+    <img loading="lazy" src="SIMPLE_MATH.png" 
          alt="The Math: One conversion funds exponential coverage"
          onclick="window.open(this.src, '_blank')" loading="lazy">
     <p>The Exponential Foundation</p>
@@ -738,7 +760,7 @@ footer a {
   <h2>The Mathematical Cascade</h2>
   
   <div class="graphic-container">
-    <img loading="lazy" src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/CORE_MATH_for_234M.png" 
+    <img loading="lazy" src="CORE_MATH_for_234M.png" 
          alt="Core Math: How $600 telehealth unlocks 234 million covered"
          onclick="window.open(this.src, '_blank')" loading="lazy">
     <p>The Endpoint: Universal Coverage for 234M Americans</p>
@@ -812,7 +834,7 @@ footer a {
   <p style="margin: 15px 0;">
     Will Price | Chief Solutions Architect<br>
     Phone: <a href="tel:+19163068967">(916) 306-8967</a> | 
-    Email: <a href="/cdn-cgi/l/email-protection#0a63646c654a7a62636f78792465786d"><span class="__cf_email__" data-cfemail="ee87808881ae9e86878b9c9dc0819c89">[email&#160;protected]</span></a>
+    Email: <a href="/cdn-cgi/l/email-protection#670e09010827170f0e02151449081500"><span class="__cf_email__" data-cfemail="c5acaba3aa85b5adaca0b7b6ebaab7a2">[email&#160;protected]</span></a>
   </p>
   
   <div class="footer-nav">
@@ -841,55 +863,77 @@ footer a {
   
   <!-- VERSION STAMP -->
   <p style="margin-top: 2rem; text-align: center; font-size: 0.75rem; color: #666;">
-    PHIERS Movement | Version: 2026-02-20 21:40:29
+    PHIERS Movement | Version: 2026-02-20 22:43:50
   </p>
   
   <p style="margin-top: 20px; font-size: 0.85rem; color: #666;">
  
 <!-- Mobile Menu JavaScript -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleMobileMenu() {
   const navLinks = document.querySelector('.nav-links');
   const menuIcon = document.querySelector('.menu-icon');
   const closeIcon = document.querySelector('.close-icon');
-  
+  if (!navLinks) return;
   navLinks.classList.toggle('active');
-  
   if (navLinks.classList.contains('active')) {
-    menuIcon.style.display = 'none';
-    closeIcon.style.display = 'inline';
+    if (menuIcon) menuIcon.style.display = 'none';
+    if (closeIcon) closeIcon.style.display = 'inline';
   } else {
-    menuIcon.style.display = 'inline';
-    closeIcon.style.display = 'none';
+    if (menuIcon) menuIcon.style.display = 'inline';
+    if (closeIcon) closeIcon.style.display = 'none';
   }
 }
-
 function toggleDropdown(event) {
   event.stopPropagation();
-  const dropdown = event.target.nextElementSibling;
-  dropdown.classList.toggle('show');
+  let btn = event.target;
+  while (btn && !btn.classList.contains('dropbtn')) { btn = btn.parentElement; }
+  if (!btn) return;
+  const dropdown = btn.nextElementSibling;
+  if (!dropdown) return;
+  const isOpen = dropdown.classList.contains('show');
+  document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('show'));
+  document.querySelectorAll('.dropbtn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  if (!isOpen) { dropdown.classList.add('show'); btn.setAttribute('aria-expanded', 'true'); }
 }
-
-document.addEventListener('click', function(event) {
-  const nav = document.querySelector('nav');
-  const navLinks = document.querySelector('.nav-links');
-  const menuIcon = document.querySelector('.menu-icon');
-  const closeIcon = document.querySelector('.close-icon');
-  
-  if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
-    navLinks.classList.remove('active');
-    menuIcon.style.display = 'inline';
-    closeIcon.style.display = 'none';
-  }
-});
-
-document.addEventListener('click', function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    const dropdowns = document.getElementsByClassName('dropdown-content');
-    for (let i = 0; i < dropdowns.length; i++) {
-      dropdowns[i].classList.remove('show');
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.dropbtn').forEach(btn => {
+    btn.setAttribute('aria-haspopup', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+  });
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.style.background = 'rgba(76,175,80,0.25)';
+      link.style.color = '#fff';
     }
+  });
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function() {
+      if (!this.getAttribute('href').startsWith('#')) {
+        sessionStorage.setItem('scrollToTop', '1');
+      }
+    });
+  });
+  if (sessionStorage.getItem('scrollToTop') === '1') {
+    sessionStorage.removeItem('scrollToTop');
+    window.scrollTo(0, 0);
   }
+  document.addEventListener('click', function(event) {
+    if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn')) {
+      document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('show'));
+      document.querySelectorAll('.dropbtn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    }
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelector('.nav-links');
+    if (nav && navLinks && !nav.contains(event.target) && navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      const menuIcon = document.querySelector('.menu-icon');
+      const closeIcon = document.querySelector('.close-icon');
+      if (menuIcon) menuIcon.style.display = 'inline';
+      if (closeIcon) closeIcon.style.display = 'none';
+    }
+  });
 });
 </script>
 -e 
@@ -955,5 +999,13 @@ function initImageModal() {
   });
 }
 </script>
-</body>
-</html>
+<div style="display: flex; justify-content: space-between; margin: 60px 0 40px 0; padding: 30px 0; border-top: 2px solid rgba(76, 175, 80, 0.3);">
+  <a href="Crisis.html" style="color: #4caf50; text-decoration: none; font-size: 1.1em;">
+    ← Previous: Crisis
+  </a>
+  <a href="5D_Solutions.html" style="color: #4caf50; text-decoration: none; font-size: 1.1em;">
+    Next: 5D Solutions →
+  </a>
+</div>
+
+<div style="text-align:center; paddi

@@ -94,7 +94,7 @@
  }
 
  .graphic-container img {
- max-width: 60%;
+ max-width: 50%;
  height: auto;
  border-radius: 8px;
  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
@@ -190,23 +190,13 @@
  @media (max-width: 768px) {
  h1 { font-size: 1.6em; }
  h2 { font-size: 1.4em; }
- .graphic-container img { max-width: 80%; }
+ .graphic-container img { max-width: 50%; }
  .container { padding: 15px; }
  header { padding: 25px 15px; }
  }
  
     /* === NAV STYLES === */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #1a1a2e;
-      padding: 0.75rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 2px solid #4caf50;
-    }
+    nav { position: sticky; top: 0; z-index: 1000; background: #1a1a2e; padding: 0.75rem 1.5rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #4caf50; }
     .nav-links { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
     .nav-links a { color: #e0e0e0; text-decoration: none; padding: 0.4rem 0.7rem; border-radius: 4px; font-size: 0.9rem; }
     .nav-links a:hover { background: #4caf50; color: #fff; }
@@ -221,12 +211,7 @@
     .dropdown-group-label:first-child { border-top: none; margin-top: 0; }
     .dropdown-content.show { display: block; }
     .close-icon { display: none; }
-    @media (max-width: 768px) {
-      .mobile-menu-toggle { display: block; }
-      .nav-links { display: none; flex-direction: column; width: 100%; }
-      .nav-links.active { display: flex; }
-      .dropdown-content { position: static; border: none; }
-    }
+    @media (max-width: 768px) { .mobile-menu-toggle { display: block; } .nav-links { display: none; flex-direction: column; width: 100%; } .nav-links.active { display: flex; } .dropdown-content { position: static; border: none; } }
     /* === END NAV STYLES === */
     </style>
 </head>
@@ -273,7 +258,7 @@
 
  <div class="container">
  <header>
- <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Logo.png" 
+ <img src="PHIERS_Logo.png" 
  alt="PHIERS Logo" 
  class="logo">
  <h1>Telehealth vs Insurance</h1>
@@ -305,7 +290,7 @@
  <p>PHIERS does exactly that.</p>
 
  <div class="graphic-container">
- <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/80-20_Healthcare_Model_-PHIERS_v_Insurance_Cost.png" 
+ <img src="8020_Healthcare_Model_PHIERS_v_Insurance_Cost.png" 
  alt="The 80/20 Healthcare Model - Telehealth vs Insurance">
  <p>The 80/20 Healthcare Model: Telehealth = Everyday Care, Insurance = Catastrophic Protection</p>
  </div>
@@ -387,6 +372,25 @@
 
  <p>Once you separate care from catastrophe, the math becomes simple — and universal coverage becomes possible.</p>
 
+ <div class="graphic-container">
+  <img loading="lazy" src="TeleHlth_v_Insurance.png" alt="Telehealth vs Insurance comparison" onclick="window.open(this.src,'_blank')" style="cursor:pointer;">
+  <p>Telehealth vs. Insurance: The cost difference is staggering</p>
+ </div>
+
+ <p style="color:#c8e6c9; margin:20px 0;">This is what good healthcare actually looks like when delivered digitally:</p>
+
+ <div class="graphic-container">
+  <img loading="lazy" src="Good_Health_Insurance__TELEHEALTH.jpg" alt="Good Health Insurance via Telehealth" onclick="window.open(this.src,'_blank')" style="cursor:pointer;">
+  <p>What good healthcare actually looks like — delivered digitally</p>
+ </div>
+
+ <p style="color:#c8e6c9; margin:20px 0;">The 80/20 model: how PHIERS covers 80% of your healthcare needs at a fraction of insurance cost:</p>
+
+ <div class="graphic-container">
+  <img loading="lazy" src="8020_Healthcare_Model_PHIERS_v_Insurance_Cost.png" alt="80/20 Healthcare Model: PHIERS vs Insurance Cost" onclick="window.open(this.src,'_blank')" style="cursor:pointer;">
+  <p>The 80/20 model: PHIERS covers 80% of your needs at a fraction of insurance cost</p>
+ </div>
+
  <div class="nav-buttons">
  <a href="index.html" class="btn btn-secondary">← Back to Main</a>
  <a href="https://phiersale.github.io/PHIERS-Concept/Simple-Math-Fast-Read.html" class="btn btn-primary">Continue →</a>
@@ -398,9 +402,7 @@
  <p><strong>PHIERS Movement | Make America Better And Healthier</strong></p>
  <p>Understanding the difference between care and catastrophe protection</p>
  <p style="margin-top: 15px;">© PHIERS.org - People's Health Insurance Exchange and Referral Service</p>
- 
-  <p style="margin-top:1rem; font-size:0.8rem; text-align:center;"><a href="UNBREAKABLE.html" style="color:#666; font-size:0.8rem;">UNBREAKABLE</a></p>
-  </footer>
+ </footer>
  </div>
 <script>
 function toggleMobileMenu() {
@@ -424,13 +426,38 @@ function toggleDropdown(event) {
   if (!btn) return;
   const dropdown = btn.nextElementSibling;
   if (!dropdown) return;
-  document.querySelectorAll('.dropdown-content').forEach(d => { if (d !== dropdown) d.classList.remove('show'); });
-  dropdown.classList.toggle('show');
+  const isOpen = dropdown.classList.contains('show');
+  document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('show'));
+  document.querySelectorAll('.dropbtn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  if (!isOpen) { dropdown.classList.add('show'); btn.setAttribute('aria-expanded', 'true'); }
 }
 document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.dropbtn').forEach(btn => {
+    btn.setAttribute('aria-haspopup', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+  });
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.style.background = 'rgba(76,175,80,0.25)';
+      link.style.color = '#fff';
+    }
+  });
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function() {
+      if (!this.getAttribute('href').startsWith('#')) {
+        sessionStorage.setItem('scrollToTop', '1');
+      }
+    });
+  });
+  if (sessionStorage.getItem('scrollToTop') === '1') {
+    sessionStorage.removeItem('scrollToTop');
+    window.scrollTo(0, 0);
+  }
   document.addEventListener('click', function(event) {
     if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn')) {
       document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('show'));
+      document.querySelectorAll('.dropbtn').forEach(b => b.setAttribute('aria-expanded', 'false'));
     }
     const nav = document.querySelector('nav');
     const navLinks = document.querySelector('.nav-links');
@@ -444,5 +471,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+<div style="text-align:center; padding: 1rem 0 0.5rem; border-top: 1px solid rgba(76,175,80,0.15); margin-top: 1rem;">
+  <a href="UNBREAKABLE.html" style="color:#555; font-size:0.78rem; text-decoration:none; letter-spacing:0.04em;">UNBREAKABLE</a>
+</div>
 </body>
 </html>
