@@ -528,18 +528,6 @@ img {
     @media (max-width: 768px) { .mobile-menu-toggle { display: block; } .nav-links { display: none; flex-direction: column; width: 100%; } .nav-links.active { display: flex; } .dropdown-content { position: static; border: none; } }
     /* === END NAV STYLES === */
     </style>
-
-  <!-- Canonical & Open Graph -->
-  <link rel="canonical" href="https://phiersale.github.io/PHIERS-Concept/Media.html" />
-  <meta property="og:url" content="https://phiersale.github.io/PHIERS-Concept/Media.html" />
-  <meta property="og:title" content="Media — PHIERS" />
-  <meta property="og:description" content="Videos, interviews, and assets documenting the PHIERS framework and movement." />
-  <meta property="og:image" content="PHIERS_Logo.png" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://phiersale.github.io/PHIERS-Concept/Media.html" />
-  <meta name="twitter:title" content="Media — PHIERS" />
-  <meta name="twitter:description" content="Videos, interviews, and assets documenting the PHIERS framework and movement." />
 </head>
 <body>
 
@@ -613,8 +601,151 @@ img {
  <p style="text-align: center; color: #64b5f6; font-weight: bold; margin-top: 15px;">1 minute 11 seconds. This is why they're terrified.</p>
  </div>
 
+ <style>
+ /* Mobile dropdown fix — disable hover dependency */
+ @media (max-width: 768px) {
+   .dropdown:hover .dropdown-content { display: none; }
+   .dropdown-content.show { display: block !important; }
+ }
+ /* Video library grid */
+ .video-library { display: grid; gap: 40px; max-width: 860px; margin: 0 auto 60px; }
+ .video-card { background: rgba(22,33,62,0.7); padding: 24px; border-radius: 12px; border-left: 5px solid #4caf50; }
+ .video-card h3 { color: #81c784; margin: 0 0 8px; font-size: 1.1em; }
+ .video-card .video-year { font-size: 0.8em; color: #555; margin-bottom: 14px; }
+ .video-card .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; }
+ .video-card .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+ </style>
+
  <main>
  <section>
+
+ <!-- ══════════════════════════════════════════
+      WILL PRICE VIDEO LIBRARY — 20 Years of Work
+      ══════════════════════════════════════════ -->
+ <h2 style="color:#4caf50; text-align:center; margin-bottom:40px;">
+   The Archive — 20 Years of Work on Video
+ </h2>
+ <p style="text-align:center; color:#c8e6c9; max-width:700px; margin: 0 auto 50px;">
+   From 2005 to today. Every video below is a timestamp in a 20-year record
+   of building solutions that institutions couldn't stop — and often tried to.
+ </p>
+
+ <div class="video-library">
+
+   <div class="video-card">
+     <h3>DotCom Magazine Interview</h3>
+     <p class="video-year">2022 — National Validation</p>
+     <div class="video-container">
+       <iframe src="https://www.youtube.com/embed/pUdlWukaLLY"
+         title="DotCom Magazine Interview — Will Price PHIERS 2022"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+     </div>
+   </div>
+
+   <div class="video-card">
+     <h3>The VA's First Mass-Distribution Training Video for Veterans & Families of Wounded Soldiers</h3>
+     <p class="video-year">2006 — Prior Art Established</p>
+     <div class="video-container">
+       <iframe src="https://www.youtube.com/embed/K1i4vucfZq0"
+         title="VA First Training Video — Veterans and Families 2006"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+     </div>
+   </div>
+
+   <div class="video-card">
+     <h3>First PHIERS Introduction</h3>
+     <p class="video-year">2005 — Where It Started</p>
+     <div class="video-container">
+       <iframe src="https://www.youtube.com/embed/0e2_20u5buI"
+         title="First PHIERS Introduction 2005"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+     </div>
+   </div>
+
+   <div class="video-card">
+     <h3>First Manhattan Project of Medicine — ICARE</h3>
+     <p class="video-year">2009 — International Cancer Alliance for Research & Education | Chief Solutions Architect</p>
+     <div class="video-container">
+       <iframe src="https://www.youtube.com/embed/VYm66hUTKZE"
+         title="First Manhattan Project of Medicine — ICARE 2009"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+     </div>
+   </div>
+
+   <div class="video-card">
+     <h3>A Better Pandemic Response — Introduction to SIICDARE</h3>
+     <p class="video-year">Sister of ICARE — Infectious & Chronic Disease R&D</p>
+     <div class="video-container">
+       <iframe src="https://www.youtube.com/embed/0CrR7uh9fFk"
+         title="A Better Pandemic Response — SIICDARE"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+     </div>
+   </div>
+
+   <div class="video-card">
+     <h3>Veteran-Focused Solutions</h3>
+     <p class="video-year">Healthcare solutions built for those who served</p>
+     <div class="video-container">
+       <iframe src="https://www.youtube.com/embed/FZS3vbgesWk"
+         title="Veteran-Focused Healthcare Solutions"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+     </div>
+   </div>
+
+   <div class="video-card">
+     <h3>The Church Dad Built</h3>
+     <p class="video-year">The spiritual foundation behind the mission</p>
+     <div class="video-container">
+       <iframe src="https://www.youtube.com/embed/YPOUfgIUePc"
+         title="The Church Dad Built"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+     </div>
+   </div>
+
+   <div class="video-card">
+     <h3>Tap & Pop — Dad and Son's Healthcare Solutions</h3>
+     <p class="video-year">Generational partnership in action</p>
+     <div class="video-container">
+       <iframe src="https://www.youtube.com/embed/q0N0n-ET2cM"
+         title="Tap and Pop — Dad and Son Healthcare Solutions"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+     </div>
+   </div>
+
+   <div class="video-card">
+     <h3>Intro to SIICDARE & Its Founder</h3>
+     <p class="video-year">Meet the next generation of the mission</p>
+     <div class="video-container">
+       <iframe src="https://www.youtube.com/embed/W9WbV1qdSmI"
+         title="Intro to SIICDARE and Its Founder"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+     </div>
+   </div>
+
+   <div class="video-card">
+     <h3>Fight of the Century — Bruce Lee's Instructor's Instructor Blesses PHIERS</h3>
+     <p class="video-year">Grand Tuhon Supremo Leo Gaje — Spiritual Validation</p>
+     <div class="video-container">
+       <iframe src="https://www.youtube.com/embed/hB3teGHp1ss"
+         title="Fight of the Century — Grand Tuhon Leo Gaje Blesses PHIERS"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe>
+     </div>
+   </div>
+
+ </div>
+
+ <hr style="border-color: rgba(76,175,80,0.2); margin: 20px 0 50px;">
+
  <div class="media-section">
  <h3>Core Videos</h3>
  <ul>
@@ -762,36 +893,27 @@ function initImageModal() {
 </div>
 
 <script>
-function toggleMobileMenu() {
-  const navLinks = document.querySelector('.nav-links');
-  const menuIcon = document.querySelector('.menu-icon');
-  const closeIcon = document.querySelector('.close-icon');
-  if (!navLinks) return;
-  navLinks.classList.toggle('active');
-  if (navLinks.classList.contains('active')) {
-    if (menuIcon) menuIcon.style.display = 'none';
-    if (closeIcon) closeIcon.style.display = 'inline';
-  } else {
-    if (menuIcon) menuIcon.style.display = 'inline';
-    if (closeIcon) closeIcon.style.display = 'none';
-  }
-}
-function toggleDropdown(event) {
-  event.stopPropagation();
-  let btn = event.target;
-  while (btn && !btn.classList.contains('dropbtn')) { btn = btn.parentElement; }
-  if (!btn) return;
-  const dropdown = btn.nextElementSibling;
-  if (!dropdown) return;
-  const isOpen = dropdown.classList.contains('show');
-  document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('show'));
-  document.querySelectorAll('.dropbtn').forEach(b => b.setAttribute('aria-expanded', 'false'));
-  if (!isOpen) { dropdown.classList.add('show'); btn.setAttribute('aria-expanded', 'true'); }
-}
 document.addEventListener('DOMContentLoaded', function() {
+  const mobileToggle = document.querySelector('.mobile-menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (mobileToggle && navLinks) {
+    mobileToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+  }
   document.querySelectorAll('.dropbtn').forEach(btn => {
-    btn.setAttribute('aria-haspopup', 'true');
-    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const content = this.nextElementSibling;
+      document.querySelectorAll('.dropdown-content').forEach(d => {
+        if (d !== content) d.classList.remove('show');
+      });
+      content.classList.toggle('show');
+    });
+  });
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('show'));
   });
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(link => {
@@ -800,33 +922,9 @@ document.addEventListener('DOMContentLoaded', function() {
       link.style.color = '#fff';
     }
   });
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function() {
-      if (!this.getAttribute('href').startsWith('#')) {
-        sessionStorage.setItem('scrollToTop', '1');
-      }
-    });
-  });
-  if (sessionStorage.getItem('scrollToTop') === '1') {
-    sessionStorage.removeItem('scrollToTop');
-    window.scrollTo(0, 0);
-  }
-  document.addEventListener('click', function(event) {
-    if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn')) {
-      document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('show'));
-      document.querySelectorAll('.dropbtn').forEach(b => b.setAttribute('aria-expanded', 'false'));
-    }
-    const nav = document.querySelector('nav');
-    const navLinks = document.querySelector('.nav-links');
-    if (nav && navLinks && !nav.contains(event.target) && navLinks.classList.contains('active')) {
-      navLinks.classList.remove('active');
-      const menuIcon = document.querySelector('.menu-icon');
-      const closeIcon = document.querySelector('.close-icon');
-      if (menuIcon) menuIcon.style.display = 'inline';
-      if (closeIcon) closeIcon.style.display = 'none';
-    }
-  });
 });
 </script>
+<div style="text-align:center; padding: 16px 0 8px;">
+  <span style="font-size:11px; color:#555;">Last updated: March 1, 2026 — Media v2</span>
+</div>
 <div style="text-align:center; paddi
-<script src="phiers-cta.js"></script>
