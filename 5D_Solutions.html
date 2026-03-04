@@ -246,7 +246,7 @@
             font-size: 1.1em;
         }
 
-        /* Section styling - FIXED SPACING */
+        /* Section styling - FIXED with number and title on same line */
         .section-box {
             background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
             padding: 40px;
@@ -260,19 +260,20 @@
             color: #4caf50;
             font-size: 1.4em;
             font-weight: bold;
-            margin-bottom: 5px;
-            display: block;
-        }
-        
-        .section-box h2 {
-            margin-top: 0;
-            margin-bottom: 25px;
-            border-bottom: 2px solid rgba(76, 175, 80, 0.3);
-            padding-bottom: 10px;
+            display: inline;
+            margin-right: 8px;
         }
 
         .section-box h2 {
-            margin-top: 0;
+            display: inline;
+            font-size: 1.8em;
+            margin: 0;
+            border-bottom: none;
+        }
+
+        .section-title-line {
+            border-bottom: 2px solid rgba(76, 175, 80, 0.3);
+            padding-bottom: 10px;
             margin-bottom: 25px;
         }
 
@@ -409,6 +410,7 @@
             h2 { font-size: 1.5em; }
             .section-box { padding: 25px; }
             .section-number { font-size: 1.2em; }
+            .section-box h2 { font-size: 1.5em; }
             ul { margin-left: 20px; }
         }
     </style>
@@ -454,8 +456,10 @@
 
         <!-- SECTION 1: The Logical Next Step -->
         <div class="section-box">
-            <span class="section-number">1.</span>
-            <h2>The Logical Next Step</h2>
+            <div class="section-title-line">
+                <span class="section-number">1.</span>
+                <h2>The Logical Next Step</h2>
+            </div>
             <p>The crisis is structural.</p>
             <p>The response must be structural.</p>
             <p>Solving problems one at a time will not stabilize the country.</p>
@@ -467,8 +471,10 @@
 
         <!-- SECTION 2: Why Five Dimensions -->
         <div class="section-box">
-            <span class="section-number">2.</span>
-            <h2>Why Five Dimensions</h2>
+            <div class="section-title-line">
+                <span class="section-number">2.</span>
+                <h2>Why Five Dimensions</h2>
+            </div>
             <p>Healthcare affects work.</p>
             <p>Work affects housing.</p>
             <p>Housing affects food security.</p>
@@ -485,8 +491,10 @@
 
         <!-- SECTION 3: Simultaneous, Not Sequential -->
         <div class="section-box">
-            <span class="section-number">3.</span>
-            <h2>Simultaneous, Not Sequential</h2>
+            <div class="section-title-line">
+                <span class="section-number">3.</span>
+                <h2>Simultaneous, Not Sequential</h2>
+            </div>
             <p>Traditional policy works in sequence.</p>
             <p>Pass one bill.<br>Debate the next.<br>Fund one program.<br>Delay the next.</p>
             
@@ -500,8 +508,10 @@
 
         <!-- SECTION 4: The Operating Principle -->
         <div class="section-box">
-            <span class="section-number">4.</span>
-            <h2>The Operating Principle</h2>
+            <div class="section-title-line">
+                <span class="section-number">4.</span>
+                <h2>The Operating Principle</h2>
+            </div>
             <p>5D is not ideology.</p>
             <p class="green-emphasis">It is sequencing across systems.</p>
             
@@ -518,8 +528,10 @@
 
         <!-- SECTION 5: Why This Is Achievable -->
         <div class="section-box">
-            <span class="section-number">5.</span>
-            <h2>Why This Is Achievable</h2>
+            <div class="section-title-line">
+                <span class="section-number">5.</span>
+                <h2>Why This Is Achievable</h2>
+            </div>
             <p>This model does not rely on new taxes.</p>
             <p class="green-emphasis">It relies on cost reduction.</p>
             
@@ -537,8 +549,10 @@
 
         <!-- SECTION 6: The Five Dimensions -->
         <div class="section-box">
-            <span class="section-number">6.</span>
-            <h2>The Five Dimensions</h2>
+            <div class="section-title-line">
+                <span class="section-number">6.</span>
+                <h2>The Five Dimensions</h2>
+            </div>
             <p>Each dimension is practical.</p>
             <p>Each dimension reinforces the others.</p>
             <p>Each dimension is measurable.</p>
@@ -560,8 +574,10 @@
 
         <!-- SECTION 7: What This Changes -->
         <div class="section-box">
-            <span class="section-number">7.</span>
-            <h2>What This Changes</h2>
+            <div class="section-title-line">
+                <span class="section-number">7.</span>
+                <h2>What This Changes</h2>
+            </div>
             <p>When healthcare stabilizes, workers gain flexibility.</p>
             <p>When workers gain flexibility, contracts strengthen.</p>
             <p>When contracts strengthen, wages rise.</p>
@@ -575,8 +591,10 @@
 
         <!-- SECTION 8: From Competence to Leverage -->
         <div class="section-box">
-            <span class="section-number">8.</span>
-            <h2>From Competence to Leverage</h2>
+            <div class="section-title-line">
+                <span class="section-number">8.</span>
+                <h2>From Competence to Leverage</h2>
+            </div>
             <p>Crisis showed the capacity gap.</p>
             <p>5D demonstrates coordinated execution.</p>
             
