@@ -126,44 +126,15 @@
             color: #4caf50;
         }
 
-        /* Hero Section - Unified */
-        .hero {
-            text-align: center;
-            padding: 50px 20px 40px 20px;
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.9), rgba(22, 33, 62, 0.9));
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border: 2px solid rgba(76, 175, 80, 0.3);
-        }
-
-        .hero-logo {
-            max-width: 180px;
-            margin-bottom: 20px;
-        }
-
-        .mabah-tagline {
-            font-size: 1.2em;
-            color: #81c784;
-            font-weight: 600;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .hero h1 {
+        /* Headers */
+        h1 {
             color: #4caf50;
             font-size: 2.8em;
             margin-bottom: 15px;
             text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+            text-align: center;
         }
 
-        .hero .subhead {
-            font-size: 1.3em;
-            color: #c8e6c9;
-            font-style: italic;
-        }
-
-        /* Headers */
         h2 {
             color: #4caf50;
             font-size: 1.8em;
@@ -183,6 +154,27 @@
             margin: 20px 0;
             line-height: 1.8;
             font-size: 1.1em;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, rgba(15, 52, 96, 0.9), rgba(22, 33, 62, 0.9));
+            border-radius: 12px;
+            margin-bottom: 60px;
+            border: 2px solid rgba(76, 175, 80, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .subhead {
+            font-size: 1.4em;
+            color: #81c784;
+            margin: 20px 0;
         }
 
         /* Section styling */
@@ -318,10 +310,9 @@
 
         /* Mobile responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2em; }
-            .hero .subhead { font-size: 1.1em; }
-            .hero-logo { max-width: 140px; }
+            h1 { font-size: 2.2em; }
             h2 { font-size: 1.5em; }
+            .hero h1 { font-size: 2.4em; }
             .global-nav { flex-direction: column; align-items: stretch; }
             .nav-item { text-align: center; }
             .dropdown { width: 100%; }
@@ -333,7 +324,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- GLOBAL NAVIGATION -->
+        <!-- GLOBAL NAVIGATION - Same on every page -->
         <nav class="global-nav">
             <a href="Crisis.html" class="nav-item">Crisis</a>
             <a href="5D_Solutions.html" class="nav-item active">5D Solutions</a>
@@ -359,10 +350,8 @@
             </div>
         </nav>
 
-        <!-- HERO - Unified Identity Block -->
+        <!-- HERO SECTION -->
         <div class="hero">
-            <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
-            <div class="mabah-tagline">Make America Better And Healthier</div>
             <h1>5D SOLUTIONS</h1>
             <div class="subhead">Coordinated Action Across Five Dimensions</div>
         </div>
@@ -515,7 +504,7 @@
             <a href="SimpleMath.html" class="btn">See the Simple Math →</a>
         </div>
 
-        <!-- FOOTER -->
+        <!-- FOOTER - Same on every page -->
         <footer>
             <h3>PHIERS Movement | MABAH</h3>
             <p><strong>Make America Better And Healthier</strong></p>
