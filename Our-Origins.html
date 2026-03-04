@@ -33,15 +33,39 @@
             border-radius: 8px;
             padding: 12px 20px;
             margin-bottom: 30px;
+            position: sticky;
+            top: 10px;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Mobile menu toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid #4caf50;
+            color: #4caf50;
+            font-size: 1.8em;
+            padding: 5px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .mobile-menu-toggle:hover {
+            background: rgba(76, 175, 80, 0.2);
+        }
+
+        .nav-links-container {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             gap: 5px;
-            position: sticky;
-            top: 10px;
-            z-index: 1000;
-            backdrop-filter: blur(5px);
+            width: 100%;
         }
 
         .nav-item {
@@ -124,6 +148,43 @@
         .dropdown:hover .dropbtn {
             background: rgba(76, 175, 80, 0.2);
             color: #4caf50;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .global-nav {
+                padding: 10px;
+            }
+            
+            .nav-links-container {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 15px;
+            }
+            
+            .nav-links-container.active {
+                display: flex;
+            }
+            
+            .nav-item, .dropdown {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .dropdown-content {
+                position: static;
+                width: 100%;
+                margin-top: 5px;
+            }
+            
+            .dropbtn {
+                width: 100%;
+            }
         }
 
         /* Hero Section - Unified */
@@ -318,10 +379,6 @@
             h1 { font-size: 2.2em; }
             h2 { font-size: 1.6em; }
             h3 { font-size: 1.2em; }
-            .global-nav { flex-direction: column; align-items: stretch; }
-            .nav-item { text-align: center; }
-            .dropdown { width: 100%; }
-            .dropdown-content { position: static; width: 100%; }
             .section { padding: 25px; }
             ul { margin-left: 20px; }
         }
@@ -331,26 +388,29 @@
     <div class="container">
         <!-- GLOBAL NAVIGATION -->
         <nav class="global-nav">
-            <a href="Crisis.html" class="nav-item">Crisis</a>
-            <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
-            <a href="SimpleMath.html" class="nav-item">Simple Math</a>
-            <a href="Roadmap.html" class="nav-item">Roadmap</a>
-            <a href="Leverage.html" class="nav-item">Leverage</a>
-            <a href="Action.html" class="nav-item">Action</a>
-            <a href="Donate.html" class="nav-item">Donate</a>
-            <div class="dropdown">
-                <button class="dropbtn">More ▼</button>
-                <div class="dropdown-content">
-                    <a href="FAQ.html">FAQ</a>
-                    <a href="Origins.html" class="active">Origins</a>
-                    <a href="Media.html">Media</a>
-                    <a href="About.html">About</a>
-                    <a href="Quickstart.html">Quickstart</a>
-                    <a href="Veterans.html">Veterans</a>
-                    <a href="SOTU-Response.html">SOTU Response</a>
-                    <a href="Union-Strategy.html">Union Strategy</a>
-                    <a href="Telehealth-vs-Insurance.html">Telehealth vs Insurance</a>
-                    <a href="Real-Stories.html">Real Stories</a>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
+            <div class="nav-links-container" id="navLinks">
+                <a href="Crisis.html" class="nav-item">Crisis</a>
+                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
+                <a href="SimpleMath.html" class="nav-item">Simple Math</a>
+                <a href="Roadmap.html" class="nav-item">Roadmap</a>
+                <a href="Leverage.html" class="nav-item">Leverage</a>
+                <a href="Action.html" class="nav-item">Action</a>
+                <a href="Donate.html" class="nav-item">Donate</a>
+                <div class="dropdown">
+                    <button class="dropbtn">More ▼</button>
+                    <div class="dropdown-content">
+                        <a href="FAQ.html">FAQ</a>
+                        <a href="Origins.html" class="active">Origins</a>
+                        <a href="Media.html">Media</a>
+                        <a href="About.html">About</a>
+                        <a href="Quickstart.html">Quickstart</a>
+                        <a href="Veterans.html">Veterans</a>
+                        <a href="SOTU-Response.html">SOTU Response</a>
+                        <a href="Union-Strategy.html">Union Strategy</a>
+                        <a href="Telehealth-vs-Insurance.html">Telehealth vs Insurance</a>
+                        <a href="Real-Stories.html">Real Stories</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -393,4 +453,113 @@
             
             <p>Stabilization at the base strengthens everything above it.</p>
             
-            <p>This wasn't a partisan idea.<
+            <p>This wasn't a partisan idea.<br>
+            It wasn't a theory.<br>
+            <span class="green-emphasis">It was math — and it was visible everywhere.</span></p>
+        </div>
+
+        <!-- LIVED REALITY -->
+        <div class="section">
+            <h2>A Model Built From Lived Reality</h2>
+            
+            <p>PHIERS was shaped by people who had seen the system from multiple angles: workers, caregivers, small‑business owners, organizers, and people navigating healthcare from the inside and outside. Different backgrounds, different experiences, same conclusion:</p>
+            
+            <div class="insight-box">
+                <p style="font-size: 1.2em;">The country wasn't failing because people were divided.<br>It was failing because the response was fragmented.</p>
+            </div>
+            
+            <p class="green-emphasis">PHIERS was built to solve that.</p>
+        </div>
+
+        <!-- FROM INSIGHT TO STRUCTURE -->
+        <div class="section">
+            <h2>From Insight to Structure</h2>
+            
+            <p>The early work focused on one question:</p>
+            
+            <p style="font-size: 1.3em; color: white; font-style: italic; margin: 30px 0;">"What would it take to stabilize the base at scale?"</p>
+            
+            <p>The answer was a model that:</p>
+            
+            <ul>
+                <li>documents public direction</li>
+                <li>stabilizes routine healthcare cost</li>
+                <li>strengthens the economic core</li>
+                <li>reinvests the savings</li>
+                <li>renews the system</li>
+            </ul>
+            
+            <p>Not through pressure.<br>
+            Not through outrage.<br>
+            <span class="green-emphasis">Through alignment.</span></p>
+        </div>
+
+        <!-- WHY PHIERS EXISTS -->
+        <div class="section">
+            <h2>Why PHIERS Exists</h2>
+            
+            <p>PHIERS exists because people deserve a system that responds to them — not the other way around. A system that treats clarity as a starting point, not an afterthought. A system that recognizes that stability is not ideological; it is structural.</p>
+            
+            <p>PHIERS is not a moment.<br>
+            It is not a campaign.<br>
+            It is not built around a personality.</p>
+            
+            <div class="highlight-box">
+                <p style="font-size: 1.3em;">It is a public‑benefit structure designed for continuity — a model that outlasts news cycles, election cycles, and personalities.</p>
+            </div>
+        </div>
+
+        <!-- CALL TO ACTION -->
+        <div style="text-align: center; margin: 60px 0;">
+            <h2>Be Part of What Comes Next</h2>
+            <p style="font-size: 1.2em;">The pattern is clear. The structure is built. The moment is now.</p>
+            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now" class="btn">Sign the Petition</a>
+            <a href="Roadmap.html" class="btn btn-secondary" style="margin-left: 15px;">See the Roadmap</a>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <h3>PHIERS Movement | MABAH</h3>
+            <p><strong>Make America Better And Healthier</strong></p>
+            <p style="margin: 20px 0;">PHIERS is a citizen coalition using collective leverage to force Congress to fix healthcare — or replace them.</p>
+            
+            <div class="footer-links">
+                <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
+                <span>|</span>
+                <a href="mailto:info@phiers.org">Contact</a>
+                <span>|</span>
+                <a href="Legal.html">Legal</a>
+                <span>|</span>
+                <span>© PHIERS</span>
+            </div>
+            
+            <div style="color: #a5d6a7; font-size: 0.9em; margin-top: 30px;">
+                PHIERS is a public-interest movement — not a company, not a product.<br>
+                The only thing missing is you.
+            </div>
+            
+            <p class="copyright">PHIERS Movement | Version: 2026-03-03</p>
+        </footer>
+    </div>
+
+    <script>
+    function toggleMobileMenu() {
+        var navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    // Close mobile menu when a link is clicked
+    document.addEventListener('DOMContentLoaded', function() {
+        var navItems = document.querySelectorAll('.nav-links-container a');
+        navItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                var navLinks = document.getElementById('navLinks');
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
