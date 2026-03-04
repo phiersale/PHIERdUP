@@ -26,62 +26,6 @@
             margin: 0 auto;
         }
 
-/* Mobile menu toggle */
-.mobile-menu-toggle {
-    display: none;
-    background: transparent;
-    border: 1px solid #4caf50;
-    color: #4caf50;
-    font-size: 1.8em;
-    padding: 5px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-}
-
-.mobile-menu-toggle:hover {
-    background: rgba(76, 175, 80, 0.2);
-}
-
-@media (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: block;
-    }
-    
-    .global-nav {
-        padding: 10px;
-    }
-    
-    .nav-links-container {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 15px;
-    }
-    
-    .nav-links-container.active {
-        display: flex;
-    }
-    
-    .nav-item, .dropdown {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .dropdown-content {
-        position: static;
-        width: 100%;
-        margin-top: 5px;
-    }
-    
-    .dropbtn {
-        width: 100%;
-    }
-}
-        
         /* GLOBAL NAVIGATION */
         .global-nav {
             background: rgba(26, 26, 46, 0.95);
@@ -89,15 +33,39 @@
             border-radius: 8px;
             padding: 12px 20px;
             margin-bottom: 30px;
+            position: sticky;
+            top: 10px;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Mobile menu toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid #4caf50;
+            color: #4caf50;
+            font-size: 1.8em;
+            padding: 5px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .mobile-menu-toggle:hover {
+            background: rgba(76, 175, 80, 0.2);
+        }
+
+        .nav-links-container {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             gap: 5px;
-            position: sticky;
-            top: 10px;
-            z-index: 1000;
-            backdrop-filter: blur(5px);
+            width: 100%;
         }
 
         .nav-item {
@@ -182,19 +150,85 @@
             color: #4caf50;
         }
 
-        /* Headers */
-        h1 {
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .global-nav {
+                padding: 10px;
+            }
+            
+            .nav-links-container {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 15px;
+            }
+            
+            .nav-links-container.active {
+                display: flex;
+            }
+            
+            .nav-item, .dropdown {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .dropdown-content {
+                position: static;
+                width: 100%;
+                margin-top: 5px;
+            }
+            
+            .dropbtn {
+                width: 100%;
+            }
+        }
+
+        /* Hero Section - Unified */
+        .hero {
+            text-align: center;
+            padding: 50px 20px 40px 20px;
+            background: linear-gradient(135deg, rgba(15, 52, 96, 0.9), rgba(22, 33, 62, 0.9));
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(76, 175, 80, 0.3);
+        }
+
+        .hero-logo {
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .mabah-tagline {
+            font-size: 1.2em;
+            color: #81c784;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
             color: #4caf50;
             font-size: 2.8em;
             margin-bottom: 15px;
             text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
-            text-align: center;
         }
 
+        .hero .subhead {
+            font-size: 1.3em;
+            color: #c8e6c9;
+            font-style: italic;
+        }
+
+        /* Headers */
         h2 {
             color: #4caf50;
             font-size: 1.8em;
-            margin: 50px 0 30px 0;
+            margin: 0 0 25px 0;
             border-bottom: 2px solid rgba(76, 175, 80, 0.3);
             padding-bottom: 10px;
         }
@@ -207,40 +241,44 @@
 
         p {
             color: #c8e6c9;
-            margin: 20px 0;
+            margin: 15px 0;
             line-height: 1.8;
             font-size: 1.1em;
         }
 
-        /* Hero section */
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.9), rgba(22, 33, 62, 0.9));
-            border-radius: 12px;
-            margin-bottom: 60px;
-            border: 2px solid rgba(76, 175, 80, 0.3);
-        }
-
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero .subhead {
-            font-size: 1.4em;
-            color: #81c784;
-            margin: 20px 0;
-        }
-
-        /* Section styling */
+        /* Section styling - FIXED SPACING */
         .section-box {
             background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
             padding: 40px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             border-radius: 12px;
             border-left: 8px solid #4caf50;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .section-number {
+            color: #4caf50;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .section-box h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .section-box p {
+            margin: 15px 0;
+        }
+
+        .section-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-box .green-emphasis {
+            margin: 20px 0 10px 0;
         }
 
         .insight-box {
@@ -256,18 +294,10 @@
             background: rgba(76, 175, 80, 0.15);
             border: 2px solid #4caf50;
             padding: 30px;
-            margin: 30px 0;
+            margin: 25px 0 15px 0;
             border-radius: 8px;
         }
 
-        .section-number {
-            color: #4caf50;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Emphasis */
         .green-emphasis {
             color: #4caf50;
             font-weight: bold;
@@ -276,7 +306,7 @@
 
         /* Lists */
         ul {
-            margin: 20px 0 20px 30px;
+            margin: 15px 0 15px 30px;
         }
 
         li {
@@ -290,7 +320,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
-            margin: 25px 0;
+            margin: 20px 0;
         }
 
         .impact-item {
@@ -366,27 +396,24 @@
 
         /* Mobile responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 2.2em; }
+            .hero h1 { font-size: 2.2em; }
+            .hero .subhead { font-size: 1.1em; }
+            .hero-logo { max-width: 140px; }
             h2 { font-size: 1.5em; }
-            .hero h1 { font-size: 2.4em; }
-            .global-nav { flex-direction: column; align-items: stretch; }
-            .nav-item { text-align: center; }
-            .dropdown { width: 100%; }
-            .dropdown-content { position: static; width: 100%; }
             .section-box { padding: 25px; }
+            .section-number { font-size: 1.2em; }
             ul { margin-left: 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- GLOBAL NAVIGATION - Same on every page -->
-     <!-- GLOBAL NAVIGATION -->
+        <!-- GLOBAL NAVIGATION -->
         <nav class="global-nav">
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
             <div class="nav-links-container" id="navLinks">
-                <a href="index.html" class="nav-item active">Crisis</a>
-                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
+                <a href="Crisis.html" class="nav-item">Crisis</a>
+                <a href="5D_Solutions.html" class="nav-item active">5D Solutions</a>
                 <a href="SimpleMath.html" class="nav-item">Simple Math</a>
                 <a href="Roadmap.html" class="nav-item">Roadmap</a>
                 <a href="Leverage.html" class="nav-item">Leverage</a>
@@ -410,15 +437,17 @@
             </div>
         </nav>
 
-        <!-- HERO SECTION -->
+        <!-- HERO - Unified Identity Block -->
         <div class="hero">
+            <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
+            <div class="mabah-tagline">Make America Better And Healthier</div>
             <h1>5D SOLUTIONS</h1>
             <div class="subhead">Coordinated Action Across Five Dimensions</div>
         </div>
 
         <!-- SECTION 1: The Logical Next Step -->
         <div class="section-box">
-            <div class="section-number">1.</div>
+            <span class="section-number">1.</span>
             <h2>The Logical Next Step</h2>
             <p>The crisis is structural.</p>
             <p>The response must be structural.</p>
@@ -431,7 +460,7 @@
 
         <!-- SECTION 2: Why Five Dimensions -->
         <div class="section-box">
-            <div class="section-number">2.</div>
+            <span class="section-number">2.</span>
             <h2>Why Five Dimensions</h2>
             <p>Healthcare affects work.</p>
             <p>Work affects housing.</p>
@@ -439,32 +468,32 @@
             <p>Economic stability affects national stability.</p>
             <p>National stability affects domestic capacity.</p>
             
-            <p style="margin-top: 30px;">These systems reinforce each other.</p>
+            <p style="margin-top: 25px;">These systems reinforce each other.</p>
             <p>Stability in one strengthens the others.</p>
             <p>Instability in one weakens the others.</p>
             
-            <p style="margin-top: 30px;">Coordinated response multiplies impact.</p>
+            <p style="margin-top: 25px;">Coordinated response multiplies impact.</p>
             <p class="green-emphasis">Fragmented response cancels it.</p>
         </div>
 
         <!-- SECTION 3: Simultaneous, Not Sequential -->
         <div class="section-box">
-            <div class="section-number">3.</div>
+            <span class="section-number">3.</span>
             <h2>Simultaneous, Not Sequential</h2>
             <p>Traditional policy works in sequence.</p>
             <p>Pass one bill.<br>Debate the next.<br>Fund one program.<br>Delay the next.</p>
             
-            <p style="margin-top: 30px;">But overlapping problems require simultaneous action.</p>
+            <p style="margin-top: 25px;">But overlapping problems require simultaneous action.</p>
             
             <p>Stabilize healthcare.<br>Expand AI-resistant jobs.<br>Create income security from savings.<br>Reinforce labor leverage.<br>Establish guardrails that protect public interest.</p>
             
-            <p style="margin-top: 30px;">Each dimension strengthens the others.</p>
+            <p style="margin-top: 25px;">Each dimension strengthens the others.</p>
             <p class="green-emphasis">This is coordinated execution.</p>
         </div>
 
         <!-- SECTION 4: The Operating Principle -->
         <div class="section-box">
-            <div class="section-number">4.</div>
+            <span class="section-number">4.</span>
             <h2>The Operating Principle</h2>
             <p>5D is not ideology.</p>
             <p class="green-emphasis">It is sequencing across systems.</p>
@@ -476,13 +505,13 @@
             <p>Housing security reduces public strain.</p>
             <p>Reduced strain increases national capacity.</p>
             
-            <p style="margin-top: 30px;">Every dimension reinforces the next.</p>
+            <p style="margin-top: 25px;">Every dimension reinforces the next.</p>
             <p class="green-emphasis">Solve the base. Then scale together.</p>
         </div>
 
         <!-- SECTION 5: Why This Is Achievable -->
         <div class="section-box">
-            <div class="section-number">5.</div>
+            <span class="section-number">5.</span>
             <h2>Why This Is Achievable</h2>
             <p>This model does not rely on new taxes.</p>
             <p class="green-emphasis">It relies on cost reduction.</p>
@@ -501,14 +530,14 @@
 
         <!-- SECTION 6: The Five Dimensions -->
         <div class="section-box">
-            <div class="section-number">6.</div>
+            <span class="section-number">6.</span>
             <h2>The Five Dimensions</h2>
             <p>Each dimension is practical.</p>
             <p>Each dimension reinforces the others.</p>
             <p>Each dimension is measurable.</p>
             <p>Each dimension is achievable.</p>
             
-            <p style="margin-top: 30px; font-size: 1.2em; color: white;">The five dimensions are:</p>
+            <p style="margin-top: 25px; font-size: 1.2em; color: white;">The five dimensions are:</p>
             
             <div class="highlight-box">
                 <p style="font-size: 1.1em;">Healthcare stabilization</p>
@@ -524,7 +553,7 @@
 
         <!-- SECTION 7: What This Changes -->
         <div class="section-box">
-            <div class="section-number">7.</div>
+            <span class="section-number">7.</span>
             <h2>What This Changes</h2>
             <p>When healthcare stabilizes, workers gain flexibility.</p>
             <p>When workers gain flexibility, contracts strengthen.</p>
@@ -533,23 +562,23 @@
             <p>When housing stabilizes, public strain decreases.</p>
             <p>When public strain decreases, institutional focus improves.</p>
             
-            <p style="margin-top: 30px;">This is coordinated reinforcement.</p>
+            <p style="margin-top: 25px;">This is coordinated reinforcement.</p>
             <p class="green-emphasis">This is how systems realign.</p>
         </div>
 
         <!-- SECTION 8: From Competence to Leverage -->
         <div class="section-box">
-            <div class="section-number">8.</div>
+            <span class="section-number">8.</span>
             <h2>From Competence to Leverage</h2>
             <p>Crisis showed the capacity gap.</p>
             <p>5D demonstrates coordinated execution.</p>
             
-            <p style="margin-top: 30px;">When voters implement practical solutions at scale, leverage shifts.</p>
+            <p style="margin-top: 25px;">When voters implement practical solutions at scale, leverage shifts.</p>
             <p>Institutions respond to stability.</p>
             <p>Stability creates alignment.</p>
             <p>Alignment produces accountability.</p>
             
-            <div class="insight-box" style="margin-top: 40px;">
+            <div class="insight-box" style="margin-top: 30px;">
                 <p style="font-size: 1.2em; color: #81c784;">Transition Line to SimpleMath</p>
                 <p>The next question is funding.</p>
                 <p>The numbers are simple.</p>
@@ -564,7 +593,7 @@
             <a href="SimpleMath.html" class="btn">See the Simple Math →</a>
         </div>
 
-        <!-- FOOTER - Same on every page -->
+        <!-- FOOTER -->
         <footer>
             <h3>PHIERS Movement | MABAH</h3>
             <p><strong>Make America Better And Healthier</strong></p>
@@ -588,13 +617,13 @@
             <p class="copyright">PHIERS Movement | Version: 2026-03-03</p>
         </footer>
     </div>
-    
+
     <script>
     function toggleMobileMenu() {
         var navLinks = document.getElementById('navLinks');
         navLinks.classList.toggle('active');
     }
-    
+
     // Close mobile menu when a link is clicked
     document.addEventListener('DOMContentLoaded', function() {
         var navItems = document.querySelectorAll('.nav-links-container a');
