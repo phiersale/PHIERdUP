@@ -187,7 +187,9 @@
             }
         }
 
-        /* Hero Section - Unified */
+        /* ============================
+           HERO SYSTEM — UNIFIED
+           ============================ */
         .hero {
             text-align: center;
             padding: 50px 20px 40px 20px;
@@ -222,6 +224,51 @@
             font-size: 1.3em;
             color: #c8e6c9;
             font-style: italic;
+        }
+
+        /* ============================
+           PHIERS MEDIA — GLOBAL STYLES
+           ============================ */
+        .phiers-media-block {
+            width: 100%;
+            max-width: 600px; /* ~50% of a 1200px layout */
+            margin: 40px auto;
+        }
+
+        .phiers-media-block img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+            border: 2px solid rgba(76, 175, 80, 0.3);
+        }
+
+        /* Responsive video wrapper */
+        .phiers-video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .phiers-video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .phiers-media-block {
+                max-width: 100%;
+                margin: 30px auto;
+            }
         }
 
         /* Headers */
@@ -371,6 +418,54 @@
             margin-top: 20px;
         }
 
+        /* Image Modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 60px auto;
+            object-fit: contain;
+        }
+
+        .close-modal {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10001;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            color: #4caf50;
+            background: rgba(0,0,0,0.8);
+        }
+
         /* Mobile responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2em; }
@@ -381,6 +476,17 @@
             h3 { font-size: 1.2em; }
             .section { padding: 25px; }
             ul { margin-left: 20px; }
+            .close-modal {
+                top: 10px;
+                right: 10px;
+                font-size: 35px;
+                width: 45px;
+                height: 45px;
+            }
+            .modal-content {
+                max-width: 95%;
+                margin: 50px auto;
+            }
         }
     </style>
 </head>
@@ -422,6 +528,8 @@
             <h1>OUR ORIGINS</h1>
             <div class="subhead">How PHIERS Began — And Why It Exists</div>
         </div>
+
+        <!-- No media blocks specified for Origins in the directive -->
 
         <!-- INTRODUCTION -->
         <div class="section" style="border-left-color: #81c784;">
@@ -513,8 +621,8 @@
         <div style="text-align: center; margin: 60px 0;">
             <h2>Be Part of What Comes Next</h2>
             <p style="font-size: 1.2em;">The pattern is clear. The structure is built. The moment is now.</p>
-            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now" class="btn">Sign the Petition</a>
-            <a href="Roadmap.html" class="btn btn-secondary" style="margin-left: 15px;">See the Roadmap</a>
+            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn">Sign the Petition</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn btn-secondary" style="margin-left: 15px;">Take the Survey</a>
         </div>
 
         <!-- FOOTER -->
@@ -542,6 +650,12 @@
         </footer>
     </div>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal" onclick="closeModal(event)">
+        <span class="close-modal" onclick="closeModal(event)">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <script>
     function toggleMobileMenu() {
         var navLinks = document.getElementById('navLinks');
@@ -559,6 +673,43 @@
                 }
             });
         });
+    });
+
+    // Image Modal functions
+    function openModal(src) {
+        var modal = document.getElementById('imageModal');
+        var modalImg = document.getElementById('modalImage');
+        modal.style.display = 'block';
+        modalImg.src = src;
+    }
+
+    function closeModal(event) {
+        var modal = document.getElementById('imageModal');
+        if (event.target === modal || event.target.classList.contains('close-modal')) {
+            modal.style.display = 'none';
+        }
+    }
+
+    // Add click handlers to all images
+    document.addEventListener('DOMContentLoaded', function() {
+        var images = document.querySelectorAll('img');
+        images.forEach(function(img) {
+            // Skip if it's the logo or has no src
+            if (img.src && !img.src.includes('PHIERS_Logo')) {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function() {
+                    openModal(this.src);
+                });
+            }
+        });
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            var modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
     });
     </script>
 </body>
