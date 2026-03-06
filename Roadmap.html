@@ -568,11 +568,27 @@
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
             <div class="mabah-full">MABAH — Make America Better And Healthier</div>
             <div class="mabah-tagline">Sounds Like MAGA, But A Lot Bettah</div>
-            <h1>ROADMAP</h1>
+            <h1>The PHIERS Roadmap: Three Acts to Systemic Change</h1>
             <div class="subhead">Where We're Going — And How We Get There</div>
         </div>
 
         <!-- No media blocks specified for Roadmap -->
+
+        <!-- At a Glance -->
+        <div class="section-box" style="margin-bottom:30px;">
+            <h2 style="margin-top:0;">Roadmap at a Glance</h2>
+            <div style="display:grid; gap:12px;">
+                <div style="padding:14px; background:rgba(76,175,80,0.07); border-radius:8px; border:1px solid rgba(76,175,80,0.2);">
+                    <p style="margin:0;"><a href="#phase-one" style="color:#4caf50; font-weight:bold;">Phase One — Stabilize the Base.</a> Routine healthcare costs drop from $10,000 to $600. One conversion funds twelve more.</p>
+                </div>
+                <div style="padding:14px; background:rgba(76,175,80,0.07); border-radius:8px; border:1px solid rgba(76,175,80,0.2);">
+                    <p style="margin:0;"><a href="#phase-two" style="color:#4caf50; font-weight:bold;">Phase Two — Strengthen the Economic Core.</a> Savings fund AI-resistant jobs and income security without new taxes.</p>
+                </div>
+                <div style="padding:14px; background:rgba(76,175,80,0.07); border-radius:8px; border:1px solid rgba(76,175,80,0.2);">
+                    <p style="margin:0;"><a href="#phase-three" style="color:#4caf50; font-weight:bold;">Phase Three — Reinvest and Renew.</a> $2.73T in annual savings redirected. 234M covered. Congress accountable.</p>
+                </div>
+            </div>
+        </div>
 
         <div class="phase" style="border-left-color: #81c784;">
             <p>People don't just need a fix.</p>
@@ -582,7 +598,7 @@
             <p style="font-size: 1.3em; margin-top: 30px;">This is the roadmap.</p>
         </div>
 
-        <div class="phase">
+        <div id="phase-one" class="phase">
             <div class="phase-header">
                 <h3>PHASE ONE — Stabilize the Base</h3>
                 <h4>Routine Healthcare Becomes Predictable</h4>
@@ -609,7 +625,7 @@
             <p>When the base stabilizes, the rest of the system can move.</p>
         </div>
 
-        <div class="phase">
+        <div id="phase-two" class="phase">
             <div class="phase-header">
                 <h3>PHASE TWO — Strengthen the Economic Core</h3>
                 <h4>Work, Wages, and Stability Improve Together</h4>
@@ -630,7 +646,7 @@
             <p class="green-emphasis">This is where pressure begins to ease.</p>
         </div>
 
-        <div class="phase">
+        <div id="phase-three" class="phase">
             <div class="phase-header">
                 <h3>PHASE THREE — Reinvest the Savings</h3>
                 <h4>Cost Reduction Creates Room for Renewal</h4>
@@ -658,7 +674,7 @@
             <p class="green-emphasis">Savings do not vanish.<br>They reinforce stability.</p>
         </div>
 
-        <div class="phase">
+        <div id="phase-four" class="phase">
             <div class="phase-header">
                 <h3>PHASE FOUR — National Renewal</h3>
                 <h4>A More Stable Country</h4>
@@ -706,6 +722,17 @@
             </div>
         </div>
 
+        <section style="text-align:center; margin:50px 0; padding:40px 30px; background:rgba(244,67,54,0.07); border:2px solid rgba(244,67,54,0.3); border-radius:12px;">
+            <h2 style="margin-top:0; color:#f44336;">Ready to Move?</h2>
+            <p style="font-size:1.15em;">The roadmap only works when people are in it. See the math, understand the solution, take action.</p>
+            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:25px;">
+                <a href="SimpleMath.html" class="btn">📊 See the Math</a>
+                <a href="5D_Solutions.html" class="btn">🔧 The Solution</a>
+                <a href="Action.html" class="btn btn-warning">✊ Take Action</a>
+                <a href="Donate.html" class="btn" style="background:transparent;">Support the Movement</a>
+            </div>
+        </section>
+
         <footer>
             <h3>PHIERS Movement | MABAH</h3>
             <p><strong>Make America Better And Healthier</strong></p>
@@ -749,7 +776,6 @@
         });
     });
 
-    // Image Modal functions
     function openModal(src) {
         var modal = document.getElementById('imageModal');
         var modalImg = document.getElementById('modalImage');
@@ -766,7 +792,6 @@
         }
     }
 
-    // Prevent modal from closing when clicking the image
     document.addEventListener('DOMContentLoaded', function() {
         var modalImg = document.getElementById('modalImage');
         if (modalImg) {
@@ -776,7 +801,6 @@
         }
     });
 
-    // Add click handlers to all images
     document.addEventListener('DOMContentLoaded', function() {
         var images = document.querySelectorAll('img');
         images.forEach(function(img) {
@@ -789,7 +813,6 @@
         });
     });
 
-    // Close on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             var modal = document.getElementById('imageModal');
