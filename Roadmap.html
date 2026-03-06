@@ -187,17 +187,24 @@
         }
 
         .hero-logo {
-            max-width: 180px;
-            margin-bottom: 20px;
+            max-width: 140px;
+            margin-bottom: 15px;
+        }
+
+        .mabah-full {
+            font-size: 1.1em;
+            color: #81c784;
+            font-weight: 600;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
         }
 
         .mabah-tagline {
             font-size: 1.2em;
-            color: #81c784;
-            font-weight: 600;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: #4caf50;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-style: italic;
         }
 
         .hero h1 {
@@ -225,6 +232,12 @@
             display: block;
             border-radius: 6px;
             border: 2px solid rgba(76, 175, 80, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .phiers-media-block img:hover {
+            transform: scale(1.02);
         }
 
         .phiers-video-wrapper {
@@ -391,6 +404,17 @@
             box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
         }
 
+        .btn-warning {
+            background: linear-gradient(135deg, #f5c842, #e0a800);
+            border-color: #f5c842;
+            color: #000;
+        }
+
+        .btn-warning:hover {
+            background: linear-gradient(135deg, #f5c842, #d4a500);
+            color: #000;
+        }
+
         .btn-blue {
             background: linear-gradient(135deg, #2196f3, #1976d2);
             box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
@@ -435,6 +459,7 @@
             margin-top: 20px;
         }
 
+        /* Image Modal */
         .image-modal {
             display: none;
             position: fixed;
@@ -453,20 +478,21 @@
             width: auto;
             height: auto;
             display: block;
-            margin: 60px auto;
+            margin: 80px auto;
             object-fit: contain;
+            pointer-events: auto;
         }
 
         .close-modal {
             position: fixed;
-            top: 15px;
-            right: 20px;
+            top: 20px;
+            right: 25px;
             color: white;
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
             z-index: 10001;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.6);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -475,31 +501,35 @@
             justify-content: center;
             line-height: 1;
             transition: all 0.3s;
+            border: 2px solid rgba(255,255,255,0.3);
         }
 
-        .close-modal:hover {
+        .close-modal:hover,
+        .close-modal:focus {
             color: #4caf50;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.9);
+            border-color: #4caf50;
+            outline: none;
         }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2em; }
             .hero .subhead { font-size: 1.1em; }
-            .hero-logo { max-width: 140px; }
+            .hero-logo { max-width: 120px; }
             h1 { font-size: 2.4em; }
             h2 { font-size: 1.8em; }
             h3 { font-size: 1.4em; }
             .phase { padding: 25px; }
             .close-modal {
-                top: 10px;
-                right: 10px;
+                top: 15px;
+                right: 15px;
                 font-size: 35px;
                 width: 45px;
                 height: 45px;
             }
             .modal-content {
                 max-width: 95%;
-                margin: 50px auto;
+                margin: 60px auto;
             }
         }
     </style>
@@ -536,10 +566,13 @@
 
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
-            <div class="mabah-tagline">Make America Better And Healthier</div>
+            <div class="mabah-full">MABAH — Make America Better And Healthier</div>
+            <div class="mabah-tagline">Sounds Like MAGA, But A Lot Bettah</div>
             <h1>ROADMAP</h1>
             <div class="subhead">Where We're Going — And How We Get There</div>
         </div>
+
+        <!-- No media blocks specified for Roadmap -->
 
         <div class="phase" style="border-left-color: #81c784;">
             <p>People don't just need a fix.</p>
@@ -682,18 +715,17 @@
                 <span>|</span>
                 <a href="mailto:info@phiers.org">Contact</a>
                 <span>|</span>
-                <a href="Legal.html">Legal</a>
-                <span>|</span>
                 <span>© PHIERS</span>
             </div>
             <div style="color: #a5d6a7; font-size: 0.9em; margin-top: 30px;">
                 PHIERS is a public-interest movement — not a company, not a product.<br>
                 The only thing missing is you.
             </div>
-            <p class="copyright">PHIERS Movement | Version: 2026-03-03</p>
+            <p class="copyright">PHIERS Movement | Version: 2026-03-05</p>
         </footer>
     </div>
 
+    <!-- Image Modal -->
     <div id="imageModal" class="image-modal" onclick="closeModal(event)">
         <span class="close-modal" onclick="closeModal(event)">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -717,20 +749,34 @@
         });
     });
 
+    // Image Modal functions
     function openModal(src) {
         var modal = document.getElementById('imageModal');
         var modalImg = document.getElementById('modalImage');
         modal.style.display = 'block';
         modalImg.src = src;
+        document.body.style.overflow = 'hidden';
     }
 
     function closeModal(event) {
         var modal = document.getElementById('imageModal');
         if (event.target === modal || event.target.classList.contains('close-modal')) {
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     }
 
+    // Prevent modal from closing when clicking the image
+    document.addEventListener('DOMContentLoaded', function() {
+        var modalImg = document.getElementById('modalImage');
+        if (modalImg) {
+            modalImg.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        }
+    });
+
+    // Add click handlers to all images
     document.addEventListener('DOMContentLoaded', function() {
         var images = document.querySelectorAll('img');
         images.forEach(function(img) {
@@ -743,10 +789,14 @@
         });
     });
 
+    // Close on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             var modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
+            if (modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         }
     });
     </script>
