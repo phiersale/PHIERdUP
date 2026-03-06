@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHIERS - Make America Better And Healthier</title>
+    <meta name="description" content="PHIERS: The math Congress fears. $600 telehealth replaces $10,000 insurance. One conversion funds 12 more. 3.5% = guaranteed change. Force Congress to act — or replace them.">
+    <link rel="canonical" href="https://phiersale.github.io/PHIERS-Concept/index.html" />
     <style>
-        /* CORE PHIERS LOOK AND FEEL */
         * {
             margin: 0;
             padding: 0;
@@ -26,7 +27,6 @@
             margin: 0 auto;
         }
 
-        /* GLOBAL NAVIGATION */
         .global-nav {
             background: rgba(26, 26, 46, 0.95);
             border: 1px solid rgba(76, 175, 80, 0.3);
@@ -39,7 +39,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* Mobile menu toggle */
         .mobile-menu-toggle {
             display: none;
             background: transparent;
@@ -150,46 +149,36 @@
             color: #4caf50;
         }
 
-        /* Mobile styles */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
                 display: block;
             }
-            
             .global-nav {
                 padding: 10px;
             }
-            
             .nav-links-container {
                 display: none;
                 flex-direction: column;
                 width: 100%;
                 margin-top: 15px;
             }
-            
             .nav-links-container.active {
                 display: flex;
             }
-            
             .nav-item, .dropdown {
                 width: 100%;
                 text-align: center;
             }
-            
             .dropdown-content {
                 position: static;
                 width: 100%;
                 margin-top: 5px;
             }
-            
             .dropbtn {
                 width: 100%;
             }
         }
 
-        /* ============================
-           HERO SYSTEM — UNIFIED
-           ============================ */
         .hero {
             text-align: center;
             padding: 50px 20px 40px 20px;
@@ -200,17 +189,24 @@
         }
 
         .hero-logo {
-            max-width: 180px;
-            margin-bottom: 20px;
+            max-width: 140px;
+            margin-bottom: 15px;
+        }
+
+        .mabah-full {
+            font-size: 1.1em;
+            color: #81c784;
+            font-weight: 600;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
         }
 
         .mabah-tagline {
             font-size: 1.2em;
-            color: #81c784;
-            font-weight: 600;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: #4caf50;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-style: italic;
         }
 
         .hero h1 {
@@ -226,9 +222,6 @@
             font-style: italic;
         }
 
-        /* ============================
-           PHIERS MEDIA — GLOBAL STYLES
-           ============================ */
         .phiers-media-block {
             width: 100%;
             max-width: 600px;
@@ -241,6 +234,12 @@
             display: block;
             border-radius: 6px;
             border: 2px solid rgba(76, 175, 80, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .phiers-media-block img:hover {
+            transform: scale(1.02);
         }
 
         .phiers-video-wrapper {
@@ -380,6 +379,17 @@
             box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
         }
 
+        .btn-warning {
+            background: linear-gradient(135deg, #f5c842, #e0a800);
+            border-color: #f5c842;
+            color: #000;
+        }
+
+        .btn-warning:hover {
+            background: linear-gradient(135deg, #f5c842, #d4a500);
+            color: #000;
+        }
+
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -419,6 +429,7 @@
             margin-top: 20px;
         }
 
+        /* Image Modal - FIXED for scrolling and closing */
         .image-modal {
             display: none;
             position: fixed;
@@ -437,20 +448,21 @@
             width: auto;
             height: auto;
             display: block;
-            margin: 60px auto;
+            margin: 80px auto;
             object-fit: contain;
+            pointer-events: auto;
         }
 
         .close-modal {
             position: fixed;
-            top: 15px;
-            right: 20px;
+            top: 20px;
+            right: 25px;
             color: white;
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
             z-index: 10001;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.6);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -459,34 +471,105 @@
             justify-content: center;
             line-height: 1;
             transition: all 0.3s;
+            border: 2px solid rgba(255,255,255,0.3);
         }
 
-        .close-modal:hover {
+        .close-modal:hover,
+        .close-modal:focus {
             color: #4caf50;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.9);
+            border-color: #4caf50;
+            outline: none;
         }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2em; }
             .hero .subhead { font-size: 1.1em; }
-            .hero-logo { max-width: 140px; }
+            .hero-logo { max-width: 120px; }
             h2 { font-size: 1.5em; }
             .connected-grid { grid-template-columns: 1fr; }
             .close-modal {
-                top: 10px;
-                right: 10px;
+                top: 15px;
+                right: 15px;
                 font-size: 35px;
                 width: 45px;
                 height: 45px;
             }
             .modal-content {
                 max-width: 95%;
-                margin: 50px auto;
+                margin: 60px auto;
             }
         }
+
+        /* Intro video modal - ONLY ON INDEX.HTML */
+        .intro-modal {
+            display: none; position: fixed; z-index: 20000;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92);
+            align-items: center; justify-content: center;
+        }
+        .intro-modal.show { display: flex; }
+        .intro-modal-inner {
+            position: relative;
+            width: 90%;
+            max-width: 680px;
+            background: #1a1a2e;
+            border: 2px solid #4caf50;
+            border-radius: 12px;
+            padding: 28px 24px 20px;
+        }
+        .intro-modal-close {
+            position: absolute; top: 10px; right: 16px;
+            color: #aaa; font-size: 28px; cursor: pointer;
+            line-height: 1; background: none; border: none;
+        }
+        .intro-modal-close:hover { color: #4caf50; }
+        .intro-modal-title {
+            color: #f5c842; font-size: 1.1em; font-weight: 700;
+            margin-bottom: 14px; padding-right: 30px;
+        }
+        .intro-modal-video {
+            position: relative; padding-bottom: 56.25%;
+            height: 0; border-radius: 8px; overflow: hidden;
+        }
+        .intro-modal-video iframe {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%; border: none;
+        }
+        .intro-modal-skip {
+            text-align: center; margin-top: 14px;
+        }
+        .intro-modal-skip button {
+            background: transparent; border: 1px solid #4caf50;
+            color: #4caf50; padding: 8px 22px; border-radius: 6px;
+            cursor: pointer; font-size: 0.95em;
+        }
+        .intro-modal-skip button:hover { background: rgba(76,175,80,0.15); }
     </style>
 </head>
 <body>
+
+    <!-- 1:11 Intro Video Modal - ONLY ON INDEX.HTML -->
+    <div id="introModal" class="intro-modal">
+        <div class="intro-modal-inner">
+            <button class="intro-modal-close" onclick="closeIntroModal()" aria-label="Close">&times;</button>
+            <p class="intro-modal-title">&#9654; 60 Seconds That Explain Everything — The PHIERS Intro (1:11)</p>
+            <div class="intro-modal-video">
+                <iframe id="introVideoFrame"
+                    src=""
+                    data-src="https://www.youtube.com/embed/2j-dF3hgdeE?autoplay=1"
+                    title="PHIERS Introduction - 1:11"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="intro-modal-skip">
+                <button onclick="closeIntroModal()">Skip to the site &rarr;</button>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <nav class="global-nav">
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
@@ -518,9 +601,10 @@
 
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
-            <div class="mabah-tagline">Make America Better And Healthier</div>
-            <h1>CRISIS</h1>
-            <div class="subhead">The Pattern We Can No Longer Ignore</div>
+            <div class="mabah-full">MABAH — Make America Better And Healthier</div>
+            <div class="mabah-tagline">Sounds Like MAGA, But A Lot Bettah</div>
+            <h1>The Math Congress Fears. The Movement They Can't Stop.</h1>
+            <div class="subhead">$600 replaces $10,000. 3.5% forces Congress to act. Here's the math — and the plan.</div>
         </div>
 
         <div class="phiers-media-block">
@@ -563,7 +647,21 @@
         </section>
 
         <div class="phiers-media-block">
-            <img src="22m-lost-coverage.png" alt="22 million Americans lost coverage when subsidies expired">
+            <img src="US_Millions_Face_Soaring_Health_Costs_as_Subsidies_Expire.png" alt="22 million Americans lost coverage when subsidies expired">
+        </div>
+
+        <div class="phiers-media-block" style="max-width:640px; margin: 36px auto;">
+            <p style="text-align:center; color:#f5c842; font-weight:600; margin-bottom:12px; font-size:1.05em;">Pathos Communications: Why They Put Their Reputation Behind PHIERS (7:11)</p>
+            <div class="phiers-video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/UD8svoGU7ZU"
+                    title="Pathos Communications: Why They Put Their Reputation Behind PHIERS (7:11)"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="text-align:center; color:#81c784; font-size:0.9em; margin-top:10px; font-style:italic;">Third-party credibility. A Fortune 500 PR firm explains why they backed this movement.</p>
         </div>
 
         <section>
@@ -619,7 +717,7 @@
         </section>
 
         <div class="phiers-media-block">
-            <img src="cascade-math.png" alt="Cascade math: 1 to 234 million coverage path">
+            <img src="Cascade_Math.png" alt="Cascade math: 1 to 234 million coverage path">
         </div>
 
         <section>
@@ -681,6 +779,19 @@
             </div>
         </section>
 
+        <section style="text-align: center; margin: 60px 0; padding: 40px 30px; background: rgba(76,175,80,0.07); border: 1px solid rgba(76,175,80,0.25); border-radius: 12px;">
+            <h2 style="margin-top: 0;">Start Where You Are</h2>
+            <p style="font-size: 1.1em; margin-bottom: 30px;">Pick the page that fits your question right now.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; max-width: 700px; margin: 0 auto;">
+                <a href="SimpleMath.html" class="btn" style="font-size:1em; padding:14px 20px;">&#128202; The Math</a>
+                <a href="5D_Solutions.html" class="btn" style="font-size:1em; padding:14px 20px;">&#128295; The Solution</a>
+                <a href="Crisis.html" class="btn" style="font-size:1em; padding:14px 20px;">&#128680; The Crisis</a>
+                <a href="Leverage.html" class="btn" style="font-size:1em; padding:14px 20px;">&#9889; The Leverage</a>
+                <a href="UNBREAKABLE.html" class="btn" style="font-size:1em; padding:14px 20px;">&#128170; UNBREAKABLE</a>
+                <a href="Action.html" class="btn btn-warning" style="font-size:1em; padding:14px 20px;">&#9994; Take Action</a>
+            </div>
+        </section>
+
         <section style="text-align: center; margin: 60px 0;">
             <h2>Be Specific About What We the People Want</h2>
             <p style="font-size: 1.2em;">Fill out the survey. Make your voice count.</p>
@@ -699,18 +810,17 @@
                 <span>|</span>
                 <a href="mailto:info@phiers.org">Contact</a>
                 <span>|</span>
-                <a href="Legal.html">Legal</a>
-                <span>|</span>
                 <span>© PHIERS</span>
             </div>
             <div style="color: #a5d6a7; font-size: 0.9em; margin-top: 30px;">
                 PHIERS is a public-interest movement — not a company, not a product.<br>
                 The only thing missing is you.
             </div>
-            <p class="copyright">PHIERS Movement | Version: 2026-03-03</p>
+            <p class="copyright">PHIERS Movement | Version: 2026-03-05</p>
         </footer>
     </div>
 
+    <!-- Image Modal -->
     <div id="imageModal" class="image-modal" onclick="closeModal(event)">
         <span class="close-modal" onclick="closeModal(event)">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -734,20 +844,34 @@
         });
     });
 
+    // Image Modal functions
     function openModal(src) {
         var modal = document.getElementById('imageModal');
         var modalImg = document.getElementById('modalImage');
         modal.style.display = 'block';
         modalImg.src = src;
+        document.body.style.overflow = 'hidden';
     }
 
     function closeModal(event) {
         var modal = document.getElementById('imageModal');
         if (event.target === modal || event.target.classList.contains('close-modal')) {
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     }
 
+    // Prevent modal from closing when clicking the image
+    document.addEventListener('DOMContentLoaded', function() {
+        var modalImg = document.getElementById('modalImage');
+        if (modalImg) {
+            modalImg.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        }
+    });
+
+    // Add click handlers to all images
     document.addEventListener('DOMContentLoaded', function() {
         var images = document.querySelectorAll('img');
         images.forEach(function(img) {
@@ -760,10 +884,35 @@
         });
     });
 
+    // Intro video modal — fires once per session
+    function closeIntroModal() {
+        var modal = document.getElementById('introModal');
+        var frame = document.getElementById('introVideoFrame');
+        modal.classList.remove('show');
+        frame.src = '';  // stop video
+        sessionStorage.setItem('introSeen', '1');
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!sessionStorage.getItem('introSeen')) {
+            setTimeout(function() {
+                var modal = document.getElementById('introModal');
+                var frame = document.getElementById('introVideoFrame');
+                modal.classList.add('show');
+                frame.src = frame.getAttribute('data-src');
+            }, 1200);
+        }
+    });
+
+    // Close on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
+            closeIntroModal();
             var modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
+            if (modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         }
     });
     </script>
