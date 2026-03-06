@@ -187,17 +187,24 @@
         }
 
         .hero-logo {
-            max-width: 180px;
-            margin-bottom: 20px;
+            max-width: 140px;
+            margin-bottom: 15px;
+        }
+
+        .mabah-full {
+            font-size: 1.1em;
+            color: #81c784;
+            font-weight: 600;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
         }
 
         .mabah-tagline {
             font-size: 1.2em;
-            color: #81c784;
-            font-weight: 600;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: #4caf50;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-style: italic;
         }
 
         .hero h1 {
@@ -394,6 +401,17 @@
             box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
         }
 
+        .btn-warning {
+            background: linear-gradient(135deg, #f5c842, #e0a800);
+            border-color: #f5c842;
+            color: #000;
+        }
+
+        .btn-warning:hover {
+            background: linear-gradient(135deg, #f5c842, #d4a500);
+            color: #000;
+        }
+
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -433,73 +451,15 @@
             margin-top: 20px;
         }
 
-        .image-modal {
-            display: none;
-            position: fixed;
-            z-index: 10000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.95);
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .modal-content {
-            max-width: 90%;
-            width: auto;
-            height: auto;
-            display: block;
-            margin: 60px auto;
-            object-fit: contain;
-        }
-
-        .close-modal {
-            position: fixed;
-            top: 15px;
-            right: 20px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 10001;
-            background: rgba(0,0,0,0.5);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1;
-            transition: all 0.3s;
-        }
-
-        .close-modal:hover {
-            color: #4caf50;
-            background: rgba(0,0,0,0.8);
-        }
-
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2em; }
             .hero .subhead { font-size: 1.1em; }
-            .hero-logo { max-width: 140px; }
+            .hero-logo { max-width: 120px; }
             h1 { font-size: 2.4em; }
             h2 { font-size: 1.5em; }
             .big-number { font-size: 2.5em; }
             .math-equation { font-size: 1.5em; }
             .section { padding: 25px; }
-            .close-modal {
-                top: 10px;
-                right: 10px;
-                font-size: 35px;
-                width: 45px;
-                height: 45px;
-            }
-            .modal-content {
-                max-width: 95%;
-                margin: 50px auto;
-            }
         }
     </style>
 </head>
@@ -535,7 +495,8 @@
 
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
-            <div class="mabah-tagline">Make America Better And Healthier</div>
+            <div class="mabah-full">MABAH — Make America Better And Healthier</div>
+            <div class="mabah-tagline">Sounds Like MAGA, But A Lot Bettah</div>
             <h1>SIMPLE MATH</h1>
             <div class="subhead">The Numbers Behind Stabilization</div>
         </div>
@@ -601,7 +562,7 @@
         </div>
 
         <div class="phiers-media-block">
-            <img src="cascade-math.png" alt="Cascade math: 1 conversion funds 12 to 19 more">
+            <img src="Cascade_Math.png" alt="Cascade math: 1 conversion funds 12 to 19 more">
         </div>
 
         <div class="section">
@@ -657,8 +618,6 @@
                 <span>|</span>
                 <a href="mailto:info@phiers.org">Contact</a>
                 <span>|</span>
-                <a href="Legal.html">Legal</a>
-                <span>|</span>
                 <span>© PHIERS</span>
             </div>
             <div style="color: #a5d6a7; font-size: 0.9em; margin-top: 30px;">
@@ -667,11 +626,6 @@
             </div>
             <p class="copyright">PHIERS Movement | Version: 2026-03-03</p>
         </footer>
-    </div>
-
-    <div id="imageModal" class="image-modal" onclick="closeModal(event)">
-        <span class="close-modal" onclick="closeModal(event)">&times;</span>
-        <img class="modal-content" id="modalImage">
     </div>
 
     <script>
@@ -692,20 +646,34 @@
         });
     });
 
+    // Image Modal functions
     function openModal(src) {
         var modal = document.getElementById('imageModal');
         var modalImg = document.getElementById('modalImage');
         modal.style.display = 'block';
         modalImg.src = src;
+        document.body.style.overflow = 'hidden';
     }
 
     function closeModal(event) {
         var modal = document.getElementById('imageModal');
         if (event.target === modal || event.target.classList.contains('close-modal')) {
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     }
 
+    // Prevent modal from closing when clicking the image
+    document.addEventListener('DOMContentLoaded', function() {
+        var modalImg = document.getElementById('modalImage');
+        if (modalImg) {
+            modalImg.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        }
+    });
+
+    // Add click handlers to all images
     document.addEventListener('DOMContentLoaded', function() {
         var images = document.querySelectorAll('img');
         images.forEach(function(img) {
@@ -718,10 +686,14 @@
         });
     });
 
+    // Close on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             var modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
+            if (modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         }
     });
     </script>
