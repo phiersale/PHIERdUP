@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5D Solutions - PHIERS</title>
     <style>
-        /* CORE PHIERS LOOK AND FEEL */
         * {
             margin: 0;
             padding: 0;
@@ -26,7 +25,6 @@
             margin: 0 auto;
         }
 
-        /* GLOBAL NAVIGATION */
         .global-nav {
             background: rgba(26, 26, 46, 0.95);
             border: 1px solid rgba(76, 175, 80, 0.3);
@@ -39,7 +37,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* Mobile menu toggle */
         .mobile-menu-toggle {
             display: none;
             background: transparent;
@@ -150,46 +147,36 @@
             color: #4caf50;
         }
 
-        /* Mobile styles */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
                 display: block;
             }
-            
             .global-nav {
                 padding: 10px;
             }
-            
             .nav-links-container {
                 display: none;
                 flex-direction: column;
                 width: 100%;
                 margin-top: 15px;
             }
-            
             .nav-links-container.active {
                 display: flex;
             }
-            
             .nav-item, .dropdown {
                 width: 100%;
                 text-align: center;
             }
-            
             .dropdown-content {
                 position: static;
                 width: 100%;
                 margin-top: 5px;
             }
-            
             .dropbtn {
                 width: 100%;
             }
         }
 
-        /* ============================
-           HERO SYSTEM — UNIFIED
-           ============================ */
         .hero {
             text-align: center;
             padding: 50px 20px 40px 20px;
@@ -226,12 +213,9 @@
             font-style: italic;
         }
 
-        /* ============================
-           PHIERS MEDIA — GLOBAL STYLES
-           ============================ */
         .phiers-media-block {
             width: 100%;
-            max-width: 600px; /* ~50% of a 1200px layout */
+            max-width: 600px;
             margin: 40px auto;
         }
 
@@ -243,11 +227,10 @@
             border: 2px solid rgba(76, 175, 80, 0.3);
         }
 
-        /* Responsive video wrapper */
         .phiers-video-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 ratio */
+            padding-bottom: 56.25%;
             height: 0;
             border-radius: 8px;
             overflow: hidden;
@@ -263,7 +246,6 @@
             border: none;
         }
 
-        /* Mobile */
         @media (max-width: 768px) {
             .phiers-media-block {
                 max-width: 100%;
@@ -271,7 +253,6 @@
             }
         }
 
-        /* Headers */
         h2 {
             color: #4caf50;
             font-size: 1.8em;
@@ -293,7 +274,6 @@
             font-size: 1.1em;
         }
 
-        /* Section styling - with number and title on same line */
         .section-box {
             background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
             padding: 40px;
@@ -359,7 +339,6 @@
             font-size: 1.2em;
         }
 
-        /* Lists */
         ul {
             margin: 15px 0 15px 30px;
         }
@@ -370,26 +349,6 @@
             font-size: 1.1em;
         }
 
-        /* Impact grid */
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .impact-item {
-            background: rgba(76, 175, 80, 0.1);
-            padding: 15px 20px;
-            border-radius: 8px;
-            border-left: 3px solid #4caf50;
-        }
-
-        .impact-item p {
-            margin: 0;
-        }
-
-        /* Button */
         .btn {
             background: linear-gradient(135deg, #4caf50, #2e7d32);
             color: white;
@@ -409,7 +368,6 @@
             box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -449,7 +407,6 @@
             margin-top: 20px;
         }
 
-        /* Image Modal */
         .image-modal {
             display: none;
             position: fixed;
@@ -497,7 +454,6 @@
             background: rgba(0,0,0,0.8);
         }
 
-        /* Mobile responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2em; }
             .hero .subhead { font-size: 1.1em; }
@@ -523,7 +479,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- GLOBAL NAVIGATION -->
         <nav class="global-nav">
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
             <div class="nav-links-container" id="navLinks">
@@ -552,7 +507,6 @@
             </div>
         </nav>
 
-        <!-- HERO - Unified Identity Block -->
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
             <div class="mabah-tagline">Make America Better And Healthier</div>
@@ -560,23 +514,6 @@
             <div class="subhead">Coordinated Action Across Five Dimensions</div>
         </div>
 
-        <!-- Rubik's Cube / 5D visual -->
-        <div class="phiers-media-block">
-            <img src="images/5d-rubiks.png" alt="5D Solutions Rubik's Cube showing five dimensions working together">
-        </div>
-
-        <!-- Optional short explainer video (commented out until video ID provided) -->
-        <!-- <div class="phiers-media-block">
-            <div class="phiers-video-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/VIDEO_ID_5D" 
-                    title="5D Solutions Overview"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div> -->
-
-        <!-- SECTION 1: The Logical Next Step -->
         <div class="section-box">
             <div class="section-title-line">
                 <span class="section-number">1.</span>
@@ -591,7 +528,6 @@
             <p class="green-emphasis">Because it is necessary.</p>
         </div>
 
-        <!-- SECTION 2: Why Five Dimensions -->
         <div class="section-box">
             <div class="section-title-line">
                 <span class="section-number">2.</span>
@@ -602,16 +538,17 @@
             <p>Housing affects food security.</p>
             <p>Economic stability affects national stability.</p>
             <p>National stability affects domestic capacity.</p>
-            
             <p style="margin-top: 25px;">These systems reinforce each other.</p>
             <p>Stability in one strengthens the others.</p>
             <p>Instability in one weakens the others.</p>
-            
             <p style="margin-top: 25px;">Coordinated response multiplies impact.</p>
             <p class="green-emphasis">Fragmented response cancels it.</p>
         </div>
 
-        <!-- SECTION 3: Simultaneous, Not Sequential -->
+        <div class="phiers-media-block">
+            <img src="5d-rubiks.png" alt="5D Solutions Rubik's Cube showing five dimensions working together">
+        </div>
+
         <div class="section-box">
             <div class="section-title-line">
                 <span class="section-number">3.</span>
@@ -619,16 +556,12 @@
             </div>
             <p>Traditional policy works in sequence.</p>
             <p>Pass one bill.<br>Debate the next.<br>Fund one program.<br>Delay the next.</p>
-            
             <p style="margin-top: 25px;">But overlapping problems require simultaneous action.</p>
-            
             <p>Stabilize healthcare.<br>Expand AI-resistant jobs.<br>Create income security from savings.<br>Reinforce labor leverage.<br>Establish guardrails that protect public interest.</p>
-            
             <p style="margin-top: 25px;">Each dimension strengthens the others.</p>
             <p class="green-emphasis">This is coordinated execution.</p>
         </div>
 
-        <!-- SECTION 4: The Operating Principle -->
         <div class="section-box">
             <div class="section-title-line">
                 <span class="section-number">4.</span>
@@ -636,19 +569,16 @@
             </div>
             <p>5D is not ideology.</p>
             <p class="green-emphasis">It is sequencing across systems.</p>
-            
             <p>Healthcare provides immediate stabilization.</p>
             <p>Stability unlocks labor mobility.</p>
             <p>Labor mobility strengthens wages.</p>
             <p>Wage strength supports housing security.</p>
             <p>Housing security reduces public strain.</p>
             <p>Reduced strain increases national capacity.</p>
-            
             <p style="margin-top: 25px;">Every dimension reinforces the next.</p>
             <p class="green-emphasis">Solve the base. Then scale together.</p>
         </div>
 
-        <!-- SECTION 5: Why This Is Achievable -->
         <div class="section-box">
             <div class="section-title-line">
                 <span class="section-number">5.</span>
@@ -656,20 +586,16 @@
             </div>
             <p>This model does not rely on new taxes.</p>
             <p class="green-emphasis">It relies on cost reduction.</p>
-            
             <p>It does not depend on ideology.</p>
             <p class="green-emphasis">It depends on arithmetic.</p>
-            
             <p>Telehealth reduces annual healthcare costs from $10,000 to $600.</p>
             <p>Savings fund expansion.</p>
             <p>Expansion stabilizes households.</p>
             <p>Stabilization strengthens the economy.</p>
             <p>Strength strengthens leverage.</p>
-            
             <p class="green-emphasis">This is execution through math.</p>
         </div>
 
-        <!-- SECTION 6: The Five Dimensions -->
         <div class="section-box">
             <div class="section-title-line">
                 <span class="section-number">6.</span>
@@ -679,9 +605,7 @@
             <p>Each dimension reinforces the others.</p>
             <p>Each dimension is measurable.</p>
             <p>Each dimension is achievable.</p>
-            
             <p style="margin-top: 25px; font-size: 1.2em; color: white;">The five dimensions are:</p>
-            
             <div class="highlight-box">
                 <p style="font-size: 1.1em;">Healthcare stabilization</p>
                 <p style="font-size: 1.1em;">AI-resistant job expansion</p>
@@ -689,12 +613,10 @@
                 <p style="font-size: 1.1em;">Labor leverage through cost removal</p>
                 <p style="font-size: 1.1em;">Institutional guardrails that protect the public</p>
             </div>
-            
             <p>None function alone.</p>
             <p class="green-emphasis">Together, they stabilize the system.</p>
         </div>
 
-        <!-- SECTION 7: What This Changes -->
         <div class="section-box">
             <div class="section-title-line">
                 <span class="section-number">7.</span>
@@ -706,12 +628,10 @@
             <p>When wages rise, housing becomes sustainable.</p>
             <p>When housing stabilizes, public strain decreases.</p>
             <p>When public strain decreases, institutional focus improves.</p>
-            
             <p style="margin-top: 25px;">This is coordinated reinforcement.</p>
             <p class="green-emphasis">This is how systems realign.</p>
         </div>
 
-        <!-- SECTION 8: From Competence to Leverage -->
         <div class="section-box">
             <div class="section-title-line">
                 <span class="section-number">8.</span>
@@ -719,12 +639,10 @@
             </div>
             <p>Crisis showed the capacity gap.</p>
             <p>5D demonstrates coordinated execution.</p>
-            
             <p style="margin-top: 25px;">When voters implement practical solutions at scale, leverage shifts.</p>
             <p>Institutions respond to stability.</p>
             <p>Stability creates alignment.</p>
             <p>Alignment produces accountability.</p>
-            
             <div class="insight-box" style="margin-top: 30px;">
                 <p style="font-size: 1.2em; color: #81c784;">Transition Line to SimpleMath</p>
                 <p>The next question is funding.</p>
@@ -733,19 +651,16 @@
             </div>
         </div>
 
-        <!-- CALL TO ACTION -->
         <div style="text-align: center; margin: 60px 0;">
             <h2>Ready for the Math?</h2>
             <p style="font-size: 1.2em;">The numbers are simple. The savings are real.</p>
             <a href="SimpleMath.html" class="btn">See the Simple Math →</a>
         </div>
 
-        <!-- FOOTER -->
         <footer>
             <h3>PHIERS Movement | MABAH</h3>
             <p><strong>Make America Better And Healthier</strong></p>
             <p style="margin: 20px 0;">PHIERS is a citizen coalition using collective leverage to force Congress to fix healthcare — or replace them.</p>
-            
             <div class="footer-links">
                 <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
                 <span>|</span>
@@ -755,17 +670,14 @@
                 <span>|</span>
                 <span>© PHIERS</span>
             </div>
-            
             <div style="color: #a5d6a7; font-size: 0.9em; margin-top: 30px;">
                 PHIERS is a public-interest movement — not a company, not a product.<br>
                 The only thing missing is you.
             </div>
-            
             <p class="copyright">PHIERS Movement | Version: 2026-03-03</p>
         </footer>
     </div>
 
-    <!-- Image Modal -->
     <div id="imageModal" class="image-modal" onclick="closeModal(event)">
         <span class="close-modal" onclick="closeModal(event)">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -777,7 +689,6 @@
         navLinks.classList.toggle('active');
     }
 
-    // Close mobile menu when a link is clicked
     document.addEventListener('DOMContentLoaded', function() {
         var navItems = document.querySelectorAll('.nav-links-container a');
         navItems.forEach(function(item) {
@@ -790,7 +701,6 @@
         });
     });
 
-    // Image Modal functions
     function openModal(src) {
         var modal = document.getElementById('imageModal');
         var modalImg = document.getElementById('modalImage');
@@ -805,11 +715,9 @@
         }
     }
 
-    // Add click handlers to all images
     document.addEventListener('DOMContentLoaded', function() {
         var images = document.querySelectorAll('img');
         images.forEach(function(img) {
-            // Skip if it's the logo or has no src
             if (img.src && !img.src.includes('PHIERS_Logo')) {
                 img.style.cursor = 'pointer';
                 img.addEventListener('click', function() {
@@ -819,7 +727,6 @@
         });
     });
 
-    // Close on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             var modal = document.getElementById('imageModal');

@@ -196,7 +196,7 @@
             background: linear-gradient(135deg, rgba(15, 52, 96, 0.9), rgba(22, 33, 62, 0.9));
             border-radius: 12px;
             margin-bottom: 40px;
-            border: 2px solid rgba(244, 67, 54, 0.3); /* RED - CRISIS ONLY */
+            border: 2px solid rgba(244, 67, 54, 0.3);
         }
 
         .hero-logo {
@@ -214,7 +214,7 @@
         }
 
         .hero h1 {
-            color: #f44336; /* RED - CRISIS ONLY */
+            color: #f44336;
             font-size: 2.8em;
             margin-bottom: 15px;
             text-shadow: 0 0 20px rgba(244, 67, 54, 0.3);
@@ -231,7 +231,7 @@
            ============================ */
         .phiers-media-block {
             width: 100%;
-            max-width: 600px; /* ~50% of a 1200px layout */
+            max-width: 600px;
             margin: 40px auto;
         }
 
@@ -243,11 +243,10 @@
             border: 2px solid rgba(76, 175, 80, 0.3);
         }
 
-        /* Responsive video wrapper */
         .phiers-video-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 ratio */
+            padding-bottom: 56.25%;
             height: 0;
             border-radius: 8px;
             overflow: hidden;
@@ -263,7 +262,6 @@
             border: none;
         }
 
-        /* Mobile */
         @media (max-width: 768px) {
             .phiers-media-block {
                 max-width: 100%;
@@ -271,7 +269,6 @@
             }
         }
 
-        /* Headers */
         h2 {
             color: #4caf50;
             font-size: 1.8em;
@@ -293,7 +290,6 @@
             font-size: 1.1em;
         }
 
-        /* Content boxes */
         .pattern-box {
             background: rgba(244, 67, 54, 0.1);
             border: 2px solid #f44336;
@@ -321,7 +317,6 @@
             border-radius: 8px;
         }
 
-        /* Lists */
         ul {
             margin: 20px 0 20px 30px;
         }
@@ -332,7 +327,6 @@
             font-size: 1.1em;
         }
 
-        /* Two-column grid */
         .connected-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -353,7 +347,6 @@
             color: #ffab91;
         }
 
-        /* Emphasis */
         .green-emphasis {
             color: #4caf50;
             font-weight: bold;
@@ -366,7 +359,6 @@
             font-size: 1.2em;
         }
 
-        /* Button */
         .btn {
             background: linear-gradient(135deg, #4caf50, #2e7d32);
             color: white;
@@ -375,7 +367,6 @@
             font-weight: bold;
             border: 2px solid #4caf50;
             border-radius: 8px;
-            cursor: pointer;
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s;
@@ -389,7 +380,6 @@
             box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -429,7 +419,6 @@
             margin-top: 20px;
         }
 
-        /* Image Modal */
         .image-modal {
             display: none;
             position: fixed;
@@ -477,7 +466,6 @@
             background: rgba(0,0,0,0.8);
         }
 
-        /* Mobile responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2em; }
             .hero .subhead { font-size: 1.1em; }
@@ -500,7 +488,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- GLOBAL NAVIGATION -->
         <nav class="global-nav">
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
             <div class="nav-links-container" id="navLinks">
@@ -529,7 +516,6 @@
             </div>
         </nav>
 
-        <!-- HERO - Unified Identity Block -->
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
             <div class="mabah-tagline">Make America Better And Healthier</div>
@@ -537,7 +523,6 @@
             <div class="subhead">The Pattern We Can No Longer Ignore</div>
         </div>
 
-        <!-- Core cascade math video (3:33) -->
         <div class="phiers-media-block">
             <div class="phiers-video-wrapper">
                 <iframe 
@@ -548,18 +533,10 @@
             </div>
         </div>
 
-        <!-- Optional supporting image -->
-        <div class="phiers-media-block">
-            <img src="images/cascade-math.png" alt="Cascade math: 1 to 234 million coverage path">
-        </div>
-
-        <!-- THE PATTERN -->
         <section>
             <h2>The Pattern</h2>
-            
             <div class="pattern-box">
                 <p style="font-size: 1.2em; margin-bottom: 20px;">Several problems are hitting at the same time.</p>
-                
                 <ul style="columns: 2; column-gap: 40px;">
                     <li>Healthcare costs rise.</li>
                     <li>Wages lag.</li>
@@ -568,66 +545,49 @@
                     <li>Stable jobs are harder to find.</li>
                     <li>Military commitments increase economic strain.</li>
                 </ul>
-                
                 <p>When conflicts escalate, it affects life at home.</p>
                 <p>Energy markets react.</p>
                 <p>Supply chains tighten or are disrupted.</p>
                 <p>Prices rise.</p>
-                
                 <p class="red-emphasis" style="margin: 30px 0;">The people absorb the impact.</p>
-                
                 <p>Each issue gets debated on its own.</p>
-                
                 <p class="green-emphasis">But they don't exist on their own.</p>
                 <p class="green-emphasis">They connect.</p>
-                
                 <div class="connected-grid">
-                    <div class="connected-item">
-                        <p>When healthcare gets more expensive, people cut back.</p>
-                    </div>
-                    <div class="connected-item">
-                        <p>When jobs feel unstable, housing falls behind.</p>
-                    </div>
-                    <div class="connected-item">
-                        <p>When costs rise everywhere, pressure builds everywhere.</p>
-                    </div>
+                    <div class="connected-item"><p>When healthcare gets more expensive, people cut back.</p></div>
+                    <div class="connected-item"><p>When jobs feel unstable, housing falls behind.</p></div>
+                    <div class="connected-item"><p>When costs rise everywhere, pressure builds everywhere.</p></div>
                 </div>
-                
                 <p class="red-emphasis">Solving one piece at a time will not fix it.</p>
             </div>
         </section>
 
-        <!-- THE STRUCTURAL PROBLEM -->
+        <div class="phiers-media-block">
+            <img src="22m-lost-coverage.png" alt="22 million Americans lost coverage when subsidies expired">
+        </div>
+
         <section>
             <h2>The Structural Problem</h2>
-            
             <div class="insight-box">
                 <p>Government usually tackles problems separately.</p>
-                
                 <ul>
                     <li>There's a healthcare bill.</li>
                     <li>A jobs bill.</li>
                     <li>A housing plan.</li>
                     <li>A foreign policy debate.</li>
                 </ul>
-                
                 <p class="green-emphasis">But the problems reinforce each other.</p>
-                
                 <p>Medical debt limits mobility.</p>
                 <p>Job instability weakens communities.</p>
                 <p>Lower earnings reduce tax revenue.</p>
                 <p>Reduced revenue strains public services.</p>
-                
                 <p style="font-style: italic; margin: 25px 0;">It works like a puzzle — move one piece, the others shift.</p>
-                
                 <p class="red-emphasis">You can't untangle something this connected by pulling one thread.</p>
             </div>
         </section>
 
-        <!-- WHAT FRAGMENTED SOLUTIONS COST -->
         <section>
             <h2>What Fragmented Solutions Cost</h2>
-            
             <div class="pattern-box">
                 <p class="green-emphasis">When healthcare stays unstable:</p>
                 <ul>
@@ -636,139 +596,104 @@
                     <li>Unions spend bargaining power on benefits instead of pay.</li>
                     <li>People delay care.</li>
                 </ul>
-                
                 <p class="green-emphasis" style="margin-top: 30px;">When work becomes unstable:</p>
                 <ul>
                     <li>Housing insecurity rises.</li>
                     <li>Local economies weaken.</li>
                     <li>Public services feel the strain.</li>
                 </ul>
-                
                 <p class="red-emphasis" style="text-align: center; margin-top: 30px;">These pressures stack.</p>
             </div>
         </section>
 
-        <!-- THE GAP IN HOW WE RESPOND -->
         <section>
             <h2>The Gap in How We Respond</h2>
-            
             <div class="insight-box">
                 <p>The issue isn't intelligence.</p>
-                
                 <p class="green-emphasis" style="font-size: 1.5em;">It's coordination.</p>
-                
                 <p>Problems are moving faster than the way policy usually works.</p>
-                
                 <p>When institutions move slowly and pressure keeps building, something eventually gives.</p>
-                
                 <p>When people act alone instead of together, they pay more and lose bargaining power.</p>
-                
                 <p>The question is whether change comes by design — or by breakdown.</p>
             </div>
         </section>
 
-        <!-- CLARITY BEFORE LEVERAGE -->
+        <div class="phiers-media-block">
+            <img src="cascade-math.png" alt="Cascade math: 1 to 234 million coverage path">
+        </div>
+
         <section>
             <h2>Clarity Before Leverage</h2>
-            
             <div class="solution-box">
                 <p>Realignment doesn't start with anger.</p>
-                
                 <p class="green-emphasis" style="font-size: 1.5em;">It starts with clarity.</p>
-                
                 <p>Sign the petition.</p>
                 <p>Fill out the survey.</p>
                 <p style="font-weight: bold;">Be specific about what We the People want.</p>
-                
                 <p>Congress answers to the people who elect it.</p>
-                
                 <p>Authority in a representative system is not automatic.</p>
                 <p>It depends on alignment with documented constituent direction.</p>
-                
                 <p>No one stays in office without public confidence.</p>
-                
                 <p>When alignment breaks down, public confidence shifts.</p>
             </div>
         </section>
 
-        <!-- WHY HEALTHCARE COMES FIRST -->
         <section>
             <h2>Why Healthcare Comes First</h2>
-            
             <div class="insight-box">
                 <p>Health insurance is one of the largest routine expenses companies face.</p>
                 <p>It is also one of the largest routine expenses individuals face.</p>
-                
                 <p class="green-emphasis">When that cost becomes predictable:</p>
-                
                 <ul>
                     <li>Workers have more flexibility.</li>
                     <li>Employers can plan.</li>
                     <li>Unions can focus on wages.</li>
                     <li>Households stabilize.</li>
                 </ul>
-                
                 <p>Start with the base.</p>
                 <p>Stabilize routine care.</p>
                 <p class="green-emphasis">Then build from there.</p>
             </div>
         </section>
 
-        <!-- WHY THIS MATTERS NOW -->
         <section>
             <h2>Why This Matters Now</h2>
-            
             <div class="pattern-box">
                 <p>People across the country are feeling the pressure.</p>
-                
                 <p>Economic strain affects political stability.</p>
                 <p>Political instability affects trust.</p>
-                
                 <p>When trust drops, coordination weakens.</p>
-                
                 <p>When people organize and stabilize healthcare together, everyone benefits.</p>
-                
                 <p>Stability restores confidence.</p>
                 <p>Confidence restores capacity.</p>
             </div>
         </section>
 
-        <!-- THE DECISION POINT -->
         <section>
             <h2>The Decision Point</h2>
-            
             <div class="solution-box" style="text-align: center;">
                 <p style="font-size: 1.3em;">This is not about left or right.</p>
-                
                 <p class="green-emphasis" style="font-size: 1.5em;">It's about whether connected problems get solved in a connected way.</p>
-                
                 <p>Waiting for systems to adjust on their own is a risk.</p>
-                
                 <p>Demonstrating workable solutions shifts the balance.</p>
-                
                 <p class="red-emphasis" style="font-size: 1.5em; margin: 35px 0;">That's where PHIERS begins.</p>
-                
                 <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn">Sign the Petition</a>
             </div>
         </section>
 
-        <!-- CALL TO ACTION -->
         <section style="text-align: center; margin: 60px 0;">
             <h2>Be Specific About What We the People Want</h2>
             <p style="font-size: 1.2em;">Fill out the survey. Make your voice count.</p>
-            
             <div style="margin: 30px 0;">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn" style="margin-right: 15px;">Take the Survey</a>
                 <a href="5D_Solutions.html" class="btn" style="background: transparent;">See the Solution</a>
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer>
             <h3>PHIERS Movement | MABAH</h3>
             <p><strong>Make America Better And Healthier</strong></p>
             <p style="margin: 20px 0;">PHIERS is a citizen coalition using collective leverage to force Congress to fix healthcare — or replace them.</p>
-            
             <div class="footer-links">
                 <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
                 <span>|</span>
@@ -778,17 +703,14 @@
                 <span>|</span>
                 <span>© PHIERS</span>
             </div>
-            
             <div style="color: #a5d6a7; font-size: 0.9em; margin-top: 30px;">
                 PHIERS is a public-interest movement — not a company, not a product.<br>
                 The only thing missing is you.
             </div>
-            
             <p class="copyright">PHIERS Movement | Version: 2026-03-03</p>
         </footer>
     </div>
 
-    <!-- Image Modal -->
     <div id="imageModal" class="image-modal" onclick="closeModal(event)">
         <span class="close-modal" onclick="closeModal(event)">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -800,7 +722,6 @@
         navLinks.classList.toggle('active');
     }
 
-    // Close mobile menu when a link is clicked
     document.addEventListener('DOMContentLoaded', function() {
         var navItems = document.querySelectorAll('.nav-links-container a');
         navItems.forEach(function(item) {
@@ -813,7 +734,6 @@
         });
     });
 
-    // Image Modal functions
     function openModal(src) {
         var modal = document.getElementById('imageModal');
         var modalImg = document.getElementById('modalImage');
@@ -828,11 +748,9 @@
         }
     }
 
-    // Add click handlers to all images
     document.addEventListener('DOMContentLoaded', function() {
         var images = document.querySelectorAll('img');
         images.forEach(function(img) {
-            // Skip if it's the logo or has no src
             if (img.src && !img.src.includes('PHIERS_Logo')) {
                 img.style.cursor = 'pointer';
                 img.addEventListener('click', function() {
@@ -842,7 +760,6 @@
         });
     });
 
-    // Close on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             var modal = document.getElementById('imageModal');

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leverage - PHIERS</title>
     <style>
-        /* CORE PHIERS LOOK AND FEEL */
         * {
             margin: 0;
             padding: 0;
@@ -26,7 +25,6 @@
             margin: 0 auto;
         }
 
-        /* GLOBAL NAVIGATION */
         .global-nav {
             background: rgba(26, 26, 46, 0.95);
             border: 1px solid rgba(76, 175, 80, 0.3);
@@ -39,7 +37,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* Mobile menu toggle */
         .mobile-menu-toggle {
             display: none;
             background: transparent;
@@ -150,46 +147,36 @@
             color: #4caf50;
         }
 
-        /* Mobile styles */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
                 display: block;
             }
-            
             .global-nav {
                 padding: 10px;
             }
-            
             .nav-links-container {
                 display: none;
                 flex-direction: column;
                 width: 100%;
                 margin-top: 15px;
             }
-            
             .nav-links-container.active {
                 display: flex;
             }
-            
             .nav-item, .dropdown {
                 width: 100%;
                 text-align: center;
             }
-            
             .dropdown-content {
                 position: static;
                 width: 100%;
                 margin-top: 5px;
             }
-            
             .dropbtn {
                 width: 100%;
             }
         }
 
-        /* ============================
-           HERO SYSTEM — UNIFIED
-           ============================ */
         .hero {
             text-align: center;
             padding: 50px 20px 40px 20px;
@@ -226,12 +213,9 @@
             font-style: italic;
         }
 
-        /* ============================
-           PHIERS MEDIA — GLOBAL STYLES
-           ============================ */
         .phiers-media-block {
             width: 100%;
-            max-width: 600px; /* ~50% of a 1200px layout */
+            max-width: 600px;
             margin: 40px auto;
         }
 
@@ -243,11 +227,10 @@
             border: 2px solid rgba(76, 175, 80, 0.3);
         }
 
-        /* Responsive video wrapper */
         .phiers-video-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 ratio */
+            padding-bottom: 56.25%;
             height: 0;
             border-radius: 8px;
             overflow: hidden;
@@ -263,7 +246,6 @@
             border: none;
         }
 
-        /* Mobile */
         @media (max-width: 768px) {
             .phiers-media-block {
                 max-width: 100%;
@@ -271,7 +253,6 @@
             }
         }
 
-        /* Headers */
         h1 {
             color: #4caf50;
             font-size: 3em;
@@ -295,7 +276,6 @@
             font-size: 1.1em;
         }
 
-        /* Section styling */
         .section {
             background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
             padding: 40px;
@@ -327,7 +307,6 @@
             font-size: 1.2em;
         }
 
-        /* Impact grid */
         .impact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -346,7 +325,6 @@
             margin: 0;
         }
 
-        /* Button */
         .btn {
             background: linear-gradient(135deg, #4caf50, #2e7d32);
             color: white;
@@ -366,7 +344,6 @@
             box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -406,7 +383,6 @@
             margin-top: 20px;
         }
 
-        /* Image Modal */
         .image-modal {
             display: none;
             position: fixed;
@@ -454,7 +430,6 @@
             background: rgba(0,0,0,0.8);
         }
 
-        /* Mobile responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2em; }
             .hero .subhead { font-size: 1.1em; }
@@ -478,7 +453,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- GLOBAL NAVIGATION -->
         <nav class="global-nav">
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
             <div class="nav-links-container" id="navLinks">
@@ -507,7 +481,6 @@
             </div>
         </nav>
 
-        <!-- HERO - Unified Identity Block -->
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
             <div class="mabah-tagline">Make America Better And Healthier</div>
@@ -515,103 +488,60 @@
             <div class="subhead">How People Move Systems</div>
         </div>
 
-        <!-- 230:1 leverage graphic -->
         <div class="phiers-media-block">
-            <img src="images/230-to-1-leverage.png" alt="230 to 1 constituent leverage over lobbyists">
+            <img src="230-to-1-leverage.png" alt="230 to 1 constituent leverage over lobbyists">
         </div>
 
-        <!-- District accountability dashboard mockup -->
-        <div class="phiers-media-block">
-            <img src="images/district-dashboard.png" alt="District accountability dashboard showing documented alignment">
-        </div>
-
-        <!-- Optional leverage explainer video (commented out until video ID provided) -->
-        <!-- <div class="phiers-media-block">
-            <div class="phiers-video-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/VIDEO_ID_LEVERAGE" 
-                    title="How 3.5% Forces Congress to Act"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div> -->
-
-        <!-- INTRODUCTION -->
         <div class="section" style="border-left-color: #81c784;">
             <p>Most people think change starts with pressure.</p>
             <p class="green-emphasis">It doesn't.</p>
-            
             <p>It starts with documented alignment.</p>
-            
             <p>Institutions don't respond to noise.</p>
             <p>They respond to clear, measurable direction from the people they serve.</p>
-            
             <p>Leverage is not force.</p>
             <p class="green-emphasis">Leverage is structure.</p>
-            
             <p style="margin-top: 30px;">This is how it works.</p>
         </div>
 
-        <!-- SECTION 1 -->
         <div class="section">
             <div class="section-number">1.</div>
             <h2>Documented Public Direction</h2>
-            
             <p>Systems move when enough people say the same thing in a way that can be measured.</p>
-            
-            <p>Not vague sentiment.<br>
-            Not social media.<br>
-            Not outrage.</p>
-            
+            <p>Not vague sentiment.<br>Not social media.<br>Not outrage.</p>
             <p class="green-emphasis">Documentation.</p>
-            
-            <p>People sign.<br>
-            People complete the survey.<br>
-            People specify priorities.</p>
-            
+            <p>People sign.<br>People complete the survey.<br>People specify priorities.</p>
             <p>When direction is documented at scale, it becomes something institutions must respond to.</p>
         </div>
 
-        <!-- SECTION 2 -->
         <div class="section">
             <div class="section-number">2.</div>
             <h2>Alignment Becomes Gravity</h2>
-            
             <p>When thousands — then millions — document the same priorities, alignment becomes visible.</p>
-            
             <p>Visible alignment becomes political gravity.</p>
-            
             <p>Gravity moves systems even when individuals cannot.</p>
-            
             <p>This is not ideology.</p>
             <p class="green-emphasis">It is representation.</p>
         </div>
 
-        <!-- SECTION 3 -->
+        <div class="phiers-media-block">
+            <img src="district-dashboard.png" alt="District accountability dashboard showing documented alignment">
+        </div>
+
         <div class="section">
             <div class="section-number">3.</div>
             <h2>Representation Creates Obligation</h2>
-            
             <p>Elected officials are not free agents.</p>
-            
             <p>Their authority depends on staying aligned with constituent direction.</p>
-            
             <p>When alignment shifts, obligation shifts.</p>
-            
             <p>When obligation shifts, policy space opens.</p>
-            
             <p class="green-emphasis">This is leverage.</p>
         </div>
 
-        <!-- SECTION 4 -->
         <div class="section">
             <div class="section-number">4.</div>
             <h2>Leverage Opens the First Door</h2>
-            
             <p>Healthcare comes first because stabilizing routine cost unlocks everything else.</p>
-            
             <p>When routine cost stabilizes:</p>
-            
             <div class="impact-grid">
                 <div class="impact-item"><p>workers gain mobility</p></div>
                 <div class="impact-item"><p>employers reduce overhead</p></div>
@@ -619,90 +549,66 @@
                 <div class="impact-item"><p>households regain breathing room</p></div>
                 <div class="impact-item"><p>public budgets face less strain</p></div>
             </div>
-            
             <p>Stabilization is not symbolic.</p>
             <p class="green-emphasis">It is structural.</p>
         </div>
 
-        <!-- SECTION 5 -->
         <div class="section">
             <div class="section-number">5.</div>
             <h2>Structural Change Creates Momentum</h2>
-            
             <p>When the base stabilizes, pressure drops across the system.</p>
-            
             <p>Lower pressure increases:</p>
-            
             <div class="impact-grid">
                 <div class="impact-item"><p>trust</p></div>
                 <div class="impact-item"><p>coordination</p></div>
                 <div class="impact-item"><p>predictability</p></div>
                 <div class="impact-item"><p>economic resilience</p></div>
             </div>
-            
             <p>Momentum is not created by force.</p>
             <p class="green-emphasis">It is created by alignment.</p>
         </div>
 
-        <!-- SECTION 6 -->
         <div class="section">
             <div class="section-number">6.</div>
             <h2>Momentum Enables Expansion</h2>
-            
             <p>Once routine cost falls, fiscal room appears.</p>
-            
-            <p>Not from new taxes.<br>
-            Not from new debt.<br>
-            From reduced waste and improved outcomes.</p>
-            
+            <p>Not from new taxes.<br>Not from new debt.<br>From reduced waste and improved outcomes.</p>
             <p>That room supports:</p>
-            
             <div class="impact-grid">
                 <div class="impact-item"><p>job expansion</p></div>
                 <div class="impact-item"><p>income stability</p></div>
                 <div class="impact-item"><p>community resilience</p></div>
                 <div class="impact-item"><p>long‑term renewal</p></div>
             </div>
-            
             <p class="green-emphasis">Leverage → stabilization → expansion.</p>
         </div>
 
-        <!-- SECTION 7 -->
         <div class="section">
             <div class="section-number">7.</div>
             <h2>Expansion Reinforces Stability</h2>
-            
             <p>As outcomes improve, confidence increases.</p>
-            
             <p>Confidence strengthens coordination.</p>
             <p>Coordination strengthens resilience.</p>
             <p>Resilience strengthens the system.</p>
-            
             <p>This is how systems stabilize — not through crisis, but through alignment.</p>
         </div>
 
-        <!-- WHY LEVERAGE MATTERS NOW -->
         <div class="section" style="border-left-color: #ff9800;">
             <h2 style="color: #ff9800;">Why Leverage Matters Now</h2>
-            
             <p>People feel the pressure.</p>
             <p>Institutions feel the strain.</p>
             <p>Trust is low.</p>
             <p>Costs are high.</p>
-            
             <p>Moments like this either fracture systems</p>
             <p class="green-emphasis">or realign them.</p>
-            
             <p>Realignment requires clarity.</p>
             <p>Clarity requires documentation.</p>
             <p>Documentation creates leverage.</p>
-            
             <div class="highlight-box">
                 <p class="green-emphasis" style="font-size: 1.5em;">This is where PHIERS begins.</p>
             </div>
         </div>
 
-        <!-- CALL TO ACTION -->
         <div style="text-align: center; margin: 60px 0;">
             <h2>Build the Leverage</h2>
             <p style="font-size: 1.2em;">Document your direction. Add your voice to the alignment.</p>
@@ -710,12 +616,10 @@
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn" style="margin-left: 15px; background: transparent;">Take the Survey</a>
         </div>
 
-        <!-- FOOTER -->
         <footer>
             <h3>PHIERS Movement | MABAH</h3>
             <p><strong>Make America Better And Healthier</strong></p>
             <p style="margin: 20px 0;">PHIERS is a citizen coalition using collective leverage to force Congress to fix healthcare — or replace them.</p>
-            
             <div class="footer-links">
                 <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
                 <span>|</span>
@@ -725,17 +629,14 @@
                 <span>|</span>
                 <span>© PHIERS</span>
             </div>
-            
             <div style="color: #a5d6a7; font-size: 0.9em; margin-top: 30px;">
                 PHIERS is a public-interest movement — not a company, not a product.<br>
                 The only thing missing is you.
             </div>
-            
             <p class="copyright">PHIERS Movement | Version: 2026-03-03</p>
         </footer>
     </div>
 
-    <!-- Image Modal -->
     <div id="imageModal" class="image-modal" onclick="closeModal(event)">
         <span class="close-modal" onclick="closeModal(event)">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -747,7 +648,6 @@
         navLinks.classList.toggle('active');
     }
 
-    // Close mobile menu when a link is clicked
     document.addEventListener('DOMContentLoaded', function() {
         var navItems = document.querySelectorAll('.nav-links-container a');
         navItems.forEach(function(item) {
@@ -760,7 +660,6 @@
         });
     });
 
-    // Image Modal functions
     function openModal(src) {
         var modal = document.getElementById('imageModal');
         var modalImg = document.getElementById('modalImage');
@@ -775,11 +674,9 @@
         }
     }
 
-    // Add click handlers to all images
     document.addEventListener('DOMContentLoaded', function() {
         var images = document.querySelectorAll('img');
         images.forEach(function(img) {
-            // Skip if it's the logo or has no src
             if (img.src && !img.src.includes('PHIERS_Logo')) {
                 img.style.cursor = 'pointer';
                 img.addEventListener('click', function() {
@@ -789,7 +686,6 @@
         });
     });
 
-    // Close on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             var modal = document.getElementById('imageModal');
