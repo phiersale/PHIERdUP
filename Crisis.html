@@ -508,12 +508,13 @@
         <nav class="global-nav">
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
             <div class="nav-links-container" id="navLinks">
+                <a href="index.html" class="nav-item">Home</a>
                 <a href="Crisis.html" class="nav-item active">Crisis</a>
-                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
                 <a href="SimpleMath.html" class="nav-item">Simple Math</a>
-                <a href="Roadmap.html" class="nav-item">Roadmap</a>
+                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
                 <a href="Leverage.html" class="nav-item">Leverage</a>
                 <a href="Action.html" class="nav-item">Action</a>
+                <a href="Roadmap.html" class="nav-item">Roadmap</a>
                 <a href="Donate.html" class="nav-item">Donate</a>
                 <div class="dropdown">
                     <button class="dropbtn">More ▼</button>
@@ -598,18 +599,8 @@
             <img src="US_Millions_Face_Soaring_Health_Costs_as_Subsidies_Expire.png" alt="22 million Americans lost coverage when subsidies expired">
         </div>
 
-        <div class="phiers-media-block" style="max-width:640px; margin: 36px auto;">
-            <p style="text-align:center; color:#f5c842; font-weight:600; margin-bottom:12px; font-size:1.05em;">Pathos Communications: Why They Put Their Reputation Behind PHIERS (7:11)</p>
-            <div class="phiers-video-wrapper">
-                <iframe
-                    src="https://www.youtube.com/embed/UD8svoGU7ZU"
-                    title="Pathos Communications: Why They Put Their Reputation Behind PHIERS (7:11)"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p style="text-align:center; color:#81c784; font-size:0.9em; margin-top:10px; font-style:italic;">Third-party credibility. A Fortune 500 PR firm explains why they backed this movement.</p>
+        <div style="text-align:center; padding: 30px 20px; margin: 10px 0 30px; border-top: 2px solid rgba(244,67,54,0.3); border-bottom: 2px solid rgba(244,67,54,0.3);">
+            <p style="font-size:1.4em; font-weight:bold; color:#f44336; font-style:italic; line-height:1.5; margin:0;">"You can't untangle something this connected<br>by pulling one thread."</p>
         </div>
 
         <section>
@@ -715,6 +706,20 @@
             </div>
         </section>
 
+        <div class="phiers-media-block" style="max-width:640px; margin: 36px auto;">
+            <p style="text-align:center; color:#f5c842; font-weight:600; margin-bottom:12px; font-size:1.05em;">Pathos Communications: Why They Put Their Reputation Behind PHIERS (7:11)</p>
+            <div class="phiers-video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/UD8svoGU7ZU"
+                    title="Pathos Communications: Why They Put Their Reputation Behind PHIERS (7:11)"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="text-align:center; color:#81c784; font-size:0.9em; margin-top:10px; font-style:italic;">Third-party credibility. A Fortune 500 PR firm explains why they backed this movement.</p>
+        </div>
+
         <section>
             <h2>The Decision Point</h2>
             <div class="solution-box" style="text-align: center;">
@@ -723,7 +728,12 @@
                 <p>Waiting for systems to adjust on their own is a risk.</p>
                 <p>Demonstrating workable solutions shifts the balance.</p>
                 <p class="red-emphasis" style="font-size: 1.5em; margin: 35px 0;">That's where PHIERS begins.</p>
-                <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn">Sign the Petition</a>
+            </div>
+            <div style="background: rgba(76,175,80,0.12); border: 2px solid #4caf50; border-radius: 12px; padding: 36px 30px; text-align:center; margin-top: 20px;">
+                <p style="font-size:1.1em; color:#c8e6c9; margin-bottom:6px;">Step 1: Document your direction. Takes 60 seconds.</p>
+                <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn" style="margin: 12px 10px; font-size:1.1em;">✍ Sign the Petition</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn" style="margin: 12px 10px; font-size:1.1em; background:transparent; border:2px solid #4caf50;">📋 Take the Survey</a>
+                <p style="font-size:0.9em; color:#81c784; margin-top:10px; font-style:italic;">Your name and district on a public record demanding Congress act. Not a like. Not a share. Political leverage.</p>
             </div>
         </section>
 
@@ -764,6 +774,7 @@
                 PHIERS is a public-interest movement — not a company, not a product.<br>
                 The only thing missing is you.
             </div>
+                            <p style="color:#81c784; font-size:0.9em; margin-top:20px; font-style:italic;">PHIERS is a peaceful, democratic, confrontational accountability movement built to stabilize the country.</p>
             <p class="copyright">PHIERS Movement | Version: 2026-03-05</p>
         </footer>
     </div>
@@ -774,7 +785,7 @@
         <img class="modal-content" id="modalImage">
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
     function toggleMobileMenu() {
         var navLinks = document.getElementById('navLinks');
         navLinks.classList.toggle('active');

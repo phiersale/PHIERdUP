@@ -352,7 +352,7 @@
             <div class="mabah-full">MABAH — Make America Better And Healthier</div>
             <div class="mabah-tagline">Sounds Like MAGA, But A Lot Bettah</div>
             <h1>The Math Congress Fears. The Movement They Can't Stop.</h1>
-            <div class="subhead">$600 replaces $10,000. 3.5% forces Congress to act. Here's the math — and the plan.</div>
+            <div class="subhead">$600 replaces $10,000. 3.5% forces Congress to act — or we replace them. Here's the math.</div>
 
             <!-- AT A GLANCE -->
             <div class="hero-glance">
@@ -371,6 +371,16 @@
             </div>
         </div>
 
+        <!-- ABOVE-FOLD ACTION BOX -->
+        <section id="act-now" style="margin: -10px 0 50px 0; padding: 30px; background: rgba(76,175,80,0.13); border: 2px solid #4caf50; border-left: 6px solid #4caf50; border-radius: 12px; text-align: center;">
+            <p style="color:#4caf50; font-size:0.8em; text-transform:uppercase; letter-spacing:0.14em; margin:0 0 8px 0; font-weight:700;">Step 1 — Create Leverage</p>
+            <h2 style="margin:0 0 12px 0; font-size:1.6em; border:none; padding:0; color:#fff;">Sign the National Petition. It takes 60 seconds.</h2>
+            <p style="margin: 0 0 6px 0; font-size:1.05em;">Add your name to the documented public demand. <strong style="color:#4caf50;">1,500 signatures in your district forces a mandatory town hall.</strong> Congress cannot ignore a documented record from their own constituents.</p>
+            <p style="color:#81c784; font-size:0.92em; margin: 12px 0 22px 0; font-style:italic;"><strong style="color:#f5c842;">What is "Documented Direction"?</strong> Your name and district on a public record demanding Congress act. Not a like. Not a share. Political leverage.</p>
+            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn btn-warning" style="font-size:1.1em; padding:16px 40px;">&#9989; Sign the Petition Now &rarr;</a>
+            <p style="margin:18px 0 0 0; color:#81c784; font-size:0.9em;">11.6 million Americans (3.5%) is the point of no return. Every signature moves the needle.</p>
+        </section>
+
         <!-- WHAT IS PHIERS -->
         <section id="what-is-phiers" style="margin: 50px 0;">
             <h2>What Is PHIERS?</h2>
@@ -378,6 +388,7 @@
                 <p>PHIERS is a national citizen coalition built on one simple idea: when millions of Americans document the same demand, Congress has no choice but to act. We don't ask people to shout louder — we align them around the same, documented direction.</p>
                 <p>We use <strong style="color:#4caf50;">math, not ideology</strong> — and <strong style="color:#4caf50;">leverage, not hope</strong> — to force Congress to stabilize healthcare, protect coverage, and stop using people's lives as bargaining chips.</p>
                 <p>America is facing simultaneous pressures — rising costs, unstable jobs, political gridlock, and declining trust. These problems are connected. They require a connected solution.</p>
+                <p>But healthcare is just the start. PHIERS is designed as a permanent coordination system — a framework that allows Americans to organize around practical solutions across the economy, national security, and beyond, creating a cohesive tapestry where solutions in one area reinforce stability in others.</p>
                 <p class="green-emphasis" style="margin-top:20px;">The goal is simple: make America better and healthier, in ways that last longer than any election cycle.</p>
             </div>
         </section>
@@ -553,25 +564,6 @@
                 });
             }
         });
-    });
-
-    function closeIntroModal() {
-        var modal = document.getElementById('introModal');
-        var frame = document.getElementById('introVideoFrame');
-        modal.classList.remove('show');
-        frame.src = '';
-        sessionStorage.setItem('introSeen', '1');
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        if (!sessionStorage.getItem('introSeen')) {
-            setTimeout(function() {
-                var modal = document.getElementById('introModal');
-                var frame = document.getElementById('introVideoFrame');
-                modal.classList.add('show');
-                frame.src = frame.getAttribute('data-src');
-            }, 1200);
-        }
     });
 
     document.addEventListener('keydown', function(e) {
