@@ -177,6 +177,7 @@
             }
         }
 
+        /* HERO - Unified */
         .hero {
             text-align: center;
             padding: 50px 20px 40px 20px;
@@ -405,15 +406,6 @@
             margin-top: 20px;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2em; }
-            .hero .subhead { font-size: 1.1em; }
-            .hero-logo { max-width: 120px; }
-            h1 { font-size: 2.4em; }
-            h2 { font-size: 1.8em; }
-            .section { padding: 25px; }
-        }
-
         /* Image Modal */
         .image-modal {
             display: none;
@@ -463,6 +455,12 @@
         }
 
         @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2em; }
+            .hero .subhead { font-size: 1.1em; }
+            .hero-logo { max-width: 120px; }
+            h1 { font-size: 2.4em; }
+            h2 { font-size: 1.8em; }
+            .section { padding: 25px; }
             .close-modal { top: 15px; right: 15px; font-size: 35px; width: 45px; height: 45px; }
             .modal-content { max-width: 95%; margin: 60px auto; }
         }
@@ -498,6 +496,7 @@
             </div>
         </nav>
 
+        <!-- HERO - Unified -->
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
             <div class="mabah-full">MABAH — Make America Better And Healthier</div>
@@ -506,11 +505,18 @@
             <div class="subhead">How People Move Systems</div>
         </div>
 
+        <!-- Leverage at a Glance summary -->
+        <div class="section" style="margin-bottom: 40px; background: rgba(76, 175, 80, 0.1); border-left: 8px solid #4caf50;">
+            <h2 style="margin-top: 0;">⚡ Leverage at a Glance</h2>
+            <p style="font-size: 1.2em; color: #c8e6c9;"><strong>Leverage = documented alignment that institutions must respond to.</strong> When enough people document the same priority, it becomes political gravity — and Congress has no choice but to act.</p>
+        </div>
+
+        <!-- Leverage graphic -->
         <div class="phiers-media-block">
             <img src="LEVERAGE_Pwr_of_the_People.png" alt="230 to 1 constituent leverage over lobbyists">
         </div>
 
-        <div class="section" style="border-left-color: #81c784;">
+        <div class="section" style="border-left-color: #81c784;" id="step-1">
             <p>Most people think change starts with pressure.</p>
             <p class="green-emphasis">It doesn't.</p>
             <p>It starts with documented alignment.</p>
@@ -521,7 +527,7 @@
             <p style="margin-top: 30px;">This is how it works.</p>
         </div>
 
-        <div class="section">
+        <div class="section" id="step-2">
             <div class="section-number">1.</div>
             <h2>Documented Public Direction</h2>
             <p>Systems move when enough people say the same thing in a way that can be measured.</p>
@@ -531,7 +537,7 @@
             <p>When direction is documented at scale, it becomes something institutions must respond to.</p>
         </div>
 
-        <div class="section">
+        <div class="section" id="step-3">
             <div class="section-number">2.</div>
             <h2>Alignment Becomes Gravity</h2>
             <p>When thousands — then millions — document the same priorities, alignment becomes visible.</p>
@@ -545,7 +551,7 @@
             <img src="District_Accountability_Dashboard.png" alt="District accountability dashboard showing documented alignment">
         </div>
 
-        <div class="section">
+        <div class="section" id="step-4">
             <div class="section-number">3.</div>
             <h2>Representation Creates Obligation</h2>
             <p>Elected officials are not free agents.</p>
@@ -555,7 +561,7 @@
             <p class="green-emphasis">This is leverage.</p>
         </div>
 
-        <div class="section">
+        <div class="section" id="step-5">
             <div class="section-number">4.</div>
             <h2>Leverage Opens the First Door</h2>
             <p>Healthcare comes first because stabilizing routine cost unlocks everything else.</p>
@@ -571,7 +577,7 @@
             <p class="green-emphasis">It is structural.</p>
         </div>
 
-        <div class="section">
+        <div class="section" id="step-6">
             <div class="section-number">5.</div>
             <h2>Structural Change Creates Momentum</h2>
             <p>When the base stabilizes, pressure drops across the system.</p>
@@ -586,7 +592,7 @@
             <p class="green-emphasis">It is created by alignment.</p>
         </div>
 
-        <div class="section">
+        <div class="section" id="step-7">
             <div class="section-number">6.</div>
             <h2>Momentum Enables Expansion</h2>
             <p>Once routine cost falls, fiscal room appears.</p>
@@ -601,7 +607,7 @@
             <p class="green-emphasis">Leverage → stabilization → expansion.</p>
         </div>
 
-        <div class="section">
+        <div class="section" id="step-8">
             <div class="section-number">7.</div>
             <h2>Expansion Reinforces Stability</h2>
             <p>As outcomes improve, confidence increases.</p>
@@ -627,6 +633,18 @@
             </div>
         </div>
 
+        <!-- CTA Section with links to SimpleMath, 5D, Action -->
+        <div style="text-align: center; margin: 60px 0; padding: 40px 30px; background: rgba(76,175,80,0.07); border: 1px solid rgba(76,175,80,0.25); border-radius: 12px;">
+            <h2 style="margin-top: 0;">Ready to Go Deeper?</h2>
+            <p style="font-size: 1.1em; margin-bottom: 30px;">See the math, the solution, or take action.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                <a href="SimpleMath.html" class="btn">📊 The Math</a>
+                <a href="5D_Solutions.html" class="btn">🧩 The Solution</a>
+                <a href="Action.html" class="btn btn-warning">✊ Take Action</a>
+            </div>
+        </div>
+
+        <!-- Build the Leverage CTA -->
         <div style="text-align: center; margin: 60px 0;">
             <h2>Build the Leverage</h2>
             <p style="font-size: 1.2em;">Document your direction. Add your voice to the alignment.</p>
@@ -649,7 +667,7 @@
                 PHIERS is a public-interest movement — not a company, not a product.<br>
                 The only thing missing is you.
             </div>
-            <p class="copyright">PHIERS Movement | Version: 2026-03-05</p>
+            <p class="copyright">PHIERS Movement | Version: 2026-03-06</p>
         </footer>
     </div>
     
@@ -677,6 +695,7 @@
         });
     });
 
+    // Image Modal functions
     function openModal(src) {
         var modal = document.getElementById('imageModal');
         var modalImg = document.getElementById('modalImage');
@@ -693,6 +712,7 @@
         }
     }
 
+    // Prevent modal from closing when clicking the image
     document.addEventListener('DOMContentLoaded', function() {
         var modalImg = document.getElementById('modalImage');
         if (modalImg) {
@@ -702,6 +722,7 @@
         }
     });
 
+    // Add click handlers to all images
     document.addEventListener('DOMContentLoaded', function() {
         var images = document.querySelectorAll('img');
         images.forEach(function(img) {
@@ -714,6 +735,7 @@
         });
     });
 
+    // Close on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             var modal = document.getElementById('imageModal');
