@@ -126,18 +126,43 @@
             border-left: 8px solid #4caf50;
         }
         .faq-item {
-            margin-bottom: 36px;
-            border-bottom: 1px solid rgba(76, 175, 80, 0.2);
-            padding-bottom: 28px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(76, 175, 80, 0.15);
         }
-        .faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .faq-question {
-            color: #4caf50;
-            font-size: 1.3em;
+        .faq-item:last-child { border-bottom: none; margin-bottom: 0; }
+        details { width: 100%; }
+        summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 16px 44px 16px 0;
+            position: relative;
+            color: #81c784;
+            font-size: 1.15em;
             font-weight: bold;
-            margin-bottom: 12px;
             line-height: 1.4;
+            transition: color 0.2s;
+            user-select: none;
         }
+        summary:hover { color: #4caf50; }
+        details[open] summary { color: #4caf50; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #4caf50;
+            font-weight: 300;
+            line-height: 1;
+        }
+        details[open] summary::after { content: '\2212'; }
+        .faq-answer {
+            padding: 4px 0 20px 0;
+            animation: fadeIn 0.2s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
         .faq-ignition {
             color: #fff;
             font-weight: bold;
@@ -213,7 +238,6 @@
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
             <div class="mabah-full">MABAH — Make America Better And Healthier</div>
-            <div class="mabah-tagline">Sounds Like MAGA, But A Lot Bettah</div>
             <div class="hero-opener">You have questions. We have answers.</div>
             <h1>FAQ</h1>
             <div class="subhead">Straight Answers. No Spin.</div>
@@ -221,7 +245,7 @@
 
         <!-- INTRO -->
         <div class="faq-section" style="border-left-color: #81c784; margin-bottom: 36px;">
-            <p>People deserve straight answers — not spin, not talking points, not bureaucratic fog. This movement is built on clarity, transparency, and math. Here are the answers to the questions we hear most.</p>
+            <p>People deserve straight answers — not spin, not talking points, not bureaucratic fog. This movement is built on clarity, transparency, and math. Here are the questions we hear most — and the clearest answers we can give.</p>
         </div>
 
         <!-- GROUP 1: BASICS -->
@@ -230,31 +254,57 @@
             <div class="faq-section">
 
                 <div class="faq-item">
-                    <div class="faq-question">1. Is this realistic?</div>
-                    <div class="faq-ignition">Yes — because it's based on math, not hope.</div>
-                    <p>Telehealth is already cheaper and faster. The $2.73 trillion in annual healthcare waste is a documented federal number. UBI is funded by redirecting that waste, not raising taxes. Job creation is a natural consequence of stability. Democracy holds when people are economically secure.</p>
-                    <p class="punchline">This isn't a wishlist. It's a systems upgrade.</p>
+                    <details>
+                        <summary>1. Is this realistic?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Yes — because it's based on math, not hope.</div>
+                            <p>Telehealth is already cheaper and faster. The $2.73 trillion in annual healthcare waste is a documented federal number. UBI is funded by redirecting that waste, not raising taxes. Job creation is a natural consequence of stability. Democracy holds when people are economically secure.</p>
+                            <p class="punchline">This isn't a wishlist. It's a systems upgrade.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">2. Why telehealth first?</div>
-                    <div class="faq-ignition">Because it's the first domino.</div>
-                    <p>Telehealth is already cheaper, already scalable, and already nationwide. Routine care drops from $10,000 annually to $600. That $9,400 difference, multiplied across the workforce, funds everything else.</p>
-                    <p class="punchline">Authorize telehealth nationally and the entire 5D cascade becomes possible.</p>
+                    <details>
+                        <summary>2. Why telehealth first?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Because it's the first domino.</div>
+                            <p>Telehealth is already cheaper, already scalable, and already nationwide. Routine care drops from $10,000 annually to $600. That $9,400 difference, multiplied across the workforce, funds everything else.</p>
+                            <p class="punchline">Authorize telehealth nationally and the entire 5D cascade becomes possible.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">3. Why 3.5%?</div>
-                    <div class="faq-ignition">Because that's the threshold where change becomes inevitable.</div>
-                    <p>Harvard researcher Erica Chenoweth analyzed 323 social movements. No movement that reached 3.5% active participation ever failed to achieve its core goals. For the U.S., that's 11.6 million people.</p>
-                    <p class="punchline">That's why every signature counts.</p>
+                    <details>
+                        <summary>3. Why 3.5%?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Because that's the threshold where change becomes inevitable.</div>
+                            <p>Harvard researcher Erica Chenoweth analyzed 323 social movements. No movement that reached 3.5% active participation ever failed to achieve its core goals. For the U.S., that's 11.6 million people.</p>
+                            <p class="punchline">That's why every signature counts.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">4. Why hasn't this already happened?</div>
-                    <div class="faq-ignition">Because the pieces existed separately.</div>
-                    <p>Telehealth worked. Cost elimination worked. Citizen leverage worked. But no one connected them into a coordinated system that documented public direction and made Congress respond to it.</p>
-                    <p class="punchline">PHIERS is the coordination layer that was missing.</p>
+                    <details>
+                        <summary>4. Why hasn't this already happened?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Because the pieces were never connected.</div>
+                            <p>Telehealth worked. Cost elimination worked. Citizen leverage worked. Each piece existed independently — but no one had connected them into a coordinated system that documented public direction and gave Congress something it had to respond to.</p>
+                            <p class="punchline">PHIERS is the coordination layer that was missing.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary>5. What kind of system does the country actually need?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Not another policy. Not another promise.</div>
+                            <p>A coordination system — one that lets people document what they want and forces institutions to respond. The problems are connected. The solutions have to be too. PHIERS is that system.</p>
+                        </div>
+                    </details>
                 </div>
 
             </div>
@@ -266,18 +316,26 @@
             <div class="faq-section">
 
                 <div class="faq-item">
-                    <div class="faq-question">5. How does this get funded?</div>
-                    <div class="faq-ignition">Through the $2.73 trillion we're already wasting.</div>
-                    <p>The U.S. currently spends more on healthcare per person than any other developed nation — and gets worse outcomes. That gap is $2.73 trillion annually in preventable waste.</p>
-                    <p>No new taxes. No new agencies. No new bureaucracy. The money is already there — it's just being spent badly.</p>
+                    <details>
+                        <summary>6. How does this get funded?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Through the $2.73 trillion we're already wasting.</div>
+                            <p>The U.S. currently spends more on healthcare per person than any other developed nation — and gets worse outcomes. That gap is $2.73 trillion annually in preventable waste.</p>
+                            <p>No new taxes. No new agencies. No new bureaucracy. The money is already there — it's just being spent badly.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">6. How does this create jobs?</div>
-                    <div class="faq-ignition">When healthcare costs fall, workers have mobility. Mobility creates opportunity.</div>
-                    <p>Right now millions of people are locked in jobs they don't want because they can't afford to lose their benefits. Healthcare stability unlocks that. People can retrain, relocate, start businesses, fill essential roles.</p>
-                    <p>The model also directly creates AI-resistant positions: community health workers, care coordinators, outreach roles, elder care support. These are human jobs that can't be automated.</p>
-                    <p class="punchline">Stability isn't just good for people. It's good for the economy.</p>
+                    <details>
+                        <summary>7. How does this create jobs?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">When healthcare costs fall, workers have mobility. Mobility creates opportunity.</div>
+                            <p>Right now millions of people are locked in jobs they don't want because they can't afford to lose their benefits. Healthcare stability unlocks that.</p>
+                            <p>People can retrain, relocate, start businesses, and fill essential roles. The model also directly creates AI-resistant positions: community health workers, care coordinators, outreach roles, elder care support.</p>
+                            <p class="punchline">Stability isn't just good for people. It's good for the economy.</p>
+                        </div>
+                    </details>
                 </div>
 
             </div>
@@ -289,32 +347,48 @@
             <div class="faq-section">
 
                 <div class="faq-item">
-                    <div class="faq-question">7. Is this partisan?</div>
-                    <div class="faq-ignition">No. Healthcare, stability, and jobs aren't partisan issues.</div>
-                    <p>This movement includes conservatives, liberals, independents, libertarians, and people who've never voted. The only requirement is wanting a country that works.</p>
-                    <p class="punchline">The math doesn't have a party affiliation.</p>
+                    <details>
+                        <summary>8. Is this partisan?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">No. Healthcare, stability, and jobs aren't partisan issues.</div>
+                            <p>This movement includes conservatives, liberals, independents, libertarians, and people who've never voted. The only requirement is wanting a country that works.</p>
+                            <p class="punchline">The math doesn't have a party affiliation.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">8. Is this socialism?</div>
-                    <div class="faq-ignition">No. It's market-efficient, cost-reducing, and freedom-expanding.</div>
-                    <p>Nothing gets nationalized. No government takeover. The model uses existing markets, existing providers, and existing institutions — it just removes the middlemen who add cost without adding care.</p>
-                    <p>When healthcare costs less, people have more freedom: to change jobs, start businesses, take risks. That's the opposite of socialism.</p>
+                    <details>
+                        <summary>9. Is this socialism?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">No. It's market-efficient, cost-reducing, and freedom-expanding.</div>
+                            <p>The model doesn't nationalize anything. It uses existing markets, existing providers, and existing institutions. What it removes are the middlemen who add cost without adding care.</p>
+                            <p>When routine healthcare costs less, people have more freedom: to change jobs, start businesses, take risks. More economic freedom, not less.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">9. Is this legal?</div>
-                    <div class="faq-ignition">Yes — entirely.</div>
-                    <p>Everything in the PHIERS model uses existing institutions, existing laws, and existing democratic processes. No new government structure is required. The system documents public direction and forces elected officials to respond to it.</p>
-                    <p class="punchline">Petition. Survey. Vote. That's the whole mechanism.</p>
+                    <details>
+                        <summary>10. Is this legal?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Yes — entirely.</div>
+                            <p>Everything in the PHIERS model uses existing institutions, existing laws, and existing democratic processes. No new government structure is required. The system documents public direction and forces elected officials to respond to it.</p>
+                            <p class="punchline">Petition. Survey. Vote. That's the whole mechanism.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">10. How does this protect democracy?</div>
-                    <div class="faq-ignition">Authoritarianism thrives in instability.</div>
-                    <p>When people are frightened, financially desperate, and distrustful of institutions, they become vulnerable to leaders who offer simple answers to complex problems. Economic stability removes that vulnerability.</p>
-                    <p>A country where people are healthy, housed, and financially secure is much harder to destabilize.</p>
-                    <p class="punchline">Economic stability is political stability.</p>
+                    <details>
+                        <summary>11. How does this protect democracy?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Authoritarianism thrives in instability.</div>
+                            <p>When people are frightened, financially desperate, and distrustful of institutions, they become vulnerable to leaders who offer simple answers to complex problems. Economic stability removes that vulnerability.</p>
+                            <p>A country where people are healthy, housed, and financially secure is much harder to destabilize.</p>
+                            <p class="punchline">Economic stability is political stability.</p>
+                        </div>
+                    </details>
                 </div>
 
             </div>
@@ -326,31 +400,47 @@
             <div class="faq-section">
 
                 <div class="faq-item">
-                    <div class="faq-question">11. Why not wait for Congress to act on its own?</div>
-                    <div class="faq-ignition">Congress has the authority and infrastructure — but not the incentive.</div>
-                    <p>The healthcare crisis has existed for decades. Congress has debated it for decades. The math has been available for decades. What's been missing is organized constituent pressure that makes the status quo more politically costly than change.</p>
-                    <p class="punchline">3.5% changes the incentive structure. That's what makes it work.</p>
+                    <details>
+                        <summary>12. Why not wait for Congress to act on its own?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Congress has the authority and infrastructure — but not the incentive.</div>
+                            <p>The healthcare crisis has existed for decades. Congress has debated it for decades. The math has been available for decades. What's been missing is organized constituent pressure that makes the status quo more politically costly than change.</p>
+                            <p class="punchline">3.5% changes the incentive structure. That's what makes it work.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">12. What happens after I sign?</div>
-                    <div class="faq-ignition">Your name becomes part of the record.</div>
-                    <p>Your signature counts toward the 3.5% threshold. Your district receives documented constituent direction. When enough districts cross the 1,500-signature mark, the results are compiled and delivered to Congress at town halls and public forums.</p>
-                    <p>Your name isn't just a count. It's a coordinate on a map of political pressure.</p>
+                    <details>
+                        <summary>13. What happens after I sign?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Your name becomes part of the record.</div>
+                            <p>Your signature counts toward the 3.5% threshold. Your district receives documented constituent direction. When enough districts cross the 1,500-signature mark, the results are compiled and delivered to Congress at town halls and public forums.</p>
+                            <p>Your name isn't just a count. It's a coordinate on a map of political pressure.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">13. What if Congress refuses?</div>
-                    <div class="faq-ignition">Organized constituent power has more than one tool.</div>
-                    <p>The movement is built for the long game: documented direction, primary accountability, district-level mobilization, and election cycles. Every seat is accountable. Every district has a primary. No special majority required — just organized, documented, sustained direction.</p>
-                    <p class="punchline">The question isn't whether Congress will respond. It's when.</p>
+                    <details>
+                        <summary>14. What if Congress refuses?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Organized constituent power has more than one tool.</div>
+                            <p>The movement is built for the long game: documented direction, primary accountability, district-level mobilization, and election cycles. Every seat is accountable. Every district has a primary. No special majority required — just organized, documented, sustained direction.</p>
+                            <p class="punchline">Organized, documented, sustained direction is hard to ignore across multiple election cycles.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">14. Why now?</div>
-                    <div class="faq-ignition">Because the timing has finally aligned.</div>
-                    <p>The crisis is unfolding now. Telehealth is proven. Cost Plus Drugs proved cost elimination works. The math is documented and undeniable. The political leverage window is open.</p>
-                    <p class="punchline">This is the first time in decades that a peaceful, scalable, coordinated solution has been possible at this scale.</p>
+                    <details>
+                        <summary>15. Why now?</summary>
+                        <div class="faq-answer">
+                            <div class="faq-ignition">Because the pieces finally exist at the same time.</div>
+                            <p>The crisis is unfolding now. Telehealth is proven. Cost Plus Drugs proved cost elimination works. The math is documented and undeniable. The political leverage window is open.</p>
+                            <p class="punchline">This is the first time in decades that a peaceful, scalable, coordinated solution has been possible at this scale.</p>
+                        </div>
+                    </details>
                 </div>
 
             </div>
