@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Origins - PHIERS</title>
+    <link rel="canonical" href="https://phiersale.github.io/PHIERS-Concept/Origins.html">
+    <meta name="description" content="PHIERS didn't begin as an organization. It began as a pattern. Twenty years of work behind one simple idea: fix the foundation, and the system stabilizes.">
+    <meta property="og:title" content="Our Origins — 20 Years. One Framework. Real Proof.">
+    <meta property="og:description" content="PHIERS started as an observation. Over twenty years, it became a framework. Now it's becoming a movement.">
+    <meta property="og:image" content="https://phiersale.github.io/PHIERS-Concept/PHIERS_Logo.png">
+    <meta property="og:url" content="https://phiersale.github.io/PHIERS-Concept/Origins.html">
+    <meta property="og:type" content="website">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -27,7 +34,7 @@
             backdrop-filter: blur(5px);
         }
         .mobile-menu-toggle {
-            display: none;
+            display: block;
             background: transparent;
             border: 1px solid #4caf50;
             color: #4caf50;
@@ -40,10 +47,11 @@
             font-weight: bold;
         }
         .nav-links-container {
-            display: flex; flex-wrap: wrap;
+            display: none; flex-wrap: wrap;
             align-items: center; justify-content: center;
             gap: 5px; width: 100%;
         }
+        .nav-links-container.active { display: flex; }
         .nav-item {
             color: #81c784; text-decoration: none;
             padding: 8px 12px; border-radius: 4px;
@@ -69,17 +77,13 @@
         }
         .dropdown-content a {
             color: #81c784; padding: 10px 16px;
-            text-decoration: none; display: block;
-            font-size: 0.9em;
+            text-decoration: none; display: block; font-size: 0.9em;
         }
         .dropdown-content a:hover { background: rgba(76, 175, 80, 0.2); color: #4caf50; }
         .dropdown:hover .dropdown-content { display: block; }
         .dropdown:hover .dropbtn { background: rgba(76, 175, 80, 0.2); color: #4caf50; }
         @media (max-width: 768px) {
-            .mobile-menu-toggle { display: block; }
             .global-nav { padding: 10px; }
-            .nav-links-container { display: none; flex-direction: column; width: 100%; margin-top: 15px; }
-            .nav-links-container.active { display: flex; }
             .nav-item, .dropdown { width: 100%; text-align: center; }
             .dropdown-content { position: static; width: 100%; margin-top: 5px; }
             .dropbtn { width: 100%; }
@@ -92,48 +96,54 @@
             margin-bottom: 40px;
             border: 2px solid rgba(76, 175, 80, 0.3);
         }
-        .hero h1 { color: #4caf50; font-size: 2.8em; margin-bottom: 15px; }
-        .hero .subhead { font-size: 1.3em; color: #c8e6c9; font-style: italic; }
-        .phiers-media-block { width: 100%; max-width: 600px; margin: 40px auto; }
-        .phiers-media-block img {
-            width: 100%; height: auto; display: block;
-            border-radius: 6px; border: 2px solid rgba(76, 175, 80, 0.3);
-            cursor: pointer;
-        }
-        @media (max-width: 768px) { .phiers-media-block { max-width: 100%; } }
+        .hero-logo { max-width: 140px; margin-bottom: 15px; }
+        .mabah-full { font-size: 1.1em; color: #81c784; font-weight: 600; margin-bottom: 5px; letter-spacing: 0.5px; }
+        .mabah-tagline { font-size: 1.2em; color: #4caf50; font-weight: bold; margin-bottom: 15px; font-style: italic; }
+        .hero-opener { font-size: 1.1em; color: #a5d6a7; margin-bottom: 10px; }
+        .hero h1 { color: #4caf50; font-size: clamp(1.4rem, 5vw, 2.8rem); margin-bottom: 15px; }
+        .hero .subhead { font-size: 1.2em; color: #c8e6c9; font-style: italic; }
         h2 {
-            color: #4caf50; font-size: 1.8em;
-            margin: 50px 0 30px;
+            color: #4caf50; font-size: 1.7em;
+            margin: 0 0 20px;
             border-bottom: 2px solid rgba(76, 175, 80, 0.3);
             padding-bottom: 10px;
         }
-        h3 { color: #81c784; font-size: 1.4em; margin: 30px 0 15px; }
-        p { color: #c8e6c9; margin: 20px 0; line-height: 1.8; font-size: 1.1em; }
-        .section {
+        h3 { color: #81c784; font-size: 1.2em; margin: 24px 0 12px; }
+        p { color: #c8e6c9; margin: 16px 0; line-height: 1.8; font-size: 1.1em; }
+        .section-box {
             background: rgba(26, 26, 46, 0.9);
-            padding: 40px;
-            margin-bottom: 30px;
+            padding: 36px 40px;
+            margin-bottom: 28px;
             border-radius: 12px;
             border-left: 8px solid #4caf50;
         }
-        .insight-box {
-            background: rgba(33, 150, 243, 0.1);
-            border: 2px solid #2196f3;
-            padding: 30px;
-            margin: 30px 0;
-            border-radius: 8px;
-        }
         .highlight-box {
-            background: rgba(76, 175, 80, 0.15);
+            background: rgba(76, 175, 80, 0.12);
             border: 2px solid #4caf50;
-            padding: 30px;
-            margin: 30px 0;
+            padding: 24px 28px;
+            margin: 20px 0;
             border-radius: 8px;
-            text-align: center;
         }
-        .green-emphasis { color: #4caf50; font-weight: bold; font-size: 1.2em; }
-        ul { margin: 20px 0 20px 30px; }
-        li { color: #c8e6c9; margin-bottom: 10px; font-size: 1.1em; }
+        .green-emphasis { color: #4caf50; font-weight: bold; font-size: 1.15em; }
+        .punchline {
+            color: #fff; font-size: 1.1em; font-weight: bold;
+            font-style: italic; margin: 14px 0 4px;
+            border-left: 3px solid #4caf50; padding-left: 14px;
+        }
+        .credibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 24px 0;
+        }
+        .credibility-card {
+            background: rgba(76, 175, 80, 0.08);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 8px;
+            padding: 16px 18px;
+        }
+        .credibility-card .cred-name { color: #4caf50; font-weight: bold; font-size: 1em; margin-bottom: 4px; }
+        .credibility-card .cred-desc { color: #a5d6a7; font-size: 0.9em; margin: 0; line-height: 1.5; }
         .btn {
             background: linear-gradient(135deg, #4caf50, #2e7d32);
             color: white; padding: 16px 36px;
@@ -142,10 +152,9 @@
             text-decoration: none; display: inline-block;
             margin: 10px;
         }
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid #4caf50;
-            color: #4caf50;
+        .btn-warning {
+            background: linear-gradient(135deg, #f5c842, #e0a800);
+            border-color: #f5c842; color: #000;
         }
         footer {
             text-align: center; padding: 40px 20px; margin-top: 80px;
@@ -162,8 +171,7 @@
         .image-modal {
             display: none; position: fixed; z-index: 10000;
             left: 0; top: 0; width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.95);
-            overflow: auto;
+            background-color: rgba(0,0,0,0.95); overflow: auto;
         }
         .modal-content {
             max-width: 90%; width: auto; height: auto;
@@ -179,22 +187,23 @@
 </head>
 <body>
     <div class="container">
+
         <nav class="global-nav">
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
             <div class="nav-links-container" id="navLinks">
                 <a href="index.html" class="nav-item">Home</a>
                 <a href="Crisis.html" class="nav-item">Crisis</a>
-                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
                 <a href="SimpleMath.html" class="nav-item">Simple Math</a>
-                <a href="Roadmap.html" class="nav-item">Roadmap</a>
+                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
                 <a href="Leverage.html" class="nav-item">Leverage</a>
                 <a href="Action.html" class="nav-item">Action</a>
+                <a href="Roadmap.html" class="nav-item">Roadmap</a>
                 <a href="Donate.html" class="nav-item">Donate</a>
                 <div class="dropdown">
                     <button class="dropbtn">More ▼</button>
                     <div class="dropdown-content">
                         <a href="FAQ.html">FAQ</a>
-                        <a href="Origins.html" class="active">Origins</a>
+                        <a href="Origins.html" style="color:#4caf50; font-weight:bold;">Origins</a>
                         <a href="Media.html">Media</a>
                         <a href="About.html">About</a>
                         <a href="Quickstart.html">Quickstart</a>
@@ -203,93 +212,137 @@
                         <a href="Union-Strategy.html">Union Strategy</a>
                         <a href="Telehealth-vs-Insurance.html">Telehealth vs Insurance</a>
                         <a href="Real-Stories.html">Real Stories</a>
-                        <a href="UNBREAKABLE.html">UNBREAKABLE</a>
+                        <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
                     </div>
                 </div>
             </div>
         </nav>
 
+        <!-- HERO -->
         <div class="hero">
-            <h1>Our Origins: 20 Years. One Framework. Real Proof.</h1>
-            <div class="subhead">How PHIERS Started — And Why It Exists</div>
+            <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
+            <div class="mabah-full">MABAH — Make America Better And Healthier</div>
+            <div class="mabah-tagline">Sounds Like MAGA, But A Lot Bettah</div>
+            <div class="hero-opener">The idea came before the organization.</div>
+            <h1>OUR ORIGINS</h1>
+            <div class="subhead">20 Years. One Framework. Real Proof.</div>
         </div>
 
-        <div class="section" style="border-left-color: #81c784;">
+        <!-- THE PATTERN -->
+        <div class="section-box" style="border-left-color: #81c784;">
+            <h2>The Pattern</h2>
             <p>PHIERS didn't begin as an organization. It began as a pattern.</p>
-            <p>All over the country, people were feeling the same squeeze: rising costs, unstable work, unpredictable healthcare, institutions that couldn't keep up with how fast life was changing.</p>
+            <p>Across the country, people were feeling the same squeeze: rising costs, unstable work, unpredictable healthcare, institutions that couldn't keep up with how fast life was changing.</p>
             <p>Each issue was talked about separately — but the pressure was connected. The outcomes were connected. People's lives were connected.</p>
-            <p>The only thing not connected was the response.</p>
-            <p>PHIERS came from the realization that the country didn't just need new ideas — it needed coordination. Not ideology. Not protest. Not another campaign.</p>
-            <p>A structure that could document what people want, stabilize the base, and realign systems that drifted away from everyday life.</p>
+            <p class="punchline">The only thing not connected was the response.</p>
         </div>
 
-        <div class="section">
+        <!-- THE STRUCTURAL INSIGHT -->
+        <div class="section-box">
             <h2>A Structural Insight, Not a Political One</h2>
-            <p>The founding insight was simple:</p>
+            <p>The founding insight was straightforward: the country didn't just need new ideas — it needed coordination.</p>
+            <p>Not ideology. Not protest. Not another campaign.</p>
+            <p>A structure that could document what people want, stabilize the base, and realign systems that drifted away from everyday life.</p>
             <div class="highlight-box">
-                <p style="font-size: 1.3em;">When routine healthcare costs become predictable, pressure drops across the whole system.</p>
+                <p style="margin:0;">When routine healthcare costs become predictable, pressure drops across the whole system. Workers can move jobs. Employers can plan. Unions can fight for wages instead of defending benefits. Households get breathing room.</p>
             </div>
-            <p>And when pressure drops: workers can move jobs, employers can plan, unions can fight for wages instead of benefits, households get breathing room, public budgets stop getting hammered.</p>
-            <p>Stabilizing the base strengthens everything above it. This wasn't partisan. It wasn't theory. It was math — and it was visible everywhere.</p>
+            <p>Fix the foundation, and everything above it becomes easier to stabilize.</p>
+            <p class="punchline">This wasn't partisan. It wasn't theory. It was math — and it was visible everywhere.</p>
         </div>
 
-        <div class="section">
+        <!-- WHERE IT STARTED -->
+        <div class="section-box">
+            <h2>Where It Started</h2>
+            <p>The work began in the early 2000s when healthcare workers were being priced out of healthcare itself. Al Wilson and Will Price developed the SureSafe model — pharmaceutical distribution without markups, without middlemen, without profit extraction from people who needed medication to live.</p>
+            <p>It wasn't theoretical. It proved cost reduction works at scale. Sixteen years before Mark Cuban launched Cost Plus Drugs with the same model, the mechanism existed. The math held. The proof of concept was real.</p>
+            <p>They faced opposition. Legal pressure from established pharmaceutical interests. Market disruptions. Setbacks that forced a pause and a long wait for the right moment.</p>
+            <p class="punchline">Timing matters. They waited because they had to — and because they were watching.</p>
+        </div>
+
+        <!-- MODEL BUILT FROM REAL LIFE -->
+        <div class="section-box">
             <h2>A Model Built From Real Life</h2>
-            <p>PHIERS was shaped by people who had seen the system from every angle: workers, caregivers, small‑business owners, organizers, people navigating healthcare from the inside and outside.</p>
+            <p>PHIERS was shaped by people who had seen the system from every angle: workers, caregivers, small-business owners, organizers, people navigating healthcare from the inside and outside.</p>
             <p>Different backgrounds. Different experiences. Same conclusion:</p>
-            <div class="insight-box">
-                <p style="font-size: 1.2em;">The country wasn't failing because people were divided. It was failing because the response was fragmented.</p>
-            </div>
-            <p class="green-emphasis">PHIERS was built to fix that.</p>
-        </div>
-
-        <div class="section">
-            <h2>From Insight to Structure</h2>
-            <p>The early work focused on one question: "How do you turn this insight into something people can actually use?"</p>
-            <p>The answer became a model that:</p>
-            <ul>
-                <li>documents public direction</li>
-                <li>stabilizes routine healthcare cost</li>
-                <li>strengthens the economic core</li>
-                <li>reinvests the savings</li>
-                <li>renews the system</li>
-            </ul>
-            <p class="green-emphasis">Not through pressure. Not through outrage. Through alignment.</p>
-        </div>
-
-        <div class="section">
-            <h2>Why PHIERS Exists</h2>
-            <p>PHIERS exists because people deserve a system that responds to them — not the other way around. A system that treats clarity as the starting point. A system that understands stability isn't ideological — it's structural.</p>
-            <p>PHIERS is not a moment. Not a campaign. Not a personality. It's a public‑benefit structure built for continuity — something that outlasts news cycles, election cycles, and personalities.</p>
             <div class="highlight-box">
-                <p>This 20‑year framework was built to answer one question:</p>
-                <p style="font-size:1.25em; font-weight:bold; color:#4caf50;">"What kind of system could Americans use to solve many connected problems at once?"</p>
-                <p>Not another policy. Not another promise. A coordination system — one that lets people identify problems clearly, organize around workable solutions, deploy those solutions through existing institutions, and maintain them through ongoing participation and accountability.</p>
-                <p>In other words: a system that lets the country coordinate intelligently, instead of lurching from crisis to crisis.</p>
-                <p class="green-emphasis">That's what PHIERS was built to be.</p>
+                <p style="font-size:1.2em; font-weight:bold; margin:0; text-align:center; color:#fff;">The country wasn't failing because people were divided.<br>It was failing because the response was fragmented.</p>
+            </div>
+            <p class="punchline">PHIERS was built to fix that.</p>
+        </div>
+
+        <!-- 20-YEAR FRAMEWORK -->
+        <div class="section-box">
+            <h2>The 20-Year Framework</h2>
+            <p>Once the insight was clear, the question became: how do you turn this into something people can actually use?</p>
+            <p>The answer became a model that documents public direction, stabilizes routine healthcare cost, strengthens the economic core, reinvests the savings, and renews the system. Not through pressure or outrage. Through alignment.</p>
+            <p>While the model developed, others succeeded with concepts it had pioneered — and that was celebrated, not resented:</p>
+            <div style="display:grid; gap:10px; margin: 20px 0;">
+                <div style="background:rgba(76,175,80,0.07); border-left:3px solid #4caf50; padding:14px 18px; border-radius:0 8px 8px 0;">
+                    <p style="margin:0;"><strong style="color:#4caf50;">Mark Cuban / Cost Plus Drugs (2022)</strong> — Independent validation of the pharmaceutical cost-elimination model. 7 million customers. 80-90% savings. Exactly what SureSafe proved in 2007.</p>
+                </div>
+                <div style="background:rgba(76,175,80,0.07); border-left:3px solid #4caf50; padding:14px 18px; border-radius:0 8px 8px 0;">
+                    <p style="margin:0;"><strong style="color:#4caf50;">ZORTT Elite Medical</strong> — Cooperative telehealth delivery for union workers, gig workers, and veterans. An independent proof that the delivery mechanism works at scale.</p>
+                </div>
+                <div style="background:rgba(76,175,80,0.07); border-left:3px solid #4caf50; padding:14px 18px; border-radius:0 8px 8px 0;">
+                    <p style="margin:0;"><strong style="color:#4caf50;">Telehealth expansion</strong> — Became mainstream during COVID, confirming what the model had assumed for fifteen years.</p>
+                </div>
+            </div>
+            <p>These weren't competitors. They were proof.</p>
+            <p class="punchline">Continuity isn't an accident. It's the design.</p>
+        </div>
+
+        <!-- CREDIBILITY -->
+        <div class="section-box" style="border-left-color: #81c784;">
+            <h2>The People and Institutions That Looked — and Stayed</h2>
+            <p>The framework is designed to be evaluated, challenged, and improved in public view.</p>
+            <div class="credibility-grid">
+                <div class="credibility-card">
+                    <div class="cred-name">Congressman Van Hollen</div>
+                    <div class="cred-desc">Letter of support for the PHIERS approach to healthcare stabilization</div>
+                </div>
+                <div class="credibility-card">
+                    <div class="cred-name">Maryland Health Care Commission</div>
+                    <div class="cred-desc">Formal engagement with the cooperative telehealth delivery model</div>
+                </div>
+                <div class="credibility-card">
+                    <div class="cred-name">Interfaith Coalition</div>
+                    <div class="cred-desc">Multi-faith organizational support for community-based healthcare access</div>
+                </div>
+                <div class="credibility-card">
+                    <div class="cred-name">Cost Plus Drugs (Mark Cuban)</div>
+                    <div class="cred-desc">Independent validation of the cost-elimination model — operational since 2022</div>
+                </div>
+                <div class="credibility-card">
+                    <div class="cred-name">ZORTT Elite Medical</div>
+                    <div class="cred-desc">Cooperative telehealth delivery operating for unions, gig workers, and veterans</div>
+                </div>
+                <div class="credibility-card">
+                    <div class="cred-name">Harvard Kennedy School</div>
+                    <div class="cred-desc">Chenoweth research: no movement reaching 3.5% participation has ever failed</div>
+                </div>
             </div>
         </div>
 
-        <div style="background: rgba(76,175,80,0.12); border: 2px solid #4caf50; border-radius: 12px; padding: 40px 30px; text-align:center; margin: 60px 0;">
-            <h2 style="margin-top:0; color:#4caf50;">Be Part of What Comes Next</h2>
-            <p style="font-size: 1.2em;">The pattern is clear. The structure is built. The moment is now.</p>
-            <p style="font-size:0.95em; color:#81c784; margin-bottom:20px; font-style:italic;">Document your direction. Your name and district on a public record — not a like, not a share. Political leverage.</p>
-            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn">✍ Sign the Petition</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn btn-secondary">📋 Take the Survey</a>
+        <!-- WHY PHIERS EXISTS -->
+        <div class="section-box">
+            <h2>Why PHIERS Exists</h2>
+            <p>PHIERS exists because people deserve a system that responds to them — not the other way around.</p>
+            <p>A system that treats clarity as the starting point. A system that understands stability isn't ideological — it's structural.</p>
+            <p>PHIERS is not a moment. Not a campaign. Not a personality. It's a public-benefit structure built for continuity — something that outlasts news cycles, election cycles, and personalities.</p>
+            <p>PHIERS is what happens when you stop waiting for someone else to coordinate the response.</p>
         </div>
 
-        <div style="background: rgba(25,118,210,0.08); border: 1px solid rgba(25,118,210,0.3); border-radius: 10px; padding: 28px 30px; margin: 40px 0; text-align:center;">
-            <p style="font-size:0.85em; text-transform:uppercase; letter-spacing:1.5px; color:#90caf9; margin-bottom:14px;">Who Has Engaged With the PHIERS Model</p>
-            <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:16px;">
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">📄 Congressman Chris Van Hollen — Letter of Support</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">📋 PHIERS Letters of Support — Partial Listing</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">🏛 Maryland Health Care Commission — Engaged</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">⛪ Interfaith Community — Support Letters on File</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">💊 Mark Cuban's Cost Plus Drugs — Independent Validation</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">🏥 ZORTT Elite Medical — Cooperative Model Proven</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">🎓 Harvard (Chenoweth) — 3.5% Threshold Validated</span>
+        <!-- FINAL CTA -->
+        <div style="text-align: center; margin: 60px 0; padding: 40px 30px; background: rgba(76,175,80,0.07); border: 2px solid rgba(76,175,80,0.3); border-radius: 12px;">
+            <h2 style="border:none; margin-top:0;">Document Your Direction</h2>
+            <p style="font-size:1.15em; color:#c8e6c9; margin-bottom:8px;">Your name and district on a public record — not a like, not a share.</p>
+            <p style="font-size:1.4em; font-weight:bold; color:#fff; margin-bottom:30px; line-height:1.6;">Political leverage.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn" style="font-size:1.3em; padding:20px 48px; display:inline-block; margin-bottom:16px;">📋 Document Your Direction</a>
+            <div>
+                <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn btn-warning" style="font-size:1em; padding:12px 28px;">✍ Sign the Petition</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn" style="font-size:1em; padding:12px 28px; background:transparent; border:2px solid #4caf50;">📊 Take the Survey</a>
             </div>
-            <p style="font-size:0.9em; color:#81c784; font-style:italic; margin:0;">The framework is designed to be evaluated, challenged, and improved in public view. These are the people and institutions that looked — and stayed.</p>
+            <p style="color:#a5d6a7; font-size:1.1em; font-weight:bold; margin:28px 0 0; font-style:italic;">Origins explains where PHIERS came from. Your signature determines where it goes.</p>
         </div>
 
         <footer>
@@ -299,7 +352,7 @@
             <div class="footer-links">
                 <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
                 <span>|</span>
-                <a href="mailto:info@phiers.org">Contact</a>
+                <a href="/cdn-cgi/l/email-protection#c8a1a6aea788b8a0a1adbabbe6a7baaf">Contact</a>
                 <span>|</span>
                 <span>© PHIERS</span>
             </div>
@@ -308,7 +361,7 @@
                 The only thing missing is you.
             </div>
             <p style="color:#81c784; font-size:0.9em; margin-top:20px; font-style:italic;">PHIERS is a peaceful, democratic, confrontational accountability movement built to stabilize the country.</p>
-            <p class="copyright">PHIERS Movement | Version: 2026-03-05</p>
+            <p class="copyright">PHIERS Movement | Version: 2026-03-06</p>
         </footer>
     </div>
 
@@ -317,7 +370,7 @@
         <img class="modal-content" id="modalImage">
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function toggleMobileMenu() {
         var navLinks = document.getElementById('navLinks');
         navLinks.classList.toggle('active');
