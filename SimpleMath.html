@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Math - PHIERS</title>
+    <link rel="canonical" href="https://phiersale.github.io/PHIERS-Concept/SimpleMath.html">
+    <meta property="og:title" content="Simple Math — The Numbers Congress Can't Argue With">
+    <meta property="og:description" content="$10,000 vs $600. A 94% drop in healthcare cost. No new taxes. Just arithmetic.">
+    <meta property="og:image" content="https://phiersale.github.io/PHIERS-Concept/PHIERS_Logo.png">
+    <meta property="og:url" content="https://phiersale.github.io/PHIERS-Concept/SimpleMath.html">
+    <meta property="og:type" content="website">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -27,7 +33,7 @@
             backdrop-filter: blur(5px);
         }
         .mobile-menu-toggle {
-            display: none;
+            display: block;
             background: transparent;
             border: 1px solid #4caf50;
             color: #4caf50;
@@ -40,10 +46,11 @@
             font-weight: bold;
         }
         .nav-links-container {
-            display: flex; flex-wrap: wrap;
+            display: none; flex-wrap: wrap;
             align-items: center; justify-content: center;
             gap: 5px; width: 100%;
         }
+        .nav-links-container.active { display: flex; }
         .nav-item {
             color: #81c784; text-decoration: none;
             padding: 8px 12px; border-radius: 4px;
@@ -76,10 +83,7 @@
         .dropdown:hover .dropdown-content { display: block; }
         .dropdown:hover .dropbtn { background: rgba(76, 175, 80, 0.2); color: #4caf50; }
         @media (max-width: 768px) {
-            .mobile-menu-toggle { display: block; }
             .global-nav { padding: 10px; }
-            .nav-links-container { display: none; flex-direction: column; width: 100%; margin-top: 15px; }
-            .nav-links-container.active { display: flex; }
             .nav-item, .dropdown { width: 100%; text-align: center; }
             .dropdown-content { position: static; width: 100%; margin-top: 5px; }
             .dropbtn { width: 100%; }
@@ -92,8 +96,12 @@
             margin-bottom: 40px;
             border: 2px solid rgba(76, 175, 80, 0.3);
         }
-        .hero h1 { color: #4caf50; font-size: 2.8em; margin-bottom: 15px; }
+        .hero h1 { color: #4caf50; font-size: clamp(1.4rem, 5vw, 2.8rem); margin-bottom: 15px; }
         .hero .subhead { font-size: 1.3em; color: #c8e6c9; font-style: italic; }
+        .hero-logo { max-width: 140px; margin-bottom: 15px; }
+        .mabah-full { font-size: 1.1em; color: #81c784; font-weight: 600; margin-bottom: 5px; letter-spacing: 0.5px; }
+        .mabah-tagline { font-size: 1.2em; color: #4caf50; font-weight: bold; margin-bottom: 15px; font-style: italic; }
+        .hero-opener { font-size: 1.1em; color: #a5d6a7; margin-bottom: 10px; }
         .phiers-media-block { width: 100%; max-width: 600px; margin: 40px auto; }
         .phiers-media-block img {
             width: 100%; height: auto; display: block;
@@ -141,6 +149,7 @@
             text-align: center;
         }
         .green-emphasis { color: #4caf50; font-weight: bold; font-size: 1.2em; }
+        .punchline { color: #fff; font-size: 1.15em; font-weight: bold; font-style: italic; margin: 10px 0 25px; border-left: 3px solid #4caf50; padding-left: 14px; }
         .star-verdict {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05));
             border: 2px solid gold;
@@ -208,11 +217,11 @@
             <div class="nav-links-container" id="navLinks">
                 <a href="index.html" class="nav-item">Home</a>
                 <a href="Crisis.html" class="nav-item">Crisis</a>
-                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
                 <a href="SimpleMath.html" class="nav-item active">Simple Math</a>
-                <a href="Roadmap.html" class="nav-item">Roadmap</a>
+                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
                 <a href="Leverage.html" class="nav-item">Leverage</a>
                 <a href="Action.html" class="nav-item">Action</a>
+                <a href="Roadmap.html" class="nav-item">Roadmap</a>
                 <a href="Donate.html" class="nav-item">Donate</a>
                 <div class="dropdown">
                     <button class="dropbtn">More ▼</button>
@@ -227,23 +236,29 @@
                         <a href="Union-Strategy.html">Union Strategy</a>
                         <a href="Telehealth-vs-Insurance.html">Telehealth vs Insurance</a>
                         <a href="Real-Stories.html">Real Stories</a>
-                        <a href="UNBREAKABLE.html">UNBREAKABLE</a>
+                        <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
                     </div>
                 </div>
             </div>
         </nav>
 
         <div class="hero">
+            <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
+            <div class="mabah-full">MABAH — Make America Better And Healthier</div>
+            <div class="mabah-tagline">Sounds Like MAGA, But A Lot Bettah</div>
+            <div class="hero-opener">You don't need a degree to see the difference.</div>
             <h1>SIMPLE MATH</h1>
             <div class="subhead">The Numbers Behind Stabilization</div>
         </div>
 
         <div class="phiers-media-block">
+            <p style="text-align:center; color:#a5d6a7; font-size:0.95em; margin-bottom:10px;">▶ Watch: The Simple Math — $600 vs $10,000 and the Cascade</p>
             <div class="phiers-video-wrapper">
                 <iframe 
                     src="https://www.youtube.com/embed/jMU6LKEBzbs" 
                     title="The Simple Math: $600 vs $10,000 and the Cascade"
-                    allowfullscreen>
+                    allowfullscreen
+                    loading="lazy">
                 </iframe>
             </div>
         </div>
@@ -254,6 +269,7 @@
             <p>The average person in America pays about $10,000 a year for healthcare.</p>
         </div>
         <p>That includes premiums, deductibles, co-pays, what employers pay, and everything else stacked on top. For a lot of people, it's even more than that. For most families, this is the biggest bill after housing.</p>
+        <p class="punchline">For most families, that's rent money.</p>
 
         <h2>2. Telehealth Cost — $600</h2>
         <div class="number-card">
@@ -261,13 +277,16 @@
             <p>A full year of telehealth coverage costs about $600 per person.</p>
         </div>
         <p>Telehealth covers routine care, prescriptions, preventive care, and basic diagnostics. If you need something serious or specialized, you still go in-person. Telehealth just handles the everyday stuff that makes up most care.</p>
+        <p class="punchline">That's a phone bill. Not a mortgage payment.</p>
 
         <div class="phiers-media-block">
+            <p style="text-align:center; color:#a5d6a7; font-size:0.95em; margin-bottom:10px;">▶ Watch: How PHIERS Aligns with Trump and Ami Bera's Cost Goals</p>
             <div class="phiers-video-wrapper">
                 <iframe 
                     src="https://www.youtube.com/embed/bEUyDVAYwpk" 
                     title="How PHIERS Aligns with Trump and Ami Bera's Cost Goals"
-                    allowfullscreen>
+                    allowfullscreen
+                    loading="lazy">
                 </iframe>
             </div>
         </div>
@@ -278,6 +297,7 @@
         </div>
         <p class="green-emphasis">Switching from $10,000 to $600 is a 94% drop in routine healthcare cost.</p>
         <p>The math isn't complicated. It's straight subtraction.</p>
+        <p class="punchline">That's money that stays in your pocket instead of going to an insurance company.</p>
 
         <h2>4. The Expansion Model</h2>
         <div class="number-card">
@@ -285,6 +305,7 @@
             <p>That $9,400 can cover about 12 more people.</p>
         </div>
         <p class="green-emphasis">One person switching helps twelve more get covered. Lower cost = more people covered. That's the whole idea.</p>
+        <p class="punchline">One person opting in helps a dozen more get covered. That's not a theory. That's just division.</p>
 
         <div class="phiers-media-block">
             <img src="Cascade_Math.png" alt="Cascade math: 1 conversion funds 12 to 19 more">
@@ -303,8 +324,8 @@
 
         <h2>6. The Conclusion</h2>
         <p>This model doesn't need new taxes. It works because the cost goes down.</p>
-        <p>It's not about politics. It's about basic arithmetic.</p>
-        <p class="green-emphasis">The numbers are simple. When costs fall, stability grows.</p>
+        <p>That's not politics. That's just arithmetic.</p>
+        <p class="green-emphasis">When costs fall, people breathe easier. It's that simple.</p>
 
         <div class="star-verdict">
             <h3>⭐ FINAL VERDICT</h3>
@@ -323,20 +344,23 @@
         <div style="text-align: center; margin: 60px 0;">
             <h2>The Math is Simple. The Choice is Clear.</h2>
             <p style="font-size: 1.2em;">Join the 3.5% and make Congress do the math.</p>
-            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn btn-warning">Sign the Petition</a>
-            <a href="Action.html" class="btn">📋 Take the Survey</a>
+            <a href="Action.html" class="btn" style="font-size:1.3em; padding:20px 48px; display:inline-block; margin: 10px auto;">📋 Document Your Direction</a>
+            <div style="margin-top: 16px;">
+                <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn btn-warning" style="font-size:1em; padding:12px 28px;">✍ Sign the Petition</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn" style="font-size:1em; padding:12px 28px; background:transparent; border:2px solid #4caf50;">📋 Take the Survey</a>
+            </div>
         </div>
 
         <div style="background: rgba(25,118,210,0.08); border: 1px solid rgba(25,118,210,0.3); border-radius: 10px; padding: 28px 30px; margin: 40px 0; text-align:center;">
             <p style="font-size:0.85em; text-transform:uppercase; letter-spacing:1.5px; color:#90caf9; margin-bottom:14px;">Who Has Engaged With the PHIERS Model</p>
-            <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:16px;">
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">📄 Congressman Chris Van Hollen — Letter of Support</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">📋 PHIERS Letters of Support — Partial Listing</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">🏛 Maryland Health Care Commission — Engaged</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">⛪ Interfaith Community — Support Letters on File</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">💊 Mark Cuban's Cost Plus Drugs — Independent Validation</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">🏥 ZORTT Elite Medical — Cooperative Model Proven</span>
-                <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:8px 16px; font-size:0.9em;">🎓 Harvard (Chenoweth) — 3.5% Threshold Validated</span>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:16px;">
+                <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:12px 16px; font-size:0.9em; text-align:left;">📄 <strong>Congressman Chris Van Hollen</strong><br><span style="color:#a5d6a7; font-size:0.9em;">Letter of Support</span></div>
+                <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:12px 16px; font-size:0.9em; text-align:left;">📋 <strong>PHIERS Letters of Support</strong><br><span style="color:#a5d6a7; font-size:0.9em;">Partial Listing on File</span></div>
+                <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:12px 16px; font-size:0.9em; text-align:left;">🏛 <strong>Maryland Health Care Commission</strong><br><span style="color:#a5d6a7; font-size:0.9em;">Formally Engaged</span></div>
+                <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:12px 16px; font-size:0.9em; text-align:left;">⛪ <strong>Interfaith Community</strong><br><span style="color:#a5d6a7; font-size:0.9em;">Support Letters on File</span></div>
+                <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:12px 16px; font-size:0.9em; text-align:left;">💊 <strong>Mark Cuban's Cost Plus Drugs</strong><br><span style="color:#a5d6a7; font-size:0.9em;">Independent Validation of Model</span></div>
+                <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:12px 16px; font-size:0.9em; text-align:left;">🏥 <strong>ZORTT Elite Medical</strong><br><span style="color:#a5d6a7; font-size:0.9em;">Cooperative Model Proven</span></div>
+                <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:12px 16px; font-size:0.9em; text-align:left;">🎓 <strong>Harvard (Chenoweth Research)</strong><br><span style="color:#a5d6a7; font-size:0.9em;">3.5% Threshold Validated</span></div>
             </div>
             <p style="font-size:0.9em; color:#81c784; font-style:italic; margin:0;">The framework is designed to be evaluated, challenged, and improved in public view. These are the people and institutions that looked — and stayed.</p>
         </div>
@@ -348,7 +372,7 @@
                 <div style="background:rgba(255,255,255,0.05); border-radius:8px; padding:16px 20px; min-width:180px; flex:1; max-width:260px;">
                     <div style="font-size:1.8em; margin-bottom:8px;">✍</div>
                     <strong>1. Sign the Petition</strong>
-                    <p style="font-size:0.9em; color:#a5d6a7; margin:6px 0 0;">Be counted. Your name and district on a public record demanding Congress act.</p>
+                    <p style="font-size:0.9em; color:#a5d6a7; margin:6px 0 0;">Your name + district on a public record. That's it. That's the start.</p>
                 </div>
                 <div style="background:rgba(255,255,255,0.05); border-radius:8px; padding:16px 20px; min-width:180px; flex:1; max-width:260px;">
                     <div style="font-size:1.8em; margin-bottom:8px;">📋</div>
@@ -358,7 +382,7 @@
                 <div style="background:rgba(255,255,255,0.05); border-radius:8px; padding:16px 20px; min-width:180px; flex:1; max-width:260px;">
                     <div style="font-size:1.8em; margin-bottom:8px;">📢</div>
                     <strong>3. Share the Model</strong>
-                    <p style="font-size:0.9em; color:#a5d6a7; margin:6px 0 0;">Movements grow when people see momentum. Share so others can see the system.</p>
+                    <p style="font-size:0.9em; color:#a5d6a7; margin:6px 0 0;">Movements grow when people see momentum. One share puts this in front of someone who needed to see it.</p>
                 </div>
             </div>
             <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn" style="margin: 6px 8px; font-size:1.05em;">✍ Sign the Petition</a>
@@ -378,7 +402,7 @@
             <div class="footer-links">
                 <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
                 <span>|</span>
-                <a href="mailto:info@phiers.org">Contact</a>
+                <a href="/cdn-cgi/l/email-protection#0a63646c654a7a62636f78792465786d">Contact</a>
                 <span>|</span>
                 <span>© PHIERS</span>
             </div>
@@ -391,11 +415,13 @@
         </footer>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function toggleMobileMenu() {
         var navLinks = document.getElementById('navLinks');
         navLinks.classList.toggle('active');
     }
+    document.addEventListener('DOMContentLoaded', function() {
+    });
     </script>
 </body>
 </html>
