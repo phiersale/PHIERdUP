@@ -15,13 +15,15 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #e0e0e0;
+            background: #0d0d0d;
+            color: #d0d0d0;
             line-height: 1.8;
             min-height: 100vh;
             padding: 20px;
         }
         .container { max-width: 900px; margin: 0 auto; }
+
+        /* NAV — site standard green */
         .global-nav {
             background: rgba(26, 26, 46, 0.95);
             border: 1px solid rgba(76, 175, 80, 0.3);
@@ -71,7 +73,7 @@
         .dropdown-content {
             display: none; position: absolute; top: 100%; right: 0;
             background: rgba(26, 26, 46, 0.98); min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
             z-index: 1001; border-radius: 8px;
             border: 1px solid rgba(76, 175, 80, 0.3); padding: 8px 0;
         }
@@ -88,175 +90,187 @@
             .dropdown-content { position: static; width: 100%; margin-top: 5px; }
             .dropbtn { width: 100%; }
         }
+
+        /* HERO */
         .hero {
             text-align: center;
-            padding: 50px 20px 40px;
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.9), rgba(22, 33, 62, 0.9));
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border: 2px solid rgba(76, 175, 80, 0.3);
+            padding: 60px 20px 50px;
+            background: #111;
+            border-radius: 10px;
+            margin-bottom: 0;
+            border: 1px solid #222;
         }
-        .hero-logo { max-width: 140px; margin-bottom: 15px; }
-        .mabah-full { font-size: 1.0em; color: #81c784; font-weight: 600; margin-bottom: 8px; letter-spacing: 0.5px; }
-        .hero-opener { font-size: 1.25em; color: #a5d6a7; margin-bottom: 10px; }
-        .hero h1 { color: #4caf50; font-size: clamp(1.8rem, 6vw, 3.4rem); margin-bottom: 15px; font-weight: 900; letter-spacing: 2px; }
-        .hero .subhead { font-size: 1.55em; color: #c8e6c9; font-style: normal; font-weight: 600; }
+        .hero-logo { max-width: 120px; margin-bottom: 18px; filter: grayscale(100%) brightness(0.75); }
+        .mabah-full { font-size: 0.85em; color: #555; font-weight: 500; margin-bottom: 12px; letter-spacing: 2px; text-transform: uppercase; }
+        .hero-opener { font-size: 1.15em; color: #888; margin-bottom: 16px; font-style: italic; }
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(2.4rem, 9vw, 5rem);
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+        .hero .subhead {
+            font-size: 1.2em;
+            color: #777;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        /* PURPOSE */
+        .purpose-box {
+            background: #141414;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            padding: 20px 32px;
+            margin: 0 0 40px;
+            text-align: center;
+        }
+        .purpose-box p { font-size: 0.98em; color: #666; font-style: italic; margin: 0; }
+
+        /* VIDEO */
         .phiers-media-block { width: 100%; max-width: 600px; margin: 40px auto; }
         .phiers-video-wrapper {
             position: relative; width: 100%; padding-bottom: 56.25%;
-            height: 0; border-radius: 8px; overflow: hidden;
+            height: 0; overflow: hidden; border: 1px solid #222;
         }
         .phiers-video-wrapper iframe {
             position: absolute; top: 0; left: 0;
             width: 100%; height: 100%; border: none;
         }
         @media (max-width: 768px) { .phiers-media-block { max-width: 100%; } }
+
+        /* TYPE */
         h2 {
-            color: #4caf50; font-size: 1.8em;
+            color: #fff; font-size: 1.7em;
             margin: 50px 0 20px;
-            border-bottom: 2px solid rgba(76, 175, 80, 0.3);
             padding-bottom: 10px;
+            border-bottom: 1px solid #222;
+            font-weight: 700; letter-spacing: 0.5px;
         }
-        h3 { color: #81c784; font-size: 1.4em; margin: 30px 0 15px; }
-        p { color: #c8e6c9; margin: 16px 0; line-height: 1.8; font-size: 1.1em; }
-        ul { color: #c8e6c9; margin: 12px 0 12px 24px; line-height: 1.9; font-size: 1.05em; }
-        .highlight {
-            background: rgba(76, 175, 80, 0.1);
-            border-left: 4px solid #4caf50;
+        h3 { color: #aaa; font-size: 1.2em; margin: 28px 0 10px; font-weight: 600; }
+        p { color: #bbb; margin: 13px 0; line-height: 1.85; font-size: 1.05em; }
+        ul { color: #aaa; margin: 10px 0 10px 22px; line-height: 2.0; font-size: 1.0em; }
+        strong { color: #ddd; }
+
+        /* SECTIONS */
+        .dark-section {
+            background: #111;
+            padding: 50px 32px;
+            margin: 40px -20px;
+            border-top: 1px solid #1e1e1e;
+            border-bottom: 1px solid #1e1e1e;
+        }
+        .dark-inner { max-width: 840px; margin: 0 auto; }
+
+        /* BOXES */
+        .mono-box {
+            background: #161616;
+            border-left: 3px solid #444;
             padding: 20px 24px;
-            margin: 28px 0;
-            border-radius: 0 8px 8px 0;
+            margin: 26px 0;
+            border-radius: 0 6px 6px 0;
         }
-        .gold-box {
-            background: rgba(245,200,66,0.07);
-            border-left: 4px solid #f5c842;
+        .mono-box p { color: #aaa; margin: 8px 0; }
+        .white-box {
+            background: #161616;
+            border-left: 3px solid #ccc;
             padding: 20px 24px;
-            margin: 28px 0;
-            border-radius: 0 8px 8px 0;
+            margin: 26px 0;
+            border-radius: 0 6px 6px 0;
         }
-        .purpose-box {
-            background: rgba(76,175,80,0.06);
-            border: 1px solid rgba(76,175,80,0.25);
-            border-radius: 10px;
-            padding: 22px 28px;
-            margin: 32px 0;
-            text-align: center;
-        }
-        .purpose-box p {
-            font-size: 1.05em;
-            color: #a5d6a7;
-            font-style: italic;
-            margin: 0;
-        }
+        .white-box p { color: #ccc; margin: 8px 0; }
+
+        /* PULL QUOTES */
         .quote-pull {
             text-align: center;
             padding: 30px 20px;
             margin: 36px 0;
-            border-top: 1px solid rgba(245,200,66,0.3);
-            border-bottom: 1px solid rgba(245,200,66,0.3);
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
         }
         .quote-pull p {
-            font-size: 1.3em;
-            font-weight: bold;
-            font-style: italic;
-            color: #f5c842;
-            line-height: 1.5;
-            margin-bottom: 10px;
+            font-size: 1.2em; font-weight: 600;
+            font-style: italic; color: #e0e0e0;
+            line-height: 1.65; margin-bottom: 12px;
         }
-        .green-pull {
-            text-align: center;
-            padding: 30px 20px;
-            margin: 36px 0;
-            border-top: 1px solid rgba(76,175,80,0.3);
-            border-bottom: 1px solid rgba(76,175,80,0.3);
+        .attr { font-size: 0.8em; color: #555; font-style: normal; letter-spacing: 0.5px; }
+
+        /* RHYTHM */
+        .rhythm-block { margin: 20px 0; }
+        .rhythm-block p { margin: 5px 0; color: #bbb; }
+        .build-line {
+            font-size: 1.5em; font-weight: 900;
+            color: #fff; letter-spacing: 3px;
+            margin: 18px 0 10px; display: block;
         }
-        .green-pull p {
-            font-size: 1.3em;
-            font-weight: bold;
-            font-style: italic;
-            color: #4caf50;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
-        .attr { font-size: 0.85em; color: #888; font-style: normal; }
-        .img-block { text-align: center; margin: 28px 0 36px; }
-        .img-caption { font-size: 0.9em; color: #888; margin-top: 8px; font-style: italic; }
-        .fact-row {
-            background: rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 8px;
-            padding: 14px 18px;
-            margin: 10px 0;
-            color: #c8e6c9;
-            font-size: 1.05em;
-            line-height: 1.7;
-        }
+
+        /* MID ANCHOR */
         .mid-anchor {
             text-align: center;
-            padding: 20px 0 10px;
-            margin: 40px 0 20px;
+            padding: 32px 0 22px;
+            margin: 10px 0;
+            border-top: 1px solid #1e1e1e;
         }
-        .mid-anchor p {
-            font-size: 1.15em;
-            font-weight: 600;
-            color: #4caf50;
-            margin: 4px 0;
-        }
-        .dark-section {
-            background: #111;
-            color: #e2e2e2;
-            padding: 60px 25px;
-            margin: 0 -20px;
-        }
-        .dark-inner { max-width: 810px; margin: 0 auto; }
-        .rhythm-block p {
+        .mid-anchor p { color: #666; font-size: 1.0em; margin: 4px 0; }
+        .anchor-word { color: #fff; font-size: 1.3em; font-weight: 800; letter-spacing: 4px; display: block; margin-top: 8px; }
+
+        /* FACT ROWS */
+        .fact-row {
+            background: #141414;
+            border: 1px solid #1e1e1e;
+            border-radius: 4px;
+            padding: 14px 18px;
             margin: 8px 0;
+            color: #aaa;
+            font-size: 1.0em;
+            line-height: 1.7;
         }
-        .btn {
-            background: linear-gradient(135deg, #4caf50, #2e7d32);
-            color: white; padding: 16px 36px;
-            font-size: 1.2em; font-weight: bold;
-            border: 2px solid #4caf50; border-radius: 8px;
-            text-decoration: none; display: inline-block;
-            margin: 10px;
-        }
-        .btn-secondary {
-            background: transparent;
-            color: #4caf50; padding: 12px 28px;
-            font-size: 1em; font-weight: bold;
-            border: 2px solid #4caf50; border-radius: 8px;
-            text-decoration: none; display: inline-block;
-            margin: 8px;
-            transition: all 0.3s ease;
-        }
-        .btn-secondary:hover { background: rgba(76,175,80,0.15); }
-        .btn-warning {
-            background: linear-gradient(135deg, #f5c842, #e0a800);
-            border-color: #f5c842; color: #000;
-            padding: 12px 28px; font-size: 1em; font-weight: bold;
-            border-radius: 8px; text-decoration: none;
-            display: inline-block; margin: 8px;
-        }
+
+        /* IMAGE */
+        .img-block { text-align: center; margin: 28px 0 36px; }
+        .img-block img { border-radius: 4px; filter: grayscale(100%); border: 1px solid #222; }
+        .img-caption { font-size: 0.85em; color: #555; margin-top: 10px; font-style: italic; }
+
+        /* CTA */
         .cta-block {
             text-align: center;
-            padding: 36px 24px;
-            background: rgba(76,175,80,0.08);
-            border: 1px solid rgba(76,175,80,0.25);
-            border-radius: 12px;
+            padding: 40px 24px;
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
             margin: 44px 0;
         }
+        .btn {
+            background: #fff; color: #000;
+            padding: 16px 40px; font-size: 1.1em; font-weight: 800;
+            border: 2px solid #fff; border-radius: 5px;
+            text-decoration: none; display: inline-block; margin: 10px;
+            letter-spacing: 0.5px; transition: all 0.2s;
+        }
+        .btn:hover { background: #ddd; border-color: #ddd; }
+        .btn-secondary {
+            background: transparent; color: #888;
+            padding: 12px 26px; font-size: 1.0em; font-weight: 600;
+            border: 1px solid #333; border-radius: 5px;
+            text-decoration: none; display: inline-block; margin: 8px;
+            transition: all 0.2s;
+        }
+        .btn-secondary:hover { border-color: #777; color: #ccc; }
+
+        /* FOOTER */
         footer {
-            text-align: center; padding: 40px 20px; margin-top: 80px;
-            border-top: 2px solid rgba(76, 175, 80, 0.3);
-            background: rgba(26, 26, 46, 0.6); border-radius: 8px;
+            text-align: center; padding: 36px 20px; margin-top: 60px;
+            border-top: 1px solid #1e1e1e;
+            background: #111; border-radius: 6px;
         }
-        .footer-links {
-            display: flex; flex-wrap: wrap; gap: 20px;
-            justify-content: center; margin: 20px 0;
-        }
-        .footer-links a { color: #81c784; text-decoration: none; }
-        .footer-links a:hover { color: #4caf50; }
-        .copyright { color: #666; font-size: 0.8em; margin-top: 20px; }
+        footer h3 { color: #666; font-size: 1.0em; font-weight: 500; margin-bottom: 6px; }
+        footer p { color: #444; font-size: 0.9em; margin: 5px 0; }
+        .footer-links { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 14px 0; }
+        .footer-links a { color: #555; text-decoration: none; font-size: 0.9em; }
+        .footer-links a:hover { color: #999; }
+        .copyright { color: #2e2e2e; font-size: 0.78em; margin-top: 14px; }
     </style>
 </head>
 <body>
@@ -302,7 +316,6 @@
             <div class="subhead">The pattern. The pressure. The proof.</div>
         </div>
 
-        <!-- WHY THIS PAGE EXISTS -->
         <div class="purpose-box">
             <p>UNBREAKABLE exists to document the pattern, the pressure, and the proof — so the country understands what PHIERS survived to exist.</p>
         </div>
@@ -327,13 +340,16 @@
                 <p>Black men are disrespected globally.</p>
                 <p>Not because we lack talent, discipline, or contribution.</p>
                 <p>Because excellence disrupts institutions built to underestimate us.</p>
-                <p>We are celebrated when our brilliance is convenient.</p>
+                <p style="margin-top:22px;">We are celebrated when our brilliance is convenient.</p>
                 <p>Ignored when our dignity requires protection.</p>
                 <p>Resisted when our solutions threaten the status quo.</p>
-                <div class="gold-box">
-                    <p><strong>This is not grievance. This is a record.</strong> And the record shows something remarkable: every time the pattern tried to stop us, we built something instead.</p>
+                <div class="mono-box" style="border-left-color:#777; margin-top:28px;">
+                    <p><strong>This is not grievance. This is a record.</strong></p>
+                    <p>And the record shows something remarkable: every time the pattern tried to stop us, we built something instead.</p>
                 </div>
-                <p>We name the pattern not to dwell in pain — but to document it. Because documented patterns become undeniable evidence. And undeniable evidence is the foundation of change.</p>
+                <p>We name the pattern not to dwell in pain — but to document it.</p>
+                <p>Because documented patterns become undeniable evidence.</p>
+                <p>And undeniable evidence is the foundation of change.</p>
             </div>
         </div>
 
@@ -341,16 +357,17 @@
         <h2>The Response</h2>
         <p>Despite the pattern, Black men do something extraordinary.</p>
         <p>We respond to disrespect with solutions that uplift everyone.</p>
-        <div class="rhythm-block" style="margin: 24px 0 24px 20px;">
+        <div class="rhythm-block" style="margin: 28px 0 28px 4px;">
             <p>We don't retaliate.</p>
             <p>We don't shrink.</p>
             <p>We don't break.</p>
-            <p><strong style="color:#4caf50; font-size:1.2em;">We build.</strong></p>
+            <span class="build-line">WE BUILD.</span>
         </div>
-        <p>We build culture that moves the world.<br>
-        We build systems that stabilize nations.<br>
-        We build solutions institutions could not create — and often tried to stop.</p>
-        <p>PHIERS is one of those solutions.</p>
+        <p>We build systems that stabilize nations.</p>
+        <p>We build culture that moves the world.</p>
+        <p>We build solutions institutions could not create —</p>
+        <p style="padding-left:22px; color:#888;">and often tried to stop.</p>
+        <p style="margin-top:20px;">PHIERS is one of those solutions.</p>
 
         <div class="img-block">
             <img src="fba_men_bonding.webp" style="max-width:220px;" alt="FBA men — brotherhood, strength, purpose">
@@ -362,18 +379,27 @@
             <div class="dark-inner">
                 <h2>The Philosophy Behind UNBREAKABLE</h2>
                 <p>We speak about race for one reason: because Black men are dismissed until we deliver something so exceptional that the world can no longer pretend not to see us.</p>
-                <p>Not to antagonize. Not to accuse. Not to divide. But to document the pattern — and then transcend it.</p>
+                <p>Not to antagonize. Not to accuse. Not to divide.</p>
+                <p>But to document the pattern — and then transcend it.</p>
                 <div class="quote-pull">
-                    <p>"Black men have been disrespected globally, yet we consistently deliver solutions that uplift everyone — even when no one uplifts us. That is not pain. That is capacity. That is not grievance. That is character. That is the record."</p>
+                    <p>"Black men have been disrespected globally, yet we consistently deliver solutions that uplift everyone — even when no one uplifts us.<br>
+                    That is not pain. That is capacity.<br>
+                    That is not grievance. That is character.<br>
+                    That is the record."</p>
                     <span class="attr">— Will Price, PHIERS Founders</span>
                 </div>
-                <p>Black excellence is not a performance for the world's approval. It is a public service — delivered whether or not the world is paying attention, whether or not institutions protect us, whether or not the stage is fair.</p>
-                <p>Respect demanded rarely lasts.</p>
+                <p>Black excellence is not a performance for the world's approval.</p>
+                <p>It is a public service — delivered whether or not the world is paying attention, whether or not institutions protect us, whether or not the stage is fair.</p>
+                <p style="margin-top:22px;">Respect demanded rarely lasts.</p>
                 <p>Respect earned through contribution becomes permanent.</p>
-                <p>UNBREAKABLE exists for one reason.</p>
-                <p>To show what dignity looks like under pressure — and what happens when people who were never supposed to build anything this powerful build it anyway.</p>
-                <div class="highlight">
-                    <p><strong>Structural excellence forces institutions to confront their own biases — without us ever raising our voices. That is the moral high ground. That is the leverage. That is PHIERS.</strong></p>
+                <p style="margin-top:22px;">UNBREAKABLE exists for one reason.</p>
+                <p>To show what dignity looks like under pressure.</p>
+                <p>And what happens when people who were never supposed to build anything this powerful build it anyway.</p>
+                <div class="white-box" style="margin-top:32px;">
+                    <p><strong>Structural excellence forces institutions to confront their own biases — without us ever raising our voices.</strong></p>
+                    <p>That is the moral high ground.</p>
+                    <p>That is the leverage.</p>
+                    <p>That is PHIERS.</p>
                 </div>
             </div>
         </div>
@@ -381,39 +407,40 @@
         <!-- MID-PAGE ANCHOR -->
         <div class="mid-anchor">
             <p>This is what the pattern produced.</p>
-            <p>Structure.</p>
+            <span class="anchor-word">STRUCTURE.</span>
         </div>
 
         <!-- PHIERS BUILT -->
         <h2>PHIERS: Built Without Permission. Built for Everyone.</h2>
         <p>PHIERS is a citizen-powered healthcare movement.</p>
-        <p>Mathematically sound.<br>Nationally scalable.<br>Globally relevant.</p>
-        <p>A solution built by Black men that improves the lives of people who may never stand up for us.</p>
+        <p>Mathematically sound. Nationally scalable. Globally relevant.</p>
+        <p style="margin-top:14px;">A solution built by Black men that improves the lives of people who may never stand up for us.</p>
         <p>And we built it anyway.</p>
 
-        <div class="fact-row">💡 One conversion from a $10,000 insurance plan to a $600 telehealth plan frees enough savings to fund <strong>12 more people.</strong></div>
-        <div class="fact-row">📈 Those 12 fund <strong>148.</strong> Those 148 fund <strong>1,825.</strong></div>
-        <div class="fact-row">🎯 At <strong>3.5% of the country</strong> — just 11.6 million people — the cascade becomes self-sustaining. Telehealth becomes free. Monthly relief checks follow. Jobs follow.</div>
-        <div class="fact-row">🏛 At that threshold, we hold Congress accountable: pass laws making telehealth available through ACA exchanges — or explain publicly why they won't adopt a solution that saves taxpayers trillions.</div>
-        <div class="fact-row">🌍 The impact reaches people across the US, the UK, and countries around the world. This is not a domestic policy tweak. This is a global model.</div>
+        <div style="margin: 28px 0;">
+            <div class="fact-row">💡 One conversion from a $10,000 insurance plan to a $600 telehealth plan frees enough savings to fund <strong>12 more people.</strong></div>
+            <div class="fact-row">📈 Those 12 fund <strong>148.</strong> Those 148 fund <strong>1,825.</strong></div>
+            <div class="fact-row">🎯 At <strong>3.5% of the country</strong> — just 11.6 million people — the cascade becomes self-sustaining. Telehealth becomes free. Monthly relief checks follow. Jobs follow.</div>
+            <div class="fact-row">🏛 At that threshold, we hold Congress accountable: pass laws making telehealth available through ACA exchanges — or explain publicly why they won't adopt a solution that saves taxpayers trillions.</div>
+            <div class="fact-row">🌍 The impact reaches people across the US, the UK, and countries around the world. This is not a domestic policy tweak. This is a global model.</div>
+        </div>
 
         <p><strong>This is not ideology. This is arithmetic.</strong></p>
         <p>PHIERS solves a problem Congress could not solve — and gives citizens the leverage to demand they adopt it, or justify publicly why they won't.</p>
 
-        <!-- WHAT IT WAS BUILT WITHOUT -->
         <h3>What It Was Built Without</h3>
         <ul>
             <li>Without institutional protection</li>
             <li>Without corporate backing</li>
             <li>Without political shelter</li>
-            <li>Under pressure designed to break us</li>
         </ul>
+        <p style="margin-top:12px; color:#777; font-style:italic;">Under pressure designed to break us.</p>
 
-        <!-- RECEIPTS -->
         <h3>What It Cost — The Receipts</h3>
-        <p>These are not grievances. These are the conditions under which the work continued.</p>
+        <p>These are not grievances.</p>
+        <p>These are the conditions under which the work continued.</p>
 
-        <p><strong>Financial &amp; Legal Pressure</strong></p>
+        <p style="margin-top:20px;"><strong>Financial &amp; Legal Pressure</strong></p>
         <ul>
             <li>Rejected hush money tied to a hold-harmless affidavit</li>
             <li>Refused to legitimize those who stole property</li>
@@ -421,73 +448,84 @@
             <li>Survived blacklisting and blocked opportunities</li>
         </ul>
 
-        <p><strong>Physical &amp; Personal</strong></p>
-        <ul>
-            <li>Survived threats, assault, and attempts to cause harm</li>
+        <p style="margin-top:20px;"><strong>Physical &amp; Personal</strong></p>
+        <ul style="list-style:none; margin-left:0; padding-left:0; line-height:2.2;">
+            <li>Survived threats.</li>
+            <li>Survived assault.</li>
+            <li>Survived being poisoned.</li>
+        </ul>
+        <ul style="margin-top:8px;">
             <li>Became homeless rather than compromise the truth</li>
             <li>Survived smear campaigns and forced relocation</li>
             <li>Protected an elder impacted by exploitation</li>
         </ul>
 
-        <p><strong>The Response</strong></p>
+        <p style="margin-top:20px;"><strong>The Response</strong></p>
         <ul>
             <li>Built PHIERS from the front seat of a car — and refused to stop</li>
         </ul>
 
-        <div class="gold-box">
+        <div class="mono-box" style="margin-top:28px;">
             <p><strong>Every threat was an opportunity to go into survival mode.</strong> Every time, the answer was the same: keep building. Not despite the pressure — through it. That is not suffering. That is the architecture of a movement. And it proves, beyond any reasonable doubt, that we are inferior to no one.</p>
         </div>
 
-        <!-- VALIDATION -->
         <h3>The Validation Before the Silence</h3>
         <p>A Fortune 500 PR firm reviewed PHIERS and staked their reputation on it.</p>
-        <div class="gold-box">
+        <div class="mono-box" style="border-left-color:#777;">
             <p>"If we're talking to you right now, there is an available editorial window."</p>
             <p>"If you weren't legit, we wouldn't risk putting our name behind yours."</p>
             <p>"Major outlets are interested — Forbes, USA Today, International Business Times."</p>
         </div>
-        <p>Nothing changed about PHIERS after hours of interviews and that review — nor after a second review from a UK-based PR firm traded on the London Stock Exchange. The math didn't change. The architecture didn't change. The national impact didn't change.</p>
+        <p>Nothing changed about PHIERS.</p>
+        <p>Not after hours of interviews.</p>
+        <p>Not after a second review from a UK-based PR firm traded on the London Stock Exchange.</p>
+        <p style="margin-top:14px;">The math didn't change. The architecture didn't change. The national impact didn't change.</p>
         <p>What changed was their understanding of who built it — and what it was built to disrupt.</p>
-        <p>This solution was built by Black men who showed up for each other — as fathers, sons, brothers, uncles, friends, and allies — when every institution they approached either went silent or pushed back.</p>
-        <p>That endurance is not a tragedy. It is the proof of concept. If PHIERS could be built under those conditions — it can survive anything.</p>
+        <p style="margin-top:14px;">This solution was built by Black men who showed up for each other — as fathers, sons, brothers, uncles, friends, and allies — when every institution they approached either went silent or pushed back.</p>
+        <p>That endurance is not a tragedy. It is the proof of concept.</p>
+        <p>If PHIERS could be built under those conditions — it can survive anything.</p>
 
-        <!-- BAFTA / THE MIRROR -->
+        <!-- THE MIRROR -->
         <div class="dark-section">
             <div class="dark-inner">
-                <p style="font-size:1.1em; color:#81c784; font-style:italic; margin-bottom:6px;">The pattern didn't stop at home — it showed up globally.</p>
+                <p style="font-size:0.95em; color:#555; font-style:italic; margin-bottom:10px;">The pattern didn't stop at home — it showed up globally.</p>
                 <h2>The Mirror</h2>
                 <p>The BAFTA incident is not the story. It is the mirror.</p>
-                <p>A global stage gave two Black men visibility.</p>
+                <p style="margin-top:18px;">A global stage gave two Black men visibility.</p>
                 <p>Then failed to protect their dignity.</p>
-                <p>The N-word was shouted at them.</p>
+                <p style="margin-top:18px;">The N-word was shouted at them.</p>
                 <p>More than once.</p>
-                <p>BAFTA had a tape delay. The BBC had editors. Warner Bros. immediately requested the slur be removed.</p>
-                <div class="gold-box">
-                    <p><strong>What was removed from the broadcast?</strong> A joke about "corrupt leaders." A filmmaker saying "Free Palestine." <strong>What was not removed?</strong> The racial slur directed at two Black men on a global stage.</p>
+                <p style="margin-top:14px;">BAFTA had a tape delay. The BBC had editors. Warner Bros. immediately requested the slur be removed.</p>
+                <div class="mono-box" style="margin-top:24px;">
+                    <p><strong>What was removed from the broadcast?</strong> A joke about "corrupt leaders." A filmmaker saying "Free Palestine."</p>
+                    <p style="margin-top:10px;"><strong>What was not removed?</strong> The racial slur directed at two Black men on a global stage.</p>
                 </div>
                 <p>Delroy Lindo said afterward he wished "someone from BAFTA had spoken to us." No one did.</p>
-                <p>That same week, a UK-based PR firm traded on the London Stock Exchange shifted direction after warm, collaborative conversations about PHIERS. Will had shared the SOTU Pre-sponse — evidence that PHIERS could address the global instability driving us toward a war nobody asked for. The energy changed. They backed out of a signed contract. No questions asked.</p>
+                <p style="margin-top:18px;">That same week, a UK-based PR firm traded on the London Stock Exchange shifted direction after warm, collaborative conversations about PHIERS. Will had shared the SOTU Pre-sponse — evidence that PHIERS could address the global instability driving us toward a war nobody asked for. The energy changed. They backed out of a signed contract. No questions asked.</p>
                 <p>The reader can connect the same dots he connected.</p>
                 <div class="quote-pull">
                     <p>"Different institution. Same pattern. Same silence. Same discomfort with Black excellence that disrupts the status quo."</p>
                     <span class="attr">— Will Price, on what he observed</span>
                 </div>
-                <p>Our response is not retaliation. Our response is solutions that make silence indefensible.</p>
+                <p>Our response is not retaliation.</p>
+                <p>Our response is solutions that make silence indefensible.</p>
             </div>
         </div>
 
         <!-- WHY BLACK MEN WALK TALL -->
         <h2>Why Black Men Should Walk Tall</h2>
         <p>Not because the world treats us well. But because we keep building anyway.</p>
-        <p>When institutions fail to protect us — we still protect others.<br>
-        When institutions refuse to support us — we still support others.<br>
-        When institutions underestimate us — we still outperform them.</p>
-        <p>Black men are unbreakable not because life is easy — but because we build under pressure, without applause, without protection, for people who may never stand up for us.</p>
-        <div class="gold-box">
-            <p><strong>We improve the lives of everyone else more than they can improve ours without us.</strong> That is why we stand tall. That is why we speak with dignity. That is why we are unbreakable.</p>
+        <p style="margin-top:20px;">When institutions fail to protect us — we still protect others.</p>
+        <p>When institutions refuse to support us — we still support others.</p>
+        <p>When institutions underestimate us —</p>
+        <p style="padding-left:22px; color:#e0e0e0; font-weight:600;">we still outperform them.</p>
+        <p style="margin-top:20px;">Black men are unbreakable not because life is easy — but because we build under pressure, without applause, without protection, for people who may never stand up for us.</p>
+        <div class="white-box" style="margin-top:26px;">
+            <p><strong>We improve the lives of everyone else more than they can improve ours without us.</strong></p>
+            <p>That is why we stand tall. That is why we speak with dignity. That is why we are unbreakable.</p>
         </div>
 
-        <!-- CALL TO PRIDE -->
+        <!-- THE CALL TO PRIDE -->
         <div class="dark-section">
             <div class="dark-inner">
                 <h2>The Call to Pride</h2>
@@ -495,30 +533,42 @@
                     <img src="i_am_a_man.jpg" style="max-width:260px;" alt="I AM A MAN — Memphis, 1968">
                     <p class="img-caption">"I AM A MAN" — Memphis, 1968. They marched for dignity then. We build it now.</p>
                 </div>
-                <p>To every Foundational Black American man who has been dismissed, sabotaged, blacklisted, or written off: See what we built anyway.</p>
-                <div class="rhythm-block" style="margin: 24px 0 24px 0;">
+                <p>To every Foundational Black American man who has been dismissed, sabotaged, blacklisted, or written off:</p>
+                <p style="color:#e8e8e8; font-weight:600; font-size:1.1em; margin-top:6px;">See what we built anyway.</p>
+
+                <div class="rhythm-block" style="margin:28px 0;">
                     <p>We have been sabotaged.</p>
                     <p>Betrayed.</p>
+                    <p>Disrupted.</p>
                     <p>Blacklisted.</p>
                     <p>Homeless.</p>
-                    <p><strong style="color:#4caf50;">And we built anyway.</strong></p>
+                    <p>Erased.</p>
+                    <p style="margin-top:18px; color:#fff; font-weight:700; font-size:1.1em;">And we built anyway.</p>
                 </div>
-                <p>UNBREAKABLE is not a complaint.<br>
-                It is not a performance.<br>
-                It is not a reaction.</p>
-                <p>It is proof.</p>
-                <p style="color:#81c784; font-style:italic;">UNBREAKABLE is not about the past — it's about the structure we built anyway.</p>
-                <div class="green-pull">
-                    <p>"PHIERS is the proof of what happens when Black men build with integrity under pressure. And the world is better for it."</p>
+
+                <p>UNBREAKABLE is not a complaint.</p>
+                <p>It is not a performance.</p>
+                <p>It is not a reaction.</p>
+                <p style="color:#fff; font-weight:800; font-size:1.15em; margin-top:16px;">It is proof.</p>
+
+                <p style="margin-top:18px; color:#666; font-style:italic;">UNBREAKABLE is not about the past — it's about the structure we built anyway.</p>
+
+                <div class="quote-pull" style="margin-top:32px;">
+                    <p>"PHIERS is the proof of what happens when Black men build with integrity under pressure.<br>And the world is better for it."</p>
                     <span class="attr">— Will Price, PHIERS Founders</span>
                 </div>
-                <p style="font-size:1.3em; text-align:center; font-weight:600;">If not this, what? If not now, when? If not us, who?</p>
+
+                <p style="font-size:1.2em; text-align:center; font-weight:700; color:#fff; letter-spacing:1px; margin-top:10px; line-height:2;">
+                    If not this, what?<br>
+                    If not now, when?<br>
+                    If not us, who?
+                </p>
             </div>
         </div>
 
         <!-- PATHOS VIDEO -->
         <div class="phiers-media-block" style="max-width:640px; margin: 60px auto;">
-            <p style="text-align:center; color:#f5c842; font-weight:600; margin-bottom:12px; font-size:1.05em;">Pathos Communications: Why They Put Their Reputation Behind PHIERS (7:11)</p>
+            <p style="text-align:center; color:#777; font-weight:600; margin-bottom:12px; font-size:0.98em;">Pathos Communications: Why They Put Their Reputation Behind PHIERS (7:11)</p>
             <div class="phiers-video-wrapper">
                 <iframe
                     src="https://www.youtube.com/embed/UD8svoGU7ZU"
@@ -528,7 +578,7 @@
                     allowfullscreen>
                 </iframe>
             </div>
-            <p style="text-align:center; color:#81c784; font-size:0.9em; margin-top:10px; font-style:italic;">Third-party credibility. A Fortune 500 PR firm explains why they backed this movement.</p>
+            <p style="text-align:center; color:#444; font-size:0.85em; margin-top:10px; font-style:italic;">Third-party credibility. A Fortune 500 PR firm explains why they backed this movement.</p>
         </div>
 
         <!-- THIS CANNOT BE ERASED -->
@@ -542,31 +592,31 @@
             <li>The inevitability of PHIERS' national impact</li>
             <li>The strength and excellence of a Black-led solution built for everyone</li>
         </ul>
-        <div class="highlight">
+        <div class="white-box" style="margin-top:28px;">
             <p><strong>PHIERS is not a pitch. PHIERS is not a protest. PHIERS is the future — built by people who were unbreakable when it mattered most.</strong></p>
         </div>
 
         <!-- CTA -->
         <div class="cta-block">
-            <p style="color:#c8e6c9; font-size:1.15em; margin-bottom:20px;">The movement needs your direction on the record.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn" style="font-size:1.3em; padding:20px 48px;">📋 Document Your Direction</a>
-            <div style="margin-top:12px;">
-                <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn-warning">✍ Sign the Petition</a>
+            <p style="color:#777; font-size:1.1em; margin-bottom:22px;">The movement needs your direction on the record.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn">📋 Document Your Direction</a>
+            <div style="margin-top:14px;">
+                <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn-secondary">✍ Sign the Petition</a>
                 <a href="UNSTOPPABLE.html" class="btn-secondary">Read UNSTOPPABLE →</a>
             </div>
         </div>
 
         <footer>
             <h3>PHIERS Movement | MABAH</h3>
-            <p><strong>Make America Better And Healthier</strong></p>
+            <p>Make America Better And Healthier</p>
             <div class="footer-links">
                 <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
-                <span>|</span>
+                <span style="color:#2a2a2a;">|</span>
                 <a href="/cdn-cgi/l/email-protection#e28b8c848da2928a8b879091cc8d9085">Contact</a>
-                <span>|</span>
-                <span>© PHIERS</span>
+                <span style="color:#2a2a2a;">|</span>
+                <span style="color:#2a2a2a;">© PHIERS</span>
             </div>
-            <div style="color: #a5d6a7; font-size: 0.9em; margin-top: 20px;">
+            <div style="color:#333; font-size:0.85em; margin-top:14px;">
                 PHIERS is a public-interest movement — not a company, not a product.<br>
                 The only thing missing is you.
             </div>
