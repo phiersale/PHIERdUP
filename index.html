@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHIERS - Make America Better And Healthier</title>
     <meta name="description" content="PHIERS: A national citizen coalition using math, not ideology — and leverage, not hope — to force Congress to fix healthcare or face replacement.">
+    <meta property="og:title" content="PHIERS — The Math Congress Fears. The Movement They Can't Stop.">
+    <meta property="og:description" content="$600 replaces $10,000. 3.5% forces Congress to act — or we replace them. Join 11.6 million Americans and make healthcare unignorable.">
+    <meta property="og:image" content="https://phiersale.github.io/PHIERS-Concept/PHIERS_Logo.png">
+    <meta property="og:url" content="https://phiersale.github.io/PHIERS-Concept/index.html">
+    <meta property="og:type" content="website">
     <link rel="canonical" href="https://phiersale.github.io/PHIERS-Concept/index.html" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -29,7 +34,7 @@
             backdrop-filter: blur(5px);
         }
         .mobile-menu-toggle {
-            display: none;
+            display: block;
             background: transparent;
             border: 1px solid #4caf50;
             color: #4caf50;
@@ -42,10 +47,11 @@
             font-weight: bold;
         }
         .nav-links-container {
-            display: flex; flex-wrap: wrap;
+            display: none; flex-wrap: wrap;
             align-items: center; justify-content: center;
             gap: 5px; width: 100%;
         }
+        .nav-links-container.active { display: flex; }
         .nav-item {
             color: #81c784; text-decoration: none;
             padding: 8px 12px; border-radius: 4px;
@@ -78,10 +84,7 @@
         .dropdown:hover .dropdown-content { display: block; }
         .dropdown:hover .dropbtn { background: rgba(76, 175, 80, 0.2); color: #4caf50; }
         @media (max-width: 768px) {
-            .mobile-menu-toggle { display: block; }
             .global-nav { padding: 10px; }
-            .nav-links-container { display: none; flex-direction: column; width: 100%; margin-top: 15px; }
-            .nav-links-container.active { display: flex; }
             .nav-item, .dropdown { width: 100%; text-align: center; }
             .dropdown-content { position: static; width: 100%; margin-top: 5px; }
             .dropbtn { width: 100%; }
@@ -187,11 +190,11 @@
             <div class="nav-links-container" id="navLinks">
                 <a href="index.html" class="nav-item active">Home</a>
                 <a href="Crisis.html" class="nav-item">Crisis</a>
-                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
                 <a href="SimpleMath.html" class="nav-item">Simple Math</a>
-                <a href="Roadmap.html" class="nav-item">Roadmap</a>
+                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
                 <a href="Leverage.html" class="nav-item">Leverage</a>
                 <a href="Action.html" class="nav-item">Action</a>
+                <a href="Roadmap.html" class="nav-item">Roadmap</a>
                 <a href="Donate.html" class="nav-item">Donate</a>
                 <div class="dropdown">
                     <button class="dropbtn">More ▼</button>
@@ -216,24 +219,31 @@
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
             <div class="mabah-full">MABAH — Make America Better And Healthier</div>
             <div class="mabah-tagline">Sounds Like MAGA, But A Lot Bettah</div>
-            <h1>The Math Congress Fears. <span style="color:#4caf50;">The Movement They Can't Stop.</span></h1>
-            <div class="subhead">$600 replaces $10,000. 3.5% forces Congress to act — or we replace them. Here's the math in plain English.</div>
+            <h1>The Math Congress Fears. <span style="color:#4caf50; white-space:nowrap;">The Movement They Can't Stop.</span></h1>
+            <div style="margin: 14px 0 18px; color:#c8e6c9; font-size:1.05em; line-height:1.6;">
+                PHIERS isn't a policy campaign.<br>
+                It's a way for regular Americans to give Congress documented direction —<br>
+                and replace the ones who ignore it.
+            </div>
+            <div class="subhead">Here's the math in plain English: $600 replaces $10,000. 3.5% forces Congress to act — or we replace them.</div>
 
             <div class="hero-glance">
                 <h3>At a Glance</h3>
                 <ul>
-                    <li>PHIERS is a national group of regular people using documented public direction — not politics — to make Congress stabilize healthcare and protect coverage.</li>
-                    <li>When millions of people put their names on the same demand, it becomes political gravity. And Congress can't ignore gravity.</li>
+                    <li>PHIERS is a national coalition of regular Americans using public record pressure to force Congress to stabilize healthcare.</li>
+                    <li>Millions of Americans already agree the system is broken. PHIERS organizes that agreement into one coordinated demand Congress can't ignore.</li>
+                    <li>When your name goes on that public record, it becomes political gravity. And Congress can't ignore gravity.</li>
                 </ul>
             </div>
+            <p style="margin-top:18px; color:#81c784; font-size:0.92em; font-style:italic;">Already backed by union leaders, veterans, healthcare workers, and national media.</p>
 
         </div>
 
         <section>
             <h2>What Is PHIERS?</h2>
             <div class="insight-box">
-                <p>PHIERS is built on one simple idea: when millions of people say the same thing — on the record — Congress has to act.</p>
-                <p>We don't ask people to yell louder. We help people line up behind the same clear demand.</p>
+                <p style="font-size:1.15em; color:#4caf50; font-weight:600; margin-bottom:6px;">Politicians respond to organized power.<br>PHIERS organizes the public.</p>
+                <p>When millions of people say the same thing — on the record — Congress has to act. We don't ask people to yell louder. We help them line up behind one clear demand.</p>
 
                 <div style="margin: 24px 0;">
                     <p style="text-align:center; color:#f5c842; font-weight:600; margin-bottom:10px; font-size:1em;">▶ 60 seconds that explain everything</p>
@@ -288,13 +298,24 @@
                     </div>
                     <div style="display:flex; gap:20px; align-items:flex-start;">
                         <span style="color:#4caf50; font-size:1.8em; font-weight:bold; min-width:40px;">3.</span>
-                        <div><p style="margin:0;"><strong style="color:#4caf50;">3.5% participation (11.6M people)</strong> — No campaign in history has ever failed after hitting this number.</p></div>
+                        <div><p style="margin:0;"><strong style="color:#4caf50;">3.5% participation (11.6M people)</strong> — No campaign in history has ever failed after hitting this number. The Civil Rights Movement, Indian Independence, the People Power Revolution — all crossed this line. All won.</p></div>
                     </div>
                     <div style="display:flex; gap:20px; align-items:flex-start;">
                         <span style="color:#f44336; font-size:1.8em; font-weight:bold; min-width:40px;">4.</span>
                         <div><p style="margin:0;"><strong style="color:#f44336;">Replace those who refuse</strong> — If they won't listen, they don't stay.</p></div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section style="margin: 50px 0; padding: 30px; background: rgba(245,200,66,0.07); border: 1px solid rgba(245,200,66,0.3); border-radius: 12px;">
+            <h2 style="margin-top:0; font-size:1.3em; color:#f5c842;">💬 Explain PHIERS in 30 Seconds</h2>
+            <p style="color:#c8e6c9; margin:0 0 16px; font-size:0.95em;">Share this anywhere — at work, at a meeting, in a text.</p>
+            <div style="background:rgba(0,0,0,0.25); border-left:4px solid #f5c842; padding:16px 20px; border-radius:6px; font-size:1.05em; line-height:1.8; color:#e0e0e0;">
+                Healthcare is broken because politicians can ignore us.<br>
+                PHIERS organizes millions of Americans behind one documented demand.<br>
+                Once 3.5% align, Congress has no choice but to act.<br>
+                <strong style="color:#4caf50;">It's math, not politics.</strong>
             </div>
         </section>
 
@@ -310,18 +331,24 @@
             </div>
         </section>
 
-        <div class="phiers-media-block" style="max-width:640px; margin: 36px auto;">
-            <p style="text-align:center; color:#f5c842; font-weight:600; margin-bottom:12px; font-size:1.05em;">Pathos Communications: Why They Backed PHIERS (7:11)</p>
+        <section style="margin: 60px 0 20px;">
+            <h2 style="text-align:center;">Why This Movement Earns Professional Backing</h2>
+            <p style="text-align:center; color:#c8e6c9; font-size:1em; margin-bottom:10px;">When union leaders and national media professionals look closely at PHIERS, here's what they find.</p>
+        </section>
+
+        <div class="phiers-media-block" style="max-width:640px; margin: 20px auto;">
+            <p style="text-align:center; color:#f5c842; font-weight:600; margin-bottom:12px; font-size:1.05em;">Why This Movement Earns Professional Backing (7:11)</p>
             <div class="phiers-video-wrapper">
                 <iframe
                     src="https://www.youtube.com/embed/UD8svoGU7ZU"
-                    title="Pathos Communications: Why They Backed PHIERS"
+                    title="Why This Movement Earns Professional Backing"
                     frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    loading="lazy"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
             </div>
-            <p style="text-align:center; color:#81c784; font-size:0.9em; margin-top:10px; font-style:italic;">A Fortune 500 PR firm explains why they put their name behind this movement.</p>
+            <p style="text-align:center; color:#81c784; font-size:0.9em; margin-top:10px; font-style:italic;">A national media firm explains why they put their name behind this movement.</p>
         </div>
 
         <div class="phiers-media-block" style="max-width:640px; margin: 36px auto;">
@@ -331,7 +358,8 @@
                     src="https://player.vimeo.com/video/1157760069"
                     title="Union Power - Why Collective Solutions Win"
                     frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    allow="fullscreen; picture-in-picture"
                     allowfullscreen>
                 </iframe>
             </div>
@@ -341,11 +369,13 @@
         <section style="text-align: center; margin: 60px 0; padding: 40px 30px; background: rgba(244,67,54,0.07); border: 2px solid rgba(244,67,54,0.3); border-radius: 12px;">
             <h2 style="margin-top:0; color:#f44336;">The Only Thing Missing Is You</h2>
             <p style="font-size: 1.2em;">PHIERS is a public-interest movement — not a company, not a product. It works when people participate.</p>
-            <div style="margin: 30px 0; display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
-                <a href="Action.html" class="btn btn-warning">✊ Document Your Direction</a>
-                <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn">Sign the Petition</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn">Take the Survey</a>
-                <a href="Donate.html" class="btn" style="background: transparent; border-color: #81c784; color:#81c784;">Support the Movement</a>
+            <div style="margin: 30px 0;">
+                <a href="Action.html" class="btn btn-warning" style="font-size:1.3em; padding:20px 50px; display:inline-block;">✊ Document Your Direction</a>
+                <div style="margin-top:20px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+                    <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn" style="font-size:1em; padding:12px 24px;">Sign the Petition</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn" style="font-size:1em; padding:12px 24px;">Take the Survey</a>
+                    <a href="Donate.html" class="btn" style="font-size:1em; padding:12px 24px; background: transparent; border-color: #81c784; color:#81c784;">Support the Movement</a>
+                </div>
             </div>
         </section>
 
