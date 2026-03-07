@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Action - PHIERS</title>
+    <title>Take Action - PHIERS</title>
+    <link rel="canonical" href="https://phiersale.github.io/PHIERS-Concept/Action.html">
+    <meta name="description" content="Three steps to put your direction on the record. Sign the petition. Complete the survey. Share the model. Your name becomes a coordinate on a map of political pressure.">
+    <meta property="og:title" content="Take Action — Put Your Direction on the Record">
+    <meta property="og:description" content="Systems don't move because people yell. They move because people line up behind the same clear direction. Here's how you participate.">
+    <meta property="og:image" content="https://phiersale.github.io/PHIERS-Concept/PHIERS_Logo.png">
+    <meta property="og:url" content="https://phiersale.github.io/PHIERS-Concept/Action.html">
+    <meta property="og:type" content="website">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -27,7 +34,7 @@
             backdrop-filter: blur(5px);
         }
         .mobile-menu-toggle {
-            display: none;
+            display: block;
             background: transparent;
             border: 1px solid #4caf50;
             color: #4caf50;
@@ -40,10 +47,11 @@
             font-weight: bold;
         }
         .nav-links-container {
-            display: flex; flex-wrap: wrap;
+            display: none; flex-wrap: wrap;
             align-items: center; justify-content: center;
             gap: 5px; width: 100%;
         }
+        .nav-links-container.active { display: flex; }
         .nav-item {
             color: #81c784; text-decoration: none;
             padding: 8px 12px; border-radius: 4px;
@@ -76,10 +84,7 @@
         .dropdown:hover .dropdown-content { display: block; }
         .dropdown:hover .dropbtn { background: rgba(76, 175, 80, 0.2); color: #4caf50; }
         @media (max-width: 768px) {
-            .mobile-menu-toggle { display: block; }
             .global-nav { padding: 10px; }
-            .nav-links-container { display: none; flex-direction: column; width: 100%; margin-top: 15px; }
-            .nav-links-container.active { display: flex; }
             .nav-item, .dropdown { width: 100%; text-align: center; }
             .dropdown-content { position: static; width: 100%; margin-top: 5px; }
             .dropbtn { width: 100%; }
@@ -92,7 +97,11 @@
             margin-bottom: 40px;
             border: 2px solid rgba(76, 175, 80, 0.3);
         }
-        .hero h1 { color: #4caf50; font-size: 2.8em; margin-bottom: 15px; }
+        .hero-logo { max-width: 140px; margin-bottom: 15px; }
+        .mabah-full { font-size: 1.1em; color: #81c784; font-weight: 600; margin-bottom: 5px; letter-spacing: 0.5px; }
+        .mabah-tagline { font-size: 1.2em; color: #4caf50; font-weight: bold; margin-bottom: 15px; font-style: italic; }
+        .hero-opener { font-size: 1.1em; color: #a5d6a7; margin-bottom: 10px; }
+        .hero h1 { color: #4caf50; font-size: clamp(1.4rem, 5vw, 2.8rem); margin-bottom: 15px; }
         .hero .subhead { font-size: 1.3em; color: #c8e6c9; font-style: italic; }
         .phiers-media-block { width: 100%; max-width: 600px; margin: 40px auto; }
         .phiers-media-block img {
@@ -103,34 +112,40 @@
         @media (max-width: 768px) { .phiers-media-block { max-width: 100%; } }
         h2 {
             color: #4caf50; font-size: 1.8em;
-            margin: 50px 0 30px;
+            margin: 0 0 20px;
             border-bottom: 2px solid rgba(76, 175, 80, 0.3);
             padding-bottom: 10px;
         }
-        p { color: #c8e6c9; margin: 20px 0; line-height: 1.8; font-size: 1.1em; }
+        p { color: #c8e6c9; margin: 16px 0; line-height: 1.8; font-size: 1.1em; }
         .section {
             background: rgba(26, 26, 46, 0.9);
-            padding: 40px;
-            margin-bottom: 30px;
+            padding: 36px 40px;
+            margin-bottom: 24px;
             border-radius: 12px;
             border-left: 8px solid #4caf50;
         }
         .section-number {
-            color: #4caf50; font-size: 1.2em; font-weight: bold;
-            margin-bottom: 10px;
+            color: #4caf50; font-size: 1em; font-weight: bold;
+            text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 8px;
         }
-        .green-emphasis { color: #4caf50; font-weight: bold; font-size: 1.2em; }
+        .green-emphasis { color: #4caf50; font-weight: bold; font-size: 1.15em; }
+        .punchline {
+            color: #fff; font-size: 1.1em; font-weight: bold;
+            font-style: italic; margin: 14px 0 4px;
+            border-left: 3px solid #4caf50; padding-left: 14px;
+        }
         .impact-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px; margin: 25px 0;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px; margin: 20px 0;
         }
         .impact-item {
             background: rgba(76, 175, 80, 0.1);
-            padding: 15px 20px;
+            padding: 12px 16px;
             border-radius: 8px;
             border-left: 3px solid #4caf50;
         }
-        .impact-item p { margin: 0; }
+        .impact-item p { margin: 0; font-size: 1em; }
         .btn {
             background: linear-gradient(135deg, #4caf50, #2e7d32);
             color: white; padding: 16px 36px;
@@ -143,8 +158,12 @@
             background: linear-gradient(135deg, #f5c842, #e0a800);
             border-color: #f5c842; color: #000;
         }
-        .btn-blue {
-            background: linear-gradient(135deg, #2196f3, #1976d2);
+        .highlight-box {
+            background: rgba(76, 175, 80, 0.1);
+            border: 2px solid #4caf50;
+            padding: 20px 24px;
+            margin: 20px 0;
+            border-radius: 8px;
         }
         footer {
             text-align: center; padding: 40px 20px; margin-top: 80px;
@@ -178,16 +197,17 @@
 </head>
 <body>
     <div class="container">
+
         <nav class="global-nav">
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
             <div class="nav-links-container" id="navLinks">
                 <a href="index.html" class="nav-item">Home</a>
                 <a href="Crisis.html" class="nav-item">Crisis</a>
-                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
                 <a href="SimpleMath.html" class="nav-item">Simple Math</a>
-                <a href="Roadmap.html" class="nav-item">Roadmap</a>
+                <a href="5D_Solutions.html" class="nav-item">5D Solutions</a>
                 <a href="Leverage.html" class="nav-item">Leverage</a>
                 <a href="Action.html" class="nav-item active">Action</a>
+                <a href="Roadmap.html" class="nav-item">Roadmap</a>
                 <a href="Donate.html" class="nav-item">Donate</a>
                 <div class="dropdown">
                     <button class="dropbtn">More ▼</button>
@@ -202,187 +222,93 @@
                         <a href="Union-Strategy.html">Union Strategy</a>
                         <a href="Telehealth-vs-Insurance.html">Telehealth vs Insurance</a>
                         <a href="Real-Stories.html">Real Stories</a>
-                        <a href="UNBREAKABLE.html">UNBREAKABLE</a>
+                        <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
                     </div>
                 </div>
             </div>
         </nav>
 
         <div class="hero">
-            <h1>Take Action: Put Your Direction on the Record</h1>
-            <div class="subhead">What You Do — And Why It Matters</div>
+            <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
+            <div class="mabah-full">MABAH — Make America Better And Healthier</div>
+            <div class="mabah-tagline">Sounds Like MAGA, But A Lot Bettah</div>
+            <div class="hero-opener">Systems don't move because people yell.</div>
+            <h1>TAKE ACTION</h1>
+            <div class="subhead">Put Your Direction on the Record</div>
         </div>
 
         <div class="section" style="border-left-color: #81c784;">
-            <p>Systems don't move because people yell. They move because people line up behind the same clear direction.</p>
+            <p>They move because people line up behind the same clear direction.</p>
             <p class="green-emphasis">Action inside PHIERS isn't about pressure, protest, or picking sides. It's about documented public direction — the one thing institutions can't ignore.</p>
             <p>Here's how you take part.</p>
         </div>
 
         <div class="section" id="step-1">
-            <div class="section-number">1.</div>
+            <div class="section-number">Step 1 — Get on the Record</div>
             <h2>Sign the Petition</h2>
             <p class="green-emphasis">Put your position on the record.</p>
             <p>A signature isn't symbolic. It's measurable alignment.</p>
             <p>When enough people document the same priority, it becomes political gravity — something elected officials have to respond to.</p>
-            <p>This is the first step in creating leverage.</p>
+            <p class="punchline">This is the first step in creating leverage.</p>
             <div style="text-align: center; margin: 30px 0;">
-                <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn">Sign the Petition</a>
+                <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn btn-warning" style="font-size:1.2em; padding:18px 40px;">✍ Sign the Petition</a>
             </div>
-        </div>
-
-        <div class="phiers-media-block">
-            <img src="paypal_venmo_zelle.png" alt="Payment methods: PayPal, Venmo, Zelle">
         </div>
 
         <div class="section" id="step-2">
-            <div class="section-number">2.</div>
+            <div class="section-number">Step 2 — Document Your Priorities</div>
             <h2>Complete the Survey</h2>
             <p class="green-emphasis">Tell us what you want stabilized first.</p>
-            <p>The survey creates clarity:</p>
-            <div class="impact-grid">
-                <div class="impact-item"><p>what people want</p></div>
-                <div class="impact-item"><p>the order they want it in</p></div>
-                <div class="impact-item"><p>which outcomes matter most</p></div>
-                <div class="impact-item"><p>where alignment is strongest</p></div>
-            </div>
-            <p>Clarity turns into structure. Structure turns into leverage.</p>
+            <p>Tell us what matters most. Your answers become part of the public record.</p>
+            <p class="punchline">Clarity turns into structure. Structure turns into leverage.</p>
             <div style="text-align: center; margin: 30px 0;">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn">Take the Survey</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn" style="font-size:1.2em; padding:18px 40px;">📋 Take the Survey</a>
             </div>
         </div>
 
         <div class="section" id="step-3">
-            <div class="section-number">3.</div>
+            <div class="section-number">Step 3 — Grow the Alignment</div>
             <h2>Share the Model</h2>
             <p class="green-emphasis">People move systems when they move together.</p>
-            <p>Sharing the model:</p>
-            <div class="impact-grid">
-                <div class="impact-item"><p>increases alignment</p></div>
-                <div class="impact-item"><p>strengthens clarity</p></div>
-                <div class="impact-item"><p>speeds up stabilization</p></div>
-                <div class="impact-item"><p>expands leverage</p></div>
-            </div>
-            <p>This isn't about going viral. It's about coordination.</p>
-        </div>
-
-        <div class="section" id="step-4">
-            <div class="section-number">4.</div>
-            <h2>Build Alignment at Scale</h2>
-            <p>When thousands — then millions — document the same priorities, the alignment becomes visible.</p>
-            <p>Visible alignment becomes obligation. Obligation opens policy space.</p>
-            <p class="green-emphasis">This is how systems shift without crisis.</p>
-        </div>
-
-        <div class="section" id="step-5">
-            <div class="section-number">5.</div>
-            <h2>Stabilize the Base</h2>
-            <p class="green-emphasis">Healthcare comes first because stabilizing routine cost unlocks everything else.</p>
-            <p>When routine care becomes predictable:</p>
-            <div class="impact-grid">
-                <div class="impact-item"><p>workers can move jobs more freely</p></div>
-                <div class="impact-item"><p>employers cut overhead</p></div>
-                <div class="impact-item"><p>unions can focus on wages</p></div>
-                <div class="impact-item"><p>households get breathing room</p></div>
-                <div class="impact-item"><p>public budgets face less strain</p></div>
-            </div>
-            <p class="green-emphasis">Stabilization is the foundation for everything that follows.</p>
-        </div>
-
-        <div class="section" id="step-6">
-            <div class="section-number">6.</div>
-            <h2>Strengthen the Core</h2>
-            <p>When pressure drops in one area, stability rises in others.</p>
-            <p>This phase reinforces:</p>
-            <div class="impact-grid">
-                <div class="impact-item"><p>wages</p></div>
-                <div class="impact-item"><p>job mobility</p></div>
-                <div class="impact-item"><p>local economies</p></div>
-                <div class="impact-item"><p>public services</p></div>
-                <div class="impact-item"><p>long‑term resilience</p></div>
-            </div>
-            <p class="green-emphasis">Stability builds on itself.</p>
-        </div>
-
-        <div class="section" id="step-7">
-            <div class="section-number">7.</div>
-            <h2>Reinvest the Savings</h2>
-            <p>Lower routine cost creates fiscal room. Not from new taxes. Not from new debt. From less waste and better outcomes.</p>
-            <p>That room supports:</p>
-            <div class="impact-grid">
-                <div class="impact-item"><p>job expansion</p></div>
-                <div class="impact-item"><p>income stability</p></div>
-                <div class="impact-item"><p>community resilience</p></div>
-                <div class="impact-item"><p>long‑term renewal</p></div>
-            </div>
-            <p class="green-emphasis">Savings don't disappear. They strengthen the system.</p>
-        </div>
-
-        <div class="section" id="step-8">
-            <div class="section-number">8.</div>
-            <h2>Renew the System</h2>
-            <p>When the base stabilizes and reinvestment strengthens communities, systems start to realign.</p>
-            <p>A more stable phase emerges:</p>
-            <div class="impact-grid">
-                <div class="impact-item"><p>lower structural pressure</p></div>
-                <div class="impact-item"><p>stronger institutional trust</p></div>
-                <div class="impact-item"><p>healthier communities</p></div>
-                <div class="impact-item"><p>more predictable costs</p></div>
-                <div class="impact-item"><p>more resilient systems</p></div>
-            </div>
-            <p class="green-emphasis">This isn't ideology. It's coordination at scale.</p>
+            <p>Every person who understands the system makes the next conversation shorter.</p>
+            <p>Sharing the model increases alignment, strengthens clarity, and expands leverage.</p>
+            <p class="punchline">This isn't about going viral. It's about coordination.</p>
         </div>
 
         <div class="section" style="border-left-color: #ff9800;">
-            <h2 style="color: #ff9800;">Why Your Action Matters</h2>
+            <h2 style="color: #ff9800; border-bottom-color: rgba(255,152,0,0.3);">Why Your Action Matters</h2>
             <p>People feel the pressure. Institutions feel the strain. Trust is low. Costs are high.</p>
             <p>Moments like this either break systems or realign them.</p>
             <p>Realignment needs clarity. Clarity needs documentation. Documentation creates leverage.</p>
-            <p>Your action is the start of stabilization.</p>
             <div class="highlight-box">
-                <p class="green-emphasis" style="font-size: 1.5em;">This is where PHIERS begins.</p>
+                <p class="green-emphasis" style="font-size: 1.4em; margin:0;">Your action is the start of stabilization.</p>
             </div>
-        </div>
-
-        <div class="section-box" style="margin-bottom:30px;">
-            <h2 style="margin-top:0;">Action at a Glance</h2>
-            <div style="display:grid; gap:12px;">
-                <div style="padding:12px 16px; background:rgba(76,175,80,0.07); border-radius:8px;">
-                    <p style="margin:0;"><strong style="color:#4caf50;">Steps 1–2:</strong> Sign the petition and take the survey. Document your direction on the record.</p>
-                </div>
-                <div style="padding:12px 16px; background:rgba(76,175,80,0.07); border-radius:8px;">
-                    <p style="margin:0;"><strong style="color:#4caf50;">Steps 3–5:</strong> Share the model, build alignment, stabilize the base. Grow the coalition.</p>
-                </div>
-                <div style="padding:12px 16px; background:rgba(76,175,80,0.07); border-radius:8px;">
-                    <p style="margin:0;"><strong style="color:#4caf50;">Steps 6–8:</strong> Strengthen the core, reinvest the savings, renew the system. This is what 3.5% looks like.</p>
-                </div>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin: 50px 0;">
-            <h2>Document Your Direction</h2>
-            <p style="font-size: 1.2em;">Add your voice to the alignment.</p>
-            <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn btn-warning">Sign the Petition</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn">Take the Survey</a>
-            <a href="Donate.html" class="btn" style="background:transparent;">Support the Movement</a>
-        </div>
-
-        <div style="background: rgba(244,67,54,0.08); border: 1px solid rgba(244,67,54,0.3); border-radius: 10px; padding: 28px 30px; margin: 40px 0;">
-            <h3 style="margin-top:0; color:#f44336;">Why This Moment Matters</h3>
-            <p>Costs are rising. Trust in institutions is falling. Pressure is building across the country.</p>
-            <p style="margin-bottom:0; font-weight:600; color:#ef9a9a;">PHIERS is built for realignment, not collapse.</p>
         </div>
 
         <div style="background: rgba(255,193,7,0.07); border-left: 4px solid #f5c842; padding: 24px 28px; margin: 40px 0; border-radius: 0 10px 10px 0;">
             <h3 style="margin-top:0; color:#f5c842;">What Happens After You Participate</h3>
             <p>As participation grows, the documented results are compiled and delivered to Congress — and presented at town halls and public forums in every district that crosses the 1,500-signature threshold.</p>
-            <p style="margin-bottom:0;">Your responses become measurable constituent direction. Not another opinion online. A public record Congress has to answer to.</p>
+            <p style="margin-bottom:0; font-weight: 600; color: #a5d6a7;">1,500 signatures in your district triggers constituent engagement. Your name is not just a count — it is a coordinate on a map of political pressure.</p>
         </div>
 
-        <div style="background: rgba(15,52,96,0.4); border: 1px solid rgba(76,175,80,0.2); border-radius: 10px; padding: 24px 28px; margin: 40px 0;">
-            <h3 style="color:#4caf50; margin-top:0;">What Happens After You Participate</h3>
-            <p style="color:#c8e6c9;">As participation grows, the documented results are compiled and delivered to Congress — presented at town halls and public forums district by district.</p>
-            <p style="color:#a5d6a7; margin:0;">1,500 signatures in your district triggers mandatory constituent engagement. Your name is not just a count — it is a coordinate on a map of political pressure.</p>
+        <div style="text-align: center; margin: 60px 0; padding: 40px 30px; background: rgba(76,175,80,0.07); border: 2px solid rgba(76,175,80,0.3); border-radius: 12px;">
+            <h2 style="border:none; margin-top:0;">Document Your Direction</h2>
+            <p style="font-size: 1.15em; color:#c8e6c9; margin-bottom: 8px;">When enough Americans align behind the same demand, Congress has two choices.</p>
+            <p style="font-size: 1.4em; font-weight: bold; color: #fff; margin-bottom: 30px; line-height: 1.6;">Act.<br>Or be replaced.</p>
+            <a href="Action.html" class="btn" style="font-size:1.3em; padding:20px 48px; display:inline-block; margin-bottom: 16px;">📋 Document Your Direction</a>
+            <div style="margin-top: 8px;">
+                <a href="https://www.change.org/p/put-the-600-telehealth-plan-on-the-aca-exchange-now-short-version" class="btn btn-warning" style="font-size:1em; padding:12px 28px;">✍ Sign the Petition</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" class="btn" style="font-size:1em; padding:12px 28px; background:transparent; border:2px solid #4caf50;">📊 Take the Survey</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+            <h3 style="color: #81c784; margin-bottom: 16px;">Support the Movement</h3>
+            <p style="font-size: 1em; color: #a5d6a7; margin-bottom: 20px;">PHIERS runs on participation, not corporate funding. If you can contribute, it keeps this going.</p>
+            <div class="phiers-media-block" style="margin: 0 auto;">
+                <img src="paypal_venmo_zelle.png" alt="Support via PayPal, Venmo, or Zelle">
+            </div>
+            <a href="Donate.html" class="btn" style="font-size:1em; padding:12px 28px; background:transparent; border:2px solid #4caf50; margin-top: 16px;">Support the Movement</a>
         </div>
 
         <footer>
@@ -392,7 +318,7 @@
             <div class="footer-links">
                 <a href="UNSTOPPABLE.html">UNSTOPPABLE</a>
                 <span>|</span>
-                <a href="mailto:info@phiers.org">Contact</a>
+                <a href="/cdn-cgi/l/email-protection#0861666e67487860616d7a7b26677a6f">Contact</a>
                 <span>|</span>
                 <span>© PHIERS</span>
             </div>
@@ -401,7 +327,7 @@
                 The only thing missing is you.
             </div>
             <p style="color:#81c784; font-size:0.9em; margin-top:20px; font-style:italic;">PHIERS is a peaceful, democratic, confrontational accountability movement built to stabilize the country.</p>
-            <p class="copyright">PHIERS Movement | Version: 2026-03-05</p>
+            <p class="copyright">PHIERS Movement | Version: 2026-03-06</p>
         </footer>
     </div>
 
@@ -410,7 +336,7 @@
         <img class="modal-content" id="modalImage">
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function toggleMobileMenu() {
         var navLinks = document.getElementById('navLinks');
         navLinks.classList.toggle('active');
