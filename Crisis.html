@@ -7,6 +7,40 @@
     <meta name="description" content="Your healthcare bill went up again. Your rent went up again. Congress keeps debating each problem separately — like they're not all hitting you at once.">
     <link rel="canonical" href="https://phiersale.github.io/PHIERS-Concept/Crisis.html" />
     <style>
+
+        .phiers-collapsible {
+            margin: 20px auto;
+            max-width: 900px;
+        }
+        
+        .collapsible-toggle {
+            width: 100%;
+            background: #f5f5f5;
+            border: none;
+            padding: 15px;
+            font-size: 1.2em;
+            text-align: left;
+            cursor: pointer;
+        }
+        
+        .collapsible-content {
+            display: none;
+            background: #ffffff;
+            padding: 20px;
+            border-left: 4px solid #4CAF50;
+            margin-top: 10px;
+        }
+        
+        .collapsible-close {
+            margin-top: 15px;
+            background: none;
+            border: none;
+            color: #4CAF50;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        
         * {
             margin: 0;
             padding: 0;
@@ -634,8 +668,41 @@
         }
     </style>
 </head>
+    
 <body>
 
+    <!-- COLLAPSIBLE INTRO BANNER -->
+    <div class="phiers-collapsible">
+        <button class="collapsible-toggle">
+            ⚡ New here? Why PHIERS works when nothing else has. <span class="arrow">[Tap to find out →]</span>
+        </button>
+    
+        <div class="collapsible-content">
+            <p>
+                Right now, Congress doesn't have to listen to you. PHIERS changes that.
+                For the first time, regular people have real leverage over Congress — not just a vote every four years, but organized pressure that makes ignoring us politically fatal.
+            </p>
+    
+            <p>
+                The moment 12 million Americans put their names on the record around a single demand, every Congress member faces the same choice: act, or get replaced by someone who will.
+                That power exists the moment people show up. Not after a bill passes. Not after an election. Now.
+            </p>
+    
+            <p>
+                Healthcare is where we prove it — because the math is undeniable and the win is fast.
+                Force that fix, and we have the power to end the war, stop the draft, fix wages, housing, hunger, and everything else Congress has refused to touch.
+                Not sequentially. All of it. Same organized people. Same leverage. Same consequence for Congress if they refuse.
+            </p>
+    
+            <p>
+                Your name on the record isn't a request. It's how we claim the power Congress doesn't want us to have.
+            </p>
+    
+            <button class="collapsible-close">[Close ↑]</button>
+        </div>
+    </div>
+
+    
 <!-- Scroll to top button -->
 <a href="#" class="scroll-top" id="scrollTop">↑</a>
 
@@ -1016,5 +1083,16 @@ PHIERS Movement | Version: 2026-03-08
 
 </div>
 
+<script>
+document.querySelector('.collapsible-toggle').addEventListener('click', function() {
+    document.querySelector('.collapsible-content').style.display = 'block';
+});
+
+document.querySelector('.collapsible-close').addEventListener('click', function() {
+    document.querySelector('.collapsible-content').style.display = 'none';
+});
+</script>
+
+    
 </body>
 </html>
