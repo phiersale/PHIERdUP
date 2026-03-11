@@ -207,7 +207,7 @@
             gap: 20px;
         }
 
-        /* hero */
+        /* hero - strengthened */
         .hero {
             text-align: center;
             padding: 50px 20px 40px;
@@ -230,45 +230,28 @@
             font-size: 1.4rem;
             margin-bottom: 20px;
         }
-        .hero-line {
+        .hero-math {
+            font-size: 3rem;
             color: #f5c842;
-            font-size: 1.8rem;
             font-weight: 700;
+            margin: 20px 0 10px;
+        }
+        .hero-line {
+            color: #4caf50;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .hero-divider {
             border-top: 1px solid #333;
             padding-top: 20px;
             margin-top: 20px;
         }
 
-        /* content sections */
-        h2 {
-            color: #4caf50;
-            font-size: 2rem;
-            margin: 0 0 25px 0;
-            border-bottom: 2px solid #2a2a2a;
-            padding-bottom: 10px;
-        }
-        .pattern-box, .war-box, .insight-box, .solution-box {
-            background-color: #111;
-            border: 1px solid #333;
-            border-left: 6px solid;
-            padding: 30px;
-            border-radius: 20px;
-            margin: 30px 0;
-        }
-        .pattern-box { border-left-color: #f44336; }
-        .war-box { border-left-color: #f44336; }
-        .insight-box { border-left-color: #2196f3; }
-        .solution-box { border-left-color: #4caf50; }
-        p { color: #ccc; font-size: 1.05rem; margin: 20px 0; }
-        .green-emphasis { color: #4caf50; font-weight: 700; font-size: 1.2rem; }
-        .red-emphasis { color: #f44336; font-weight: 700; }
-        ul { margin-left: 30px; }
-        li { color: #ccc; margin: 8px 0; }
-
-        /* video thumbnail as anchor */
+        /* video thumbnail */
         .video-thumbnail-block {
             max-width: 700px;
-            margin: 40px auto;
+            margin: 40px auto 60px; /* increased bottom margin for white space */
             cursor: pointer;
             position: relative;
             border-radius: 20px;
@@ -306,9 +289,36 @@
             color: #aaa;
             font-style: italic;
             margin-top: 10px;
+            margin-bottom: 30px;
         }
 
-        /* media blocks for other images */
+        /* content sections */
+        h2 {
+            color: #4caf50;
+            font-size: 2rem;
+            margin: 0 0 25px 0;
+            border-bottom: 2px solid #2a2a2a;
+            padding-bottom: 10px;
+        }
+        .pattern-box, .war-box, .insight-box, .solution-box {
+            background-color: #111;
+            border: 1px solid #333;
+            border-left: 6px solid;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+        .pattern-box { border-left-color: #f44336; }
+        .war-box { border-left-color: #f44336; }
+        .insight-box { border-left-color: #2196f3; }
+        .solution-box { border-left-color: #4caf50; }
+        p { color: #ccc; font-size: 1.05rem; margin: 20px 0; }
+        .green-emphasis { color: #4caf50; font-weight: 700; font-size: 1.2rem; }
+        .red-emphasis { color: #f44336; font-weight: 700; }
+        ul { margin-left: 30px; }
+        li { color: #ccc; margin: 8px 0; }
+
+        /* media blocks */
         .phiers-media-block {
             max-width: 700px;
             margin: 60px auto;
@@ -336,7 +346,7 @@
             margin-top: 8px;
         }
 
-        /* hidden video modal */
+        /* video modal */
         .video-modal {
             display: none;
             position: fixed;
@@ -555,29 +565,31 @@
             </div>
         </div>
 
-        <!-- HERO -->
+        <!-- HERO - STRENGTHENED with conflict framing -->
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
             <h1>Simple Math</h1>
             <div class="hero-subhead">The Numbers Congress Can't Argue With</div>
-            <p style="color:#ccc; max-width:700px; margin:20px auto;">
+            <div class="hero-math">$10,000 → $600</div>
+            <div class="hero-line">That's the difference between healthcare and the insurance industry.</div>
+            <p style="color:#ccc; max-width:700px; margin:30px auto 10px;">
                 You don't need a degree to see the difference.
             </p>
-            <div class="hero-line">$10,000 → $600</div>
+            <div class="hero-divider"></div>
         </div>
 
-        <!-- VIDEO THUMBNAIL AS ANCHOR (click to play) -->
+        <!-- VIDEO THUMBNAIL - more white space below -->
         <div class="video-thumbnail-block" onclick="openVideoModal()">
             <img src="SIMPLE_MATH.png" alt="Simple Math Video Thumbnail - From One Conversion to 234 Million Covered">
             <div class="play-button-overlay">▶</div>
         </div>
         <div class="video-caption">Click to watch: The math that changes everything (3:33)</div>
 
-        <!-- SECTION 1 — WHAT YOU PAY NOW -->
+        <!-- SECTION 1 — WHAT MOST ARE PAYING FOR (revised wording) -->
         <section>
-            <h2>1. What You Pay Now — About $10,000</h2>
+            <h2>1. What Most Are Paying For — About $10,000</h2>
             <div class="pattern-box">
-                <p>The average American pays around <strong>$10,000 a year</strong> for healthcare.</p>
+                <p>The average American pays around <strong>$10,000 a year</strong> for healthcare. Even if your employer or the government foots part of the bill — that money still comes out of your pocket one way or another.</p>
                 <p>That includes:</p>
                 <ul>
                     <li>premiums</li>
@@ -588,7 +600,7 @@
                 </ul>
                 <p>The whole stack. And none of it feels like healthcare anymore — it feels like a bill collector.</p>
                 <p>For a lot of families, it's even more. For most households, healthcare is the second-largest expense after housing.</p>
-                <p class="red-emphasis">For a lot of people, that's rent money.</p>
+                <p class="red-emphasis">For a lot of people, that's rent money. And none of it makes you healthier.</p>
             </div>
         </section>
 
@@ -630,7 +642,7 @@
             <div class="image-takeaway">Each successful conversion funds the next 12 — exponential growth toward universal coverage.</div>
         </div>
 
-        <!-- SECTION 4 — HOW THE EXPANSION WORKS -->
+        <!-- SECTION 4 — HOW THE EXPANSION WORKS (with scale line) -->
         <section>
             <h2>4. How the Expansion Works</h2>
             <div class="insight-box">
@@ -641,11 +653,11 @@
                 <p>That's called a <strong>cascade</strong>. It's the same math insurance companies use — we're just using it for people instead of profit.</p>
                 <p>Lower costs mean more people get covered. More people covered means the system grows faster.</p>
                 <p>One person helps twelve. Those twelve help the next group. And it keeps growing.</p>
-                <p class="green-emphasis">That's not theory. That's just division.</p>
+                <p class="green-emphasis">Start with 1,000 people switching, and the cascade reaches millions. That's not theory. That's just division.</p>
             </div>
         </section>
 
-        <!-- SECTION 5 — WHAT HAPPENS WHEN COSTS DROP -->
+        <!-- SECTION 5 — WHAT HAPPENS WHEN COSTS DROP (with kitchen table line) -->
         <section>
             <h2>5. What Happens When Costs Drop</h2>
             <div class="solution-box">
@@ -657,11 +669,11 @@
                     <li>Families stop drowning in medical debt</li>
                     <li>Everyday health problems stop turning into financial emergencies</li>
                 </ul>
-                <p class="green-emphasis">When the pressure on household budgets drops, the whole economy stabilizes.</p>
+                <p class="green-emphasis">When the pressure on household budgets drops, the whole economy stabilizes. People finally get breathing room.</p>
             </div>
         </section>
 
-        <!-- SECTION 6 — WHY THIS MATTERS -->
+        <!-- SECTION 6 — WHY THIS MATTERS (with 5D connection) -->
         <section>
             <h2>6. Why This Matters</h2>
             <div class="pattern-box">
@@ -676,6 +688,7 @@
                 </ul>
                 <p>When families aren't drowning in healthcare bills, they can finally get ahead again.</p>
                 <p class="green-emphasis">That's not ideology. That's arithmetic.</p>
+                <p class="red-emphasis" style="margin-top:20px;">This is the math that powers the entire 5D Plan.</p>
             </div>
         </section>
 
@@ -697,9 +710,10 @@
             <p>Join the movement that's forcing Congress to do the math.</p>
         </section>
 
-        <!-- FINAL CTA -->
+        <!-- FINAL CTA - strengthened with district connection -->
         <div class="cta-block">
             <h2>Take Action</h2>
+            <p style="color:#f5c842; margin-bottom:20px;">Your name + your district = political pressure.</p>
             <div class="btn-group">
                 <a href="#" class="btn btn-primary">✍ Sign the Petition</a>
                 <a href="#" class="btn">📋 Complete the Survey</a>
@@ -708,7 +722,7 @@
             <p style="color:#aaa; margin-top:30px;">As participation grows, district-level results are delivered directly to Congress.</p>
             <p>When a district reaches <strong>1,500 verified participants</strong>, representatives must answer the question in public.</p>
             <p class="green-emphasis">Your name becomes documented constituent direction. Not another opinion online. A public record Congress has to answer to.</p>
-            <div class="trust-note">Free. No spam. Just math Congress can't ignore.</div>
+            <div class="trust-note">Free. No spam. Just math Congress can't ignore. And enough people doing it to force the answer.</div>
         </div>
 
         <!-- FOOTER -->
