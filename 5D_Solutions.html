@@ -220,6 +220,11 @@
             max-width: 140px;
             margin-bottom: 20px;
         }
+        .hero-rubik {
+            max-width: 80px;
+            margin: 10px auto 20px;
+            display: block;
+        }
         .hero h1 {
             color: #f44336;
             font-size: 2.8rem;
@@ -508,9 +513,10 @@
             </div>
         </div>
 
-        <!-- HERO -->
+        <!-- HERO with Rubik's Cube -->
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
+            <img src="Rubiks_Cube_Small.png" alt="Rubik's Cube - Five Dimensions Working Together" class="hero-rubik">
             <h1>The 5D Plan</h1>
             <div class="hero-subhead">Five fixes that work better together — because your life works that way too.</div>
             <p style="color:#ccc; max-width:700px; margin:20px auto;">
@@ -604,7 +610,7 @@
             </div>
         </div>
 
-        <!-- VIDEO 1 — if applicable (keeping media consistent) -->
+        <!-- VIDEO — Math Video -->
         <div class="phiers-media-block">
             <div class="video-label">🎥 The Math Behind the Movement (3:33)</div>
             <div class="phiers-video-wrapper">
@@ -667,7 +673,7 @@
                 <p>In person. On camera. Answering their constituents.</p>
                 <p><span class="red-emphasis">The demand:</span> Put the $600 plan on the ACA exchange.</p>
                 <p>If they refuse → primary challenger.<br>If they dodge → general election opponent.<br>If they lie → the video lives forever.</p>
-                <p><span class="green-emphasis">What it means for your community:</span> $2.7 trillion stops flowing to insurance companies and starts flowing back into wages, local businesses, housing, grocery stores, schools.</p>
+                <p><span class="green-emphasis">What it means for your community:</span> $2.7 trillion stops flowing to insurance companies and starts flowing back into wages, your paycheck, local businesses, housing, grocery stores, schools.</p>
                 <p class="green-emphasis">This isn't redistribution. It's stopping the extraction. The money was yours before they took it. PHIERS just stops the theft.</p>
             </div>
         </section>
@@ -698,7 +704,7 @@
             </div>
         </section>
 
-        <!-- IMAGE 2 — 22 Million (keeping media) -->
+        <!-- IMAGE 2 — 22 Million -->
         <div class="phiers-media-block">
             <div class="image-context">📊 22 Million Americans Lost Coverage</div>
             <img src="US_Millions_Face_Soaring_Health_Costs_as_Subsidies_Expire.png" alt="22 million lost coverage">
@@ -820,7 +826,7 @@
         }
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('img').forEach(img => {
-                if (!img.src.includes('PHIERS_Logo')) {
+                if (!img.src.includes('PHIERS_Logo') && !img.src.includes('Rubiks_Cube_Small')) {
                     img.style.cursor = 'pointer';
                     img.addEventListener('click', () => openModal(img.src));
                 }
