@@ -298,6 +298,33 @@
             margin-bottom: 5px;
         }
 
+        /* visual divider */
+        .phase-divider {
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+        }
+        .phase-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #333;
+            z-index: 1;
+        }
+        .phase-divider span {
+            background: #0a0a0a;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            color: #f5c842;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
         /* media blocks */
         .phiers-media-block {
             max-width: 700px;
@@ -538,14 +565,14 @@
             </div>
         </div>
 
-        <!-- HERO -->
+        <!-- HERO - tightened intro -->
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
             <h1>The Roadmap</h1>
             <div class="hero-subhead">Three Acts. Four Phases. One Outcome.</div>
             <p style="color:#ccc; max-width:700px; margin:20px auto;">
-                This isn't a campaign with one deadline.<br>
-                It's a movement that unfolds in sequence.
+                People don't just need a fix.<br>
+                They need a path forward.
             </p>
             <div class="hero-line">The Country Changes</div>
         </div>
@@ -577,19 +604,24 @@
             </div>
         </div>
 
+        <!-- VISUAL DIVIDER: THE FOUR PHASES -->
+        <div class="phase-divider">
+            <span>THE FOUR PHASES — HOW THE SYSTEM STABILIZES</span>
+        </div>
+
         <!-- PHASE ONE -->
         <section>
             <h2>Phase One — Stabilize the Base</h2>
             <div class="pattern-box">
                 <p class="green-emphasis" style="font-size:1.5rem;">Everything starts with healthcare.</p>
-                <p>Right now, families are living one medical bill away from disaster. Routine care gets buried under premiums, deductibles, and surprise bills. If healthcare costs are unstable, everything built on top of them is unstable too—workers, households, employers, public budgets.</p>
+                <p>Right now, families are living one medical bill away from disaster. Routine care gets buried under premiums, deductibles, and surprise bills. If healthcare costs are unstable, everything built on top of them is unstable too—workers, households, employers, government budgets.</p>
                 <p>PHIERS fixes the foundation.</p>
                 <p>When routine care drops from about <strong>$10,000 to $600</strong>, the pressure finally lifts. Families stop choosing between medicine and groceries, doctor visits and rent, care and bankruptcy. Workers can change jobs without risking their family's coverage. Small businesses can hire without drowning in insurance costs. Unions can bargain for wages and working conditions instead of spending every contract fight defending healthcare.</p>
                 <p class="green-emphasis">This is where stability begins.</p>
             </div>
         </section>
 
-        <!-- VIDEO — Math Video (preserved from original) -->
+        <!-- VIDEO — Math Video -->
         <div class="phiers-media-block">
             <div class="video-label">🎥 The Math Behind the Movement (3:33)</div>
             <div class="phiers-video-wrapper">
@@ -610,46 +642,46 @@
             </div>
         </section>
 
-        <!-- IMAGE — Cascade Math (preserved) -->
+        <!-- IMAGE — Cascade Math -->
         <div class="phiers-media-block">
             <div class="image-context">📈 The Cascade Math</div>
             <img src="Cascade_Math.png" alt="Cascade math">
             <div class="image-takeaway">One person switches. That funds 12 more. Those 12 fund 148. No new taxes. Just math.</div>
         </div>
 
-        <!-- PHASE THREE -->
+        <!-- PHASE THREE — with concrete examples -->
         <section>
             <h2>Phase Three — Reinvest the Savings</h2>
             <div class="solution-box">
                 <p class="green-emphasis" style="font-size:1.5rem;">Cost reduction creates room for renewal.</p>
-                <p>Today, about <strong>$2.7 trillion a year</strong> flows through the healthcare system. A huge chunk of that disappears into paperwork nobody needs, insurance overhead, and layers of middlemen who don't treat a single patient.</p>
+                <p>Today, about <strong>$2.7 trillion a year</strong> flows through the healthcare system. A huge chunk of that disappears into paperwork nobody needs, insurance overhead, and middlemen who don't treat a single patient.</p>
                 <p>PHIERS doesn't create new money. It stops lighting existing money on fire.</p>
                 <p>When that waste disappears, the savings return to the people and communities that created them. At national scale, this unlocks roughly $2.7 trillion a year in savings—room created by lower routine spending, earlier access to care, reduced medical debt, and stronger household stability.</p>
                 <p>That room supports reinvestment into:</p>
                 <ul>
-                    <li>Better housing and housing stability</li>
-                    <li>Stronger schools and workforce development</li>
-                    <li>More reliable infrastructure</li>
-                    <li>Food security and community resilience</li>
-                    <li>A safety net that actually works and real economic mobility</li>
+                    <li><span class="green-emphasis">Better housing</span> — fewer families getting priced out of their own neighborhoods</li>
+                    <li><span class="green-emphasis">Stronger schools</span> — kids learning in classrooms that aren't falling apart</li>
+                    <li><span class="green-emphasis">More reliable infrastructure</span> — roads and bridges that don't crumble</li>
+                    <li><span class="green-emphasis">Food security</span> — fewer empty pantries, more community resilience</li>
+                    <li><span class="green-emphasis">A safety net that actually works</span> — catching people instead of letting them fall</li>
                 </ul>
                 <p class="green-emphasis">The money doesn't disappear. It gets reinvested in the people who earned it. This is how we rebuild the middle class—not by inventing money, but by stopping the waste.</p>
             </div>
         </section>
 
-        <!-- PHASE FOUR -->
+        <!-- PHASE FOUR — with human line -->
         <section>
             <h2>Phase Four — National Renewal</h2>
             <div class="insight-box">
                 <p class="green-emphasis" style="font-size:1.5rem;">A more stable country.</p>
                 <p>When the base stabilizes, pressure drops, and the country starts to feel different: lower costs, stronger communities, more mobility, more trust, more resilient systems.</p>
                 <p>That's what renewal actually looks like.</p>
-                <p>When everyday life stops feeling like a constant emergency, something bigger changes. People start trusting the country again—not because someone tells them to, but because their lives actually get better. When families aren't crushed by costs, when workers have leverage again, when communities start rebuilding, confidence comes back.</p>
-                <p class="green-emphasis">This is not ideology. It is coordination at scale. A country that can coordinate can stabilize. A country that stabilizes can grow.</p>
+                <p>When everyday life stops feeling like a constant emergency, something bigger changes. People stop feeling like they're one bad month away from losing everything. They start trusting the country again—not because someone tells them to, but because their lives actually get better. When families aren't crushed by costs, when workers have leverage again, when communities start rebuilding, confidence comes back.</p>
+                <p class="green-emphasis">This is not ideology. It is organization at scale. A country that can organize can stabilize. A country that stabilizes can grow.</p>
             </div>
         </section>
 
-        <!-- IMAGE — 22 Million (preserved) -->
+        <!-- IMAGE — 22 Million -->
         <div class="phiers-media-block">
             <div class="image-context">📊 22 Million Americans Lost Coverage</div>
             <img src="US_Millions_Face_Soaring_Health_Costs_as_Subsidies_Expire.png" alt="22 million lost coverage">
@@ -720,7 +752,7 @@
                     <li style="margin:15px 0;">✍ <span class="green-emphasis">Sign the petition</span></li>
                     <li style="margin:15px 0;">📋 <span class="green-emphasis">Complete the survey</span></li>
                     <li style="margin:15px 0;">📢 <span class="green-emphasis">Share the model</span></li>
-                    <li style="margin:15px 0;">👥 <span class="green-emphasis">Bring one other person in your district</span></li>
+                    <li style="margin:15px 0;">👥 <span class="green-emphasis">Bring one other person from your district</span></li>
                 </ul>
                 <p class="green-emphasis">One conversation leads to another. And another. And another.</p>
                 <p class="green-emphasis">That's how movements grow.</p>
