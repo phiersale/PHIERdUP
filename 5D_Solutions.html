@@ -207,7 +207,7 @@
             gap: 20px;
         }
 
-        /* hero */
+        /* hero - strengthened with larger rubik's cube */
         .hero {
             text-align: center;
             padding: 50px 20px 40px;
@@ -221,8 +221,9 @@
             margin-bottom: 20px;
         }
         .hero-rubik {
-            max-width: 80px;
-            margin: 10px auto 20px;
+            width: 40%;
+            max-width: 300px;
+            margin: 20px auto 25px;
             display: block;
         }
         .hero h1 {
@@ -435,7 +436,7 @@
             cursor: pointer;
         }
 
-        /* at-a-glance grid */
+        /* at-a-glance grid with micro-headers */
         .glance-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -451,8 +452,23 @@
         }
         .glance-item h3 {
             color: #f5c842;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             font-size: 1.3rem;
+        }
+        .glance-micro {
+            color: #4caf50;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .bridge-sentence {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #f5c842;
+            margin: 40px 0 20px;
+            font-style: italic;
         }
     </style>
 </head>
@@ -494,48 +510,47 @@
             </div>
         </nav>
 
-        <!-- COLLAPSIBLE PRIMER -->
+        <!-- COLLAPSIBLE PRIMER - trimmed slightly -->
         <div class="primer-bar">
             <div class="primer-header" onclick="togglePrimer()">
                 <span style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                     <span class="primer-badge">WHY PHIERS WORKS</span>
-                    <span class="primer-title">The leverage Congress can't ignore — and why healthcare is the proof.</span>
+                    <span class="primer-title">The leverage Congress can't ignore — healthcare is the proof.</span>
                 </span>
                 <span class="primer-icon" id="primerIcon">▼</span>
             </div>
             <div class="primer-content" id="primerContent">
                 <div class="primer-inner">
-                    <p>Every other reform movement has tried to convince Congress to do the right thing. PHIERS doesn't ask. It reorganizes the money.</p>
-                    <p>When enough people switch to the $600 plan, insurance companies lose. When insurance companies lose, campaign donors lose. When campaign donors lose, Congress has a new boss: you.</p>
+                    <p>Every other reform movement tried to convince Congress. PHIERS reorganizes the money.</p>
+                    <p>When enough people switch to the $600 plan, insurance companies lose. When they lose, campaign donors lose. When donors lose, Congress has a new boss: you.</p>
                     <p>Healthcare is the first fight because it's the easiest to win — and winning proves the power works for every other fight.</p>
                     <p class="green-emphasis">This isn't a petition. It's a conversion campaign. And it's already math.</p>
                 </div>
             </div>
         </div>
 
-        <!-- HERO with Rubik's Cube -->
+        <!-- HERO with enlarged Rubik's Cube -->
         <div class="hero">
             <img src="PHIERS_Logo.png" alt="PHIERS Logo" class="hero-logo">
             <h1>The 5D Plan</h1>
-            <div class="hero-subhead">Five fixes that work better together — because your life works that way too.</div>
+            <div class="hero-subhead">Five fixes that work together — because your life works that way too.</div>
             <p style="color:#ccc; max-width:700px; margin:20px auto;">
                 When the rent goes up, something else gets cut.<br>
                 When healthcare eats your paycheck, the car repair waits.<br>
                 When the car doesn't get fixed, you risk losing the job.
             </p>
-            <img src="5D_Solutions_Rubiks Cube.png" alt="Rubik's Cube - Five Dimensions Working Together" class="hero-rubik">            <p style="color:#4caf50; font-weight:700; font-size:1.3rem;">It's all connected.</p>
-            <p style="color:#ddd;">And you can't fix one thing while everything else keeps breaking.</p>
-            <div class="hero-line">That's why PHIERS works in five dimensions.</div>
+            <img src="5D_Solutions_Rubiks Cube.png" alt="Rubik's Cube - Five Dimensions Working Together" class="hero-rubik">
+            <p style="color:#4caf50; font-weight:700; font-size:1.3rem;">It's all connected.</p>
+            <p style="color:#ddd;">Most plans try to fix one piece of the system. PHIERS fixes the whole machine.</p>
+            <div class="hero-line">That's why it works in five dimensions.</div>
         </div>
 
-        <!-- SECTION 1 — THIS IS THE ONLY WAY IT WORKS -->
+        <!-- SECTION 1 — THIS IS THE ONLY WAY IT WORKS (trimmed) -->
         <section>
             <h2>This Is the Only Way It Works</h2>
             <div class="pattern-box">
                 <p style="font-size:1.2rem; font-weight:600;">The crisis is structural.<br>Which means the fix has to be structural too.</p>
-                <p>Trying to patch one thing at a time while everything else is on fire doesn't work.</p>
-                <p>We fix them together — because that's the only way any of it sticks.</p>
-                <p>Not because it's ambitious.<br>Because it's necessary.</p>
+                <p>Trying to patch one thing at a time while everything else is on fire doesn't work. We fix them together — because that's the only way any of it sticks.</p>
                 <p>The system isn't broken in one place:</p>
                 <ul>
                     <li>The cost is insane</li>
@@ -571,7 +586,7 @@
                 <p>Pass one bill. Debate the next.<br>
                 Fund one program. Delay the next.<br>
                 Fight one fight. Abandon the rest.</p>
-                <p>But your problems don't wait their turn.<br>Neither can the solutions.</p>
+                <p>But your problems don't wait their turn. Neither can the solutions.</p>
                 <p><span class="green-emphasis">We do them together:</span></p>
                 <ul>
                     <li>Fix healthcare</li>
@@ -584,26 +599,36 @@
             </div>
         </section>
 
-        <!-- 5D AT A GLANCE -->
+        <!-- BRIDGE SENTENCE before 5D list -->
+        <div class="bridge-sentence">
+            Most plans try to fix one piece. PHIERS fixes the whole machine.
+        </div>
+
+        <!-- 5D AT A GLANCE with micro-headers -->
         <h2>5D at a Glance</h2>
         <div class="glance-grid">
             <div class="glance-item">
+                <div class="glance-micro">THE DOOR</div>
                 <h3>1. Healthcare</h3>
                 <p>Cut your bill from $10,000 to $600. Real doctors. 24/7 access. No waiting rooms. No surprise bills.<br><span class="green-emphasis">This is the door — everything else walks through it.</span></p>
             </div>
             <div class="glance-item">
+                <div class="glance-micro">AI-PROOF WORK</div>
                 <h3>2. Jobs</h3>
                 <p>Millions of jobs AI can't replace: home health, community care, elder care, mental health support, childcare.<br>Real work. Real wages.</p>
             </div>
             <div class="glance-item">
+                <div class="glance-micro">YOUR MONEY BACK</div>
                 <h3>3. Economy</h3>
-                <p>$2.7 trillion back where it belongs. Not from new taxes — from stopping the waste. Money that used to leave your community stays where you live.</p>
+                <p>$2.7 trillion back where it belongs — money coming out of paychecks, small businesses, and family budgets. Not from new taxes. From stopping the waste.</p>
             </div>
             <div class="glance-item">
+                <div class="glance-micro">WHO'S THE BOSS</div>
                 <h3>4. Power</h3>
                 <p>When healthcare isn't tied to your job: unions negotiate wages, workers move freely, employers compete for labor again.</p>
             </div>
             <div class="glance-item">
+                <div class="glance-micro">RULES FOR US</div>
                 <h3>5. Peace</h3>
                 <p>Rules that protect people. Guardrails that keep the powerful accountable. A government that works for citizens again.</p>
             </div>
@@ -642,7 +667,7 @@
 
         <!-- DIMENSION 2 — CASCADE ECONOMICS -->
         <section>
-            <h2>2. Jobs — Cascade Economics</h2>
+            <h2>2. Jobs — How the Plan Pays for Itself</h2>
             <div class="insight-box">
                 <p class="green-emphasis" style="font-size:1.5rem;">How the Movement Scales Without Permission</p>
                 <p>One person switches from a $24,000 plan to the $7,200 PHIERS plan. They save <strong>$16,800</strong>.</p>
@@ -672,7 +697,7 @@
                 <p>In person. On camera. Answering their constituents.</p>
                 <p><span class="red-emphasis">The demand:</span> Put the $600 plan on the ACA exchange.</p>
                 <p>If they refuse → primary challenger.<br>If they dodge → general election opponent.<br>If they lie → the video lives forever.</p>
-                <p><span class="green-emphasis">What it means for your community:</span> $2.7 trillion stops flowing to insurance companies and starts flowing back into wages, your paycheck, local businesses, housing, grocery stores, schools.</p>
+                <p><span class="green-emphasis">What it means for your community:</span> $2.7 trillion stops flowing to insurance companies — that's money coming out of paychecks, small businesses, and family budgets. It starts flowing back into wages, your paycheck, local businesses, housing, grocery stores, schools.</p>
                 <p class="green-emphasis">This isn't redistribution. It's stopping the extraction. The money was yours before they took it. PHIERS just stops the theft.</p>
             </div>
         </section>
@@ -710,7 +735,7 @@
             <div class="image-takeaway">When subsidies expired, Congress did nothing. That's not incompetence — that's a choice.</div>
         </div>
 
-        <!-- WHY ALL FIVE MATTER -->
+        <!-- WHY ALL FIVE MATTER (emotional peak) -->
         <section>
             <h2>Why All Five Matter</h2>
             <div class="solution-box">
@@ -723,11 +748,25 @@
                     <li>Demands that connect</li>
                     <li>Ownership that lasts</li>
                 </ul>
-                <p class="green-emphasis">That's the architecture of a movement that can't be stopped.</p>
+                <p class="green-emphasis" style="font-size:1.5rem;">That's not a policy idea. That's a movement architecture.</p>
+                <p class="green-emphasis">That's how a movement becomes unstoppable.</p>
             </div>
         </section>
 
-        <!-- WHAT THIS ACTUALLY PAYS FOR -->
+        <!-- FINAL CTA - moved up to emotional peak -->
+        <div class="cta-block">
+            <h2>Pick the Piece That Matters Most to You</h2>
+            <p style="font-size:1.2rem; color:#f5c842;">Cost. Jobs. Peace. Power. Ownership.</p>
+            <p>The piece you care about is already inside this movement.<br>And once you're in, the rest comes with it.</p>
+            <div class="btn-group">
+                <a href="Leverage.html" class="btn btn-primary">🔧 Fix Congress Now</a>
+                <a href="#" class="btn">✅ Switch to the $600 Plan</a>
+                <a href="#" class="btn">📖 Read the Full Architecture</a>
+            </div>
+            <div class="trust-note">Free. No spam. Just a movement organizing real pressure.</div>
+        </div>
+
+        <!-- WHAT THIS ACTUALLY PAYS FOR - strengthened -->
         <section style="background:#0f0f0f; border:2px solid #f44336; border-radius:30px; padding:40px; margin:70px 0;">
             <h2 style="color:#f44336;">What This Actually Pays For</h2>
             <p>We're talking about real things:</p>
@@ -739,6 +778,7 @@
                 <li>✓ Retirement</li>
             </ul>
             <p>$2.7 trillion is already being collected. It's just going to the wrong place.</p>
+            <p class="green-emphasis">That's money coming out of your paycheck, your small business, your family budget — every single day.</p>
             <p class="green-emphasis">The money is already there. We just have to take it back.</p>
         </section>
 
@@ -752,19 +792,6 @@
                 <p class="red-emphasis">Protest without power gets you a news cycle. PHIERS gives you the power.</p>
             </div>
         </section>
-
-        <!-- FINAL CTA -->
-        <div class="cta-block">
-            <h2>Pick the Piece That Matters Most to You</h2>
-            <p style="font-size:1.2rem; color:#f5c842;">Cost. Jobs. Peace. Power. Ownership.</p>
-            <p>The piece you care about is already inside this movement.<br>And once you're in, the rest comes with it.</p>
-            <div class="btn-group">
-                <a href="Leverage.html" class="btn btn-primary">🔧 Fix Congress Now</a>
-                <a href="#" class="btn">✅ Switch to the $600 Plan</a>
-                <a href="#" class="btn">📖 Read the Full Architecture</a>
-            </div>
-            <div class="trust-note">Free. No spam. Just a movement organizing real pressure.</div>
-        </div>
 
         <!-- FOOTER -->
         <footer>
@@ -825,7 +852,7 @@
         }
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('img').forEach(img => {
-                if (!img.src.includes('PHIERS_Logo') && !img.src.includes('Rubiks_Cube_Small')) {
+                if (!img.src.includes('PHIERS_Logo') && !img.src.includes('Rubiks_Cube')) {
                     img.style.cursor = 'pointer';
                     img.addEventListener('click', () => openModal(img.src));
                 }
