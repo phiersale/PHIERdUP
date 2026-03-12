@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PHIERS.org — Restore Citizen Leverage</title>
 
@@ -30,31 +30,37 @@ color:white;
 }
 
 h1{font-size:3rem}
-h2{font-size:2.2rem}
-
-p{font-size:1.05rem}
+h2{font-size:2.3rem}
 
 .nav{
 position:sticky;
 top:0;
-background:#0f1a2b;
+background:#0e1a2a;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:12px 20px;
-z-index:1000;
+padding:14px 20px;
+z-index:999;
 box-shadow:0 4px 10px rgba(0,0,0,.4);
 }
 
-.nav img{height:40px}
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:40px;
+}
 
 .cta{
 background:#f44336;
-padding:12px 20px;
+padding:12px 22px;
 border-radius:6px;
+text-decoration:none;
 font-weight:bold;
 color:white;
-text-decoration:none;
 }
 
 .secondary{
@@ -70,34 +76,40 @@ padding:80px 20px;
 
 .card{
 background:#111a33;
-padding:25px;
-border-radius:8px;
+padding:24px;
 border-left:4px solid #4caf50;
-margin-bottom:25px;
+border-radius:8px;
+margin-bottom:20px;
 }
 
-.deadline-strip{
+.deadline{
+background:#0f2544;
+padding:30px;
 text-align:center;
-background:#0e223f;
-padding:25px;
 }
 
 .math{
 display:flex;
 flex-direction:column;
 gap:20px;
+margin:40px 0;
 }
 
-.math-card{
+.math-left{
+background:#3c0b0b;
 padding:30px;
 text-align:center;
-font-size:2rem;
+font-size:1.8rem;
 font-weight:bold;
-border-radius:8px;
 }
 
-.math-left{background:#3c0b0b}
-.math-right{background:#1b3a1b}
+.math-right{
+background:#1b3a1b;
+padding:30px;
+text-align:center;
+font-size:1.8rem;
+font-weight:bold;
+}
 
 .expandable{
 max-height:0;
@@ -106,15 +118,15 @@ transition:max-height .4s ease;
 }
 
 .expandable.open{
-max-height:2000px;
+max-height:3000px;
 }
 
 button.toggle{
 background:none;
 border:none;
 color:#81c784;
-font-size:1rem;
 cursor:pointer;
+font-size:1rem;
 }
 
 .modal{
@@ -132,8 +144,8 @@ align-items:center;
 .modal-content{
 background:#1a1a2e;
 padding:40px;
-border:2px solid #4caf50;
 max-width:700px;
+border:2px solid #4caf50;
 }
 
 .close{
@@ -142,20 +154,16 @@ cursor:pointer;
 font-size:22px;
 }
 
-.video{
-margin-top:20px;
+img.full{
+width:100%;
+margin:30px 0;
+border-radius:6px;
 }
 
 footer{
+background:#0e1a2a;
 text-align:center;
 padding:40px;
-background:#0f1a2b;
-}
-
-img.full{
-width:100%;
-margin-top:20px;
-border-radius:8px;
 }
 
 </style>
@@ -167,9 +175,9 @@ border-radius:8px;
 
 <div class="nav">
 
-<div>
+<div class="logo">
 <img src="PHIERS_Logo.png">
-<span style="margin-left:10px">MABAH — Making America Better And Healthier</span>
+<span>MABAH — Making America Better And Healthier</span>
 </div>
 
 <div>
@@ -191,8 +199,10 @@ PHIERS coordinates millions of citizens into a force Congress cannot ignore — 
 </p>
 
 <p>
-Americans currently pay about $10,000 per person for healthcare. The PHIERS model delivers the same care for about $600 — paid for by savings, not by you.
-Congress could authorize this tomorrow. They refuse. When millions demand it together, Congress must act.
+Americans currently pay about $10,000 per person for healthcare.
+The PHIERS model delivers the same care for about $600 — paid for by savings, not by you.
+Congress could authorize this tomorrow. They refuse.
+When millions demand it together, Congress must act.
 </p>
 
 <a class="cta" href="#">✍ Sign the Petition</a>
@@ -200,7 +210,7 @@ Congress could authorize this tomorrow. They refuse. When millions demand it tog
 
 </section>
 
-<div class="deadline-strip">
+<div class="deadline">
 
 📅 March 28 — No Kings III · Make PHIERS-power trend now  
 <br>
@@ -210,33 +220,27 @@ Congress could authorize this tomorrow. They refuse. When millions demand it tog
 
 </div>
 
-<!-- CREDIBILITY -->
+<!-- CREDIBILITY STRIP -->
 
 <section class="section container">
 
 <h2>Built for this moment. Validated along the way.</h2>
 
-<div class="card">
-Congressman Chris Van Hollen — Letter of Support (identified the same problems in 2009 that remain unsolved today)
-</div>
+<p>15 years in the making — because the problem never went away.</p>
 
-<div class="card">
-Pathos Communications — Global PR leader, London Stock Exchange: "If you weren't legit, we wouldn't risk putting our name behind yours."
-</div>
+<div class="card">Congressman Chris Van Hollen — Letter of Support (identified the same problems in 2009 that remain unsolved today)</div>
 
-<div class="card">
-Mark Cuban's Cost Plus Drugs — Independent validation of the cost-elimination model PHIERS pioneered
-</div>
+<div class="card">Pathos Communications — Global PR leader, London Stock Exchange: "If you weren't legit, we wouldn't risk putting our name behind yours."</div>
 
-<div class="card">
-ZORTT Elite Medical — Independent validation of cooperative telehealth delivery
-</div>
+<div class="card">Mark Cuban's Cost Plus Drugs — Independent validation of the cost-elimination model PHIERS pioneered</div>
 
-<div class="video">
-<iframe width="100%" height="400"
-src="https://www.youtube.com/embed/YOUR_VIDEO_ID">
-</iframe>
-</div>
+<div class="card">ZORTT Elite Medical — Independent validation of cooperative telehealth delivery for unions, gig workers, and veterans</div>
+
+<div class="card">Maryland Interfaith Coalition — Support letters on file</div>
+
+<div class="card">Harvard Kennedy School — Chenoweth research: no nonviolent movement at 3.5% has ever failed</div>
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
 
 </section>
 
@@ -246,15 +250,14 @@ src="https://www.youtube.com/embed/YOUR_VIDEO_ID">
 
 <h2>Congress has never listened to anyone but their donors.</h2>
 
-<p>
-Unauthorized wars draining over $1 billion every single day — no vote, no mandate, no end in sight.
-</p>
+<p>The problems aren't complicated. The solutions often exist. Congress just won't act.</p>
 
-<p>
-Healthcare costs exploding while care gets worse.
-Working people crushed by an affordability crisis that keeps deepening.
-Politicians keep their seats no matter what they fail to do.
-</p>
+<ul>
+<li>Unauthorized wars draining over $1 billion every single day — no vote, no mandate, no end in sight</li>
+<li>Healthcare costs exploding while care gets worse</li>
+<li>Working people crushed by an affordability crisis that keeps deepening</li>
+<li>Politicians keep their seats no matter what they fail to do</li>
+</ul>
 
 <h3 style="text-align:center">Power concedes nothing without a demand that has TEETH.</h3>
 
@@ -262,7 +265,7 @@ Politicians keep their seats no matter what they fail to do.
 
 <p style="text-align:center"><em>PHIERS.org is the mechanism the No Kings movement has been missing.</em></p>
 
-<p style="color:#81c784"><em>This isn't a policy failure. It's a leverage failure.</em></p>
+<p><strong>This isn't a policy failure. It's a leverage failure.</strong></p>
 
 <a class="cta" href="#">✍ Sign the Petition</a>
 
@@ -274,18 +277,19 @@ Politicians keep their seats no matter what they fail to do.
 
 <h2>The missing ingredient isn't money or technology. It's leverage.</h2>
 
+<p>Elected officials don't respond to noise. They respond to numbers.</p>
+
 <p>No coordination.</p>
 <p>No unified signal.</p>
 <p>No pressure.</p>
 
-<div class="card">
-
+<p>
 Harvard researcher Erica Chenoweth studied 323 political campaigns across 106 years.
 Her finding: no sustained nonviolent movement with 3.5% participation has ever failed.
+Not one. Ever.
+</p>
 
-In the United States, that's 12 million people.
-
-</div>
+<p>In the United States, that's 12 million people.</p>
 
 <a class="cta" href="#">✍ Sign the Petition</a>
 
@@ -299,19 +303,12 @@ In the United States, that's 12 million people.
 
 <div class="math">
 
-<div class="math-card math-left">
-$10,000 per person
-</div>
-
-<div class="math-card math-right">
-$600 per person
-</div>
+<div class="math-left">$10,000 per person per year</div>
+<div class="math-right">$600 per person per year</div>
 
 </div>
 
-<p style="text-align:center">
-<strong>The barrier isn't technology. It's political will.</strong>
-</p>
+<p><strong>The barrier isn't technology. It's political will.</strong></p>
 
 <button class="toggle" onclick="toggle()">► How does PHIERS.org deliver $600 healthcare?</button>
 
@@ -319,22 +316,29 @@ $600 per person
 
 <div class="card">
 
-<strong>PHIERSale</strong><br>
-Cooperative marketplace using collective bargaining.
+<strong>PHIERSale</strong>
+
+Our cooperative marketplace uses collective bargaining and group discounts on health-related goods and services.
+
+When members purchase medications through PHIERSale, we generate over $50 per month in savings per member. That $50 sponsors a Medicaid beneficiary into existing telehealth — saving CMS at least $9,400 per year.
+
+Those savings sponsor more people.
 
 </div>
 
 <div class="card">
 
-<strong>PHIERWorks</strong><br>
-Job training and placement strengthening the safety net.
+<strong>PHIERWorks</strong>
+
+Job training and placement that strengthens and expands the safety net while providing all workers with real benefits.
 
 </div>
 
 <div class="card">
 
-<strong>PHIERPlace</strong><br>
-Resource matching connecting people to care and services.
+<strong>PHIERPlace</strong>
+
+Resource matching and referral connecting people to the care, services, and support they need.
 
 </div>
 
@@ -351,7 +355,7 @@ Resource matching connecting people to care and services.
 <h2>Congress won't fix itself. But We the People will.</h2>
 
 <p>
-Your signature isn't just a petition. It tells your representative exactly what you expect.
+Our goal: a Congress that is for, by, and accountable to We the People — only.
 </p>
 
 <p>
@@ -360,6 +364,8 @@ March 28. July 4th. November 2026.
 
 <a class="cta" href="#">✍ Sign the Petition</a>
 <a class="secondary" href="#">Take the Survey</a>
+
+<p style="color:#81c784"><em>#PHIERdUpNow</em></p>
 
 </section>
 
@@ -373,7 +379,7 @@ MABAH — Making America Better And Healthier
 
 <br><br>
 
-© PHIERS.org
+© PHIERS.org — Original Concept Since 2009.
 
 </footer>
 
