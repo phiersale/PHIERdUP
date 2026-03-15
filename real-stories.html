@@ -7,7 +7,7 @@
     <meta property="og:title" content="PHIERS.org — Real Stories. Real People. Real Stakes.">
     <meta property="og:description" content="Insurance denied. Telehealth saved. These are the stories that prove why change is required.">
     <meta property="og:image" content="/PHIERS_Logo.png">
-    <link rel="icon" type="image/png" href="PHIERS_Logo.png">
+    <link rel="icon" type="image/png" href="/PHIERS_Logo.png">
     <title>PHIERS.org — Real Stories. Real People. Real Stakes.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
@@ -80,10 +80,10 @@
   }
 
   .menu-section { width: 100%; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .menu-section[open] > summary { color: var(--green); }
+  .menu-section[open] > summary { color: #3ddc84; }
   .menu-section > summary.menu-label {
-    cursor: pointer; font-family: var(--font-condensed); font-size: 1rem; font-weight: 900;
-    letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-bright);
+    cursor: pointer; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 900;
+    letter-spacing: 0.12em; text-transform: uppercase; color: #f0f4ff;
     padding: 14px 0; list-style: none; display: flex; justify-content: center;
     align-items: center; gap: 8px; width: 100%;
   }
@@ -92,11 +92,11 @@
   .menu-section > summary::-webkit-details-marker { display: none; }
   .menu-section a {
     display: block; padding: 10px 0; text-align: center; width: 100%;
-    color: var(--text-body); text-decoration: none; font-size: 1rem;
+    color: #b8c8e8; text-decoration: none; font-size: 1rem;
     transition: color 0.2s; border-bottom: 1px solid rgba(255,255,255,0.04);
   }
   .menu-section a:last-child { border-bottom: none; }
-  .menu-section a:hover, .menu-section a.active { color: var(--green); }
+  .menu-section a:hover, .menu-section a.active { color: #3ddc84; }
 </style>
 </head>
 <body>
@@ -292,6 +292,12 @@
             img.addEventListener('click', function() { openModal(src); });
         });
 
-        document.addEventListener('keydown', functi
+        document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('imageModal').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+</script>
 </body>
 </html>
