@@ -1,1013 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary Meta Tags -->
-  <title>PHIERS.org — Welcome to PHIERStorm</title>
-  <meta name="title" content="PHIERS.org — PHIERStorm: The Mechanism Congress Can't Ignore">
-  <meta name="description" content="Congress ignores you because they can. PHIERS changes that. 12 million Americans organized = unstoppable change. PHIERStorm is the mechanism.">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://phiers.org/">
-  <meta property="og:title" content="PHIERS.org — PHIERStorm: The Mechanism Congress Can't Ignore">
-  <meta property="og:description" content="3.5% organized = unstoppable change. 12 million Americans. That's the line. Energy without power fails. PHIERStorm is the power.">
-  <meta property="og:image" content="PHIERS_Logo.png">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://phiers.org/">
-  <meta property="twitter:title" content="PHIERS.org — PHIERStorm: The Mechanism Congress Can't Ignore">
-  <meta property="twitter:description" content="3.5% organized = unstoppable change. 12 million Americans. That's the line. Energy without power fails. PHIERStorm is the power.">
-  <meta property="twitter:image" content="PHIERS_Logo.png">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="PHIERS_Logo.png">
-  <link rel="apple-touch-icon" href="PHIERS_Logo.png">
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
-  
-  <!-- Preconnect to YouTube for faster video loading -->
-  <link rel="preconnect" href="https://www.youtube.com">
-  <link rel="preconnect" href="https://i.ytimg.com">
-  
-  <!-- External CSS (separate file for production) -->
-  <link rel="stylesheet" href="styles.css">
-  
-  <!-- Critical inline styles (minimal) -->
-  <style>
-    /* Critical path styles only - rest in styles.css */
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: var(--green, #3ddc84);
-      color: var(--bg-deep, #080d1a);
-      padding: 8px 16px;
-      z-index: 10000;
-      text-decoration: none;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      transition: top 0.2s;
-    }
-    .skip-link:focus {
-      top: 0;
-    }
-    [hidden] {
-      display: none !important;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Congress ignores you because they can. PHIERS changes that. 12 million Americans organized = unstoppable change. PHIERStorm is the mechanism.">
+<meta property="og:title" content="PHIERS.org — PHIERStorm: The Mechanism Congress Can't Ignore">
+<meta property="og:description" content="3.5% organized = unstoppable change. 12 million Americans. That's the line. Energy without power fails. PHIERStorm is the power.">
+<meta property="og:image" content="PHIERS_Logo.png">
+<link rel="icon" type="image/png" href="PHIERS_Logo.png">
+<title>PHIERS.org — Welcome to PHIERStorm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Skip to content link for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ── NAVIGATION ── -->
-  <nav id="main-nav" aria-label="Main navigation">
-    <div class="nav-left">
-      <a href="index.html" class="nav-logo" aria-label="PHIERS.org homepage">PHIERS.org</a>
-    </div>
-    <div class="nav-right">
-      <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         class="btn-petition" 
-         aria-label="Sign the petition now (opens in new tab)">
-         ✍ Sign Now
-      </a>
-      <button class="hamburger" 
-              onclick="toggleMenu()" 
-              aria-label="Menu" 
-              aria-expanded="false" 
-              aria-controls="mobile-menu"
-              id="hamburger-btn">
-        ☰
-      </button>
-    </div>
-  </nav>
-
-  <!-- ── MOBILE MENU (FULLY COMPLETED) ── -->
-  <div class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation menu" hidden>
-    <details class="menu-section">
-      <summary class="menu-label">Understand the Fight</summary>
-      <a href="Crisis.html">🚨 The Crisis</a>
-      <a href="SimpleMath.html">📊 Simple Math</a>
-      <a href="5D_Solutions.html">🔬 5D Solutions</a>
-      <a href="Telehealth-Insurance.html">💡 Telehealth vs Insurance</a>
-    </details>
-    
-    <details class="menu-section">
-      <summary class="menu-label">Who We're With</summary>
-      <a href="organizers.html">✊ For Organizers</a>
-      <a href="Veterans.html">🎖 Veterans</a>
-      <a href="NoWar.html">🕊 No War / No Draft</a>
-      <a href="Unions-Strategy.html">💪 Union Strategy</a>
-    </details>
-    
-    <details class="menu-section">
-      <summary class="menu-label">Resources</summary>
-      <a href="Resources.html">📚 Resource Hub</a>
-      <a href="real-stories.html">💬 Real Stories</a>
-      <a href="FAQ.html">❓ FAQ</a>
-      <a href="healthcare-proof.html" class="menu-deepdive">→ The Full Story</a>
-    </details>
-    
-    <details class="menu-section">
-      <summary class="menu-label">Take Action</summary>
-      <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" 
-         target="_blank" 
-         rel="noopener noreferrer">✍ Sign the Petition</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" 
-         target="_blank" 
-         rel="noopener noreferrer">📋 Take the Survey</a>
-      <a href="Donate.html">💚 Donate</a>
-      <a href="action.html">📣 Take Action</a>
-    </details>
+<!-- ── NAV ── -->
+<nav id="main-nav">
+  <div class="nav-left">
+    <a href="index.html" style="font-family:var(--font-condensed);font-weight:700;font-size:1.3rem;color:#fff;text-decoration:none;letter-spacing:0.05em">PHIERS.org</a>
   </div>
-
-  <!-- ── FLOATING TABLE OF CONTENTS ── -->
-  <div class="floating-toc" id="floating-toc">
-    <button class="toc-toggle" 
-            onclick="toggleToc()" 
-            aria-label="Toggle table of contents"
-            aria-expanded="false"
-            aria-controls="toc-menu">
-      📋 Contents
-    </button>
-    <div class="toc-menu" id="toc-menu" hidden>
-      <a href="#hero" class="toc-link" data-target="hero">Welcome</a>
-      <a href="#threshold" class="toc-link" data-target="threshold">The 3.5% Line</a>
-      <a href="#what-is-phiers" class="toc-link" data-target="what-is-phiers">What Is PHIERS?</a>
-      <a href="#three-levers" class="toc-link" data-target="three-levers">Three Levers</a>
-      <a href="#how-it-works" class="toc-link" data-target="how-it-works">How It Works</a>
-      <a href="#war-draft" class="toc-link" data-target="war-draft">War & Draft</a>
-      <a href="#sign" class="toc-link" data-target="sign">Take Action</a>
-    </div>
+  <div class="nav-right">
+    <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" target="_blank" rel="noopener noreferrer" class="btn-petition">✍ Sign Now</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
   </div>
+</nav>
 
-  <!-- ── BANNER COMPONENT ── -->
-  <div class="phiers-def-wrap">
-    <button class="phiers-def-toggle" 
-            onclick="toggleDef()" 
-            aria-expanded="false" 
-            aria-controls="phiers-def-body"
-            id="def-toggle-btn">
-      <span>⚡ Already marching? Already boycotting? This is where it gets teeth. [Tap to find out →]</span>
-      <span class="def-arrow" aria-hidden="true">▼</span>
-    </button>
-    <div class="phiers-def-body" id="phiers-def-body" hidden>
-      <p>PHIERS is the place where movements, voters, and consumers come together — with real power over Congress and the market.</p>
-      <p>If you marched at NoKings — you're already here. If you're part of a boycott — you're already here. If you're in a union or mutual aid group — you're already here. PHIERStorm gives everything you're already doing the one thing it's been missing: <strong>power that actually works.</strong></p>
-    </div>
-  </div>
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobile-menu">
+  <details class="menu-section">
+    <summary class="menu-label">Understand the Fight</summary>
+    <a href="Crisis.html">🚨 The Crisis</a>
+    <a href="SimpleMath.html">📊 Simple Math</a>
+    <a href="5D_Solutions.html">🔬 5D Solutions</a>
+    <a href="Telehealth-Insurance.html">💡 Telehealth vs Insurance</a>
+  </details>
+  <details class="menu-section">
+    <summary class="menu-label">Who We're With</summary>
+    <a href="organizers.html">✊ For Organizers</a>
+    <a href="Veterans.html">🎖 Veterans</a>
+    <a href="NoWar.html">🕊 No War / No Draft</a>
+    <a href="Unions-Strategy.html">💪 Union Strategy</a>
+  </details>
+  <details class="menu-section">
+    <summary class="menu-label">Resources</summary>
+    <a href="Resources.html">📚 Resource Hub</a>
+    <a href="real-stories.html">💬 Real Stories</a>
+    <a href="FAQ.html" target="_blank">❓ FAQ</a>
+    <a href="healthcare-proof.html" target="_blank" class="menu-deepdive">→ The Full Story</a>
+  </details>
+  <details class="menu-section">
+    <summary class="menu-label">Take Action</summary>
+    <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" target="_blank" rel="noopener noreferrer">✍ Sign the Petition</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" target="_blank" rel="noopener noreferrer">📋 Take the Survey</a>
+    <a href="Donate.html">💚 Donate</a>
+    <a href="action.html">📣 Take Action</a>
+  </details>
+</div>
 
-  <hr class="divider" role="separator">
-
-  <!-- ═══════════════════════════════════════
-       MAIN CONTENT (with id for skip link)
-  ═══════════════════════════════════════ -->
-  <main id="main-content">
-
-    <!-- SECTION 1 — HERO -->
-    <section id="hero" aria-labelledby="hero-heading">
-      <div class="hero-logo">
-        <img src="PHIERS_Logo.png" alt="PHIERS.org logo" width="120" height="120" loading="eager">
-      </div>
-
-      <h1 class="hero-h1" id="hero-heading">You're not powerless.</h1>
-      <p class="hero-sub">You just haven't had the right leverage yet.</p>
-
-      <div class="hero-statements">
-        <p class="hero-sub">Congress ignores you — <span class="red">because they can.</span></p>
-        <p class="hero-sub">Corporations disrespect you — <span class="red">because they can.</span></p>
-        <p class="hero-sub">The wars keep going because <span class="red">Congress never declared them — and has never been made to answer for it.</span></p>
-        <p class="hero-sub hero-green">That changes right now.</p>
-      </div>
-
-      <div class="hero-welcome">Welcome to PHIERStorm.</div>
-      <p class="hero-tagline">Where movements get power.</p>
-
-      <div class="cta-row">
-        <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="btn-gold">
-           ✍ SIGN NOW — 30 SECONDS
-        </a>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 1B — WELCOME VIDEO -->
-    <section class="section" aria-labelledby="video-heading">
-      <h2 id="video-heading" class="visually-hidden">Welcome Video</h2>
-      <div class="video-container">
-        <p class="video-instruction">🎥 Watch This First — 90 Seconds That Explain Everything</p>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/2j-dF3hgdeE" 
-                  title="Welcome to PHIERStorm - 90 second introduction" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen
-                  loading="lazy">
-          </iframe>
-        </div>
-        <p class="video-caption">One signature starts the storm.</p>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 1C — ORIENTATION -->
-    <section class="section" aria-labelledby="orientation-heading">
-      <h2 id="orientation-heading" class="visually-hidden">How to navigate this page</h2>
-      <div class="orientation-line">
-        90 seconds: Watch the video above.<br>
-        5 minutes: Read the bold sections as you scroll.<br>
-        Full picture: Keep going — everything connects.
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 2 — 3.5% STAT BLOCK -->
-    <section id="threshold" class="section" aria-labelledby="threshold-heading">
-      <h2 id="threshold-heading" class="visually-hidden">The 3.5% Threshold</h2>
-      <div class="stat-block">
-        <div class="big-num">3.5%</div>
-        <div class="slogan">3.5% organized = unstoppable change.<br>12 million Americans. That's the line.</div>
-        <p>History shows something remarkable: when just 3.5% of the population — that's 12 million Americans — participates in sustained action, change becomes almost impossible to stop.</p>
-        <p>Every time. Without exception.</p>
-        <p>That's roughly the number of people expected at the NoKings III rally. Except instead of one day in the streets — organized, on the record, district by district, impossible to ignore.</p>
-        <p>That's when our power kicks in.</p>
-        <div class="mechanism">
-          Energy without power fails.<br>
-          PHIERStorm is the power.
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 3 — MOMENTUM INDICATOR -->
-    <section class="section" aria-labelledby="momentum-heading">
-      <h2 id="momentum-heading" class="visually-hidden">Movement Momentum</h2>
-      <div class="momentum-block">
-        <p class="momentum-title">🔥 MOMENTUM TRACKER</p>
-        <p class="momentum-counter">[Placeholder: Real-time signature counter will go here]</p>
-        <p class="momentum-note">Every signature is a brick in the wall Congress can't ignore.</p>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 4 — FAST ACTION BAR -->
-    <section class="section" aria-labelledby="fast-action-heading">
-      <h2 id="fast-action-heading" class="visually-hidden">Quick Actions</h2>
-      <div class="fast-action-bar">
-        <div class="fast-action-title">⚡ THE STORM STARTS WITH THREE ACTIONS ⚡</div>
-        <div class="fast-action-steps">
-          <span class="action-step">✍ Sign the Demand</span>
-          <span class="action-step">📍 Find Your District</span>
-          <span class="action-step">🌊 Join PHIERStorm</span>
-        </div>
-        <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="btn-gold btn-large">
-           ✍ SIGN NOW — 30 SECONDS
-        </a>
-        <div class="fast-action-footer">
-          3.5% organized = unstoppable change. 12 million Americans. That's the line.
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 5 — WHAT IS PHIERS + DEMAND BLOCK -->
-    <section id="what-is-phiers" class="section" aria-labelledby="what-is-heading">
-      <span class="eyebrow">What Is PHIERS?</span>
-      <h2 id="what-is-heading">You're Already Part of This.<br>You Just Didn't Have a Name For It.</h2>
-      
-      <div class="def-box">
-        <p class="def-statement">PHIERS is the place where movements, voters, and consumers come together — with real power over Congress and the market.</p>
-        
-        <h3 class="def-subhead">You're already here if:</h3>
-        <ul class="def-already-list">
-          <li>You marched at a NoKings rally</li>
-          <li>You're part of a boycott</li>
-          <li>You're in a union or mutual aid group</li>
-          <li>You're a regular person who's done feeling like nothing you do matters</li>
-        </ul>
-        
-        <h3 class="def-subhead">PHIERS gives you:</h3>
-        <ul class="def-missing">
-          <li>One home base</li>
-          <li>A specific winnable demand</li>
-          <li>Real power over Congress and the market</li>
-        </ul>
-        
-        <p class="def-caveat">Energy without power is a wave that breaks and recedes.</p>
-        <p class="def-power">Energy without power fails. PHIERStorm is the power.</p>
-      </div>
-
-      <div class="demand-block">
-        <h3 class="demand-heading">Movements that win don't try to fix everything at once.<br>They force one decision that changes the math.</h3>
-        
-        <p class="demand-statement">The first demand is simple: <strong>Make telehealth available to every American through the ACA Exchange.</strong></p>
-        
-        <p class="demand-context">Congress already has the authority. No new bureaucracy. No complicated legislation. Make it work for everyone — the same setup, everywhere.</p>
-        
-        <h4 class="demand-result-heading">The result:</h4>
-        <ul class="demand-result">
-          <li>$2.7 trillion in annual savings</li>
-          <li>Universal healthcare</li>
-          <li>Millions of good jobs</li>
-          <li>A monthly check every American can rely on</li>
-          <li>Rebuilding systems that have been collapsing for decades</li>
-        </ul>
-        
-        <p class="demand-footer">The money's already there. We're already paying for it. We just need to use it right.</p>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 6 — THREE LEVERS (with collapse toggles) -->
-    <section id="three-levers" class="section-alt" aria-labelledby="levers-heading">
-      <div class="inner">
-        <span class="eyebrow">Three Kinds of Power</span>
-        <h2 id="levers-heading">Three Kinds of Power.<br><span class="green">Working Together. For the First Time.</span></h2>
-        <p class="levers-intro">Most movements only have one. PHIERS gives people all three at once.</p>
-        
-        <div class="lever-grid">
-          <!-- Political Power Card -->
-          <article class="lever-card political">
-            <div class="lever-icon" aria-hidden="true">⚡</div>
-            <h3 class="lever-title">Political Power</h3>
-            <p class="lever-subtitle">Make Congress Fear You</p>
-            
-            <p>When 12 million Americans put their names on the record around a single demand, every member of Congress faces the same decision: do your job — or get primaried right before the election.</p>
-            
-            <h4 class="lever-list-heading">Real pressure to:</h4>
-            <ul>
-              <li>End wars Congress never authorized</li>
-              <li>Stop a military draft before it starts</li>
-              <li>Put guardrails on executive overreach</li>
-              <li>Pass healthcare reform that actually lowers costs</li>
-              <li>Create economic security people can rely on</li>
-            </ul>
-            
-            <p class="lever-context">Congress has always had the authority. They've just never had a reason to fear ignoring us.</p>
-            <div class="lever-punchline">PHIERStorm creates that reason.</div>
-          </article>
-
-          <!-- Economic Power Card -->
-          <article class="lever-card economic">
-            <div class="lever-icon" aria-hidden="true">💰</div>
-            <h3 class="lever-title">Economic Power</h3>
-            <p class="lever-subtitle">Make the Math Work For You</p>
-            
-            <p>Telehealth on the ACA Exchange unlocks $2.7 trillion in annual savings. That's not theory. That's math.</p>
-            <p>One person switching from a $10,000 plan to a $600 telehealth plan frees enough money to cover 12 more people. Those 12 cover 148. Those 148 cover 1,825. The cascade becomes unstoppable.</p>
-            
-            <div id="economic-collapse" class="collapse-content">
-              <p>Once the savings exist, the question stops being "How do we pay for it?" and becomes "Why are we still wasting trillions?"</p>
-              <p>Enough for universal healthcare. Enough for good jobs. Enough for a monthly check every American can count on. Enough to rebuild everything that's been breaking for decades.</p>
-            </div>
-            
-            <button class="collapse-toggle" 
-                    data-target="economic-collapse" 
-                    data-label="[Show me the math →]"
-                    aria-expanded="false"
-                    aria-controls="economic-collapse">
-              [Show me the math →]
-            </button>
-            
-            <div class="lever-punchline">$600 replaces $10,000. The savings are real. The math is undeniable. Congress knows it.</div>
-          </article>
-
-          <!-- Consumer Power Card -->
-          <article class="lever-card consumer">
-            <div class="lever-icon" aria-hidden="true">🛒</div>
-            <h3 class="lever-title">Consumer Power</h3>
-            <p class="lever-subtitle">Make the Market Work For You</p>
-            
-            <p>When millions shop as individuals, corporations set the terms. When millions shop as a group, we set the terms.</p>
-            <p>12 million people shopping together is enough to move markets and change workplaces.</p>
-            <p>Here's what that actually looks like: We buy from the same suppliers Target uses. The same manufacturers. The same distributors. Except we cut out every middleman. No markups. No profit extracted from people who can't afford it. No CEO bonus built on the back of your grocery bill.</p>
-            
-            <div id="consumer-collapse" class="collapse-content">
-              <p>We pass every penny of savings directly to our members.</p>
-              <p>That's not a boycott. That's outcompeting them on their own turf — with their own suppliers — at prices they can't match because they need to keep extracting profit from you to survive.</p>
-              <p>When a company disrespects its customers, exploits its workers, or treats people like a resource to drain — we don't just walk away. We replace them. We build the people's marketplace right next to them and we undercut them permanently.</p>
-              <p>No profit motive. No middlemen. No markups. Just people buying as a team for the benefit of everyone on the team.</p>
-            </div>
-            
-            <button class="collapse-toggle" 
-                    data-target="consumer-collapse" 
-                    data-label="[See how it works →]"
-                    aria-expanded="false"
-                    aria-controls="consumer-collapse">
-              [See how it works →]
-            </button>
-            
-            <div class="lever-punchline">This is PHIERSale. It started with medications sixteen years ago — proving that buying direct from manufacturers could cut drug costs by 80% without a single law being passed, without asking anyone's permission. Now it scales to everything. Groceries. Essentials. Everything corporations have been overcharging you for while disrespecting you at the same time.</div>
-            
-            <p class="lever-warning">They underestimated us. That's about to be expensive for them.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 7 — HOW PHIERS WORKS (4 steps) -->
-    <section id="how-it-works" class="section" aria-labelledby="how-heading">
-      <span class="eyebrow">How It Works</span>
-      <h2 id="how-heading">Four Steps.<br><span class="green">No Ideology. Just Power.</span></h2>
-      
-      <div class="steps">
-        <div class="step">
-          <div class="step-num" aria-hidden="true">1</div>
-          <div class="step-body">
-            <h3 class="step-title">Put It On Record</h3>
-            <p class="step-desc">Your name. Your district. Your demand. This isn't a request — it's the first brick in a wall Congress cannot buy off, wait out, or ignore.</p>
-          </div>
-        </div>
-        
-        <div class="step">
-          <div class="step-num" aria-hidden="true">2</div>
-          <div class="step-body">
-            <h3 class="step-title">Build Pressure District by District</h3>
-            <p class="step-desc">1,500 signatures in your district and your representative has to show up and answer for it — on the record, in public, no excuses. Before the next election. Not after. Before.</p>
-          </div>
-        </div>
-        
-        <div class="step">
-          <div class="step-num" aria-hidden="true">3</div>
-          <div class="step-body">
-            <h3 class="step-title">Hit the 3.5% Line</h3>
-            <p class="step-desc">Movements that hit 3.5% have never failed. Not once. In the United States: 12 million people. That's when they can't stop us.</p>
-          </div>
-        </div>
-        
-        <div class="step">
-          <div class="step-num red-num" aria-hidden="true">4</div>
-          <div class="step-body">
-            <h3 class="step-title red-title">Replace Anyone Who Ignores It</h3>
-            <p class="step-desc">If Congress ignores organized voters, elections solve the problem. Not a threat. Just how democracy works.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 8 — CANONICAL POWER BLOCK -->
-    <section id="power-block" class="section-alt" aria-labelledby="power-heading">
-      <div class="inner">
-        <div class="power-block">
-          <span class="eyebrow">This Is What Power Actually Looks Like</span>
-          <h2 id="power-heading">PHIERS doesn't ask Congress to change.<br><span class="green">It gives regular people the power to force them to choose.</span></h2>
-          
-          <ul class="power-lines">
-            <li><strong>Politically</strong> — 12 million organized voters makes ignoring us politically fatal. Every Congress member knows it. Every primary challenger is waiting.</li>
-            <li><strong>Economically</strong> — $2.7 trillion in savings funds healthcare, jobs, and a monthly check. Not someday. The moment the math is applied.</li>
-            <li><strong>As consumers</strong> — 12 million people buying together moves markets. No markups. No middlemen. No profit motive. We buy from the same suppliers they use — and we undercut them permanently because we don't need to extract profit from our own people.</li>
-          </ul>
-          
-          <div class="power-shift">
-            This isn't one fight. It's all of them. At the same time.<br>
-            <span class="power-shift-emphasis">And your name starts it.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 9 — VIDEOS (2 embeds) -->
-    <section id="videos" class="section" aria-labelledby="videos-heading">
-      <span class="eyebrow">See It For Yourself</span>
-      <h2 id="videos-heading">See It For Yourself</h2>
-      
-      <div class="video-embeds">
-        <!-- First Video - Math -->
-        <div class="video-wrap" id="wrap-math">
-          <div class="video-facade" 
-               style="background-image:url('https://img.youtube.com/vi/2j-dF3hgdeE/hqdefault.jpg')" 
-               role="button" 
-               tabindex="0"
-               aria-label="Play video: The Math Congress Fears"
-               onclick="playVideo('math','https://www.youtube.com/embed/2j-dF3hgdeE?autoplay=1&rel=0')"
-               onkeydown="if(event.key==='Enter'||event.key===' ') playVideo('math','https://www.youtube.com/embed/2j-dF3hgdeE?autoplay=1&rel=0')">
-            <div class="video-facade-overlay" aria-hidden="true">▶</div>
-          </div>
-          <div class="video-info">
-            <h3 class="video-title">🎥 The Math Congress Fears (1:11)</h3>
-            <p class="video-meta">One conversion covers 12. Those 12 cover 148. This is why they're terrified.</p>
-          </div>
-        </div>
-
-        <!-- Second Video - Union (replaced with YouTube version) -->
-        <div class="video-wrap" id="wrap-unions">
-          <div class="video-facade" 
-               style="background-image:url('https://img.youtube.com/vi/VdeniYs1QsQ/hqdefault.jpg')"
-               role="button"
-               tabindex="0"
-               aria-label="Play video: Funding Mamdani's Agenda for a Stronger Future"
-               onclick="playVideo('unions','https://www.youtube.com/embed/VdeniYs1QsQ?autoplay=1&rel=0')"
-               onkeydown="if(event.key==='Enter'||event.key===' ') playVideo('unions','https://www.youtube.com/embed/VdeniYs1QsQ?autoplay=1&rel=0')">
-            <div class="video-facade-overlay" aria-hidden="true">▶</div>
-          </div>
-          <div class="video-info">
-            <h3 class="video-title">🎥 Funding Mamdani's Agenda — A National Strategy</h3>
-            <p class="video-meta">Healthcare crisis solution: fully fund Zor Mamdani's agenda, reduce medication costs.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 10 — WAR / DRAFT (REWRITTEN FOR TONE) -->
-    <section id="war-draft" class="section-alt" aria-labelledby="war-heading">
-      <div class="inner">
-        <span class="eyebrow">The War Problem</span>
-        <h2 id="war-heading">Your Kitchen Table Has a War Problem —<br><span class="red">Whether You Know It Yet or Not.</span></h2>
-        
-        <div class="two-col">
-          <div>
-            <p>Congress never authorized this war. Not once. No vote. No debate. No end in sight. Over $1 billion of your money. Every single day.</p>
-            <p>And now they're talking about a draft.</p>
-            <p>When supply lines break — your gas goes up. Your groceries go up. Your rent goes up. <strong>This isn't a foreign policy issue. This is your kitchen table.</strong></p>
-          </div>
-          <div>
-            <p>The Constitution says Congress declares war. Not the President. Not a defense contractor. <strong>Congress. Your representatives. The ones you can replace.</strong></p>
-            <p>PHIERS gives people the power to make that real. The same organized voters who force healthcare reform can end the war and stop the draft. At the same time. Same people. Same power. Same consequence for Congress if they refuse.</p>
-            <p class="war-conclusion">That's not radical. That's the Constitution doing its job — because we made Congress do theirs.</p>
-          </div>
-        </div>
-        
-        <!-- Rewritten draft block with more measured tone -->
-        <div class="draft-block">
-          <p class="draft-statement">History demonstrates that those who advocate for conscription rarely face it themselves.</p>
-          <p class="draft-statement">The burden historically falls on working families — your family.</p>
-          <p class="draft-statement">Your neighbors. Your community.</p>
-          <p class="draft-context">Congress never authorized this war. They have never been held accountable for that constitutional failure.</p>
-          <p class="draft-action">We can prevent a draft before it begins — by making accountability more politically costly than inaction.</p>
-        </div>
-        
-        <p class="war-summary">Protest without power gets you a news cycle.</p>
-        <p class="war-power">PHIERStorm gives you the power.</p>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 11 — REAL STORIES -->
-    <section id="stories" class="section" aria-labelledby="stories-heading">
-      <span class="eyebrow">Real Voices</span>
-      <h2 id="stories-heading">These Are the Voices<br><span class="green">Congress Ignores.</span></h2>
-      
-      <div class="testimonials">
-        <article class="testimonial-card">
-          <p class="testimonial-text">My family member can't afford insurance. PHIERS gives us hope AND a plan. This is how we win.</p>
-          <footer class="testimonial-attr">— Small Business Owner, TX</footer>
-        </article>
-        
-        <article class="testimonial-card">
-          <p class="testimonial-text">The math is undeniable. $600 a year versus $10,000? When 12 million of us get organized, Congress has no choice.</p>
-          <footer class="testimonial-attr">— Union Organizer, NY</footer>
-        </article>
-        
-        <article class="testimonial-card">
-          <p class="testimonial-text">Congress abandoned 22 million of us. I'm not protesting anymore. I'm organizing. This is how we force them out.</p>
-          <footer class="testimonial-attr">— Healthcare Worker, CA</footer>
-        </article>
-      </div>
-      
-      <div class="testimonials-more">
-        <a href="real-stories.html" class="more-link">Read More Stories →</a>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 12 — THE STORM IS ALREADY BUILDING -->
-    <section id="storm" class="section-alt" aria-labelledby="storm-heading">
-      <div class="inner">
-        <span class="eyebrow">The Storm Is Building</span>
-        <h2 id="storm-heading">The Storm Is Already Building.<br><span class="green">PHIERS Is What Makes It Unstoppable.</span></h2>
-        
-        <ul class="storm-list">
-          <li>The NoKings rallies are real.</li>
-          <li>The boycotts are real.</li>
-          <li>The strikes are real.</li>
-          <li>Mutual aid networks are real.</li>
-          <li>The anger across this country is real and justified.</li>
-        </ul>
-        
-        <p>But energy without power is a wave that breaks on the shore and recedes. Congress waits it out. Corporations calculate the cost of waiting and absorb it. And the moment passes.</p>
-        
-        <div class="exhaustion-line">Exhaustion is their strategy. Scattered energy is their best defense.</div>
-        
-        <p>PHIERStorm changes that permanently. When the same people marching also have 12 million names on the record — Congress can't wait it out. When the same people boycotting also buy together as a group with no markups and no middlemen — corporations can't ignore them. When local movements connect to national power — the wave doesn't recede. It builds.</p>
-        
-        <img src="We_Are_The_TEETH_Original.jpg" 
-             alt="We Are The TEETH — Power Concedes Nothing" 
-             class="teeth-img"
-             loading="lazy"
-             width="800"
-             height="400">
-        
-        <div class="pull-quote">
-          <p>"Power concedes nothing without a demand."</p>
-        </div>
-        
-        <p class="storm-note">This is not a protest. This is a pressure system.</p>
-        <p class="storm-power">
-          Energy without power fails.<br>
-          PHIERStorm is the power.
-        </p>
-        <p class="storm-tagline">A spark doesn't replace the fire. It starts it.</p>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 13 — PICK YOUR FIGHT -->
-    <section id="pick-your-fight" class="section" aria-labelledby="fight-heading">
-      <span class="eyebrow">Pick Your Fight</span>
-      <h2 id="fight-heading">Pick Your Fight.<br><span class="green">They're All Connected.</span></h2>
-      <p class="fight-intro">They're all connected. Pick where you want to start.</p>
-      
-      <div class="fight-grid">
-        <a href="Telehealth-Insurance.html" class="fight-btn">
-          <span class="fight-emoji" aria-hidden="true">🏥</span>
-          <span class="fight-label">Healthcare</span>
-        </a>
-        <a href="NoWar.html" class="fight-btn">
-          <span class="fight-emoji" aria-hidden="true">⚔️</span>
-          <span class="fight-label">War / Draft</span>
-        </a>
-        <a href="PHIERStorm.html" class="fight-btn">
-          <span class="fight-emoji" aria-hidden="true">🌊</span>
-          <span class="fight-label">PHIERStorm</span>
-        </a>
-        <a href="PHIERSale.html" class="fight-btn">
-          <span class="fight-emoji" aria-hidden="true">🛒</span>
-          <span class="fight-label">PHIERSale</span>
-        </a>
-        <a href="SimpleMath.html" class="fight-btn">
-          <span class="fight-emoji" aria-hidden="true">📊</span>
-          <span class="fight-label">Economy</span>
-        </a>
-        <a href="Crisis.html" class="fight-btn">
-          <span class="fight-emoji" aria-hidden="true">🍽️</span>
-          <span class="fight-label">Hunger</span>
-        </a>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 14 — FINAL CTA + ORGANIZING PROMISE -->
-    <section id="sign" class="section" aria-labelledby="sign-heading">
-      <div class="final-cta-box">
-        <h2 id="sign-heading" class="final-cta-heading">SIGN THE DEMAND</h2>
-        
-        <p class="final-cta-intro">This is not a like. Not a share. Not a tweet into the void.</p>
-        <p class="final-cta-emphasis">This is your name, your district, your demand — on the public record.</p>
-        
-        <ul class="record-lines">
-          <li>Counted.</li>
-          <li>Delivered to Congress.</li>
-          <li>Impossible to ignore.</li>
-          <li>Impossible to deny.</li>
-          <li>Impossible to delete.</li>
-        </ul>
-        
-        <p class="final-cta-threshold">1,500 signatures in your district forces a mandatory town hall.<br>They have to show up. They have to answer. On the record. Before the next election.</p>
-        
-        <div class="organizing-promise">
-          <h3 class="organizing-heading">✅ We do the organizing for you</h3>
-          <p>When you sign, you're not just adding your name — you're joining a district team. We coordinate the pressure. We track the signatures. We schedule the town halls. You just show up when it's time.</p>
-        </div>
-        
-        <p class="final-cta-context">This isn't asking nicely. This is organized people with three kinds of power forcing Congress and corporations to choose:</p>
-        <p class="final-cta-ultimatum">Act — or face the consequences.</p>
-        <p class="final-cta-tagline">One signature starts the storm.</p>
-        
-        <div class="cta-buttons-stack">
-          <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="btn-gold btn-large">
-             ✍ SIGN THE DEMAND — 30 SECONDS
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="btn-secondary">
-             📋 DISTRICT LOOKUP
-          </a>
-          <a href="PHIERStorm.html" class="btn-secondary">🌊 JOIN THE STORM</a>
-        </div>
-        
-        <div class="slogan-gold">
-          3.5% organized = unstoppable change.<br>
-          12 million Americans. That's the line.
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" role="separator">
-
-    <!-- SECTION 15 — FOUR ACTIONS -->
-    <section id="four-actions" class="section" aria-labelledby="actions-heading">
-      <span class="eyebrow">Make It Count</span>
-      <h2 id="actions-heading">Four Ways to<br><span class="green">Make It Count.</span></h2>
-      
-      <div class="four-actions">
-        <article class="action-card">
-          <div class="action-verb" aria-hidden="true">Sign</div>
-          <h3 class="action-title">Sign</h3>
-          <p>Add your name. Build district pressure.</p>
-          <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="action-link"
-             aria-label="Sign the petition">
-             SIGN THE PETITION
-          </a>
-        </article>
-        
-        <article class="action-card">
-          <div class="action-verb" aria-hidden="true">Share</div>
-          <h3 class="action-title">Share</h3>
-          <p>Recruit five people. Multiply the reach.</p>
-          <a href="action.html" class="action-link" aria-label="Get sharing tools">GET TOOLS</a>
-        </article>
-        
-        <article class="action-card">
-          <div class="action-verb" aria-hidden="true">Donate</div>
-          <h3 class="action-title">Donate</h3>
-          <p>Fund the media campaign that reaches 55M+ readers.</p>
-          <a href="Donate.html" class="action-link" aria-label="Make a donation">GIVE</a>
-        </article>
-        
-        <article class="action-card">
-          <div class="action-verb" aria-hidden="true">Organize</div>
-          <h3 class="action-title">Organize</h3>
-          <p>Join district teams. Build local power.</p>
-          <a href="action.html" class="action-link" aria-label="Start organizing">GET STARTED</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <hr class="divider" role="separator">
-
-  <!-- ── FOOTER ── -->
-  <footer aria-label="Site footer">
-    <img src="PHIERS_Logo.png" 
-         alt="PHIERS.org" 
-         class="footer-logo"
-         loading="lazy"
-         width="80"
-         height="80">
-    
-    <p class="footer-tagline">PHIERS is a people's movement — not a company, not a product.</p>
-    <p class="footer-built">Built by regular people who are done waiting.</p>
-    
-    <div class="footer-power">
-      Energy without power fails.<br>
-      PHIERStorm is the power.<br>
-      <span class="footer-missing">The only thing missing is you.</span>
-    </div>
-    
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="Crisis.html">The Crisis</a>
-      <a href="SimpleMath.html">Simple Math</a>
-      <a href="5D_Solutions.html">5D Solutions</a>
-      <a href="Telehealth-Insurance.html">Telehealth</a>
-      <a href="NoWar.html">No War / No Draft</a>
-      <a href="organizers.html">Organizers</a>
-      <a href="Unions-Strategy.html">Unions</a>
-      <a href="PHIERStorm.html">PHIERStorm</a>
-      <a href="PHIERSale.html">PHIERSale</a>
-      <a href="Donate.html">Donate</a>
-      <a href="FAQ.html">FAQ</a>
-      <a href="healthcare-proof.html">Full Story</a>
-    </nav>
-    
-    <div class="footer-copy">
-      <p>Not built for profit. Not built for power. Built for We the People — by people who refused to stop.</p>
-      <p>📧 <a href="mailto:info@phiers.org">info@phiers.org</a> · 📞 (916) 306-8967</p>
-      <p>© PHIERS.org — Original Concept Since 2009. All Rights Reserved.</p>
-      <p class="footer-trademark">PHIERS™ · PHIERSale™ · PHIERWorks™ — Protected marks established 2009–2025.</p>
-    </div>
-  </footer>
-
-  <button class="back-to-top" 
-          id="back-to-top" 
-          aria-label="Back to top"
-          title="Back to top">
-    ↑
+<!-- ── BANNER COMPONENT ── -->
+<div class="phiers-def-wrap" style="max-width:760px;margin:0 auto;padding:0 24px;">
+  <button class="phiers-def-toggle" onclick="toggleDef()" aria-expanded="false" aria-controls="phiers-def-body"
+          style="background:#111d35;border:1px solid rgba(61,220,132,0.3);border-radius:8px;padding:18px 24px;width:100%;text-align:left;color:#3ddc84;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+    <span>⚡ Already marching? Already boycotting? This is where it gets teeth. [Tap to find out →]</span>
+    <span class="def-arrow" style="color:#3ddc84;">▼</span>
   </button>
+  <div class="phiers-def-body" id="phiers-def-body" hidden style="background:#0a1628;border:1px solid rgba(61,220,132,0.3);border-top:none;border-radius:0 0 8px 8px;padding:28px;">
+    <p style="color:#b8c8e8;margin-bottom:15px;">PHIERS is the place where movements, voters, and consumers come together — with real power over Congress and the market.</p>
+    <p style="color:#b8c8e8;">If you marched at NoKings — you're already here. If you're part of a boycott — you're already here. If you're in a union or mutual aid group — you're already here. PHIERStorm gives everything you're already doing the one thing it's been missing: <strong style="color:#f0f4ff;">power that actually works.</strong></p>
+  </div>
+</div>
 
-  <!-- ── JAVASCRIPT (COMPLETE) ── -->
-  <script>
-    // Toggle mobile menu
-    function toggleMenu() {
-      const menu = document.getElementById('mobile-menu');
-      const hamburger = document.getElementById('hamburger-btn');
-      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-      
-      menu.hidden = isExpanded;
-      hamburger.setAttribute('aria-expanded', !isExpanded);
-    }
+<hr class="divider">
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const menu = document.getElementById('mobile-menu');
-      const hamburger = document.getElementById('hamburger-btn');
-      
-      if (menu && hamburger && !menu.hidden && 
-          !menu.contains(event.target) && 
-          !hamburger.contains(event.target)) {
-        menu.hidden = true;
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
+<!-- ═══════════════════════════════════════
+     SECTION 1 — HERO
+═══════════════════════════════════════ -->
+<section id="hero">
+  <div style="margin-bottom:28px">
+    <img src="PHIERS_Logo.png" alt="PHIERS.org" style="height:120px;width:auto;display:inline-block;margin-bottom:10px;">
+  </div>
+  <h1 class="hero-h1">You're not powerless.</h1>
+  <p class="hero-sub" style="color:var(--text-dim)">You just haven't had the right leverage yet.</p>
+  <div style="margin:20px 0">
+    <p class="hero-sub" style="color:var(--text-dim)">Congress ignores you — <span class="red">because they can.</span></p>
+    <p class="hero-sub" style="color:var(--text-dim)">Corporations disrespect you — <span class="red">because they can.</span></p>
+    <p class="hero-sub" style="color:var(--text-dim)">The wars keep going because <span class="red">Congress never declared them — and has never been made to answer for it.</span></p>
+    <p class="hero-sub" style="color:var(--green);margin-top:16px">That changes right now.</p>
+  </div>
+  <div class="hero-welcome">Welcome to PHIERStorm.</div>
+  <p style="font-family:var(--font-condensed);font-size:1.2rem;color:var(--green);text-align:center;margin-top:-10px;margin-bottom:30px;">Where movements get power.</p>
+  <div class="cta-row">
+    <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" target="_blank" rel="noopener noreferrer" class="btn-gold" style="color:#080d1a">✍ SIGN NOW — 30 SECONDS</a>
+  </div>
+</section>
 
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        const menu = document.getElementById('mobile-menu');
-        const hamburger = document.getElementById('hamburger-btn');
-        if (menu && hamburger) {
-          menu.hidden = true;
-          hamburger.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
+<hr class="divider">
 
-    // Play video function
-    function playVideo(which, src) {
-      const wrap = document.getElementById('wrap-' + which);
-      if (!wrap) return;
-      
-      wrap.innerHTML = '<iframe width="100%" height="100%" src="' + src + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:4px" title="Video player"></iframe>';
-    }
+<!-- ═══════════════════════════════════════
+     SECTION 2 — 3.5% STAT BLOCK
+═══════════════════════════════════════ -->
+<section class="section" id="threshold">
+  <div class="stat-block">
+    <div class="big-num">3.5%</div>
+    <div class="slogan">3.5% organized = unstoppable change.<br>12 million Americans. That's the line.</div>
+    <p>History shows something remarkable: when just 3.5% of the population — that's 12 million Americans — participates in sustained action, change becomes almost impossible to stop.</p>
+    <p>Every time. Without exception.</p>
+    <p>That's roughly the number of people expected at the NoKings III rally. Except instead of one day in the streets — organized, on the record, district by district, impossible to ignore.</p>
+    <p>That's when our power kicks in.</p>
+    <div class="mechanism">
+      Energy without power fails.<br>
+      PHIERStorm is the power.
+    </div>
+  </div>
+</section>
 
-    // Toggle definition banner
-    function toggleDef() {
-      const btn = document.getElementById('def-toggle-btn');
-      const body = document.getElementById('phiers-def-body');
-      if (!btn || !body) return;
-      
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      body.hidden = expanded;
-      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-      
-      const arrow = btn.querySelector('.def-arrow');
-      if (arrow) arrow.textContent = expanded ? '▼' : '▲';
-    }
+<hr class="divider">
 
-    // Toggle table of contents
-    function toggleToc() {
-      const toc = document.getElementById('toc-menu');
-      const btn = document.querySelector('.toc-toggle');
-      if (!toc || !btn) return;
-      
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      toc.hidden = expanded;
-      btn.setAttribute('aria-expanded', !expanded);
-    }
+<!-- ═══════════════════════════════════════
+     SECTION 3 — FAST ACTION BAR
+═══════════════════════════════════════ -->
+<section class="section" style="padding-top:40px;padding-bottom:40px;">
+  <div class="fast-action-bar">
+    <div style="font-family:var(--font-display);font-size:clamp(1.3rem,4vw,2rem);color:var(--gold);margin-bottom:25px;">⚡ THE STORM STARTS WITH THREE ACTIONS ⚡</div>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:25px;">
+      <div style="font-family:var(--font-condensed);font-weight:700;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:10px 20px;">✍ Sign the Demand</div>
+      <div style="font-family:var(--font-condensed);font-weight:700;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:10px 20px;">📍 Find Your District</div>
+      <div style="font-family:var(--font-condensed);font-weight:700;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:10px 20px;">🌊 Join PHIERStorm</div>
+    </div>
+    <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" target="_blank" rel="noopener noreferrer" class="btn-gold" style="font-size:1.3rem;padding:16px 48px;margin:10px 0;">✍ SIGN NOW — 30 SECONDS</a>
+    <div style="font-family:var(--font-condensed);font-weight:700;color:var(--gold);margin-top:20px;">
+      3.5% organized = unstoppable change. 12 million Americans. That's the line.
+    </div>
+  </div>
+</section>
 
-    // Collapse toggles for lever cards
-    document.querySelectorAll('.collapse-toggle').forEach(btn => {
-      btn.addEventListener('click', function() {
-        const target = document.getElementById(this.getAttribute('data-target'));
-        if (!target) return;
-        
-        target.classList.toggle('open');
-        const expanded = target.classList.contains('open');
-        this.setAttribute('aria-expanded', expanded);
-        this.textContent = expanded ? '[Show less ↑]' : this.getAttribute('data-label');
-      });
-    });
+<hr class="divider">
 
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-      const nav = document.getElementById('main-nav');
-      if (nav) {
-        nav.classList.toggle('scrolled', window.scrollY > 50);
-      }
-    });
+<!-- ═══════════════════════════════════════
+     SECTION 4 — WHAT IS PHIERS + DEMAND BLOCK
+═══════════════════════════════════════ -->
+<section class="section" id="what-is-phiers">
+  <span class="eyebrow">What Is PHIERS?</span>
+  <div class="def-box">
+    <div class="def-headline">You're Already Part of This.<br>You Just Didn't Have a Name For It.</div>
+    <p class="def-statement">PHIERS is the place where movements, voters, and consumers come together — with real power over Congress and the market.</p>
+    <ul class="def-already-list">
+      <li>If you marched at a NoKings rally — you're already here.</li>
+      <li>If you're part of a boycott — you're already here.</li>
+      <li>If you're in a union or a mutual aid group — you're already here.</li>
+      <li>If you're a regular person who's done feeling like nothing you do matters — you're exactly who this was built for.</li>
+    </ul>
+    <p>PHIERS doesn't ask you to join something new.<br>It gives everything you're already doing three things it's been missing:</p>
+    <ul class="def-missing">
+      <li>One home base</li>
+      <li>A specific winnable demand</li>
+      <li>Real power over Congress and the market</li>
+    </ul>
+    <p style="color:var(--text-dim);font-style:italic">Energy without power is a wave that breaks and recedes.</p>
+    <p style="font-family:var(--font-condensed);font-weight:700;font-size:1.2rem;color:var(--green);margin-top:4px">Energy without power fails. PHIERStorm is the power.</p>
+  </div>
+  <div class="demand-block">
+    <p style="font-family:var(--font-condensed);font-weight:700;font-size:1.05rem;color:var(--text-bright);margin-bottom:12px">Movements that win don't try to fix everything at once.<br>They force one decision that changes the math.</p>
+    <p>The first demand is simple: <strong style="color:var(--text-bright)">Make telehealth available to every American through the ACA Exchange.</strong></p>
+    <p style="color:var(--text-dim)">Congress already has the authority. No new bureaucracy. No complicated legislation. Make it work for everyone — the same setup, everywhere.</p>
+    <p style="font-family:var(--font-condensed);font-weight:700;font-size:0.95rem;color:var(--text-bright);margin:12px 0 6px">The result:</p>
+    <ul class="demand-result">
+      <li>$2.7 trillion in annual savings</li>
+      <li>Universal healthcare</li>
+      <li>Millions of good jobs</li>
+      <li>A monthly check every American can rely on</li>
+      <li>Rebuilding systems that have been collapsing for decades</li>
+    </ul>
+    <p style="color:var(--green);font-family:var(--font-condensed);font-weight:700;margin-top:12px">The money's already there. We're already paying for it. We just need to use it right.</p>
+  </div>
+</section>
 
-    // Back to top button
-    const btt = document.getElementById('back-to-top');
-    if (btt) {
-      window.addEventListener('scroll', function() {
-        btt.classList.toggle('visible', window.scrollY > 400);
-      });
-      
-      btt.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
+<hr class="divider">
 
-    // Smooth scroll for TOC links
-    document.querySelectorAll('.toc-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('data-target');
-        const target = document.getElementById(targetId);
-        
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-          
-          // Close TOC on mobile after click
-          const toc = document.getElementById('toc-menu');
-          const btn = document.querySelector('.toc-toggle');
-          if (window.innerWidth <= 768 && toc && btn) {
-            toc.hidden = true;
-            btn.setAttribute('aria-expanded', 'false');
-          }
-        }
-      });
-    });
+<!-- ═══════════════════════════════════════
+     SECTION 5 — THREE LEVERS
+═══════════════════════════════════════ -->
+<section class="section-alt" id="three-levers">
+  <div class="inner">
+    <span class="eyebrow">Three Kinds of Power</span>
+    <h2>Three Kinds of Power.<br><span class="green">Working Together. For the First Time.</span></h2>
+    <p>Most movements only have one. PHIERS gives people all three at once.</p>
+    <div class="lever-grid">
 
-    // Set active state for current page in nav
-    (function() {
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.mobile-menu a, .footer-nav a').forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active');
-        }
-      });
-    })();
+      <div class="lever-card political">
+        <div class="lever-icon">⚡</div>
+        <div class="lever-title">Political Power<br><span style="color:var(--text-dim);font-size:1.1rem">Make Congress Fear You</span></div>
+        <p style="font-size:0.97rem;color:var(--text-body)">When 12 million Americans put their names on the record around a single demand, every member of Congress faces the same decision: do your job — or get primaried right before the election.</p>
+        <p style="font-size:0.9rem;color:var(--text-dim);margin-bottom:8px">Real pressure to:</p>
+        <ul>
+          <li>End wars Congress never authorized</li>
+          <li>Stop a military draft before it starts</li>
+          <li>Put guardrails on executive overreach</li>
+          <li>Pass healthcare reform that actually lowers costs</li>
+          <li>Create economic security people can rely on</li>
+        </ul>
+        <p style="font-size:0.95rem;color:var(--text-body);margin-top:12px">Congress has always had the authority. They've just never had a reason to fear ignoring us.</p>
+        <div class="lever-punchline">PHIERStorm creates that reason.</div>
+      </div>
 
-    // Keyboard support for video facades
-    document.querySelectorAll('.video-facade').forEach(facade => {
-      facade.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          this.click();
-        }
-      });
-    });
+      <div class="lever-card economic">
+        <div class="lever-icon">💰</div>
+        <div class="lever-title">Economic Power<br><span style="color:var(--text-dim);font-size:1.1rem">Make the Math Work For You</span></div>
+        <p style="font-size:0.97rem;color:var(--text-body)">Telehealth on the ACA Exchange unlocks $2.7 trillion in annual savings. That's not theory. That's math.</p>
+        <p style="font-size:0.97rem;color:var(--text-body)">One person switching from a $10,000 plan to a $600 telehealth plan frees enough money to cover 12 more people. Those 12 cover 148. Those 148 cover 1,825. The cascade becomes unstoppable.</p>
+        <div id="economic-collapse" class="collapse-content">
+          <p style="font-size:0.97rem;color:var(--text-body);margin-top:15px;">Once the savings exist, the question stops being "How do we pay for it?" and becomes "Why are we still wasting trillions?"</p>
+          <p style="font-size:0.97rem;color:var(--text-body)">Enough for universal healthcare. Enough for good jobs. Enough for a monthly check every American can count on. Enough to rebuild everything that's been breaking for decades.</p>
+        </div>
+        <button class="collapse-toggle" data-target="economic-collapse" data-label="[Show me the math →]">[Show me the math →]</button>
+        <div class="lever-punchline" style="margin-top:15px;">$600 replaces $10,000. The savings are real. The math is undeniable. Congress knows it.</div>
+      </div>
 
-    // Focus trap for mobile menu when open
-    document.addEventListener('keydown', function(e) {
-      const menu = document.getElementById('mobile-menu');
-      const hamburger = document.getElementById('hamburger-btn');
-      
-      if (!menu || menu.hidden || e.key !== 'Tab') return;
-      
-      const focusable = menu.querySelectorAll('a, button, summary');
-      if (focusable.length === 0) return;
-      
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        hamburger.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        hamburger.focus();
-      }
-    });
-  </script>
+      <div class="lever-card consumer">
+        <div class="lever-icon">🛒</div>
+        <div class="lever-title">Consumer Power<br><span style="color:var(--text-dim);font-size:1.1rem">Make the Market Work For You</span></div>
+        <p style="font-size:0.97rem;color:var(--text-body)">When millions shop as individuals, corporations set the terms. When millions shop as a group, we set the terms.</p>
+        <p style="font-size:0.97rem;color:var(--text-body)">12 million people shopping together is enough to move markets and change workplaces.</p>
+        <p style="font-size:0.97rem;color:var(--text-body)">Here's what that actually looks like: We buy from the same suppliers Target uses. The same manufacturers. The same distributors. Except we cut out every middleman. No markups. No profit extracted from people who can't afford it. No CEO bonus built on the back of your grocery bill.</p>
+        <div id="consumer-collapse" class="collapse-content">
+          <p style="font-size:0.97rem;color:var(--text-body);margin-top:15px;">We pass every penny of savings directly to our members.</p>
+          <p style="font-size:0.97rem;color:var(--text-body)">That's not a boycott. That's outcompeting them on their own turf — with their own suppliers — at prices they can't match because they need to keep extracting profit from you to survive.</p>
+          <p style="font-size:0.97rem;color:var(--text-body)">When a company disrespects its customers, exploits its workers, or treats people like a resource to drain — we don't just walk away. We replace them. We build the people's marketplace right next to them and we undercut them permanently.</p>
+          <p style="font-size:0.97rem;color:var(--text-body)">No profit motive. No middlemen. No markups. Just people buying as a team for the benefit of everyone on the team.</p>
+        </div>
+        <button class="collapse-toggle" data-target="consumer-collapse" data-label="[See how it works →]">[See how it works →]</button>
+        <div class="lever-punchline" style="margin-top:15px;">This is PHIERSale. It started with medications sixteen years ago — proving that buying direct from manufacturers could cut drug costs by 80% without a single law being passed, without asking anyone's permission. Now it scales to everything. Groceries. Essentials. Everything corporations have been overcharging you for while disrespecting you at the same time.</div>
+        <p style="color:var(--red);font-family:var(--font-condensed);font-weight:700;margin-top:10px;">They underestimated us. That's about to be expensive for them.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Schema.org markup for organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "PHIERS.org",
-    "url": "https://phiers.org",
-    "logo": "https://phiers.org/PHIERS_Logo.png",
-    "sameAs": [
-      "https://twitter.com/phiers",
-      "https://www.facebook.com/phiers"
-    ],
-    "description": "PHIERS is a people's movement giving regular people power over Congress and corporations through political, economic, and consumer leverage.",
-    "email": "info@phiers.org",
-    "telephone": "+19163068967"
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 6 — HOW PHIERS WORKS
+═══════════════════════════════════════ -->
+<section class="section" id="how-it-works">
+  <span class="eyebrow">How It Works</span>
+  <h2>Four Steps.<br><span class="green">No Ideology. Just Power.</span></h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-title">Put It On Record</div>
+        <div class="step-desc">Your name. Your district. Your demand. This isn't a request — it's the first brick in a wall Congress cannot buy off, wait out, or ignore.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-title">Build Pressure District by District</div>
+        <div class="step-desc">1,500 signatures in your district and your representative has to show up and answer for it — on the record, in public, no excuses. Before the next election. Not after. Before.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-title">Hit the 3.5% Line</div>
+        <div class="step-desc">Movements that hit 3.5% have never failed. Not once. In the United States: 12 million people. That's when they can't stop us.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num red-num">4</div>
+      <div class="step-body">
+        <div class="step-title red-title">Replace Anyone Who Ignores It</div>
+        <div class="step-desc">If Congress ignores organized voters, elections solve the problem. Not a threat. Just how democracy works.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 7 — CANONICAL POWER BLOCK
+═══════════════════════════════════════ -->
+<section class="section-alt" id="power-block">
+  <div class="inner">
+    <div class="power-block">
+      <span class="eyebrow">This Is What Power Actually Looks Like</span>
+      <h2>PHIERS doesn't ask Congress to change.<br><span class="green">It gives regular people the power to force them both to choose.</span></h2>
+      <ul class="power-lines">
+        <li><strong style="color:var(--text-bright)">Politically</strong> — 12 million organized voters makes ignoring us politically fatal. Every Congress member knows it. Every primary challenger is waiting.</li>
+        <li><strong style="color:var(--gold)">Economically</strong> — $2.7 trillion in savings funds healthcare, jobs, and a monthly check. Not someday. The moment the math is applied.</li>
+        <li><strong style="color:var(--green)">As consumers</strong> — 12 million people buying together moves markets. No markups. No middlemen. No profit motive. We buy from the same suppliers they use — and we undercut them permanently because we don't need to extract profit from our own people.</li>
+      </ul>
+      <div class="power-shift">
+        This isn't one fight. It's all of them. At the same time.<br>
+        <span style="color:var(--text-bright)">And your name starts it.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 8 — VIDEOS
+═══════════════════════════════════════ -->
+<section class="section" id="videos">
+  <span class="eyebrow">See It For Yourself</span>
+  <h2>See It For Yourself</h2>
+  <div class="video-embeds">
+    <div class="video-wrap" id="wrap-math">
+      <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/2j-dF3hgdeE/hqdefault.jpg');background-size:cover;background-position:center;">
+        <div class="video-facade-overlay" onclick="playVideo('math','https://www.youtube.com/embed/2j-dF3hgdeE?autoplay=1&rel=0')">▶</div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">🎥 The Math Congress Fears (1:11)</div>
+        <div class="video-meta">One conversion covers 12. Those 12 cover 148. This is why they're terrified.</div>
+      </div>
+    </div>
+    <div class="video-wrap" id="wrap-unions">
+      <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/VdeniYs1QsQ/hqdefault.jpg');background-size:cover;background-position:center;">
+        <div class="video-facade-overlay" onclick="playVideo('unions','https://www.youtube.com/embed/VdeniYs1QsQ?autoplay=1&rel=0')">▶</div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">🎥 Union Power — Why This Fight Is Winnable</div>
+        <div class="video-meta">How organized workers become the engine that makes this unstoppable.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 9 — WAR / DRAFT
+═══════════════════════════════════════ -->
+<section class="section-alt" id="war-draft">
+  <div class="inner">
+    <span class="eyebrow">The War Problem</span>
+    <h2>Your Kitchen Table Has a War Problem —<br><span class="red">Whether You Know It Yet or Not.</span></h2>
+    <div class="two-col">
+      <div>
+        <p>Congress never authorized this war. Not once. No vote. No debate. No end in sight. Over $1 billion of your money. Every single day.</p>
+        <p>And now they're talking about a draft.</p>
+        <p>When supply lines break — your gas goes up. Your groceries go up. Your rent goes up. <strong style="color:var(--text-bright)">This isn't a foreign policy issue. This is your kitchen table.</strong></p>
+      </div>
+      <div>
+        <p>The Constitution says Congress declares war. Not the President. Not a defense contractor. <strong style="color:var(--text-bright)">Congress. Your representatives. The ones you can replace.</strong></p>
+        <p>PHIERS gives people the power to make that real. The same organized voters who force healthcare reform can end the war and stop the draft. At the same time. Same people. Same power. Same consequence for Congress if they refuse.</p>
+        <p style="font-family:var(--font-condensed);font-weight:700;color:var(--green)">That's not radical. That's the Constitution doing its job — because we made Congress do theirs.</p>
+      </div>
+    </div>
+    <div class="draft-block">
+      <p>The people talking about a draft will never be the ones sent.</p>
+      <p>You will.</p>
+      <p>Your kids will.</p>
+      <p>Your neighbors will.</p>
+      <p style="font-size:1rem;color:var(--text-body);margin-top:20px;">Congress never authorized this war.</p>
+      <p style="color:var(--red);font-family:var(--font-condensed);font-weight:700;font-size:1.2rem;margin-top:10px;">We stop it before the draft ever begins — by making ignoring us more expensive than acting.</p>
+    </div>
+    <p style="text-align:center;margin-top:30px;">Protest without power gets you a news cycle.</p>
+    <p style="text-align:center;font-family:var(--font-display);font-size:clamp(1.4rem,4vw,2.2rem);color:var(--green);margin-top:5px;">PHIERStorm gives you the power.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 10 — REAL STORIES
+═══════════════════════════════════════ -->
+<section class="section" id="stories">
+  <span class="eyebrow">Real Voices</span>
+  <h2>These Are the Voices<br><span class="green">Congress Ignores.</span></h2>
+  <div class="testimonials">
+    <div class="testimonial-card">
+      <p class="testimonial-text">My family member can't afford insurance. PHIERS gives us hope AND a plan. This is how we win.</p>
+      <div class="testimonial-attr">— Small Business Owner, TX</div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">The math is undeniable. $600 a year versus $10,000? When 12 million of us get organized, Congress has no choice.</p>
+      <div class="testimonial-attr">— Union Organizer, NY</div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">Congress abandoned 22 million of us. I'm not protesting anymore. I'm organizing. This is how we force them out.</p>
+      <div class="testimonial-attr">— Healthcare Worker, CA</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:24px">
+    <a href="real-stories.html" style="color:var(--green);font-family:var(--font-condensed);font-weight:700;font-size:1rem;text-decoration:none">Read More Stories →</a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 11 — THE STORM IS ALREADY BUILDING
+═══════════════════════════════════════ -->
+<section class="section-alt" id="storm">
+  <div class="inner">
+    <span class="eyebrow">The Storm Is Building</span>
+    <h2>The Storm Is Already Building.<br><span class="green">PHIERS Is What Makes It Unstoppable.</span></h2>
+    <ul class="storm-list">
+      <li>The NoKings rallies are real.</li>
+      <li>The boycotts are real.</li>
+      <li>The strikes are real.</li>
+      <li>Mutual aid networks are real.</li>
+      <li>The anger across this country is real and justified.</li>
+    </ul>
+    <p>But energy without power is a wave that breaks on the shore and recedes. Congress waits it out. Corporations calculate the cost of waiting and absorb it. And the moment passes.</p>
+    <div class="exhaustion-line">Exhaustion is their strategy. Scattered energy is their best defense.</div>
+    <p>PHIERStorm changes that permanently. When the same people marching also have 12 million names on the record — Congress can't wait it out. When the same people boycotting also buy together as a group with no markups and no middlemen — corporations can't ignore them. When local movements connect to national power — the wave doesn't recede. It builds.</p>
+    <img src="We_Are_The_TEETH_Original.jpg" alt="We Are The TEETH — Power Concedes Nothing" class="teeth-img">
+    <div class="pull-quote"><p>"Power concedes nothing without a demand."</p></div>
+    <p style="font-family:var(--font-condensed);font-weight:700;font-size:1.05rem;color:var(--green);margin-top:16px">This is not a protest. This is a pressure system.</p>
+    <p style="font-family:var(--font-display);font-size:clamp(1.4rem,4vw,2rem);color:var(--green);margin-top:8px;line-height:1.2">
+      Energy without power fails.<br>
+      PHIERStorm is the power.
+    </p>
+    <p style="font-family:var(--font-condensed);font-weight:700;font-size:1.05rem;color:var(--green);font-style:italic;margin-top:12px;">A spark doesn't replace the fire. It starts it.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 12 — PICK YOUR FIGHT
+═══════════════════════════════════════ -->
+<section class="section" id="pick-your-fight">
+  <span class="eyebrow">Pick Your Fight</span>
+  <h2>Pick Your Fight.<br><span class="green">They're All Connected.</span></h2>
+  <p>They're all connected. Pick where you want to start.</p>
+  <div class="fight-grid">
+    <a href="Telehealth-Insurance.html" class="fight-btn"><span class="fight-emoji">🏥</span>Healthcare</a>
+    <a href="NoWar.html" class="fight-btn"><span class="fight-emoji">⚔️</span>War / Draft</a>
+    <a href="PHIERStorm.html" class="fight-btn"><span class="fight-emoji">🌊</span>PHIERStorm</a>
+    <a href="PHIERSale.html" class="fight-btn"><span class="fight-emoji">🛒</span>PHIERSale</a>
+    <a href="SimpleMath.html" class="fight-btn"><span class="fight-emoji">📊</span>Economy</a>
+    <a href="Crisis.html" class="fight-btn"><span class="fight-emoji">🍽️</span>Hunger</a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 13 — FINAL CTA
+═══════════════════════════════════════ -->
+<section class="section" id="sign">
+  <div class="final-cta-box">
+    <div class="final-cta-heading">SIGN THE DEMAND</div>
+    <p style="font-size:1.05rem;color:var(--text-body)">This is not a like. Not a share. Not a tweet into the void.</p>
+    <p style="font-family:var(--font-condensed);font-weight:700;font-size:1.1rem;color:var(--text-bright)">This is your name, your district, your demand — on the public record.</p>
+    <ul class="record-lines">
+      <li>Counted.</li>
+      <li>Delivered to Congress.</li>
+      <li>Impossible to ignore.</li>
+      <li>Impossible to deny.</li>
+      <li>Impossible to delete.</li>
+    </ul>
+    <p style="font-size:0.97rem;color:var(--text-body)">1,500 signatures in your district forces a mandatory town hall.<br>They have to show up. They have to answer. On the record. Before the next election.</p>
+    <div class="organizing-promise">
+      <p style="font-weight:700;color:var(--text-bright);margin-bottom:5px;">✅ We do the organizing for you</p>
+      <p style="font-size:0.95rem;">When you sign, you're not just adding your name — you're joining a district team. We coordinate the pressure. We track the signatures. We schedule the town halls. You just show up when it's time.</p>
+    </div>
+    <p style="font-size:0.97rem;color:var(--text-body);margin-top:12px">This isn't asking nicely. This is organized people with three kinds of power forcing Congress and corporations to choose:</p>
+    <p style="font-family:var(--font-display);font-size:clamp(1.4rem,4vw,2rem);color:var(--red);margin:12px 0">Act — or face the consequences.</p>
+    <p style="font-size:0.97rem;color:var(--text-dim)">One signature starts the storm.</p>
+    <div class="cta-buttons-stack">
+      <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" target="_blank" rel="noopener noreferrer" class="btn-gold" style="color:#080d1a;font-size:1.3rem;">✍ SIGN THE DEMAND — 30 SECONDS</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-secondary">📋 DISTRICT LOOKUP</a>
+      <a href="PHIERStorm.html" class="btn-secondary">🌊 JOIN THE STORM</a>
+    </div>
+    <div class="slogan-gold">
+      3.5% organized = unstoppable change.<br>
+      12 million Americans. That's the line.
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 14 — FOUR ACTIONS
+═══════════════════════════════════════ -->
+<section class="section" id="four-actions" style="padding-top:60px">
+  <span class="eyebrow">Make It Count</span>
+  <h2>Four Ways to<br><span class="green">Make It Count.</span></h2>
+  <div class="four-actions">
+    <div class="action-card">
+      <div class="action-verb">Sign</div>
+      <p>Add your name. Build district pressure.</p>
+      <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" target="_blank" rel="noopener noreferrer">SIGN THE PETITION</a>
+    </div>
+    <div class="action-card">
+      <div class="action-verb">Share</div>
+      <p>Recruit five people. Multiply the reach.</p>
+      <a href="action.html">GET TOOLS</a>
+    </div>
+    <div class="action-card">
+      <div class="action-verb">Donate</div>
+      <p>Fund the media campaign that reaches 55M+ readers.</p>
+      <a href="Donate.html">GIVE</a>
+    </div>
+    <div class="action-card">
+      <div class="action-verb">Organize</div>
+      <p>Join district teams. Build local power.</p>
+      <a href="action.html">GET STARTED</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── FOOTER ── -->
+<footer>
+  <img src="PHIERS_Logo.png" alt="PHIERS.org" class="footer-logo">
+  <div style="font-family:var(--font-condensed);font-weight:700;font-size:1rem;color:var(--text-dim);margin-bottom:4px">PHIERS is a people's movement — not a company, not a product.</div>
+  <div style="font-size:0.9rem;color:var(--text-dim);margin-bottom:6px">Built by regular people who are done waiting.</div>
+  <div class="footer-power">
+    Energy without power fails.<br>
+    PHIERStorm is the power.<br>
+    <span style="color:var(--text-dim)">The only thing missing is you.</span>
+  </div>
+  <nav class="footer-nav">
+    <a href="Crisis.html">The Crisis</a>
+    <a href="SimpleMath.html">Simple Math</a>
+    <a href="5D_Solutions.html">5D Solutions</a>
+    <a href="Telehealth-Insurance.html">Telehealth</a>
+    <a href="NoWar.html">No War / No Draft</a>
+    <a href="organizers.html">Organizers</a>
+    <a href="Unions-Strategy.html">Unions</a>
+    <a href="PHIERStorm.html">PHIERStorm</a>
+    <a href="PHIERSale.html">PHIERSale</a>
+    <a href="Donate.html">Donate</a>
+    <a href="FAQ.html" target="_blank">FAQ</a>
+    <a href="healthcare-proof.html" target="_blank">Full Story</a>
+  </nav>
+  <div class="footer-copy">
+    Not built for profit. Not built for power. Built for We the People — by people who refused to stop.<br>
+    📧 <a href="mailto:info@phiers.org">info@phiers.org</a> · 📞 (916) 306-8967<br>
+    © PHIERS.org — Original Concept Since 2009. All Rights Reserved.<br>
+    <span style="font-size:0.75rem">PHIERS™ · PHIERSale™ · PHIERWorks™ — Protected marks established 2009–2025.</span>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('mobile-menu');
+  if (menu) menu.classList.toggle('open');
+}
+
+document.addEventListener('click', function(event) {
+  var menu = document.getElementById('mobile-menu');
+  var hamburger = document.querySelector('.hamburger');
+  if (menu && hamburger && menu.classList.contains('open') &&
+      !menu.contains(event.target) && !hamburger.contains(event.target)) {
+    menu.classList.remove('open');
   }
-  </script>
+});
+
+document.querySelectorAll('.mobile-menu a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    var m = document.getElementById('mobile-menu');
+    if (m) m.classList.remove('open');
+  });
+});
+
+function playVideo(which, src) {
+  var wrap = document.getElementById('wrap-' + which);
+  if (!wrap) return;
+  wrap.innerHTML = '<iframe width="100%" height="100%" src="' + src + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:4px"></iframe>';
+}
+
+function toggleDef() {
+  var btn = document.querySelector('.phiers-def-toggle');
+  var body = document.getElementById('phiers-def-body');
+  if (!btn || !body) return;
+  var expanded = btn.getAttribute('aria-expanded') === 'true';
+  body.hidden = expanded;
+  btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+  var arrow = btn.querySelector('.def-arrow');
+  if (arrow) arrow.textContent = expanded ? '▼' : '▲';
+}
+
+document.querySelectorAll('.collapse-toggle').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var target = document.getElementById(this.getAttribute('data-target'));
+    if (target) {
+      target.classList.toggle('open');
+      this.textContent = target.classList.contains('open')
+        ? '[Show less ↑]'
+        : this.getAttribute('data-label');
+    }
+  });
+});
+
+window.addEventListener('scroll', function() {
+  var n = document.getElementById('main-nav');
+  if (n) n.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+var btt = document.getElementById('back-to-top');
+if (btt) {
+  window.addEventListener('scroll', function() { btt.classList.toggle('visible', window.scrollY > 400); });
+  btt.addEventListener('click', function() { window.scrollTo({top:0, behavior:'smooth'}); });
+}
+
+(function() {
+  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.mobile-menu a').forEach(function(a) {
+    if (a.getAttribute('href') === currentPage) a.classList.add('active');
+  });
+})();
+</script>
 </body>
 </html>
