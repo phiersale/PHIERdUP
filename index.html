@@ -98,6 +98,21 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
+     SECTION 1B — INTRO VIDEO (MOVED EARLIER)
+═══════════════════════════════════════ -->
+<section class="section" style="padding-top:40px; padding-bottom:20px;">
+  <div style="margin:0 auto; text-align:center; max-width:700px;">
+    <p style="font-family:var(--font-condensed); color:var(--gold); margin-bottom:15px; font-size:1.2rem;">🎥 Watch This First — 90 Seconds That Explain Everything</p>
+    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; border:2px solid var(--border);">
+      <iframe src="https://www.youtube.com/embed/2j-dF3hgdeE" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p style="color:var(--text-dim); font-style:italic; margin-top:12px;">One signature starts the storm.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
      SECTION 2 — 3.5% STAT BLOCK
 ═══════════════════════════════════════ -->
 <section class="section" id="threshold">
@@ -303,28 +318,46 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
-     SECTION 8 — VIDEOS
+     SECTION 8 — VIDEOS (UPDATED)
 ═══════════════════════════════════════ -->
 <section class="section" id="videos">
   <span class="eyebrow">See It For Yourself</span>
   <h2>See It For Yourself</h2>
+  
+  <!-- Two-column video grid -->
   <div class="video-embeds">
-    <div class="video-wrap" id="wrap-math">
+    <!-- Left: 90-second intro (original) -->
+    <div class="video-wrap" id="wrap-intro">
       <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/2j-dF3hgdeE/hqdefault.jpg');background-size:cover;background-position:center;">
-        <div class="video-facade-overlay" onclick="playVideo('math','https://www.youtube.com/embed/2j-dF3hgdeE?autoplay=1&rel=0')">▶</div>
+        <div class="video-facade-overlay" onclick="playVideo('intro','https://www.youtube.com/embed/2j-dF3hgdeE?autoplay=1&rel=0')">▶</div>
       </div>
       <div class="video-info">
-        <div class="video-title">🎥 The Math Congress Fears (1:11)</div>
-        <div class="video-meta">One conversion covers 12. Those 12 cover 148. This is why they're terrified.</div>
+        <div class="video-title">🎥 Welcome to PHIERStorm (1:30)</div>
+        <div class="video-meta">The 90-second introduction that explains everything.</div>
       </div>
     </div>
-    <div class="video-wrap" id="wrap-unions">
-      <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/VdeniYs1QsQ/hqdefault.jpg');background-size:cover;background-position:center;">
-        <div class="video-facade-overlay" onclick="playVideo('unions','https://www.youtube.com/embed/VdeniYs1QsQ?autoplay=1&rel=0')">▶</div>
+    
+    <!-- Right: 333 Cascade Math (new) -->
+    <div class="video-wrap" id="wrap-cascade">
+      <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/jMU6LKEBzbs/hqdefault.jpg');background-size:cover;background-position:center;">
+        <div class="video-facade-overlay" onclick="playVideo('cascade','https://www.youtube.com/embed/jMU6LKEBzbs?autoplay=1&rel=0')">▶</div>
       </div>
       <div class="video-info">
-        <div class="video-title">🎥 Union Power — Why This Fight Is Winnable</div>
-        <div class="video-meta">How organized workers become the engine that makes this unstoppable.</div>
+        <div class="video-title">🎥 The Cascade Mechanism — Mathematical Proof (333)</div>
+        <div class="video-meta">Why Congress can't ignore PHIERS. One person saves $50 → funds 148 → $1.1B cascade.</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Full-width Pathos video (new) -->
+  <div style="margin-top: 28px;">
+    <div class="video-wrap" id="wrap-pathos" style="width:100%; max-width:100%;">
+      <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/KLu7USN_dao/hqdefault.jpg');background-size:cover;background-position:center;">
+        <div class="video-facade-overlay" onclick="playVideo('pathos','https://www.youtube.com/embed/KLu7USN_dao?autoplay=1&rel=0')">▶</div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">🎥 711 Pathos — Our Credibility (Even Though Nobody Knows We Exist)</div>
+        <div class="video-meta">How we built the mechanism without anyone noticing. The story of 16 years of work.</div>
       </div>
     </div>
   </div>
@@ -424,7 +457,7 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
-     SECTION 12 — PICK YOUR FIGHT
+     SECTION 12 — PICK YOUR FIGHT (UPDATED - removed PHIERSale and PHIERStorm)
 ═══════════════════════════════════════ -->
 <section class="section" id="pick-your-fight">
   <span class="eyebrow">Pick Your Fight</span>
@@ -433,10 +466,10 @@
   <div class="fight-grid">
     <a href="Telehealth-Insurance.html" class="fight-btn"><span class="fight-emoji">🏥</span>Healthcare</a>
     <a href="NoWar.html" class="fight-btn"><span class="fight-emoji">⚔️</span>War / Draft</a>
-    <a href="PHIERStorm.html" class="fight-btn"><span class="fight-emoji">🌊</span>PHIERStorm</a>
-    <a href="PHIERSale.html" class="fight-btn"><span class="fight-emoji">🛒</span>PHIERSale</a>
     <a href="SimpleMath.html" class="fight-btn"><span class="fight-emoji">📊</span>Economy</a>
     <a href="Crisis.html" class="fight-btn"><span class="fight-emoji">🍽️</span>Hunger</a>
+    <a href="organizers.html" class="fight-btn"><span class="fight-emoji">✊</span>Organizers</a>
+    <a href="Unions-Strategy.html" class="fight-btn"><span class="fight-emoji">💪</span>Unions</a>
   </div>
 </section>
 
@@ -468,7 +501,7 @@
     <div class="cta-buttons-stack">
       <a href="https://www.change.org/p/congress-the-public-is-coordinating-it-s-time-to-answer" target="_blank" rel="noopener noreferrer" class="btn-gold" style="color:#080d1a;font-size:1.3rem;">✍ SIGN THE DEMAND — 30 SECONDS</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdETA-oNIeOAzEsG4GsYiiws1YBpLunx8ioVJkZac5hzSxaZw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-secondary">📋 DISTRICT LOOKUP</a>
-      <a href="PHIERStorm.html" class="btn-secondary">🌊 JOIN THE STORM</a>
+      <a href="action.html" class="btn-secondary">🌊 JOIN THE STORM</a>
     </div>
     <div class="slogan-gold">
       3.5% organized = unstoppable change.<br>
@@ -529,8 +562,6 @@
     <a href="NoWar.html">No War / No Draft</a>
     <a href="organizers.html">Organizers</a>
     <a href="Unions-Strategy.html">Unions</a>
-    <a href="PHIERStorm.html">PHIERStorm</a>
-    <a href="PHIERSale.html">PHIERSale</a>
     <a href="Donate.html">Donate</a>
     <a href="FAQ.html" target="_blank">FAQ</a>
     <a href="healthcare-proof.html" target="_blank">Full Story</a>
