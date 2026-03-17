@@ -98,21 +98,6 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
-     SECTION 1B — INTRO VIDEO (MOVED EARLIER)
-═══════════════════════════════════════ -->
-<section class="section" style="padding-top:40px; padding-bottom:20px;">
-  <div style="margin:0 auto; text-align:center; max-width:700px;">
-    <p style="font-family:var(--font-condensed); color:var(--gold); margin-bottom:15px; font-size:1.2rem;">🎥 Watch This First — 90 Seconds That Explain Everything</p>
-    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; border:2px solid var(--border);">
-      <iframe src="https://www.youtube.com/embed/2j-dF3hgdeE" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <p style="color:var(--text-dim); font-style:italic; margin-top:12px;">One signature starts the storm.</p>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ═══════════════════════════════════════
      SECTION 2 — 3.5% STAT BLOCK
 ═══════════════════════════════════════ -->
 <section class="section" id="threshold">
@@ -153,7 +138,7 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
-     SECTION 4 — WHAT IS PHIERS + DEMAND BLOCK
+     SECTION 4 — WHAT IS PHIERS (PART 1)
 ═══════════════════════════════════════ -->
 <section class="section" id="what-is-phiers">
   <span class="eyebrow">What Is PHIERS?</span>
@@ -175,7 +160,22 @@
     <p style="color:var(--text-dim);font-style:italic">Energy without power is a wave that breaks and recedes.</p>
     <p style="font-family:var(--font-condensed);font-weight:700;font-size:1.2rem;color:var(--green);margin-top:4px">Energy without power fails. PHIERStorm is the power.</p>
   </div>
-  <div class="demand-block">
+  
+  <!-- 333 CASCADE MATH VIDEO INSERTED HERE -->
+  <div style="margin: 40px 0;">
+    <div class="video-wrap" id="wrap-cascade" style="width:100%; max-width:100%; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; border:2px solid var(--border);">
+      <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/jMU6LKEBzbs/hqdefault.jpg');background-size:cover;background-position:center; position:absolute; top:0; left:0; right:0; bottom:0;">
+        <div class="video-facade-overlay" onclick="playVideo('cascade','https://www.youtube.com/embed/jMU6LKEBzbs?autoplay=1&rel=0')" style="position:absolute; inset:0; background:rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; font-size:3rem; color:rgba(255,255,255,0.9); cursor:pointer;">▶</div>
+      </div>
+      <div class="video-info" style="position:absolute; bottom:0; left:0; right:0; background:rgba(8,13,26,0.92); padding:12px 14px; border-top:1px solid var(--border);">
+        <div class="video-title">🎥 The Cascade Mechanism — Mathematical Proof (333)</div>
+        <div class="video-meta">Why Congress can't ignore PHIERS. One person saves $50 → funds 148 → $1.1B cascade.</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- DEMAND BLOCK (formerly separate section, now continues) -->
+  <div class="demand-block" style="margin-top:20px;">
     <p style="font-family:var(--font-condensed);font-weight:700;font-size:1.05rem;color:var(--text-bright);margin-bottom:12px">Movements that win don't try to fix everything at once.<br>They force one decision that changes the math.</p>
     <p>The first demand is simple: <strong style="color:var(--text-bright)">Make telehealth available to every American through the ACA Exchange.</strong></p>
     <p style="color:var(--text-dim)">Congress already has the authority. No new bureaucracy. No complicated legislation. Make it work for everyone — the same setup, everywhere.</p>
@@ -318,47 +318,20 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
-     SECTION 8 — VIDEOS (UPDATED)
+     SECTION 8 — 555 UNIONS VIDEO (WHERE IT WAS)
 ═══════════════════════════════════════ -->
 <section class="section" id="videos">
   <span class="eyebrow">See It For Yourself</span>
   <h2>See It For Yourself</h2>
   
-  <!-- Two-column video grid -->
-  <div class="video-embeds">
-    <!-- Left: 90-second intro (original) -->
-    <div class="video-wrap" id="wrap-intro">
-      <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/2j-dF3hgdeE/hqdefault.jpg');background-size:cover;background-position:center;">
-        <div class="video-facade-overlay" onclick="playVideo('intro','https://www.youtube.com/embed/2j-dF3hgdeE?autoplay=1&rel=0')">▶</div>
-      </div>
-      <div class="video-info">
-        <div class="video-title">🎥 Welcome to PHIERStorm (1:30)</div>
-        <div class="video-meta">The 90-second introduction that explains everything.</div>
-      </div>
+  <!-- 555 Unions Video (original) -->
+  <div class="video-wrap" id="wrap-unions" style="width:100%; max-width:100%; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; border:2px solid var(--border); margin-bottom:28px;">
+    <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/VdeniYs1QsQ/hqdefault.jpg');background-size:cover;background-position:center; position:absolute; top:0; left:0; right:0; bottom:0;">
+      <div class="video-facade-overlay" onclick="playVideo('unions','https://www.youtube.com/embed/VdeniYs1QsQ?autoplay=1&rel=0')" style="position:absolute; inset:0; background:rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; font-size:3rem; color:rgba(255,255,255,0.9); cursor:pointer;">▶</div>
     </div>
-    
-    <!-- Right: 333 Cascade Math (new) -->
-    <div class="video-wrap" id="wrap-cascade">
-      <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/jMU6LKEBzbs/hqdefault.jpg');background-size:cover;background-position:center;">
-        <div class="video-facade-overlay" onclick="playVideo('cascade','https://www.youtube.com/embed/jMU6LKEBzbs?autoplay=1&rel=0')">▶</div>
-      </div>
-      <div class="video-info">
-        <div class="video-title">🎥 The Cascade Mechanism — Mathematical Proof (333)</div>
-        <div class="video-meta">Why Congress can't ignore PHIERS. One person saves $50 → funds 148 → $1.1B cascade.</div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Full-width Pathos video (new) -->
-  <div style="margin-top: 28px;">
-    <div class="video-wrap" id="wrap-pathos" style="width:100%; max-width:100%;">
-      <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/KLu7USN_dao/hqdefault.jpg');background-size:cover;background-position:center;">
-        <div class="video-facade-overlay" onclick="playVideo('pathos','https://www.youtube.com/embed/KLu7USN_dao?autoplay=1&rel=0')">▶</div>
-      </div>
-      <div class="video-info">
-        <div class="video-title">🎥 711 Pathos — Our Credibility (Even Though Nobody Knows We Exist)</div>
-        <div class="video-meta">How we built the mechanism without anyone noticing. The story of 16 years of work.</div>
-      </div>
+    <div class="video-info" style="position:absolute; bottom:0; left:0; right:0; background:rgba(8,13,26,0.92); padding:12px 14px; border-top:1px solid var(--border);">
+      <div class="video-title">🎥 Union Power — Why This Fight Is Winnable</div>
+      <div class="video-meta">How organized workers become the engine that makes this unstoppable.</div>
     </div>
   </div>
 </section>
@@ -400,7 +373,32 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
-     SECTION 10 — REAL STORIES
+     SECTION 10 — 711 PATHOS VIDEO (PLACED HERE)
+═══════════════════════════════════════ -->
+<section class="section" id="credibility">
+  <span class="eyebrow">Our Credibility</span>
+  <h2>Built in Silence.<br><span class="green">Ready for the Moment.</span></h2>
+  
+  <!-- 711 Pathos Video -->
+  <div class="video-wrap" id="wrap-pathos" style="width:100%; max-width:100%; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; border:2px solid var(--border); margin-bottom:28px;">
+    <div class="video-facade" style="background-image:url('https://img.youtube.com/vi/KLu7USN_dao/hqdefault.jpg');background-size:cover;background-position:center; position:absolute; top:0; left:0; right:0; bottom:0;">
+      <div class="video-facade-overlay" onclick="playVideo('pathos','https://www.youtube.com/embed/KLu7USN_dao?autoplay=1&rel=0')" style="position:absolute; inset:0; background:rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; font-size:3rem; color:rgba(255,255,255,0.9); cursor:pointer;">▶</div>
+    </div>
+    <div class="video-info" style="position:absolute; bottom:0; left:0; right:0; background:rgba(8,13,26,0.92); padding:12px 14px; border-top:1px solid var(--border);">
+      <div class="video-title">🎥 711 Pathos — Our Credibility (Even Though Nobody Knows We Exist)</div>
+      <div class="video-meta">How we built the mechanism without anyone noticing. The story of 16 years of work.</div>
+    </div>
+  </div>
+  
+  <p style="text-align:center; font-family:var(--font-condensed); font-size:1.2rem; color:var(--text-bright); margin-top:20px;">
+    We've been building this while you weren't looking. <span class="green">Now it's ready.</span>
+  </p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 11 — REAL STORIES
 ═══════════════════════════════════════ -->
 <section class="section" id="stories">
   <span class="eyebrow">Real Voices</span>
@@ -427,7 +425,7 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
-     SECTION 11 — THE STORM IS ALREADY BUILDING
+     SECTION 12 — THE STORM IS ALREADY BUILDING
 ═══════════════════════════════════════ -->
 <section class="section-alt" id="storm">
   <div class="inner">
@@ -457,7 +455,7 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
-     SECTION 12 — PICK YOUR FIGHT (UPDATED - removed PHIERSale and PHIERStorm)
+     SECTION 13 — PICK YOUR FIGHT
 ═══════════════════════════════════════ -->
 <section class="section" id="pick-your-fight">
   <span class="eyebrow">Pick Your Fight</span>
@@ -476,7 +474,7 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
-     SECTION 13 — FINAL CTA
+     SECTION 14 — FINAL CTA
 ═══════════════════════════════════════ -->
 <section class="section" id="sign">
   <div class="final-cta-box">
@@ -513,7 +511,7 @@
 <hr class="divider">
 
 <!-- ═══════════════════════════════════════
-     SECTION 14 — FOUR ACTIONS
+     SECTION 15 — FOUR ACTIONS
 ═══════════════════════════════════════ -->
 <section class="section" id="four-actions" style="padding-top:60px">
   <span class="eyebrow">Make It Count</span>
